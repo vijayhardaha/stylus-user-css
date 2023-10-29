@@ -1,0 +1,29 @@
+/*! ==UserStyle==
+@name Linear App UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for linear.app
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/linear.apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("linear.app") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  :root {
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --poppins-font: "Poppins",sans-serif;
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  :root {
+    --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    --courier-prime-font: "Courier Prime",monospace;
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --font-regular: var(--font-sans);
+    --font-monospace: var(--font-mono)
+  }
+}
