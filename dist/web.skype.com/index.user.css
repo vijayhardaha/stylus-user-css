@@ -1,0 +1,52 @@
+/*! ==UserStyle==
+@name Skype UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for web.skype.com
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/web.skype.com/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("web.skype.com") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  :root {
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --poppins-font: "Poppins",sans-serif;
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  :root {
+    --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    --courier-prime-font: "Courier Prime",monospace;
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  body,
+  body *,
+  body div[class*=r-][class*=css-] {
+    font-family: var(--font-sans)
+  }
+  body a [style*="SF Semibold"],
+  body a[style*="SF Regular"],
+  body div [style*="SF Semibold"],
+  body div[style*="SF Regular"],
+  body p [style*="SF Semibold"],
+  body p[style*="SF Regular"],
+  body span [style*="SF Semibold"],
+  body span[style*="SF Regular"] {
+    font-family: var(--font-sans)!important
+  }
+  body a [style*=monospace],
+  body div [style*=monospace],
+  body p [style*=monospace],
+  body span [style*=monospace] {
+    font-family: var(--font-mono)!important
+  }
+  body a [style*="SF Semibold"],
+  body div [style*="SF Semibold"],
+  body p [style*="SF Semibold"],
+  body span [style*="SF Semibold"] {
+    font-weight: 700!important
+  }
+}
