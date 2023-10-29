@@ -1,0 +1,41 @@
+/*! ==UserStyle==
+@name WhatsApp UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for whatsapp.com
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/whatsapp.com/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document domain("whatsapp.com") {
+
+	@include import-poppins-font();
+
+	/* Define Extend Placeholders */
+	%font-family {
+		font-family: var(--font-sans);
+	}
+
+	.os-mac.font-fix,
+	.os-mac button,
+	.os-mac input,
+	.os-mac,
+	body,
+	body.native.darwin
+	body.native.darwin button,
+	body.native.darwin input {
+
+		@extend %font-family;
+	}
+
+	.UzMP7 {
+		font-size: 14.5px;
+		line-height: 1.3;
+	}
+}
