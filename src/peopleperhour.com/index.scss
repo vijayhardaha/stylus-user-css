@@ -15,7 +15,7 @@
 
 @-moz-document domain("peopleperhour.com") {
 
-	@include import-poppins-font();
+	@include import-sans-family();
 
 	/* Define Extend Placeholders */
 	%font-family {

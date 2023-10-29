@@ -15,8 +15,8 @@
 
 @-moz-document domain("linear.app") {
 
-	@include import-poppins-font();
-	@include import-courier-prime-font();
+	@include import-sans-family();
+	@include import-mono-family();
 
 	:root {
 		--font-regular: var(--font-sans);
