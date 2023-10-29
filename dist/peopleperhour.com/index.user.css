@@ -1,0 +1,81 @@
+/*! ==UserStyle==
+@name PPH UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for peopleperhour.com
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/peopleperhour.com/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("peopleperhour.com") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  :root {
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --poppins-font: "Poppins",sans-serif;
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  #stream-message-box .content .simple-message .textbox,
+  .body,
+  .btn,
+  .button,
+  .controller-hourlie.view-create .pseudo-input,
+  .controller-hourlie.view-new .pseudo-input,
+  .controller-hourlie.view-update .pseudo-input,
+  .daterangepicker-elem.daterangepicker-select,
+  .left-column h2,
+  .left-column h3,
+  .listings-sidebar .search-container .input-group,
+  .nano,
+  .pph-legacy-container .main-content h4,
+  .pph-legacy-container .main-content h5,
+  .pph-legacy-container .main-content h6,
+  .results .btn--contact,
+  .right-column h2,
+  .right-column h3,
+  .small,
+  .title-nano,
+  .title-new,
+  .title-small,
+  .widget-tags-input,
+  body,
+  body .select2-container,
+  button,
+  h4,
+  h5,
+  h6,
+  html,
+  input,
+  ol,
+  p,
+  select,
+  small,
+  textarea,
+  ul {
+    font-family: var(--font-sans)
+  }
+  .body,
+  .small,
+  body,
+  ol,
+  p,
+  small,
+  ul {
+    font-weight: 400
+  }
+  div.pph-row a[class*=dropdown_] {
+    font-weight: 600
+  }
+  #stream-message-box .content .simple-message .textbox textarea {
+    font-size: 1em;
+    font-weight: 500
+  }
+  div[class*=footer__nav] li a {
+    padding: .3em 0
+  }
+  h2[class*=footer__nav-title] {
+    padding-bottom: 0
+  }
+}
