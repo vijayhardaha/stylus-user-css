@@ -1,0 +1,41 @@
+{
+	"name": "stylus-user-css",
+	"version": "1.0.0",
+	"description": "A collection of Stylus CSS.",
+	"private": true,
+	"author": "Vijay Hardaha <https://twitter.com/vijayhardaha>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "gulp watch",
+		"build": "gulp build",
+		"lint": "stylelint src",
+		"fix": "stylelint src --fix"
+	},
+	"homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
+	"bugs": {
+		"url": "https://github.com/vijayhardaha/stylus-user-css/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
+	},
+	"devDependencies": {
+		"@wordpress/stylelint-config": "^21.27.0",
+		"autoprefixer": "^10.4.16",
+		"bootstrap": "^5.3.2",
+		"del": "^7.1.0",
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-filter": "^8.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^5.1.0",
+		"postcss": "^8.4.31",
+		"postcss-discard-duplicates": "^6.0.0",
+		"sass": "^1.69.5",
+		"stylelint": "14.16.1",
+		"stylelint-config-property-sort-order-smacss": "^9.1.0",
+		"stylelint-order": "^6.0.3"
+	}
+}
