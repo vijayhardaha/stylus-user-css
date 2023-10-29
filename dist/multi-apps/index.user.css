@@ -115,7 +115,6 @@ domain("127.0.0.1") {
   }
   :root {
     --__bodyFontStack: var(--font-sans);
-    --font-sans: var(--font-sans);
     --tnp-font-family: var(--font-sans);
     --font-primary: var(--font-sans);
     --font-display: var(--font-sans);
