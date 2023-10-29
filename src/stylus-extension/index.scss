@@ -32,11 +32,6 @@
 		font-size: 1rem;
 	}
 
-	#header details[open] summary {
-		position: absolute;
-		margin-top: calc(-2 * var(--pad));
-	}
-
 	.CodeMirror {
 		font-family: var(--font-mono);
 		font-size: 1rem;
