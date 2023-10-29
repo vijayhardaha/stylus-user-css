@@ -11,9 +11,7 @@
 @preprocessor default
 ==/UserStyle== */
 
-@import "./variables";
 @import "../helpers/mixins";
-@import "./mixins";
 
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
 
