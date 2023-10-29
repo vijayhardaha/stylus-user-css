@@ -1,0 +1,224 @@
+/*! ==UserStyle==
+@name Multi Apps UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for multiple apps.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/multi-apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?([a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+	regexp("^(https?://)(192.168.1)(.*)"),
+	regexp("^https://(.*)(basecamp|clickup|gpldl|zipbooks|mailtrap|textfixer)(.*)"),
+	regexp("^https://(.*)(discord|github|cloudflare|cloudways|youtube|vimeo|dropbox|netlify|vercel|nextui)(.*)"), domain("127.0.0.1") {
+
+	@include import-sans-family();
+	@include import-mono-family();
+
+	/* Define Extend Placeholders */
+	%font-family {
+		font-family: var(--font-sans);
+	}
+
+	%font-family-imp {
+		font-family: var(--font-sans) !important;
+	}
+
+	%mono-family {
+		font-family: var(--font-mono);
+	}
+
+	%mono-family-imp {
+		font-family: var(--font-mono) !important;
+	}
+
+	// Define font variables
+	:root {
+		--__bodyFontStack: var(--font-sans);
+		--font-sans: var(--font-sans);
+		--tnp-font-family: var(--font-sans);
+		--font-primary: var(--font-sans);
+		--font-display: var(--font-sans);
+		--font-headline: var(--font-sans);
+		--font-system: var(--font-sans);
+		--cu-font-family: var(--font-sans);
+		--font-family-apple: var(--font-sans);
+	}
+
+	// Apply font to various elements
+	html,
+	body,
+	a,
+	#wpadminbar *,
+	body.wpallimport-plugin {
+
+		@extend %font-family;
+	}
+
+	// Headings
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		@extend %font-family;
+	}
+
+	// Code Blocks
+	.code,
+	code {
+
+		@extend %mono-family;
+	}
+
+	// Buttons and Inputs
+	.button,
+	input,
+	select,
+	textarea {
+
+		@extend %font-family;
+	}
+
+	// Navigation
+	#primary-navigation li,
+	#primary-navigation li a {
+
+		@extend %font-family;
+	}
+
+	// Content Blocks
+	.comment-bar__send-btn,
+	.cron-job-tab2 h4,
+	.single-title,
+	.widget .widget-title {
+
+		@extend %font-family;
+	}
+
+	// Text and Typography
+	.markdown-body,
+	.md-subheader,
+	.ql-container {
+
+		@extend %font-family;
+	}
+
+	// Media and UI Elements
+	.yith-plugin-ui,
+	.media-frame,
+	.media-modal {
+
+		@extend %font-family;
+	}
+
+	// Elements with Specific Class Patterns
+	[class*="c_"],
+	[class*="tinvwl-"],
+	[class*="tinv-"],
+	[class*="tinvwl-"] *,
+	[class*="tinv-"] * {
+
+		@extend %font-family;
+	}
+
+	// Maestro Styles
+	.maestro {
+
+		body:not(.dig-Button),
+		input:not(.dig-Button),
+		textarea:not(.dig-Button),
+		select:not(.dig-Button),
+		button:not(.dig-Button),
+		.normal:not(.dig-Button) {
+
+			@extend %font-family;
+		}
+	}
+
+	// Facebook Styles
+	#facebook {
+
+		.system-fonts--body.sf,
+		._-kb.sf,
+		._-kb.mac,
+		._8esf ._1gaz,
+		[class*="_"],
+		[class*="_"] [class*="_"] {
+
+			@extend %font-family;
+		}
+	}
+
+	// Global Elements
+	ytd-app * {
+
+		@extend %font-family;
+	}
+
+	// Specific Content Blocks
+	#content [class*="ytd-"] {
+
+		@extend %font-family-imp;
+	}
+
+	// Query Monitor
+	#query-monitor-main {
+
+		dl,
+		dt,
+		dd,
+		button,
+		caption,
+		label,
+		select,
+		table,
+		td,
+		th,
+		ul,
+		ol,
+		li,
+		code,
+		pre,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		section,
+		nav,
+		p {
+
+			@extend %font-family-imp;
+		}
+	}
+
+	// Style for CodeMirror
+	.qm code,
+	.qm pre {
+
+		@extend %mono-family-imp;
+	}
+
+	// CodeMirror style
+	.cm-s-darcula.CodeMirror,
+	.CodeMirror {
+
+		@extend %mono-family;
+	}
+
+	// Markdown code formatting
+	.markdown-body pre > code {
+		white-space: pre-wrap;
+	}
+}
