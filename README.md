@@ -12,6 +12,7 @@ Here's a list of available user CSS files in this project:
 | BankingApps         | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/banking-apps/index.user.css)        |
 | ChatGPT             | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/chatgpt/index.user.css)             |
 | Cra-Nsdl.com        | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/cra-nsdl.com/index.user.css)        |
+| EasyHindiTyping.com | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/easyhindityping.com/index.user.css) |
 | eCommerceApps       | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/ecommerce-apps/index.user.css)      |
 | InvestmentApps      | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/investment-apps/index.user.css)     |
 | Linear.app          | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/linear.apps/index.user.css)         |
