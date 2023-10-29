@@ -1,0 +1,47 @@
+/*! ==UserStyle==
+@name Stylus Extension UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for Stylus Extension page.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/dist/stylus-extension/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "./variables";
+@import "../helpers/mixins";
+@import "./mixins";
+
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+
+	@include import-poppins-font();
+	@include import-courier-prime-font();
+
+	:root {
+		--family: var(--font-sans);
+		--input-height: 30px;
+	}
+
+	html {
+		font-family: var(--font-sans);
+		font-size: 14px;
+	}
+
+	body {
+		font-size: 1rem;
+	}
+
+	#header details[open] summary {
+		position: absolute;
+		margin-top: calc(-2 * var(--pad));
+	}
+
+	.CodeMirror {
+		font-family: var(--font-mono);
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}

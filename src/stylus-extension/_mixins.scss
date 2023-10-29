@@ -1,0 +1,25 @@
+/* stylelint-disable scss/no-global-function-names */
+// Include Bootstrap Button Mixin
+@mixin bootstrap-button($btn-color: $primary, $btn-bg: $white) {
+	display: inline-block;
+	padding: $btn-padding-y $btn-padding-x;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	border: $btn-border-width solid transparent;
+	border-radius: $btn-border-radius;
+	background-color: $btn-bg;
+	color: $btn-color;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	user-select: none;
+	// Hover variables
+	$btn-hover-bg: darken($btn-bg, 10%);
+
+	&:hover {
+		background-color: $btn-hover-bg;
+		color: $btn-color;
+	}
+}
