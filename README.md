@@ -9,7 +9,7 @@ Here's a list of available user CSS files in this project:
 - **ChatGPT UI**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/chatgpt/index.user.css)
 - **StackOverflow UI**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)
 - **WordPress.org UI**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/wordpress/index.user.css)
-- **Stylus Extension UI**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/dist/stylus-extension/index.user.css)
+- **Stylus Extension UI**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stylus-extension/index.user.css)
 
 ## Author
 
