@@ -1,24 +1,45 @@
 /*! ==UserStyle==
-@name ChatGPT UI
+@name Stylus Extension UI
 @namespace github.com/openstyles/stylus
 @version 1.0.0
-@description A new userstyle for Chat GPT UI (https://openai.com)
+@description A new userstyle for Stylus Extension page.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
 @supportURL https://github.com/vijayhardaha/stylus-user-css/issues
-@updateURL https://github.com/vijayhardaha/stylus-user-css/dist/chatgpt/index.user.css
+@updateURL https://github.com/vijayhardaha/stylus-user-css/dist/stylus-extension/index.user.css
 @license MIT
 @preprocessor default
 ==/UserStyle== */
-@-moz-document domain("openai.com") {
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   :root {
     --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     --poppins-font: "Poppins",sans-serif;
     --font-sans: var(--poppins-font, var(--default-sans))
   }
+  :root {
+    --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    --courier-prime-font: "Courier Prime",monospace;
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --family: var(--font-sans);
+    --input-height: 30px
+  }
   html {
     font-family: var(--font-sans);
     font-size: 14px
+  }
+  body {
+    font-size: 1rem
+  }
+  #header details[open] summary {
+    position: absolute;
+    margin-top: calc(-2 * var(--pad))
+  }
+  .CodeMirror {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.6
   }
 }
