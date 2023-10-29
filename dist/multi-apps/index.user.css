@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Multi Apps UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for multiple apps.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -51,6 +51,7 @@ domain("127.0.0.1") {
   .media-frame,
   .media-modal,
   .ql-container,
+  .simplenote-app *,
   .single-title,
   .widget .widget-title,
   .yith-plugin-ui,
@@ -106,6 +107,8 @@ domain("127.0.0.1") {
   .CodeMirror,
   .cm-s-darcula.CodeMirror,
   .code,
+  .simplenote-app code,
+  .simplenote-app code *,
   code {
     font-family: var(--font-mono)
   }
