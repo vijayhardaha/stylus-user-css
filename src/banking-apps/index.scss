@@ -1,0 +1,64 @@
+/*! ==UserStyle==
+@name Banking Apps UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for banking apps.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/banking-apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document domain("icicibank.com"),
+	domain("onlinesbi.sbi"),
+	domain("incometax.gov.in"),
+	domain("insight.gov.in") {
+
+	@include import-sans-family();
+
+	/* Define Extend Placeholders */
+	%font-family {
+		font-family: var(--font-sans);
+	}
+	%font-family-imp {
+		font-family: var(--font-sans) !important;
+	}
+
+	body,
+	*,
+	::after,
+	::before {
+
+		@extend %font-family-imp;
+	}
+
+	*,
+	body {
+
+		@extend %font-family;
+	}
+
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.subtitle1,
+	.subtitle2,
+	.caption,
+	.hintText {
+
+		@extend %font-family-imp;
+	}
+}
