@@ -1,0 +1,24 @@
+/*! ==UserStyle==
+@name AP Website UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for acharyaprashant.org.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/acharyaprashant.org/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document domain("acharyaprashant.org") {
+
+	@include import-poppins-font();
+
+	html,
+	.font-en {
+		font-family: var(--font-sans);
+	}
+}
