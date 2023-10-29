@@ -1,0 +1,33 @@
+/*! ==UserStyle==
+@name Banking Apps UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for banking apps.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/banking-apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("icicibank.com"),
+domain("onlinesbi.sbi"),
+domain("incometax.gov.in"),
+domain("insight.gov.in") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  :root {
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --poppins-font: "Poppins",sans-serif;
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  *,
+  body {
+    font-family: var(--font-sans)
+  }
+  *,
+  ::after,
+  ::before,
+  body {
+    font-family: var(--font-sans)!important
+  }
+}
