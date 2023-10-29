@@ -15,7 +15,7 @@
 
 @-moz-document regexp("^(https?:\\/\\/)?(www\\.)?([a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 	regexp("^(https?://)(192.168.1)(.*)"),
-	regexp("^https://(.*)(basecamp|clickup|gpldl|zipbooks|mailtrap|textfixer)(.*)"),
+	regexp("^https://(.*)(basecamp|clickup|gpldl|zipbooks|mailtrap)(.*)"),
 	regexp("^https://(.*)(discord|github|cloudflare|cloudways|youtube|vimeo|dropbox|netlify|vercel|nextui)(.*)"),
 	domain("127.0.0.1"),
 	domain("app.simplenote.com") {
