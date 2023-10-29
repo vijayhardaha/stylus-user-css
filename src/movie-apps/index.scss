@@ -1,0 +1,54 @@
+/*! ==UserStyle==
+@name Movie Apps UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for movie apps.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/movie-apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
+
+	@include import-poppins-font();
+
+	/* Define Extend Placeholders */
+	%font-family {
+		font-family: var(--font-sans);
+	}
+
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.button,
+	#primary-navigation li,
+	#primary-navigation li a,
+	.latestPost .title,
+	.latestPost .title a,
+	.single-title {
+
+		@extend %font-family;
+	}
+
+	#sidebar,
+	#commentsAdd {
+		display: none !important;
+	}
+
+	#page .article {
+		width: 100%;
+	}
+
+	.imdbwp {
+		max-width: 100%;
+	}
+}
