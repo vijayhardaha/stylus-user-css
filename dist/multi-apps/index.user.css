@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Multi Apps UI
 @namespace github.com/openstyles/stylus
-@version 1.0.1
+@version 1.0.2
 @description A new userstyle for multiple apps.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -14,7 +14,8 @@
 regexp("^(https?://)(192.168.1)(.*)"),
 regexp("^https://(.*)(basecamp|clickup|gpldl|zipbooks|mailtrap|textfixer)(.*)"),
 regexp("^https://(.*)(discord|github|cloudflare|cloudways|youtube|vimeo|dropbox|netlify|vercel|nextui)(.*)"),
-domain("127.0.0.1") {
+domain("127.0.0.1"),
+domain("app.simplenote.com") {
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Federo&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
