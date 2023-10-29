@@ -9,6 +9,7 @@ Here's a list of available user CSS files in this project:
 | Website Name        | Install CSS Link                                                                                                           |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | AcharyaPrashant.org | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/acharyaprashant.org/index.user.css) |
+| BankingApps         | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/banking-apps/index.user.css)        |
 | ChatGPT             | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/chatgpt/index.user.css)             |
 | eCommerceApps       | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/ecommerce-apps/index.user.css)      |
 | InvestmentApps      | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/investment-apps/index.user.css)     |
