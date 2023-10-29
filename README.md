@@ -9,6 +9,7 @@ Here's a list of available user CSS files in this project:
 - **AcharyaPrashant.org**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/acharyaprashant.org/index.user.css)
 - **ChatGPT**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/chatgpt/index.user.css)
 - **InvestmentApps**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/investment-apps/index.user.css)
+- **Linear.app**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/linear.apps/index.user.css)
 - **PeoplePerHour.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/peopleperhour.com/index.user.css)
 - **StackOverflow.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)
 - **StylusExtension**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stylus-extension/index.user.css)
