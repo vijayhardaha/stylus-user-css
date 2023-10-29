@@ -1,0 +1,193 @@
+/*! ==UserStyle==
+@name NSDL Web UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for cra-nsdl.com
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/cra-nsdl.com/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document domain("cra-nsdl.com") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  :root {
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --poppins-font: "Poppins",sans-serif;
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  *,
+  body body * {
+    font-family: var(--font-sans)!important
+  }
+  #page_wrapper > div > header > div,
+  .page,
+  .shadow-element,
+  .shadow-sm,
+  .table-border {
+    box-shadow: none!important
+  }
+  .rounded,
+  .shadow-element,
+  .shadow-sm,
+  .table-border {
+    border-radius: 0
+  }
+  html {
+    font-size: 16px
+  }
+  body,
+  p,
+  td {
+    font-size: 1rem
+  }
+  #page_wrapper {
+    width: 1200px;
+    max-width: 100%
+  }
+  .example1 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd
+  }
+  .example1 h3 {
+    line-height: 40px
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 {
+    padding-right: 0!important;
+    padding-left: 0!important
+  }
+  ul.todoPoint {
+    margin: 0
+  }
+  ul.todoPoint li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    gap: 8px
+  }
+  ul.todoPoint li p {
+    margin: 0!important;
+    font-size: 1.125rem!important;
+    font-weight: 700
+  }
+  .shadow-element,
+  .shadow-sm {
+    height: auto
+  }
+  .shadow-element {
+    border: 0!important
+  }
+  .CRA-loginForm {
+    padding: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5)
+  }
+  .CRA-loginForm > .p-2 {
+    padding: .75rem 1.5rem!important
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 > div.col-sm.CRA-loginForm > div:nth-child(1) > div:nth-child(1),
+  #pass > form > div:nth-child(4) {
+    margin: 0!important;
+    margin-bottom: 1rem!important;
+    text-align: left!important
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 > div.col-sm.CRA-loginForm > div:nth-child(1) > div:nth-child(1) > p,
+  #pass > form > div:nth-child(4) > p {
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 1.75rem!important;
+    font-weight: 700
+  }
+  form input[type=button],
+  form input[type=reset],
+  form input[type=submit] {
+    cursor: pointer
+  }
+  form input,
+  form input[type=email],
+  form input[type=number],
+  form input[type=password],
+  form input[type=search],
+  form input[type=text],
+  form select {
+    width: 100%;
+    padding: .625rem .75rem;
+    border: 1px solid #ddd;
+    font-size: 1em
+  }
+  form input[type=radio] {
+    cursor: pointer
+  }
+  form input[type=radio] + label {
+    cursor: pointer
+  }
+  form .row {
+    margin: 0!important;
+    margin-bottom: 1rem!important
+  }
+  form .row > * {
+    flex: none;
+    width: 100%;
+    padding: 0!important
+  }
+  form .row > table {
+    width: auto
+  }
+  form .row .rdolbl {
+    margin-left: 0!important
+  }
+  form .row .col-4,
+  form .row .col-6,
+  form .row .col-8 {
+    margin: 0!important;
+    font-size: .85rem!important;
+    font-weight: 600;
+    text-align: left!important
+  }
+  form .row .col-4 span,
+  form .row .col-6 span,
+  form .row .col-8 span {
+    font-size: inherit!important
+  }
+  form table > tbody > tr:nth-child(1) > td:nth-child(1) {
+    padding-left: 0!important;
+    font-size: inherit!important;
+    text-align: left!important
+  }
+  form .shadow-element {
+    margin: 0
+  }
+  form .shadow-element ul {
+    padding: 0!important;
+    list-style-position: inside
+  }
+  form .shadow-element ul li {
+    padding-left: 1rem!important
+  }
+  form .submitbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    margin: 0;
+    margin: 0 auto;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center
+  }
+  form .submitbutton:hover {
+    background-color: #b55c23
+  }
+  .table-border {
+    padding: 1rem
+  }
+  .table-border > tbody > tr:nth-child(2) > td:nth-child(1),
+  .table-border > tbody > tr:nth-child(3) > td:nth-child(1),
+  .table-border > tbody > tr:nth-child(4) > td:nth-child(1) {
+    padding-left: 0!important
+  }
+}
