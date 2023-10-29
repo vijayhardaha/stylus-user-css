@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Multi Apps UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for multiple apps.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -219,5 +219,20 @@
 	// Markdown code formatting
 	.markdown-body pre > code {
 		white-space: pre-wrap;
+	}
+
+	// Simplenote app fonts
+	.simplenote-app {
+
+		* {
+
+			@extend %font-family;
+		}
+
+		code,
+		code * {
+
+			@extend %mono-family;
+		}
 	}
 }
