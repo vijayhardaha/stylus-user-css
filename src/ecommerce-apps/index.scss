@@ -1,0 +1,58 @@
+/*! ==UserStyle==
+@name eCommerce Apps UI
+@namespace github.com/openstyles/stylus
+@version 1.0.0
+@description A new userstyle for ecommerce apps.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/ecommerce-apps/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "../helpers/mixins";
+
+@-moz-document domain("amazon.in"),
+	domain("flipkart.com") {
+
+	@include import-poppins-font();
+
+	/* Define Extend Placeholders */
+	%font-family {
+		font-family: var(--font-sans);
+	}
+
+	.a-ember body,
+	.fonts-loaded body,
+	.fonts-loaded button,
+	.fonts-loaded input,
+	.fonts-loaded select,
+	.fonts-loaded textarea,
+	body,
+	button,
+	input,
+	select,
+	textarea {
+
+		@extend %font-family;
+	}
+
+	.useInterFont.en-fonts-loaded {
+
+		body,
+		button,
+		input,
+		select,
+		textarea {
+
+			@extend %font-family;
+		}
+	}
+
+	._1ch8e_ div > .YBLJE4 ._1XjE3T,
+	._58bkzqd {
+
+		@extend %font-family;
+	}
+}
