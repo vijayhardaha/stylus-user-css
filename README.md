@@ -13,6 +13,7 @@ Here's a list of available user CSS files in this project:
 - **PeoplePerHour.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/peopleperhour.com/index.user.css)
 - **StackOverflow.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)
 - **StylusExtension**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stylus-extension/index.user.css)
+- **Web.Skype.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/web.skype.com/index.user.css)
 - **WhatsApp.com**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/whatsapp.com/index.user.css)
 - **WordPress.org**: [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/wordpress/index.user.css)
 
