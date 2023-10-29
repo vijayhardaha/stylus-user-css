@@ -15,10 +15,13 @@
 
 @-moz-document regexp("^(https?:\\/\\/)?(www\\.)?([a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 	regexp("^(https?://)(192.168.1)(.*)"),
-	regexp("^https://(.*)(basecamp|clickup|gpldl|zipbooks|mailtrap)(.*)"),
-	regexp("^https://(.*)(discord|github|cloudflare|cloudways|youtube|vimeo|dropbox|netlify|vercel|nextui)(.*)"),
-	domain("127.0.0.1"),
-	domain("app.simplenote.com") {
+	regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
+	regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
+	regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
+	regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
+	regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
+	regexp("^https://(.*)(basecamp.com|clickup.com|simplenote.com|zipbooks.com)(.*)"),
+	domain("127.0.0.1") {
 
 	@include import-sans-family();
 	@include import-mono-family();
