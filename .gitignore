@@ -1,0 +1,44 @@
+# Operating System files.
+.DS_Store
+Thumbs.db
+
+# Grunt.
+none
+
+# Sass.
+.sass-cache/
+
+# NPM.
+.npm
+
+# Logs.
+*.log
+logs/
+
+# Eslint Cache.
+.eslintcache
+
+# REPL.
+.node_repl_history
+
+# node-waf.
+.lock-wscript
+
+# Environment files.
+.pnpm-debug.log
+npm-debug.log
+wp-cli.local.yml
+yarn-error.log
+
+# Built packages.
+build/
+coverage/
+
+# Project files.
+node_modules/
+
+# Patches.
+*.diff
+*.orig
+*.patch
+*.rej
