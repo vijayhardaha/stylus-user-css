@@ -1,0 +1,21 @@
+/*!
+==UserStyle==
+@name           stackoverflow.com - 13/09/2022, 03:22:43
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle==
+*/
+@-moz-document domain("wordpress.org") {
+  .js-comment-actions .s-btn.s-btn__unset,
+  .js-comment-actions .s-btn.s-btn__unset:active,
+  .js-comment-actions .s-btn.s-btn__unset:focus,
+  .js-comment-actions .s-btn.s-btn__unset:hover {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -moz-user-select: none;
+    user-select: none
+  }
+}
