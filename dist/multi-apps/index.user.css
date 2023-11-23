@@ -17,7 +17,8 @@ regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
 regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
-regexp("^https://(.*)(basecamp.com|clickup.com|simplenote.com|zipbooks.com)(.*)"),
+regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
+regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 domain("127.0.0.1") {
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Federo&display=swap);
@@ -128,7 +129,8 @@ domain("127.0.0.1") {
     --font-headline: var(--font-sans);
     --font-system: var(--font-sans);
     --cu-font-family: var(--font-sans);
-    --font-family-apple: var(--font-sans)
+    --font-family-apple: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans)
   }
   .markdown-body pre > code {
     white-space: pre-wrap
