@@ -20,7 +20,8 @@
 	regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 	regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
 	regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
-	regexp("^https://(.*)(basecamp.com|clickup.com|simplenote.com|zipbooks.com)(.*)"),
+	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
+	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 	domain("127.0.0.1") {
 
 	@include import-sans-family();
@@ -53,6 +54,7 @@
 		--font-system: var(--font-sans);
 		--cu-font-family: var(--font-sans);
 		--font-family-apple: var(--font-sans);
+		--sn-stylekit-sans-serif-font: var(--font-sans);
 	}
 
 	// Apply font to various elements
