@@ -126,7 +126,9 @@
   }
   body #languageTextarea,
   body textarea.textarea-for-translation {
-    height: 800px;
+    width: 100%!important;
+    height: 700px!important;
+    margin: 0!important;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 0;
@@ -188,18 +190,35 @@
   }
   #TranslationWrapper,
   #translate > div,
+  body .centered-mobile-container,
   body > div.body-container > div.row,
   body > div.body-container > div.row div.span9,
   body > div.container.body-container > div.row > div {
     width: 100%;
     margin: 0
   }
+  body #nav_list {
+    display: flex;
+    z-index: 10;
+    top: 5px;
+    left: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0!important;
+    border: 1px solid #333;
+    font-size: 1.25rem!important;
+    line-height: 1
+  }
   #translate > div > div:nth-child(1),
   body #HelpBox,
   body .additional-info,
   body .additonal-info,
+  body .centered-mobile-container + div,
   body .mobile-advertisement-label,
-  body .mobile-sides body .centered-mobile-container + div,
+  body .mobile-sides,
+  body .site-header + .margin-sides,
   body .subnav-fixed,
   body div.body-container > div.row > div.span12 > div:not(#translate),
   body div.body-container > div.row > div.span12 > hr,
