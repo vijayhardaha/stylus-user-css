@@ -231,7 +231,8 @@
 	#translate > div,
 	#TranslationWrapper,
 	body > div.body-container > div.row,
-	body > div.body-container > div.row div.span9 {
+	body > div.body-container > div.row div.span9,
+	body .centered-mobile-container {
 		width: 100%;
 		margin: 0;
 	}
@@ -250,7 +251,7 @@
 	body .additonal-info,
 	body #HelpBox,
 	body .mobile-advertisement-label,
-	body .mobile-sides
+	body .mobile-sides,
 	body .centered-mobile-container + div {
 		display: none;
 	}

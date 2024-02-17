@@ -198,6 +198,8 @@
   body #HelpBox,
   body .additional-info,
   body .additonal-info,
+  body .mobile-advertisement-label,
+  body .mobile-sides body .centered-mobile-container + div,
   body .subnav-fixed,
   body div.body-container > div.row > div.span12 > div:not(#translate),
   body div.body-container > div.row > div.span12 > hr,
