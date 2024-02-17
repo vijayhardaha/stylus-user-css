@@ -10,7 +10,7 @@
 @license MIT
 @preprocessor default
 ==/UserStyle== */
-@-moz-document regexp("^(https?://)?(www.)?(w+(.w+)*)(/w+)?(/(wp-admin|backoffice|wp-login.php)(.*))?$"),
+@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(\\w+(\\.\\w+)*)(\\/\\w+)?(\\/(wp-admin|backoffice|wp-login\\.php)(.*))?$"),
 regexp("^(https?://)(192.168.1)(.*)"),
 regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
