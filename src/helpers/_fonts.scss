@@ -9,22 +9,15 @@ $font-family-monospace: "SFMono-Regular", "Menlo", "Monaco", "Consolas",
 
 	@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
 	@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 	:root {
 		--default-sans: #{$font-family-sans-serif};
 		--poppins-font: "Poppins", sans-serif;
-		--font-sans: var(--poppins-font, var(--default-sans));
-	}
-}
-
-// Import Federo font and define CSS variables
-@mixin import-federo-font() {
-
-	:root {
-		--default-sans: #{$font-family-sans-serif};
+		--js-font: "Josefin Sans", sans-serif;
 		--federo-font: "Federo", sans-serif;
-		--font-sans: var(--federo-font, var(--default-sans));
+		--font-sans: var(--poppins-font, var(--default-sans));
 	}
 }
 
@@ -42,12 +35,6 @@ $font-family-monospace: "SFMono-Regular", "Menlo", "Monaco", "Consolas",
 @mixin import-sans-family() {
 
 	@include import-poppins-font();
-}
-
-// Import Federo font for the serif font family
-@mixin import-serif-family() {
-
-	@include import-federo-font();
 }
 
 // Import Courier Prime font for the monospace font family
