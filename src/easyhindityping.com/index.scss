@@ -248,7 +248,10 @@
 	body .subnav-fixed,
 	body .additional-info,
 	body .additonal-info,
-	body #HelpBox {
+	body #HelpBox,
+	body .mobile-advertisement-label,
+	body .mobile-sides
+	body .centered-mobile-container + div {
 		display: none;
 	}
 }
