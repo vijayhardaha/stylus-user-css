@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name ChatGPT UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for Chat GPT UI (https://openai.com)
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -20,7 +20,7 @@
     --poppins-font: "Poppins",sans-serif;
     --js-font: "Josefin Sans",sans-serif;
     --federo-font: "Federo",sans-serif;
-    --font-sans: var(--poppins-font, var(--default-sans))
+    --font-sans: var(--js-font, var(--default-sans))
   }
   html {
     font-family: var(--font-sans);

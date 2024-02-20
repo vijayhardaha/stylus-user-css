@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Investment Apps UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for investment apps.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -22,7 +22,7 @@ domain("smallcase.com") {
     --poppins-font: "Poppins",sans-serif;
     --js-font: "Josefin Sans",sans-serif;
     --federo-font: "Federo",sans-serif;
-    --font-sans: var(--poppins-font, var(--default-sans))
+    --font-sans: var(--js-font, var(--default-sans))
   }
   .font-semibold,
   .outer-app *,
