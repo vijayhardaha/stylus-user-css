@@ -115,6 +115,8 @@ domain("127.0.0.1") {
   .CodeMirror,
   .cm-s-darcula.CodeMirror,
   .code,
+  .markdown-body code,
+  .markdown-body pre,
   .simplenote-app code,
   .simplenote-app code *,
   code {
