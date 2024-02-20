@@ -62,8 +62,7 @@
 	body,
 	a,
 	#wpadminbar *,
-	body.wpallimport-plugin,
-	div#root * {
+	body.wpallimport-plugin {
 
 		@extend %font-family;
 	}
