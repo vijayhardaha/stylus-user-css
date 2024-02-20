@@ -5,7 +5,7 @@ $font-family-monospace: "SFMono-Regular", "Menlo", "Monaco", "Consolas",
 	"Liberation Mono", "Courier New", monospace;
 
 // Import Poppins font for the sans-serif font family
-@mixin import-sans-family() {
+@mixin import-sans-family($font: js-font) {
 
 	@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
 	@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
@@ -17,7 +17,7 @@ $font-family-monospace: "SFMono-Regular", "Menlo", "Monaco", "Consolas",
 		--poppins-font: "Poppins", sans-serif;
 		--js-font: "Josefin Sans", sans-serif;
 		--federo-font: "Federo", sans-serif;
-		--font-sans: var(--js-font, var(--default-sans));
+		--font-sans: var(--#{$font}, var(--default-sans));
 	}
 }
 
