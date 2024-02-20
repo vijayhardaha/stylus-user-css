@@ -71,7 +71,6 @@ domain("127.0.0.1") {
   a,
   body,
   body.wpallimport-plugin,
-  div#root *,
   h1,
   h2,
   h3,
