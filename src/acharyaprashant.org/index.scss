@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name AP Website UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for acharyaprashant.org.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -15,7 +15,7 @@
 
 @-moz-document domain("acharyaprashant.org") {
 
-	@include import-sans-family();
+	@include import-sans-family(poppins-font);
 
 	html,
 	.font-en {

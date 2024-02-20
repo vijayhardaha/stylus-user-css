@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Banking Apps UI
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for banking apps.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -18,12 +18,13 @@
 	domain("incometax.gov.in"),
 	domain("insight.gov.in") {
 
-	@include import-sans-family();
+	@include import-sans-family(poppins-font);
 
 	/* Define Extend Placeholders */
 	%font-family {
 		font-family: var(--font-sans);
 	}
+
 	%font-family-imp {
 		font-family: var(--font-sans) !important;
 	}
