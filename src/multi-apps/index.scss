@@ -224,8 +224,17 @@
 	}
 
 	// Markdown code formatting
-	.markdown-body pre > code {
-		white-space: pre-wrap;
+	.markdown-body {
+
+		code,
+		pre {
+
+			@extend %mono-family;
+		}
+
+		pre > code {
+			white-space: pre-wrap;
+		}
 	}
 
 	// Simplenote app fonts
