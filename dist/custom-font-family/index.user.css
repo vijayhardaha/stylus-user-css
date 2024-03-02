@@ -1,0 +1,947 @@
+/*! ==UserStyle==
+@name Custom Font Family
+@namespace github.com/openstyles/stylus
+@version 1.0.7
+@description A new userstyle for custom font family on multiple websites.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/custom-font-family/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+@-moz-document regexp("(.*)"),
+url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Federo&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+  :root {
+    --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --courier-prime-font: "Courier Prime",monospace;
+    --federo-font: "Federo",sans-serif;
+    --josefin-sans-font: "Josefin Sans",sans-serif;
+    --poppins-font: "Poppins",sans-serif
+  }
+}
+@-moz-document domain("acharyaprashant.org") {
+  :root {
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  .font-en,
+  html {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("icicibank.com"),
+domain("onlinesbi.sbi"),
+domain("incometax.gov.in"),
+domain("insight.gov.in") {
+  :root {
+    --font-sans: var(--poppins-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before,
+  body {
+    font-family: var(--font-sans)!important
+  }
+  .caption,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  .hintText,
+  .subtitle1,
+  .subtitle2,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans)!important
+  }
+}
+@-moz-document domain("openai.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  html {
+    font-family: var(--font-sans);
+    font-size: 14px
+  }
+}
+@-moz-document domain("cra-nsdl.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  html {
+    font-size: 16px
+  }
+  *,
+  body * {
+    font-family: var(--font-sans)!important
+  }
+  body,
+  p,
+  td {
+    font-size: 1rem
+  }
+  #page_wrapper {
+    width: 1200px;
+    max-width: 100%
+  }
+  #page_wrapper > div > header > div,
+  .page {
+    box-shadow: none!important
+  }
+  .example1 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd
+  }
+  .example1 h3 {
+    line-height: 40px
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 {
+    padding-right: 0!important;
+    padding-left: 0!important
+  }
+  ul.todoPoint {
+    margin: 0
+  }
+  ul.todoPoint li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    gap: 8px
+  }
+  ul.todoPoint li p {
+    margin: 0!important;
+    font-size: 1.125rem!important;
+    font-weight: 700
+  }
+  .shadow-element,
+  .shadow-sm {
+    height: auto;
+    border-radius: 0;
+    box-shadow: none!important
+  }
+  .shadow-element {
+    border: 0!important
+  }
+  .rounded {
+    border-radius: 0
+  }
+  .CRA-loginForm {
+    padding: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5)
+  }
+  .CRA-loginForm > .p-2 {
+    padding: .75rem 1.5rem!important
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 > div.col-sm.CRA-loginForm > div:nth-child(1) > div:nth-child(1),
+  #pass > form > div:nth-child(4) {
+    margin: 0!important;
+    margin-bottom: 1rem!important;
+    text-align: left!important
+  }
+  #page_wrapper > div > table > tbody > tr:nth-child(1) > td > div.row.px-3 > div.col-sm.CRA-loginForm > div:nth-child(1) > div:nth-child(1) > p,
+  #pass > form > div:nth-child(4) > p {
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 1.75rem!important;
+    font-weight: 700
+  }
+  form input[type=button],
+  form input[type=reset],
+  form input[type=submit] {
+    cursor: pointer
+  }
+  form input,
+  form input[type=email],
+  form input[type=number],
+  form input[type=password],
+  form input[type=search],
+  form input[type=text],
+  form select {
+    width: 100%;
+    padding: .625rem .75rem;
+    border: 1px solid #ddd;
+    font-size: 1em
+  }
+  form input[type=radio] {
+    cursor: pointer
+  }
+  form input[type=radio] + label {
+    cursor: pointer
+  }
+  form .row {
+    margin: 0!important;
+    margin-bottom: 1rem!important
+  }
+  form .row > * {
+    flex: none;
+    width: 100%;
+    padding: 0!important
+  }
+  form .row > table {
+    width: auto
+  }
+  form .row .rdolbl {
+    margin-left: 0!important
+  }
+  form .row .col-4,
+  form .row .col-6,
+  form .row .col-8 {
+    margin: 0!important;
+    font-size: .85rem!important;
+    font-weight: 600;
+    text-align: left!important
+  }
+  form .row .col-4 span,
+  form .row .col-6 span,
+  form .row .col-8 span {
+    font-size: inherit!important
+  }
+  form table > tbody > tr:nth-child(1) > td:nth-child(1) {
+    padding-left: 0!important;
+    font-size: inherit!important;
+    text-align: left!important
+  }
+  form .shadow-element {
+    margin: 0
+  }
+  form .shadow-element ul {
+    padding: 0!important;
+    list-style-position: inside
+  }
+  form .shadow-element ul li {
+    padding-left: 1rem!important
+  }
+  form .submitbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    margin: 0;
+    margin: 0 auto;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center
+  }
+  form .submitbutton:hover {
+    background-color: #b55c23
+  }
+  .table-border {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none!important
+  }
+  .table-border > tbody > tr:nth-child(2) > td:nth-child(1),
+  .table-border > tbody > tr:nth-child(3) > td:nth-child(1),
+  .table-border > tbody > tr:nth-child(4) > td:nth-child(1) {
+    padding-left: 0!important
+  }
+}
+@-moz-document domain("easyhindityping.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
+  }
+  html {
+    font-size: 14px
+  }
+  #NavBar li,
+  .navbar,
+  body,
+  button,
+  footer,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)!important
+  }
+  body {
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: var(--font-sans)
+  }
+  body > .body-container {
+    width: 100%;
+    margin-top: 0;
+    padding-right: 1rem;
+    padding-left: 1rem
+  }
+  body > .body-container > div.site-header {
+    margin: 0
+  }
+  body > .body-container > div.site-header > h1 {
+    margin: 0;
+    font-weight: 700
+  }
+  body > .body-container > .row .span9 > div.contains {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0
+  }
+  body > .body-container > .row .span3 {
+    display: none
+  }
+  body div.navbar.navbar-fixed-top > div > div > a.brand.brand-mobile {
+    color: #fff;
+    font-weight: 900
+  }
+  body #NavBar {
+    max-width: 100%;
+    margin: 0
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    margin-top: 0!important;
+    margin-bottom: 1rem!important;
+    line-height: 1.5!important
+  }
+  body .uneditable-input,
+  body input[type=color],
+  body input[type=date],
+  body input[type=datetime-local],
+  body input[type=datetime],
+  body input[type=email],
+  body input[type=month],
+  body input[type=number],
+  body input[type=password],
+  body input[type=search],
+  body input[type=tel],
+  body input[type=text],
+  body input[type=time],
+  body input[type=url],
+  body input[type=week],
+  body select,
+  body textarea {
+    min-height: 40px
+  }
+  body textarea #input_tool,
+  body textarea #languageTextarea,
+  body textarea #languageTextareaNew {
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-family: var(--font-sans);
+    font-size: 100%;
+    resize: vertical
+  }
+  body textarea #ToText,
+  body textarea #ToText > div,
+  body textarea #ToText textarea {
+    width: 100%;
+    font-family: var(--font-sans)
+  }
+  body #languageTextarea,
+  body textarea.textarea-for-translation {
+    width: 100%!important;
+    height: 700px!important;
+    margin: 0!important;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 100%;
+    resize: vertical
+  }
+  body #ResetButton,
+  body #SubmitWrapper .btn,
+  body .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1em;
+    text-shadow: none
+  }
+  body div.contains > div.center-text.no-overflow-ws.mg-btm-10 {
+    margin: 0;
+    text-align: left
+  }
+  body #translate .span8 {
+    width: 100%!important
+  }
+  body #translate .span4 {
+    display: none!important
+  }
+  body #TranslationWrapper {
+    margin-top: 1rem!important;
+    border: 1px solid #ddd;
+    box-shadow: none
+  }
+  body .nav-pills,
+  body .nav-tabs {
+    width: 100%
+  }
+  body .nav-pills > li,
+  body .nav-tabs > li {
+    margin-bottom: -1px
+  }
+  body .nav-pills > li > a,
+  body .nav-tabs > li > a {
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 0;
+    font-size: .75rem
+  }
+  body .nav-pills > li:not(:first-child) > a,
+  body .nav-tabs > li:not(:first-child) > a {
+    margin-left: -1px
+  }
+  body .nav-pills > .active a,
+  body .nav-pills > .active a:hover,
+  body .nav-tabs > .active a,
+  body .nav-tabs > .active a:hover {
+    border-bottom-color: #ddd;
+    background: #fafafa
+  }
+  #TranslationWrapper,
+  #translate > div,
+  body .centered-mobile-container,
+  body > div.body-container > div.row,
+  body > div.body-container > div.row div.span9,
+  body > div.container.body-container > div.row > div {
+    width: 100%;
+    margin: 0
+  }
+  body #nav_list {
+    display: flex;
+    z-index: 10;
+    top: 5px;
+    left: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0!important;
+    border: 1px solid #333;
+    font-size: 1.25rem!important;
+    line-height: 1
+  }
+  #translate > div > div:nth-child(1),
+  body #HelpBox,
+  body .additional-info,
+  body .additonal-info,
+  body .centered-mobile-container + div,
+  body .mobile-advertisement-label,
+  body .mobile-sides,
+  body .site-header + .margin-sides,
+  body .subnav-fixed,
+  body div.body-container > div.row > div.span12 > div:not(#translate),
+  body div.body-container > div.row > div.span12 > hr,
+  body div.body-container > div.row > div.span9 > div.contains > div:nth-child(6),
+  body div.body-container > div.row > div.span9 > div:nth-child(1),
+  body div.navbar-fixed-top,
+  body div.site-header > h2,
+  body div.translation-desktop-faqs {
+    display: none
+  }
+}
+@-moz-document domain("amazon.in"),
+domain("flipkart.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  .a-ember body,
+  .fonts-loaded body,
+  .fonts-loaded button,
+  .fonts-loaded input,
+  .fonts-loaded select,
+  .fonts-loaded textarea,
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)
+  }
+  .useInterFont.en-fonts-loaded body,
+  .useInterFont.en-fonts-loaded button,
+  .useInterFont.en-fonts-loaded input,
+  .useInterFont.en-fonts-loaded select,
+  .useInterFont.en-fonts-loaded textarea {
+    font-family: var(--font-sans)
+  }
+  ._1ch8e_ div > .YBLJE4 ._1XjE3T,
+  ._58bkzqd {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("indmoney.com"),
+domain("zerodha.com"),
+domain("smallcase.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  .font-semibold,
+  .outer-app *,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  html {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("linear.app") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  :root {
+    --font-regular: var(--font-sans);
+    --font-monospace: var(--font-mono)
+  }
+}
+@-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  #primary-navigation li,
+  #primary-navigation li a,
+  .button,
+  .latestPost .title,
+  .latestPost .title a,
+  .single-title,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans)!important
+  }
+  #commentsAdd,
+  #sidebar {
+    display: none!important
+  }
+  #page .article {
+    width: 100%
+  }
+  .imdbwp {
+    max-width: 100%
+  }
+}
+@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+regexp("^(https?://)(192.168.1)(.*)"),
+regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
+regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
+regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
+regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
+regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
+regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
+regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
+domain("127.0.0.1") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-system: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans)
+  }
+  #wpadminbar *,
+  a,
+  body,
+  body.wpallimport-plugin,
+  html {
+    font-family: var(--font-sans)
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans)
+  }
+  .code,
+  code {
+    font-family: var(--font-mono)
+  }
+  .button,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)
+  }
+  #primary-navigation li,
+  #primary-navigation li a {
+    font-family: var(--font-sans)
+  }
+  .comment-bar__send-btn,
+  .cron-job-tab2 h4,
+  .single-title,
+  .widget .widget-title {
+    font-family: var(--font-sans)
+  }
+  .markdown-body,
+  .md-subheader,
+  .ql-container {
+    font-family: var(--font-sans)
+  }
+  .media-frame,
+  .media-modal,
+  .yith-plugin-ui {
+    font-family: var(--font-sans)
+  }
+  [class*=c_],
+  [class*=tinv-],
+  [class*=tinv-] *,
+  [class*=tinvwl-],
+  [class*=tinvwl-] * {
+    font-family: var(--font-sans)
+  }
+  .maestro .normal:not(.dig-Button),
+  .maestro body:not(.dig-Button),
+  .maestro button:not(.dig-Button),
+  .maestro input:not(.dig-Button),
+  .maestro select:not(.dig-Button),
+  .maestro textarea:not(.dig-Button) {
+    font-family: var(--font-sans)
+  }
+  #facebook ._-kb.mac,
+  #facebook ._-kb.sf,
+  #facebook ._8esf ._1gaz,
+  #facebook .system-fonts--body.sf,
+  #facebook [class*=_],
+  #facebook [class*=_] [class*=_] {
+    font-family: var(--font-sans)
+  }
+  ytd-app * {
+    font-family: var(--font-sans)
+  }
+  #content [class*=ytd-] {
+    font-family: var(--font-sans)!important
+  }
+  #query-monitor-main a,
+  #query-monitor-main button,
+  #query-monitor-main caption,
+  #query-monitor-main code,
+  #query-monitor-main dd,
+  #query-monitor-main dl,
+  #query-monitor-main dt,
+  #query-monitor-main h1,
+  #query-monitor-main h2,
+  #query-monitor-main h3,
+  #query-monitor-main h4,
+  #query-monitor-main h5,
+  #query-monitor-main h6,
+  #query-monitor-main label,
+  #query-monitor-main li,
+  #query-monitor-main nav,
+  #query-monitor-main ol,
+  #query-monitor-main p,
+  #query-monitor-main pre,
+  #query-monitor-main section,
+  #query-monitor-main select,
+  #query-monitor-main table,
+  #query-monitor-main td,
+  #query-monitor-main th,
+  #query-monitor-main ul {
+    font-family: var(--font-sans)!important
+  }
+  .qm code,
+  .qm pre {
+    font-family: var(--font-mono)!important
+  }
+  .CodeMirror,
+  .cm-s-darcula.CodeMirror {
+    font-family: var(--font-mono)
+  }
+  .markdown-body code,
+  .markdown-body pre {
+    font-family: var(--font-mono)
+  }
+  .markdown-body pre > code {
+    white-space: pre-wrap
+  }
+  .simplenote-app * {
+    font-family: var(--font-sans)
+  }
+  .simplenote-app code,
+  .simplenote-app code * {
+    font-family: var(--font-mono)
+  }
+}
+@-moz-document domain("peopleperhour.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  body,
+  button,
+  h4,
+  h5,
+  h6,
+  html,
+  input,
+  ol,
+  p,
+  select,
+  small,
+  textarea,
+  ul {
+    font-family: var(--font-sans)
+  }
+  .body,
+  .nano,
+  .small,
+  .title-nano,
+  .title-new,
+  .title-small,
+  body .select2-container {
+    font-family: var(--font-sans)
+  }
+  .pph-legacy-container .main-content h4,
+  .pph-legacy-container .main-content h5,
+  .pph-legacy-container .main-content h6 {
+    font-family: var(--font-sans)
+  }
+  #stream-message-box .content .simple-message .textbox,
+  .btn,
+  .button,
+  .daterangepicker-elem.daterangepicker-select,
+  .listings-sidebar .search-container .input-group,
+  .results .btn--contact,
+  .widget-tags-input {
+    font-family: var(--font-sans)
+  }
+  .controller-hourlie.view-create .pseudo-input,
+  .controller-hourlie.view-new .pseudo-input,
+  .controller-hourlie.view-update .pseudo-input {
+    font-family: var(--font-sans)
+  }
+  .left-column h2,
+  .left-column h3,
+  .right-column h2,
+  .right-column h3 {
+    font-family: var(--font-sans)
+  }
+  #stream-message-box .content .simple-message .textbox textarea {
+    font-size: 1em;
+    font-weight: 500
+  }
+  .body,
+  .small,
+  body,
+  ol,
+  p,
+  small,
+  ul {
+    font-weight: 400
+  }
+  div.pph-row a[class*=dropdown_] {
+    font-weight: 600
+  }
+  div[class*=footer__nav] li a {
+    padding: .3em 0
+  }
+  h2[class*=footer__nav-title] {
+    padding-bottom: 0
+  }
+}
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --family: var(--font-sans);
+    --input-height: 30px
+  }
+  html {
+    font-family: var(--font-sans);
+    font-size: 14px
+  }
+  body {
+    font-size: 1rem
+  }
+  .CodeMirror {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.6
+  }
+}
+@-moz-document domain("textfixer.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
+  }
+  #menu li,
+  body,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)
+  }
+  body {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.6
+  }
+  textarea {
+    width: 100%;
+    padding: 8px 12px
+  }
+  .button,
+  input,
+  select,
+  textarea {
+    border: 1px solid #e3e3e3;
+    border-radius: 0;
+    outline: 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.6
+  }
+  p {
+    margin-top: 0
+  }
+  p:not(:last-child) {
+    margin-bottom: 8px
+  }
+  #content > h1,
+  #content > p:nth-child(1),
+  #content > p:nth-child(2),
+  #content > p:nth-child(3),
+  #content > p:nth-child(4),
+  #content > p:nth-child(5),
+  #content > p:nth-child(6) {
+    display: none!important
+  }
+  .online-tools {
+    margin-top: 30px;
+    padding: 5px 15px;
+    border-radius: 0
+  }
+  .online-tools > h3 {
+    margin-top: 0;
+    margin-bottom: 8px
+  }
+  .actbtn,
+  .frmbtn,
+  .rstbtn,
+  .subbtn {
+    margin: 0 0 8px 0;
+    padding: 8px 22px;
+    border: 0;
+    border-radius: 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.6
+  }
+  .ftable h3 {
+    margin-top: 0;
+    margin-bottom: 0
+  }
+  .tools {
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
+  .tools li {
+    margin-bottom: 0
+  }
+  #ftr,
+  .adthrive-placeholder-header,
+  .adthrive-placeholder-video,
+  .socialShareBar {
+    display: none!important
+  }
+}
+@-moz-document domain("web.skype.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+  body *,
+  body div[class*=r-][class*=css-] {
+    font-family: var(--font-sans)
+  }
+  body a[style*="SF Regular"],
+  body div[style*="SF Regular"],
+  body p[style*="SF Regular"],
+  body span[style*="SF Regular"] {
+    font-family: var(--font-sans)!important
+  }
+  body a [style*="SF Semibold"],
+  body div [style*="SF Semibold"],
+  body p [style*="SF Semibold"],
+  body span [style*="SF Semibold"] {
+    font-weight: 700!important;
+    font-family: var(--font-sans)!important
+  }
+  body a [style*=monospace],
+  body div [style*=monospace],
+  body p [style*=monospace],
+  body span [style*=monospace] {
+    font-family: var(--font-mono)!important
+  }
+}
+@-moz-document domain("whatsapp.com") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  .os-mac,
+  .os-mac button,
+  .os-mac input,
+  .os-mac.font-fix,
+  body,
+  body.native.darwin body.native.darwin button,
+  body.native.darwin input {
+    font-family: var(--font-sans)
+  }
+  .UzMP7 {
+    font-size: 14.5px;
+    line-height: 1.3
+  }
+}
