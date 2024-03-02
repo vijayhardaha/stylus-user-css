@@ -1,0 +1,38 @@
+@-moz-document domain("amazon.in"),
+	domain("flipkart.com") {
+
+	@include root-sans-font();
+
+	.a-ember body,
+	.fonts-loaded body,
+	.fonts-loaded button,
+	.fonts-loaded input,
+	.fonts-loaded select,
+	.fonts-loaded textarea,
+	body,
+	button,
+	input,
+	select,
+	textarea {
+
+		@include sans-font();
+	}
+
+	.useInterFont.en-fonts-loaded {
+
+		body,
+		button,
+		input,
+		select,
+		textarea {
+
+			@include sans-font();
+		}
+	}
+
+	._1ch8e_ div > .YBLJE4 ._1XjE3T,
+	._58bkzqd {
+
+		@include sans-font();
+	}
+}

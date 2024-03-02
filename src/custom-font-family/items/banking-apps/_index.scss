@@ -1,0 +1,35 @@
+@-moz-document domain("icicibank.com"),
+	domain("onlinesbi.sbi"),
+	domain("incometax.gov.in"),
+	domain("insight.gov.in") {
+
+	@include root-sans-font(poppins);
+
+	*,
+	body,
+	::after,
+	::before {
+
+		@include sans-font(true);
+	}
+
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.subtitle1,
+	.subtitle2,
+	.caption,
+	.hintText {
+
+		@include sans-font(true);
+	}
+}

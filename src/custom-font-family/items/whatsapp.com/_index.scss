@@ -1,0 +1,21 @@
+@-moz-document domain("whatsapp.com") {
+
+	@include root-sans-font();
+
+	.os-mac.font-fix,
+	.os-mac button,
+	.os-mac input,
+	.os-mac,
+	body,
+	body.native.darwin
+	body.native.darwin button,
+	body.native.darwin input {
+
+		@include sans-font();
+	}
+
+	.UzMP7 {
+		font-size: 14.5px;
+		line-height: 1.3;
+	}
+}

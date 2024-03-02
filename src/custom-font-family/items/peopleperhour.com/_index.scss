@@ -1,0 +1,109 @@
+@-moz-document domain("peopleperhour.com") {
+
+	@include root-sans-font();
+
+	body,
+	h4,
+	h5,
+	h6,
+	html,
+	ol,
+	p,
+	small,
+	ul,
+	input,
+	button,
+	select,
+	textarea {
+
+		@include sans-font();
+	}
+
+	.body,
+	.nano,
+	.small,
+	.title-nano,
+	.title-new,
+	.title-small,
+	body .select2-container {
+
+		@include sans-font();
+	}
+
+	.pph-legacy-container .main-content {
+
+		h4,
+		h5,
+		h6 {
+
+			@include sans-font();
+		}
+	}
+
+	.btn,
+	.button,
+	.results .btn--contact,
+	#stream-message-box .content .simple-message .textbox,
+	.listings-sidebar .search-container .input-group,
+	.daterangepicker-elem.daterangepicker-select,
+	.widget-tags-input {
+
+		@include sans-font();
+	}
+
+	.controller-hourlie {
+
+		&.view-update,
+		&.view-new,
+		&.view-create {
+
+			.pseudo-input {
+
+				@include sans-font();
+			}
+		}
+	}
+
+	.right-column,
+	.left-column {
+
+		h2,
+		h3 {
+
+			@include sans-font();
+		}
+	}
+
+	/* Large Font Size for Specific Textarea */
+	#stream-message-box .content .simple-message .textbox textarea {
+		font-size: 1em;
+		font-weight: 500;
+	}
+
+	body,
+	.small,
+	small,
+	.body,
+	ol,
+	p,
+	ul {
+
+		font-weight: 400;
+	}
+
+	div.pph-row {
+
+		a[class*="dropdown_"] {
+
+			font-weight: 600;
+		}
+	}
+
+	div[class*="footer__nav"] li a {
+		padding: 0.3em 0;
+	}
+
+	h2[class*="footer__nav-title"] {
+		padding-bottom: 0;
+	}
+}

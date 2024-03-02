@@ -1,0 +1,20 @@
+@-moz-document domain("indmoney.com"),
+	domain("zerodha.com"),
+	domain("smallcase.com") {
+
+	@include root-sans-font();
+
+	.font-semibold,
+	.outer-app *,
+	html,
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		@include sans-font();
+	}
+}

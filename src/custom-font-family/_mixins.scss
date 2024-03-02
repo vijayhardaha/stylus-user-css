@@ -1,0 +1,40 @@
+// Mixin to set the root variable for sans-serif font
+@mixin root-sans-font($font: josefin-sans) {
+
+	:root {
+		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
+		--font-sans: var(--#{$font}-font, var(--default-sans));
+	}
+}
+
+// Mixin to set the root variable for monospace font
+@mixin root-mono-font($font: courier-prime) {
+
+	:root {
+		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
+		--font-mono: var(--#{$font}-font, var(--default-mono));
+	}
+}
+
+// Mixin to set font-family with optional !important declaration
+@mixin font-family($font, $important: false) {
+
+	@if $important {
+		// Overrides font-family with !important if $important is true
+		font-family: $font !important;
+	} @else {
+		font-family: $font;
+	}
+}
+
+// Mixin for applying sans-serif font-family
+@mixin sans-font($important: false) {
+	// Applies font-family specified in --font-sans variable with optional !important
+	@include font-family(var(--font-sans), $important);
+}
+
+// Mixin for applying monospace font-family
+@mixin mono-font($important: false) {
+	// Applies font-family specified in --font-mono variable with optional !important
+	@include font-family(var(--font-mono), $important);
+}

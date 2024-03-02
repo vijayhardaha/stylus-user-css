@@ -1,0 +1,27 @@
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:root {
+		--family: var(--font-sans);
+		--input-height: 30px;
+	}
+
+	html {
+
+		@include sans-font();
+		font-size: 14px;
+	}
+
+	body {
+		font-size: 1rem;
+	}
+
+	.CodeMirror {
+
+		@include mono-font();
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}

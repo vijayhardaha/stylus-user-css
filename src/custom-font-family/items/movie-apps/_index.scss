@@ -1,0 +1,34 @@
+@-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
+
+	@include root-sans-font();
+
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.button,
+	#primary-navigation li,
+	#primary-navigation li a,
+	.latestPost .title,
+	.latestPost .title a,
+	.single-title {
+
+		@include sans-font(true);
+	}
+
+	#sidebar,
+	#commentsAdd {
+		display: none !important;
+	}
+
+	#page .article {
+		width: 100%;
+	}
+
+	.imdbwp {
+		max-width: 100%;
+	}
+}

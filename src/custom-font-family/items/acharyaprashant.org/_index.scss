@@ -1,0 +1,10 @@
+@-moz-document domain("acharyaprashant.org") {
+
+	@include root-sans-font(poppins);
+
+	html,
+	.font-en {
+
+		@include sans-font();
+	}
+}

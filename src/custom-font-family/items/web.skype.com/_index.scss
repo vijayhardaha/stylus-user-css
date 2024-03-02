@@ -1,0 +1,37 @@
+@-moz-document domain("web.skype.com") {
+
+	@include root-sans-font();
+
+	body {
+
+		@include sans-font();
+
+		*,
+		div[class*="r-"][class*="css-"] {
+
+			@include sans-font();
+		}
+
+		div,
+		span,
+		a,
+		p {
+
+			&[style*="SF Regular"] {
+
+				@include sans-font(true);
+			}
+
+			[style*="SF Semibold"] {
+				font-weight: 700 !important;
+
+				@include sans-font(true);
+			}
+
+			[style*="monospace"] {
+
+				@include mono-font(true);
+			}
+		}
+	}
+}

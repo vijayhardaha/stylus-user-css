@@ -1,0 +1,33 @@
+/*! ==UserStyle==
+@name Custom Font Family
+@namespace github.com/openstyles/stylus
+@version 1.0.7
+@description A new userstyle for custom font family on multiple websites.
+@author Vijay Hardaha (http://github.com/vijayhardaha)
+@homepageURL https://github.com/vijayhardaha/stylus-user-css
+@supportURL https://github.com/vijayhardaha/stylus-user-css/issues
+@updateURL https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/custom-font-family/index.user.css
+@license MIT
+@preprocessor default
+==/UserStyle== */
+
+@import "variables";
+@import "mixins";
+@import "root";
+
+/* Items */
+@import "items/acharyaprashant.org/index";
+@import "items/banking-apps/index";
+@import "items/chatgpt/index";
+@import "items/cra-nsdl.com/index";
+@import "items/easyhindityping.com/index";
+@import "items/ecommerce-apps/index";
+@import "items/investment-apps/index";
+@import "items/linear.apps/index";
+@import "items/movie-apps/index";
+@import "items/multi-apps/index";
+@import "items/peopleperhour.com/index";
+@import "items/stylus-extension/index";
+@import "items/textfixer.com/index";
+@import "items/web.skype.com/index";
+@import "items/whatsapp.com/index";

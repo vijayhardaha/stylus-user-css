@@ -1,0 +1,252 @@
+@-moz-document domain("easyhindityping.com") {
+
+	@include root-sans-font();
+
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 14px;
+	}
+
+	.navbar,
+	#NavBar li,
+	body,
+	button,
+	footer,
+	input,
+	select,
+	textarea {
+
+		@include sans-font(true);
+	}
+
+	body {
+		font-size: 1rem;
+		line-height: 1.8;
+
+		@include sans-font();
+
+		> .body-container {
+			width: 100%;
+			margin-top: 0;
+			padding-right: 1rem;
+			padding-left: 1rem;
+
+			> div.site-header {
+				margin: 0;
+
+				> h1 {
+					margin: 0;
+					font-weight: 700;
+				}
+			}
+
+			> .row {
+
+				.span9 {
+
+					> div.contains {
+						margin-top: 1rem;
+						padding: 1rem;
+						border-radius: 0;
+					}
+				}
+
+				.span3 {
+					display: none;
+				}
+			}
+		}
+
+		div.navbar.navbar-fixed-top > div > div > a.brand.brand-mobile {
+			color: #fff;
+			font-weight: 900;
+		}
+
+		#NavBar {
+			max-width: 100%;
+			margin: 0;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0 !important;
+			margin-bottom: 1rem !important;
+			line-height: 1.5 !important;
+		}
+
+		select,
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		.uneditable-input {
+			min-height: 40px;
+		}
+
+		textarea {
+
+			#input_tool,
+			#languageTextarea,
+			#languageTextareaNew {
+				width: 100%;
+				height: 600px;
+				padding: 10px;
+				border: 1px solid #ddd;
+				border-radius: 0;
+
+				@include sans-font();
+				font-size: 100%;
+				resize: vertical;
+			}
+
+			#ToText,
+			#ToText > div,
+			#ToText textarea {
+				width: 100%;
+
+				@include sans-font();
+			}
+		}
+
+		#languageTextarea,
+		textarea.textarea-for-translation {
+			width: 100% !important;
+			height: 700px !important;
+			margin: 0 !important;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 0;
+			font-size: 100%;
+			resize: vertical;
+		}
+
+		.btn,
+		#ResetButton,
+		#SubmitWrapper .btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 40px;
+			border-radius: 0;
+			box-shadow: none;
+			font-size: 1em;
+			text-shadow: none;
+		}
+
+		div.contains > div.center-text.no-overflow-ws.mg-btm-10 {
+			margin: 0;
+			text-align: left;
+		}
+
+		#translate {
+
+			.span8 {
+				width: 100% !important;
+			}
+
+			.span4 {
+				display: none !important;
+			}
+		}
+
+		#TranslationWrapper {
+			margin-top: 1rem !important;
+			border: 1px solid #ddd;
+			box-shadow: none;
+		}
+
+		.nav-pills,
+		.nav-tabs {
+			width: 100%;
+
+			> li {
+				margin-bottom: -1px;
+
+				> a {
+					margin: 0;
+					padding: 6px 10px;
+					border-radius: 0;
+					font-size: 0.75rem;
+				}
+
+				&:not(:first-child) > a {
+					margin-left: -1px;
+				}
+			}
+
+			> .active {
+
+				a,
+				a:hover {
+					border-bottom-color: #ddd;
+					background: #fafafa;
+				}
+			}
+		}
+	}
+
+	body > div.container.body-container > div.row > div,
+	#translate > div,
+	#TranslationWrapper,
+	body > div.body-container > div.row,
+	body > div.body-container > div.row div.span9,
+	body .centered-mobile-container {
+		width: 100%;
+		margin: 0;
+	}
+
+	body #nav_list {
+		display: flex;
+		z-index: 10;
+		top: 5px;
+		left: 1rem;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		padding: 0 !important;
+		border: 1px solid #333;
+		font-size: 1.25rem !important;
+		line-height: 1;
+	}
+
+	#translate > div > div:nth-child(1),
+	body div.body-container > div.row > div.span12 > div:not(#translate),
+	body div.body-container > div.row > div.span12 > hr,
+	body div.navbar-fixed-top,
+	body div.translation-desktop-faqs,
+	body div.body-container > div.row > div.span9 > div:nth-child(1),
+	body
+	div.body-container > div.row > div.span9 > div.contains > div:nth-child(6),
+	body div.site-header > h2,
+	body .subnav-fixed,
+	body .additional-info,
+	body .additonal-info,
+	body #HelpBox,
+	body .mobile-advertisement-label,
+	body .mobile-sides,
+	body .centered-mobile-container + div,
+	body .site-header + .margin-sides {
+		display: none;
+	}
+}

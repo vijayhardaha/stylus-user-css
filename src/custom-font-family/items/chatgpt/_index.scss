@@ -1,0 +1,10 @@
+@-moz-document domain("openai.com") {
+
+	@include root-sans-font();
+
+	html {
+
+		@include sans-font();
+		font-size: 14px;
+	}
+}
