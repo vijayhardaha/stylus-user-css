@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.0
+@version 1.0.1
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -11,7 +11,8 @@
 @preprocessor default
 ==/UserStyle== */
 @-moz-document regexp("(.*)"),
-url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"),
+url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Federo&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
@@ -490,6 +491,41 @@ domain("flipkart.com") {
     font-family: var(--font-sans)
   }
 }
+@-moz-document url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  body,
+  button,
+  input,
+  textarea {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+  :root {
+    --font-sans: var(--josefin-sans-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --family: var(--font-sans);
+    --input-height: 30px
+  }
+  html {
+    font-family: var(--font-sans);
+    font-size: 14px
+  }
+  body {
+    font-size: 1rem
+  }
+  .CodeMirror {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.6
+  }
+}
 @-moz-document domain("indmoney.com"),
 domain("zerodha.com"),
 domain("smallcase.com") {
@@ -573,7 +609,8 @@ domain("127.0.0.1") {
     --font-system: var(--font-sans);
     --cu-font-family: var(--font-sans);
     --font-family-apple: var(--font-sans);
-    --sn-stylekit-sans-serif-font: var(--font-sans)
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --e-a-font-family: var(--font-sans)
   }
   #wpadminbar *,
   a,
@@ -773,30 +810,6 @@ domain("127.0.0.1") {
   }
   h2[class*=footer__nav-title] {
     padding-bottom: 0
-  }
-}
-@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
-  :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
-  }
-  :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
-  }
-  :root {
-    --family: var(--font-sans);
-    --input-height: 30px
-  }
-  html {
-    font-family: var(--font-sans);
-    font-size: 14px
-  }
-  body {
-    font-size: 1rem
-  }
-  .CodeMirror {
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    line-height: 1.6
   }
 }
 @-moz-document domain("textfixer.com") {
