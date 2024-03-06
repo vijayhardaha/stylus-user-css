@@ -525,6 +525,12 @@ domain("flipkart.com") {
     font-size: 1rem;
     line-height: 1.6
   }
+  .applies-to ul {
+    --input-height: 2rem
+  }
+  .select-wrapper::after {
+    top: 8px
+  }
 }
 @-moz-document domain("indmoney.com"),
 domain("zerodha.com"),
