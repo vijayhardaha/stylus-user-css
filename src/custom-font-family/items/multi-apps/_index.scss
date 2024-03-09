@@ -9,7 +9,7 @@
 	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 	domain("127.0.0.1") {
 
-	@include root-sans-font();
+	@include root-sans-font(dm-sans);
 	@include root-mono-font();
 
 	// Define font variables
