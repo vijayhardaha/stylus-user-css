@@ -13,15 +13,17 @@
 @-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"),
 url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
-  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Federo&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   :root {
     --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --albert-sans-font: "Albert Sans",sans-serif;
     --courier-prime-font: "Courier Prime",monospace;
-    --federo-font: "Federo",sans-serif;
+    --dm-sans-font: "DM Sans",sans-serif;
     --josefin-sans-font: "Josefin Sans",sans-serif;
     --poppins-font: "Poppins",sans-serif
   }
@@ -601,7 +603,7 @@ regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 domain("127.0.0.1") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--dm-sans-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--courier-prime-font, var(--default-mono))
