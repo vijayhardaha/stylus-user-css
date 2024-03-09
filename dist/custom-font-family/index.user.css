@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.3
+@version 1.0.4
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -555,7 +555,7 @@ domain("smallcase.com") {
 }
 @-moz-document domain("linear.app") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--albert-sans-font, var(--default-sans))
   }
   :root {
     --font-regular: var(--font-sans);
