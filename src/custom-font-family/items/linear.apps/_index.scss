@@ -1,6 +1,6 @@
 @-moz-document domain("linear.app") {
 
-	@include root-sans-font();
+	@include root-sans-font(albert-sans);
 
 	:root {
 		--font-regular: var(--font-sans);
