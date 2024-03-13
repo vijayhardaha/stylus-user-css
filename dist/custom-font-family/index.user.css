@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.4
+@version 1.0.5
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -71,7 +71,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("openai.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--albert-sans-font, var(--default-sans))
   }
   html {
     font-family: var(--font-sans);
@@ -603,7 +603,7 @@ regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 domain("127.0.0.1") {
   :root {
-    --font-sans: var(--dm-sans-font, var(--default-sans))
+    --font-sans: var(--albert-sans-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--courier-prime-font, var(--default-mono))
@@ -919,7 +919,7 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("web.skype.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--albert-sans-font, var(--default-sans))
   }
   body {
     font-family: var(--font-sans)
