@@ -8,7 +8,7 @@
 }
 
 // Mixin to set the root variable for monospace font
-@mixin root-mono-font($font: courier-prime) {
+@mixin root-mono-font($font: space-mono) {
 
 	:root {
 		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
