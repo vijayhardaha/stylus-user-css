@@ -4,8 +4,9 @@
 	@include root-mono-font(space-mono);
 
 	#root .markdown-body {
+
+		@include sans-font();
 		padding: 10px 30px;
-		font-family: var(--font-sans);
 
 		h1,
 		h2,
@@ -18,7 +19,8 @@
 
 		code,
 		pre {
-			font-family: var(--font-mono);
+
+			@include mono-font();
 		}
 	}
 }
