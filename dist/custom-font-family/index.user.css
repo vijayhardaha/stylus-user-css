@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.6
+@version 1.0.7
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -72,10 +72,12 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)!important
   }
 }
-@-moz-document domain("openai.com") {
+@-moz-document domain("openai.com"),
+domain("chatgpt.com") {
   :root {
-    --font-sans: var(--albert-sans-font, var(--default-sans))
+    --font-sans: var(--space-grotesk-font, var(--default-sans))
   }
+  :host,
   html {
     font-family: var(--font-sans);
     font-size: 14px
@@ -565,6 +567,30 @@ domain("smallcase.com") {
     --font-monospace: var(--font-mono)
   }
 }
+@-moz-document domain("md2pdf.netlify.app") {
+  :root {
+    --font-sans: var(--space-grotesk-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--space-mono-font, var(--default-mono))
+  }
+  #root .markdown-body {
+    font-family: var(--font-sans);
+    padding: 10px 30px
+  }
+  #root .markdown-body h1,
+  #root .markdown-body h2,
+  #root .markdown-body h3,
+  #root .markdown-body h4,
+  #root .markdown-body h5,
+  #root .markdown-body h6 {
+    font-weight: 700
+  }
+  #root .markdown-body code,
+  #root .markdown-body pre {
+    font-family: var(--font-mono)
+  }
+}
 @-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
   :root {
     --font-sans: var(--josefin-sans-font, var(--default-sans))
@@ -604,6 +630,7 @@ regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
 regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
+regexp("^https://(.*)(cpsess)(.*)"),
 domain("127.0.0.1") {
   :root {
     --font-sans: var(--space-grotesk-font, var(--default-sans))
@@ -922,7 +949,10 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("web.skype.com") {
   :root {
-    --font-sans: var(--albert-sans-font, var(--default-sans))
+    --font-sans: var(--space-grotesk-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--space-mono-font, var(--default-mono))
   }
   body {
     font-family: var(--font-sans)
