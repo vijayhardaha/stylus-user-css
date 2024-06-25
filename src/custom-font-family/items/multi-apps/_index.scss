@@ -7,10 +7,11 @@
 	regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
+	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
 
 	@include root-sans-font(space-grotesk);
-	@include root-mono-font();
+	@include root-mono-font(space-mono);
 
 	// Define font variables
 	:root {
