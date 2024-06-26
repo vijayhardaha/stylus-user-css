@@ -38,5 +38,6 @@
 		"stylelint": "14.16.1",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
 		"stylelint-order": "^6.0.4"
-	}
+	},
+	"packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
