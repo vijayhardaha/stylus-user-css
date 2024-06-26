@@ -16,15 +16,17 @@
 	// Define font variables
 	:root {
 		--__bodyFontStack: var(--font-sans);
-		--tnp-font-family: var(--font-sans);
-		--font-primary: var(--font-sans);
-		--font-display: var(--font-sans);
-		--font-headline: var(--font-sans);
-		--font-system: var(--font-sans);
+		--cp-font-monospace: var(--font-mono);
+		--cp-font-sans-serif: var(--font-sans);
 		--cu-font-family: var(--font-sans);
-		--font-family-apple: var(--font-sans);
-		--sn-stylekit-sans-serif-font: var(--font-sans);
 		--e-a-font-family: var(--font-sans);
+		--font-display: var(--font-sans);
+		--font-family-apple: var(--font-sans);
+		--font-headline: var(--font-sans);
+		--font-primary: var(--font-sans);
+		--font-system: var(--font-sans);
+		--sn-stylekit-sans-serif-font: var(--font-sans);
+		--tnp-font-family: var(--font-sans);
 	}
 
 	// Apply font to various elements
@@ -204,6 +206,15 @@
 
 		pre > code {
 			white-space: pre-wrap;
+		}
+
+		ol,
+		ul {
+
+			ol {
+
+				list-style-type: numerial;
+			}
 		}
 	}
 
