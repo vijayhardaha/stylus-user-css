@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.7
+@version 1.0.8
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -640,15 +640,17 @@ domain("127.0.0.1") {
   }
   :root {
     --__bodyFontStack: var(--font-sans);
-    --tnp-font-family: var(--font-sans);
-    --font-primary: var(--font-sans);
-    --font-display: var(--font-sans);
-    --font-headline: var(--font-sans);
-    --font-system: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
     --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
     --sn-stylekit-sans-serif-font: var(--font-sans);
-    --e-a-font-family: var(--font-sans)
+    --tnp-font-family: var(--font-sans)
   }
   #wpadminbar *,
   a,
@@ -765,6 +767,10 @@ domain("127.0.0.1") {
   }
   .markdown-body pre > code {
     white-space: pre-wrap
+  }
+  .markdown-body ol ol,
+  .markdown-body ul ol {
+    list-style-type: numerial
   }
   .simplenote-app * {
     font-family: var(--font-sans)
