@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.8
+@version 1.0.9
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -17,6 +17,7 @@ url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap);
   :root {
@@ -27,6 +28,7 @@ url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
     --dm-sans-font: "DM Sans",sans-serif;
     --josefin-sans-font: "Josefin Sans",sans-serif;
     --poppins-font: "Poppins",sans-serif;
+    --lexend-font: "Lexend",sans-serif;
     --space-grotesk-font: "Space Grotesk",sans-serif;
     --space-mono-font: "Space Mono",monospace
   }
@@ -633,7 +635,7 @@ regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 regexp("^https://(.*)(cpsess)(.*)"),
 domain("127.0.0.1") {
   :root {
-    --font-sans: var(--space-grotesk-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--space-mono-font, var(--default-mono))
