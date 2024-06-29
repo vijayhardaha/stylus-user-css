@@ -10,7 +10,7 @@
 	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
 
-	@include root-sans-font(space-grotesk);
+	@include root-sans-font(lexend);
 	@include root-mono-font(space-mono);
 
 	// Define font variables
