@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.10
+@version 1.0.11
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -15,22 +15,15 @@ url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"),
 url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   @import url(https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap);
   :root {
     --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     --albert-sans-font: "Albert Sans",sans-serif;
     --courier-prime-font: "Courier Prime",monospace;
-    --dm-sans-font: "DM Sans",sans-serif;
-    --josefin-sans-font: "Josefin Sans",sans-serif;
     --poppins-font: "Poppins",sans-serif;
-    --lexend-font: "Lexend",sans-serif;
-    --space-grotesk-font: "Space Grotesk",sans-serif;
-    --space-mono-font: "Space Mono",monospace
+    --lexend-font: "Lexend",sans-serif
   }
 }
 @-moz-document domain("acharyaprashant.org") {
@@ -77,7 +70,7 @@ domain("insight.gov.in") {
 @-moz-document domain("openai.com"),
 domain("chatgpt.com") {
   :root {
-    --font-sans: var(--space-grotesk-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :host,
   html {
@@ -87,7 +80,7 @@ domain("chatgpt.com") {
 }
 @-moz-document domain("cra-nsdl.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   html {
     font-size: 16px
@@ -263,7 +256,7 @@ domain("chatgpt.com") {
 }
 @-moz-document domain("easyhindityping.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   *,
   ::after,
@@ -473,7 +466,7 @@ domain("chatgpt.com") {
 @-moz-document domain("amazon.in"),
 domain("flipkart.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   .a-ember body,
   .fonts-loaded body,
@@ -502,7 +495,7 @@ domain("flipkart.com") {
 }
 @-moz-document url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   body,
   button,
@@ -513,10 +506,10 @@ domain("flipkart.com") {
 }
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--space-mono-font, var(--default-mono))
+    --font-mono: var(--courier-prime-font, var(--default-mono))
   }
   :root {
     --family: var(--font-sans);
@@ -545,7 +538,7 @@ domain("flipkart.com") {
 domain("zerodha.com"),
 domain("smallcase.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   .font-semibold,
   .outer-app *,
@@ -562,7 +555,7 @@ domain("smallcase.com") {
 }
 @-moz-document domain("linear.app") {
   :root {
-    --font-sans: var(--albert-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
     --font-regular: var(--font-sans);
@@ -571,10 +564,10 @@ domain("smallcase.com") {
 }
 @-moz-document domain("md2pdf.netlify.app") {
   :root {
-    --font-sans: var(--space-grotesk-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--space-mono-font, var(--default-mono))
+    --font-mono: var(--courier-prime-font, var(--default-mono))
   }
   #root .markdown-body {
     font-family: var(--font-sans);
@@ -595,7 +588,7 @@ domain("smallcase.com") {
 }
 @-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   #primary-navigation li,
   #primary-navigation li a,
@@ -638,7 +631,7 @@ domain("127.0.0.1") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--space-mono-font, var(--default-mono))
+    --font-mono: var(--courier-prime-font, var(--default-mono))
   }
   :root {
     --__bodyFontStack: var(--font-sans);
@@ -785,7 +778,7 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("peopleperhour.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   body,
   button,
@@ -861,7 +854,7 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("textfixer.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   *,
   ::after,
@@ -958,10 +951,10 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("web.skype.com") {
   :root {
-    --font-sans: var(--space-grotesk-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--space-mono-font, var(--default-mono))
+    --font-mono: var(--courier-prime-font, var(--default-mono))
   }
   body {
     font-family: var(--font-sans)
@@ -992,7 +985,7 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("whatsapp.com") {
   :root {
-    --font-sans: var(--josefin-sans-font, var(--default-sans))
+    --font-sans: var(--lexend-font, var(--default-sans))
   }
   .os-mac,
   .os-mac button,
