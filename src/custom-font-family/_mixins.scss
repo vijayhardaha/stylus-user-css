@@ -1,5 +1,5 @@
 // Mixin to set the root variable for sans-serif font
-@mixin root-sans-font($font: josefin-sans) {
+@mixin root-sans-font($font: $default-root-sans) {
 
 	:root {
 		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
@@ -8,7 +8,7 @@
 }
 
 // Mixin to set the root variable for monospace font
-@mixin root-mono-font($font: space-mono) {
+@mixin root-mono-font($font: $default-root-mono) {
 
 	:root {
 		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
