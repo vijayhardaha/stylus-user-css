@@ -1,7 +1,7 @@
 @-moz-document domain("openai.com"),
 	domain("chatgpt.com") {
 
-	@include root-sans-font(space-grotesk);
+	@include root-sans-font();
 
 	:host,
 	html {

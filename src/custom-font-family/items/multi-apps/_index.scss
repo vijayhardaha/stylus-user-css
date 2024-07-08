@@ -11,7 +11,7 @@
 	domain("127.0.0.1") {
 
 	@include root-sans-font(lexend);
-	@include root-mono-font(space-mono);
+	@include root-mono-font();
 
 	// Define font variables
 	:root {

@@ -1,7 +1,7 @@
 @-moz-document domain("web.skype.com") {
 
-	@include root-sans-font(space-grotesk);
-	@include root-mono-font(space-mono);
+	@include root-sans-font();
+	@include root-mono-font();
 
 	body {
 
