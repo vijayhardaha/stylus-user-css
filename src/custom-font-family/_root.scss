@@ -4,11 +4,8 @@
 
 	@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-	@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-	@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-	@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 	:root {
 
@@ -19,11 +16,7 @@
 		/* Define custom fonts */
 		--albert-sans-font: "Albert Sans", sans-serif;
 		--courier-prime-font: "Courier Prime", monospace;
-		--dm-sans-font: "DM Sans", sans-serif;
-		--josefin-sans-font: "Josefin Sans", sans-serif;
 		--poppins-font: "Poppins", sans-serif;
 		--lexend-font: "Lexend", sans-serif;
-		--space-grotesk-font: "Space Grotesk", sans-serif;
-		--space-mono-font: "Space Mono", monospace;
 	}
 }
