@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.11
+@version 1.0.12
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -774,6 +774,97 @@ domain("127.0.0.1") {
   .simplenote-app code,
   .simplenote-app code * {
     font-family: var(--font-mono)
+  }
+}
+@-moz-document url-prefix("https://www.bluehost.com") {
+  :root {
+    --font-sans: var(--lexend-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+  #hosting-app,
+  .mat-h1,
+  .mat-h3,
+  .mat-headline,
+  .mat-subheading-2,
+  .mat-typography,
+  .mat-typography h1,
+  .mat-typography h3 {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document url-prefix("https://www.reddit.com/"),
+url-prefix("https://www.quora.com/") {
+  :root {
+    --font-sans: var(--lexend-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document url-prefix("https://x.com/") {
+  :root {
+    --font-sans: var(--lexend-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--courier-prime-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  [class*=css-],
+  [class*=r-],
+  body {
+    font-family: var(--font-sans)
   }
 }
 @-moz-document domain("peopleperhour.com") {
