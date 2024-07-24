@@ -1,10 +1,20 @@
 @-moz-document domain("openai.com"),
-	domain("chatgpt.com") {
+domain("chatgpt.com") {
 
 	@include root-sans-font();
 
 	:host,
 	html {
+
+		@include sans-font();
+		font-size: 14px;
+	}
+}
+
+@-moz-document domain("www.perplexity.ai") {
+	@include root-sans-font();
+
+	.font-sans {
 
 		@include sans-font();
 		font-size: 14px;

@@ -264,8 +264,9 @@
 	}
 }
 
-@-moz-document url-prefix("https://www.reddit.com/"),
-	url-prefix("https://www.quora.com/") {
+@-moz-document domain("reddit.com"),
+	domain("quora.com"),
+	domain("acharyaprashant.quora.com") {
 
 	@include fonts-group();
 
