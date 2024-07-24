@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.12
+@version 1.0.13
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -74,6 +74,15 @@ domain("chatgpt.com") {
   }
   :host,
   html {
+    font-family: var(--font-sans);
+    font-size: 14px
+  }
+}
+@-moz-document domain("www.perplexity.ai") {
+  :root {
+    --font-sans: var(--lexend-font, var(--default-sans))
+  }
+  .font-sans {
     font-family: var(--font-sans);
     font-size: 14px
   }
@@ -812,8 +821,9 @@ domain("127.0.0.1") {
     font-family: var(--font-sans)
   }
 }
-@-moz-document url-prefix("https://www.reddit.com/"),
-url-prefix("https://www.quora.com/") {
+@-moz-document domain("reddit.com"),
+domain("quora.com"),
+domain("acharyaprashant.quora.com") {
   :root {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
