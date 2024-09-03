@@ -20,8 +20,8 @@
 		"url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
 	},
 	"devDependencies": {
-		"@wordpress/stylelint-config": "^22.1.0",
-		"autoprefixer": "^10.4.19",
+		"@wordpress/stylelint-config": "^22.6.0",
+		"autoprefixer": "^10.4.20",
 		"bootstrap": "^5.3.3",
 		"del": "^7.1.0",
 		"eslint": "8.56.0",
@@ -32,9 +32,9 @@
 		"gulp-postcss": "^10.0.0",
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^5.1.0",
-		"postcss": "^8.4.38",
-		"postcss-discard-duplicates": "^7.0.0",
-		"sass": "^1.77.6",
+		"postcss": "^8.4.44",
+		"postcss-discard-duplicates": "^7.0.1",
+		"sass": "^1.77.8",
 		"stylelint": "14.16.1",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
 		"stylelint-order": "^6.0.4"
