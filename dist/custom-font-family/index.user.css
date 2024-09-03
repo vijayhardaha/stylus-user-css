@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.13
+@version 1.0.14
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -13,15 +13,13 @@
 @-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"),
 url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
-  @import url(https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
   :root {
     --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    --albert-sans-font: "Albert Sans",sans-serif;
-    --courier-prime-font: "Courier Prime",monospace;
+    --ibm-plex-font: "IBM Plex Mono",system-ui;
     --poppins-font: "Poppins",sans-serif;
     --lexend-font: "Lexend",sans-serif
   }
@@ -518,7 +516,7 @@ domain("flipkart.com") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   :root {
     --family: var(--font-sans);
@@ -576,7 +574,7 @@ domain("smallcase.com") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   #root .markdown-body {
     font-family: var(--font-sans);
@@ -640,7 +638,7 @@ domain("127.0.0.1") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   :root {
     --__bodyFontStack: var(--font-sans);
@@ -790,7 +788,7 @@ domain("127.0.0.1") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   :root {
     --__bodyFontStack: var(--font-sans);
@@ -828,7 +826,7 @@ domain("acharyaprashant.quora.com") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   :root {
     --__bodyFontStack: var(--font-sans);
@@ -854,7 +852,7 @@ domain("acharyaprashant.quora.com") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   :root {
     --__bodyFontStack: var(--font-sans);
@@ -1055,7 +1053,7 @@ domain("acharyaprashant.quora.com") {
     --font-sans: var(--lexend-font, var(--default-sans))
   }
   :root {
-    --font-mono: var(--courier-prime-font, var(--default-mono))
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
   body {
     font-family: var(--font-sans)
