@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.14
+@version 1.0.15
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -629,7 +629,7 @@ regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
-regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
+regexp("^https://(.*)(cloudflare.com|cloudways.com|facebook.com|instagram.com)(.*)"),
 regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 regexp("^https://(.*)(cpsess)(.*)"),
@@ -646,6 +646,7 @@ domain("127.0.0.1") {
     --cp-font-sans-serif: var(--font-sans);
     --cu-font-family: var(--font-sans);
     --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-headline: var(--font-sans);
@@ -796,6 +797,7 @@ domain("127.0.0.1") {
     --cp-font-sans-serif: var(--font-sans);
     --cu-font-family: var(--font-sans);
     --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-headline: var(--font-sans);
@@ -834,6 +836,7 @@ domain("acharyaprashant.quora.com") {
     --cp-font-sans-serif: var(--font-sans);
     --cu-font-family: var(--font-sans);
     --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-headline: var(--font-sans);
@@ -860,6 +863,7 @@ domain("acharyaprashant.quora.com") {
     --cp-font-sans-serif: var(--font-sans);
     --cu-font-family: var(--font-sans);
     --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-headline: var(--font-sans);
