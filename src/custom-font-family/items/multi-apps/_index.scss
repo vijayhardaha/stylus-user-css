@@ -290,3 +290,12 @@
 		@include sans-font();
 	}
 }
+
+@-moz-document url-prefix("https://www.instagram.com/") {
+
+	:root,
+	.__fb-light-mode:root,
+	.__fb-light-mode {
+		--font-family-system: var(--font-sans);
+	}
+}
