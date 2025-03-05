@@ -282,6 +282,10 @@
 
 	@include fonts-group();
 
+	:root {
+		--font-sans: var(--parkinsans-font, var(--default-sans));
+	}
+
 	// Apply font to various elements
 	body,
 	[class*="css-"],
@@ -291,11 +295,39 @@
 	}
 }
 
+@-moz-document url-prefix("https://www.facebook.com/") {
+
+	:root {
+		--font-sans: var(--parkinsans-font, var(--default-sans));
+	}
+}
+
 @-moz-document url-prefix("https://www.instagram.com/") {
+
+	.x1ykew4q {
+		max-width: 1440px;
+	}
+
+	.xh8yej3 {
+		max-width: 100% !important;
+	}
+
+	.x4h1yfo {
+		width: 720px;
+	}
 
 	:root,
 	.__fb-light-mode:root,
-	.__fb-light-mode {
+	.__fb-light-mode,
+	body,
+	button,
+	input,
+	label,
+	select,
+	td,
+	textarea,
+	._ar45 {
 		--font-family-system: var(--font-sans);
+		--font-family-apple: var(--font-sans);
 	}
 }
