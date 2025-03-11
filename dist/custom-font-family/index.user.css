@@ -1,7 +1,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.16
+@version 1.0.17
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -22,14 +22,13 @@ url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
     --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --default-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     --ibm-plex-font: "IBM Plex Mono",system-ui;
-    --poppins-font: "Poppins","Hind",sans-serif;
-    --lexend-font: "Lexend","Hind",sans-serif;
-    --parkinsans-font: "Parkinsans","Hind",sans-serif
+    --parkinsans-font: "Parkinsans","Hind",sans-serif;
+    --default-font: var(--parkinsans-font)
   }
 }
 @-moz-document domain("acharyaprashant.org") {
   :root {
-    --font-sans: var(--poppins-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .font-en,
   html {
@@ -41,7 +40,7 @@ domain("onlinesbi.sbi"),
 domain("incometax.gov.in"),
 domain("insight.gov.in") {
   :root {
-    --font-sans: var(--poppins-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   *,
   ::after,
@@ -71,7 +70,7 @@ domain("insight.gov.in") {
 @-moz-document domain("openai.com"),
 domain("chatgpt.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :host,
   html {
@@ -81,7 +80,7 @@ domain("chatgpt.com") {
 }
 @-moz-document domain("www.perplexity.ai") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .font-sans {
     font-family: var(--font-sans);
@@ -90,7 +89,7 @@ domain("chatgpt.com") {
 }
 @-moz-document domain("cra-nsdl.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   html {
     font-size: 16px
@@ -266,7 +265,7 @@ domain("chatgpt.com") {
 }
 @-moz-document domain("easyhindityping.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   *,
   ::after,
@@ -476,7 +475,7 @@ domain("chatgpt.com") {
 @-moz-document domain("amazon.in"),
 domain("flipkart.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .a-ember body,
   .fonts-loaded body,
@@ -505,7 +504,7 @@ domain("flipkart.com") {
 }
 @-moz-document url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   body,
   button,
@@ -516,7 +515,7 @@ domain("flipkart.com") {
 }
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -548,7 +547,7 @@ domain("flipkart.com") {
 domain("zerodha.com"),
 domain("smallcase.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .font-semibold,
   .outer-app *,
@@ -565,7 +564,7 @@ domain("smallcase.com") {
 }
 @-moz-document domain("linear.app") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-regular: var(--font-sans);
@@ -574,7 +573,7 @@ domain("smallcase.com") {
 }
 @-moz-document domain("md2pdf.netlify.app") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -598,7 +597,7 @@ domain("smallcase.com") {
 }
 @-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   #primary-navigation li,
   #primary-navigation li a,
@@ -638,7 +637,7 @@ regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 regexp("^https://(.*)(cpsess)(.*)"),
 domain("127.0.0.1") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -719,6 +718,10 @@ domain("127.0.0.1") {
   .maestro textarea:not(.dig-Button) {
     font-family: var(--font-sans)
   }
+  #facebook .x1xqt7ti,
+  #facebook .xmi5d70 {
+    font-family: var(--font-sans)!important
+  }
   #facebook ._-kb.mac,
   #facebook ._-kb.sf,
   #facebook ._8esf ._1gaz,
@@ -789,7 +792,7 @@ domain("127.0.0.1") {
 }
 @-moz-document url-prefix("https://www.bluehost.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -828,7 +831,7 @@ domain("127.0.0.1") {
 domain("quora.com"),
 domain("acharyaprashant.quora.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -855,7 +858,7 @@ domain("acharyaprashant.quora.com") {
 }
 @-moz-document url-prefix("https://x.com/") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -917,7 +920,7 @@ domain("acharyaprashant.quora.com") {
 }
 @-moz-document domain("peopleperhour.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   body,
   button,
@@ -993,7 +996,7 @@ domain("acharyaprashant.quora.com") {
 }
 @-moz-document domain("textfixer.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   *,
   ::after,
@@ -1090,7 +1093,7 @@ domain("acharyaprashant.quora.com") {
 }
 @-moz-document domain("web.skype.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
@@ -1124,7 +1127,7 @@ domain("acharyaprashant.quora.com") {
 }
 @-moz-document domain("whatsapp.com") {
   :root {
-    --font-sans: var(--lexend-font, var(--default-sans))
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .os-mac,
   .os-mac button,
