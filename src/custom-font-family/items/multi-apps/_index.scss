@@ -1,6 +1,6 @@
 @mixin fonts-group() {
 
-	@include root-sans-font(lexend);
+	@include root-sans-font();
 	@include root-mono-font();
 
 	// Define font variables

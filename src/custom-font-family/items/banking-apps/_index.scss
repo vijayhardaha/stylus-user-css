@@ -3,7 +3,7 @@
 	domain("incometax.gov.in"),
 	domain("insight.gov.in") {
 
-	@include root-sans-font(poppins);
+	@include root-sans-font();
 
 	*,
 	body,

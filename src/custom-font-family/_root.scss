@@ -16,8 +16,7 @@
 
 		/* Define custom fonts */
 		--ibm-plex-font: "IBM Plex Mono", system-ui;
-		--poppins-font: "Poppins", "Hind", sans-serif;
-		--lexend-font: "Lexend", "Hind", sans-serif;
 		--parkinsans-font: "Parkinsans", "Hind", sans-serif;
+		--default-font: var(--parkinsans-font);
 	}
 }
