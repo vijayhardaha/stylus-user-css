@@ -239,3 +239,17 @@
 		@include sans-font();
 	}
 }
+
+@-moz-document domain("apple.com") {
+
+	@include fonts-group();
+
+	body,
+	.content-post .body .post-content .title,
+	.content-post .body .post-content .post-body,
+	.page .locked-thread,
+	#globalnav .globalnav-link {
+
+		@include sans-font();
+	}
+}
