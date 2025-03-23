@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.18
+@version 1.0.19
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -32,6 +32,52 @@ url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   .font-en,
   html {
     font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("openai.com"),
+domain("chatgpt.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :host,
+  html {
+    font-family: var(--font-sans)
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  code,
+  pre {
+    font-family: var(--font-mono)!important
+  }
+}
+@-moz-document domain("www.perplexity.ai") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  .font-sans {
+    font-family: var(--font-sans)
+  }
+  .font-mono {
+    font-family: var(--font-mono)
+  }
+}
+@-moz-document domain("deepseek.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+  code,
+  pre {
+    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("icicibank.com"),
@@ -64,37 +110,6 @@ domain("insight.gov.in") {
   h5,
   h6 {
     font-family: var(--font-sans)!important
-  }
-}
-@-moz-document domain("openai.com"),
-domain("chatgpt.com") {
-  :root {
-    --font-sans: var(--default-font, var(--default-sans))
-  }
-  :host,
-  html {
-    font-family: var(--font-sans)
-  }
-  :root {
-    --font-mono: var(--ibm-plex-font, var(--default-mono))
-  }
-  code,
-  pre {
-    font-family: var(--font-mono)!important
-  }
-}
-@-moz-document domain("www.perplexity.ai") {
-  :root {
-    --font-sans: var(--default-font, var(--default-sans))
-  }
-  :root {
-    --font-mono: var(--ibm-plex-font, var(--default-mono))
-  }
-  .font-sans {
-    font-family: var(--font-sans)
-  }
-  .font-mono {
-    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("cra-nsdl.com") {
@@ -511,6 +526,9 @@ domain("flipkart.com") {
   ._58bkzqd {
     font-family: var(--font-sans)
   }
+  .cPHDOP * {
+    font-family: var(--font-sans)!important
+  }
 }
 @-moz-document url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
   :root {
@@ -606,10 +624,67 @@ domain("flipkart.com") {
     display: none!important
   }
 }
-@-moz-document url-prefix("https://www.instagram.com/") {
+@-moz-document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
+regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\/\\?fbid=\\d+&set=a\\.\\d.*"),
+regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\?fbid=\\d+&set=a\\.\\d.*"),
+regexp("https:\\/\\/www\\.facebook\\.com\\/[\\w\\d]+\\/videos\\/.*"),
+regexp("https:\\/\\/www\\.facebook\\.com\\/.*\\/posts\\/.*"),
+regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
+  div[role=complementary],
+  div[role=complementary] > div > div {
+    width: 760px;
+    max-width: 760px
+  }
+}
+@-moz-document domain("fdown.net") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
   }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: var(--font-sans)
+  }
+  #extension,
+  #menu,
+  #result > div:nth-child(4),
+  #result > div:nth-child(7) {
+    display: none!important
+  }
+  body > div.jumbotron > div center > a,
+  body > div.jumbotron > div center > h1,
+  body > div.jumbotron > div center > h2 {
+    display: none!important
+  }
+  body > div.jumbotron.row {
+    margin: 0!important;
+    padding-top: 40px!important;
+    padding-bottom: 0!important
+  }
+  body > div.jumbotron.row > div > div > div > center > form > div > input {
+    border-color: #2c3e50
+  }
+  #result > div.col-xs-6.col-xs-offset-3.no-padding.lib-item {
+    margin-left: 30px
+  }
+  #result > div.col-xs-12 {
+    display: flex;
+    margin-top: 15px;
+    padding: 0
+  }
+}
+@-moz-document url-prefix("https://www.instagram.com/") {
   :root {
     --font-mono: var(--ibm-plex-font, var(--default-mono))
   }
@@ -628,6 +703,9 @@ domain("flipkart.com") {
     --sn-stylekit-sans-serif-font: var(--font-sans);
     --tnp-font-family: var(--font-sans);
     --neko-font-family: var(--font-sans)
+  }
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
   }
   .__fb-light-mode,
   .__fb-light-mode:root,
@@ -714,6 +792,24 @@ domain("smallcase.com") {
     font-family: var(--font-sans)
   }
 }
+@-moz-document domain("jscompress.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  .button,
+  body,
+  button,
+  input {
+    font-family: var(--font-sans)
+  }
+  textarea {
+    font-family: var(--font-mono);
+    line-height: 1.6
+  }
+}
 @-moz-document domain("linear.app") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
@@ -782,7 +878,7 @@ regexp("^(https?://)(192.168.1)(.*)"),
 regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
-regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
+regexp("^https://(.*)(vimeo.com)(.*)"),
 regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
@@ -869,39 +965,6 @@ domain("127.0.0.1") {
   .maestro select:not(.dig-Button),
   .maestro textarea:not(.dig-Button) {
     font-family: var(--font-sans)
-  }
-  ytd-app * {
-    font-family: var(--font-sans)
-  }
-  #content [class*=ytd-] {
-    font-family: var(--font-sans)!important
-  }
-  #query-monitor-main a,
-  #query-monitor-main button,
-  #query-monitor-main caption,
-  #query-monitor-main code,
-  #query-monitor-main dd,
-  #query-monitor-main dl,
-  #query-monitor-main dt,
-  #query-monitor-main h1,
-  #query-monitor-main h2,
-  #query-monitor-main h3,
-  #query-monitor-main h4,
-  #query-monitor-main h5,
-  #query-monitor-main h6,
-  #query-monitor-main label,
-  #query-monitor-main li,
-  #query-monitor-main nav,
-  #query-monitor-main ol,
-  #query-monitor-main p,
-  #query-monitor-main pre,
-  #query-monitor-main section,
-  #query-monitor-main select,
-  #query-monitor-main table,
-  #query-monitor-main td,
-  #query-monitor-main th,
-  #query-monitor-main ul {
-    font-family: var(--font-sans)!important
   }
   .qm code,
   .qm pre {
@@ -996,7 +1059,7 @@ domain("acharyaprashant.quora.com") {
     font-family: var(--font-sans)
   }
 }
-@-moz-document url-prefix("https://x.com/") {
+@-moz-document domain("apple.com") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
   }
@@ -1019,11 +1082,48 @@ domain("acharyaprashant.quora.com") {
     --tnp-font-family: var(--font-sans);
     --neko-font-family: var(--font-sans)
   }
-  :root {
-    --font-sans: var(--parkinsans-font, var(--default-sans))
+  #globalnav .globalnav-link,
+  .content-post .body .post-content .post-body,
+  .content-post .body .post-content .title,
+  .page .locked-thread,
+  body {
+    font-family: var(--font-sans)
   }
-  [class*=css-],
-  [class*=r-],
+}
+@-moz-document domain("veganprofile.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  a,
+  body,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  p,
+  span {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("abplive.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  html:root {
+    --primary-font: var(--font-sans)
+  }
+}
+@-moz-document domain("google.co.in") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  .JJYS0b,
+  .Ose4Jf,
+  .Rj2Mlf,
   body {
     font-family: var(--font-sans)
   }
@@ -1201,6 +1301,17 @@ domain("acharyaprashant.quora.com") {
     display: none!important
   }
 }
+@-moz-document domain("twittervideodownloader.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  :root {
+    --bs-body-font-family: var(--font-sans)
+  }
+}
 @-moz-document domain("web.skype.com") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
@@ -1251,5 +1362,63 @@ domain("acharyaprashant.quora.com") {
   .UzMP7 {
     font-size: 14.5px;
     line-height: 1.3
+  }
+}
+@-moz-document url-prefix("https://x.com/") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  [class*=css-],
+  [class*=r-],
+  body {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
+  div[role=group] > div[aria-labelledby=modal-header] > div > div[aria-expanded=true] {
+    width: 720px
+  }
+}
+@-moz-document domain("twittershots.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  .__className_d65c78 {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("youtube.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  ytd-app * {
+    font-family: var(--font-sans)
+  }
+  #content [class*=ytd-] {
+    font-family: var(--font-sans)!important
+  }
+  .message.ytd-notification-renderer,
+  .yt-tab-shape-wiz__tab,
+  .ytSearchboxComponentInput {
+    font-family: var(--font-sans)
   }
 }
