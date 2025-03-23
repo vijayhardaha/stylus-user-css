@@ -17,3 +17,13 @@
 		width: 720px;
 	}
 }
+
+@-moz-document domain("twittershots.com") {
+
+	@include root-sans-font();
+
+	.__className_d65c78 {
+
+		@include sans-font();
+	}
+}
