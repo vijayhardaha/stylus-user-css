@@ -35,4 +35,9 @@
 
 		@include sans-font();
 	}
+
+	.cPHDOP * {
+
+		@include sans-font(true);
+	}
 }
