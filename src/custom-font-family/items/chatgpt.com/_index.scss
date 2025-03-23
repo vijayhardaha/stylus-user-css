@@ -37,3 +37,20 @@
 		@include mono-font();
 	}
 }
+
+@-moz-document domain("deepseek.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	body {
+
+		@include sans-font();
+	}
+
+	code,
+	pre {
+
+		@include mono-font();
+	}
+}
