@@ -1,34 +1,10 @@
-@mixin fonts-group() {
-
-	@include root-sans-font();
-	@include root-mono-font();
-
-	// Define font variables
-	:root {
-		--__bodyFontStack: var(--font-sans);
-		--cp-font-monospace: var(--font-mono);
-		--cp-font-sans-serif: var(--font-sans);
-		--cu-font-family: var(--font-sans);
-		--e-a-font-family: var(--font-sans);
-		--font-family-system: var(--font-sans);
-		--font-display: var(--font-sans);
-		--font-family-apple: var(--font-sans);
-		--font-headline: var(--font-sans);
-		--font-primary: var(--font-sans);
-		--font-system: var(--font-sans);
-		--sn-stylekit-sans-serif-font: var(--font-sans);
-		--tnp-font-family: var(--font-sans);
-		--neko-font-family: var(--font-sans);
-	}
-}
-
 @-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 	regexp("^(https?://)(192.168.1)(.*)"),
 	regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 	regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 	regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 	regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
-	regexp("^https://(.*)(cloudflare.com|cloudways.com|facebook.com|instagram.com)(.*)"),
+	regexp("^https://(.*)(cloudflare.com|cloudways.com|instagram.com)(.*)"),
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 	regexp("^https://(.*)(cpsess)(.*)"),
@@ -124,26 +100,6 @@
 		select:not(.dig-Button),
 		button:not(.dig-Button),
 		.normal:not(.dig-Button) {
-
-			@include sans-font();
-		}
-	}
-
-	// Facebook Styles
-	#facebook {
-
-		.x1xqt7ti,
-		.xmi5d70 {
-
-			@include sans-font(true);
-		}
-
-		.system-fonts--body.sf,
-		._-kb.sf,
-		._-kb.mac,
-		._8esf ._1gaz,
-		[class*="_"],
-		[class*="_"] [class*="_"] {
 
 			@include sans-font();
 		}
@@ -298,13 +254,6 @@
 	[class*="r-"] {
 
 		@include sans-font();
-	}
-}
-
-@-moz-document url-prefix("https://www.facebook.com/") {
-
-	:root {
-		--font-sans: var(--parkinsans-font, var(--default-sans));
 	}
 }
 
