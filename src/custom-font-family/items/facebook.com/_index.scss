@@ -42,3 +42,17 @@
 		display: none !important;
 	}
 }
+
+@-moz-document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\/\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/[\\w\\d]+\\/videos\\/.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/.*\\/posts\\/.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
+
+	div[role="complementary"],
+	div[role="complementary"] > div > div {
+		width: 760px;
+		max-width: 760px;
+	}
+}
