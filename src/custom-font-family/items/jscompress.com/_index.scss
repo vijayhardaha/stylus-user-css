@@ -1,0 +1,19 @@
+@-moz-document domain("jscompress.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	body,
+	button,
+	input,
+	.button {
+
+		@include font-sans();
+	}
+
+	textarea {
+
+		@include font-mono();
+		line-height: 1.6;
+	}
+}
