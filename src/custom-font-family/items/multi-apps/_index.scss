@@ -283,3 +283,16 @@
 		--primary-font: var(--font-sans);
 	}
 }
+
+@-moz-document domain("google.co.in") {
+
+	@include root-sans-font();
+
+	body,
+	.Ose4Jf,
+	.JJYS0b,
+	.Rj2Mlf {
+
+		@include sans-font();
+	}
+}
