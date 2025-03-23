@@ -1,0 +1,39 @@
+@-moz-document domain("openai.com"),
+	domain("chatgpt.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:host,
+	html {
+
+		@include sans-font();
+	}
+
+	:root {
+		--font-mono: var(--ibm-plex-font, var(--default-mono));
+
+	}
+
+	code,
+	pre {
+
+		@include mono-font(true);
+	}
+}
+
+@-moz-document domain("www.perplexity.ai") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	.font-sans {
+
+		@include sans-font();
+	}
+
+	.font-mono {
+
+		@include mono-font();
+	}
+}
