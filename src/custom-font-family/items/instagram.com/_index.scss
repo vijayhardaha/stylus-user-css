@@ -4,8 +4,6 @@
 	@include root-sans-font();
 
 	:root,
-	.__fb-light-mode:root,
-	.__fb-light-mode,
 	body,
 	button,
 	input,
@@ -13,7 +11,9 @@
 	select,
 	td,
 	textarea,
-	._ar45 {
+	._ar45,
+	.__fb-light-mode:root,
+	.__fb-light-mode, {
 		--font-family-system: var(--font-sans);
 		--font-family-apple: var(--font-sans);
 	}
@@ -41,34 +41,37 @@
 	section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div {
 		flex-direction: row !important;
 		align-items: flex-start;
-	}
 
-	section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div > div.x4h1yfo {
-		width: var(--section-width) !important;
-	}
+		> div.x4h1yfo {
+			width: var(--section-width) !important;
 
-	section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div > div.x4h1yfo > div > div.x5yr21d.xw2csxc.x1odjw0f.x1n2onr6 > div {
-		position: relative !important;
-		max-height: 70vh !important;
-		overflow-y: scroll !important;
+			> div > div.x5yr21d.xw2csxc.x1odjw0f.x1n2onr6 > div {
+				position: relative !important;
+				max-height: 70vh !important;
+				overflow-y: scroll !important;
+			}
+		}
 	}
 
 	.x1qjc9v5 {
 		--font-family-system: var(--font-sans) !important;
 	}
 
-	.x1l895ks[data-pressable-container="true"]:not(:last-child) {
-		max-height: 110px;
-		margin-bottom: 10px;
-		border-bottom: 1px solid #ddd;
-	}
+	.x1l895ks[data-pressable-container="true"] {
 
-	.x1l895ks[data-pressable-container="true"] > .x1iyjqo2 {
-		overflow: hidden;
-	}
+		&:not(:last-child) {
+			max-height: 110px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #ddd;
+		}
 
-	.x1l895ks[data-pressable-container="true"] > .x1iyjqo2 > span {
-		max-height: 90px;
+		> .x1iyjqo2 {
+			overflow: hidden;
+		}
+
+		> .x1iyjqo2 > span {
+			max-height: 90px;
+		}
 	}
 
 	form:has(textarea[aria-label="Add a comment…"]) {
