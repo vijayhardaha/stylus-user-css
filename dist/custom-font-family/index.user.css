@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.17
+@version 1.0.18
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -13,8 +14,6 @@
 @-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"),
 url-prefix("chrome-extension://hdokiejnpimakedhajhdlcegeplioahd") {
-  @import url(https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap);
@@ -74,17 +73,28 @@ domain("chatgpt.com") {
   }
   :host,
   html {
-    font-family: var(--font-sans);
-    font-size: 14px
+    font-family: var(--font-sans)
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  code,
+  pre {
+    font-family: var(--font-mono)!important
   }
 }
 @-moz-document domain("www.perplexity.ai") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
   }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
   .font-sans {
-    font-family: var(--font-sans);
-    font-size: 14px
+    font-family: var(--font-sans)
+  }
+  .font-mono {
+    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("cra-nsdl.com") {
@@ -543,6 +553,148 @@ domain("flipkart.com") {
     top: 8px
   }
 }
+@-moz-document url-prefix("https://www.facebook.com/") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  body,
+  html {
+    font-family: var(--font-sans)
+  }
+  #facebook .x1xqt7ti,
+  #facebook .xmi5d70 {
+    font-family: var(--font-sans)!important
+  }
+  #facebook ._-kb.mac,
+  #facebook ._-kb.sf,
+  #facebook ._8esf ._1gaz,
+  #facebook .system-fonts--body.sf,
+  #facebook [class*=_],
+  #facebook [class*=_] [class*=_] {
+    font-family: var(--font-sans)
+  }
+  div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div.html-div.x18d9i69.xkhd6sds,
+  div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div.html-div.x1n2onr6.xh8yej3,
+  div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div:not([class]),
+  div[aria-label="Account controls and settings"] span > div[aria-label=Menu],
+  div[aria-label="New Message"],
+  div[aria-label="People you may know"],
+  div[aria-label="Suggested for you"],
+  div[aria-label=Facebook][role=navigation] ul,
+  div[aria-label=Reels],
+  div[aria-label=Shortcuts] > div > div > div > div > div > div > div > ul + div[data-visualcompletion=ignore-dynamic],
+  div[aria-label=Stories] {
+    display: none!important
+  }
+}
+@-moz-document url-prefix("https://www.instagram.com/") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  :root {
+    --__bodyFontStack: var(--font-sans);
+    --cp-font-monospace: var(--font-mono);
+    --cp-font-sans-serif: var(--font-sans);
+    --cu-font-family: var(--font-sans);
+    --e-a-font-family: var(--font-sans);
+    --font-family-system: var(--font-sans);
+    --font-display: var(--font-sans);
+    --font-family-apple: var(--font-sans);
+    --font-headline: var(--font-sans);
+    --font-primary: var(--font-sans);
+    --font-system: var(--font-sans);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --tnp-font-family: var(--font-sans);
+    --neko-font-family: var(--font-sans)
+  }
+  .__fb-light-mode,
+  .__fb-light-mode:root,
+  ._ar45,
+  :root,
+  body,
+  button,
+  input,
+  label,
+  select,
+  td,
+  textarea {
+    --font-family-system: var(--font-sans);
+    --font-family-apple: var(--font-sans)
+  }
+  .__fb-light-mode,
+  .__fb-light-mode:root,
+  :root {
+    --section-width: 700px;
+    --nav-medium-width: 244px;
+    --nav-wide-width: 244px
+  }
+  .x1ykew4q {
+    max-width: 1440px
+  }
+  .xh8yej3 {
+    max-width: 100%!important
+  }
+  .x4h1yfo {
+    width: 720px
+  }
+  section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div {
+    flex-direction: row!important;
+    align-items: flex-start
+  }
+  section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div > div.x4h1yfo {
+    width: var(--section-width)!important
+  }
+  section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div > div.x4h1yfo > div > div.x5yr21d.xw2csxc.x1odjw0f.x1n2onr6 > div {
+    position: relative!important;
+    max-height: 70vh!important;
+    overflow-y: scroll!important
+  }
+  .x1qjc9v5 {
+    --font-family-system: var(--font-sans)!important
+  }
+  .x1l895ks[data-pressable-container=true]:not(:last-child) {
+    max-height: 110px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd
+  }
+  .x1l895ks[data-pressable-container=true] > .x1iyjqo2 {
+    overflow: hidden
+  }
+  .x1l895ks[data-pressable-container=true] > .x1iyjqo2 > span {
+    max-height: 90px
+  }
+  form:has(textarea[aria-label="Add a comment…"]) {
+    padding: 10px 12px;
+    padding-right: 6px;
+    border-radius: 4px;
+    border-color: #b9b9b9;
+    outline: 0;
+    background-color: #fff;
+    box-shadow: 0 0 0 .1rem rgba(0,0,0,.08)
+  }
+}
 @-moz-document domain("indmoney.com"),
 domain("zerodha.com"),
 domain("smallcase.com") {
@@ -631,7 +783,7 @@ regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
-regexp("^https://(.*)(cloudflare.com|cloudways.com|facebook.com|instagram.com)(.*)"),
+regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 regexp("^https://(.*)(cpsess)(.*)"),
@@ -716,18 +868,6 @@ domain("127.0.0.1") {
   .maestro input:not(.dig-Button),
   .maestro select:not(.dig-Button),
   .maestro textarea:not(.dig-Button) {
-    font-family: var(--font-sans)
-  }
-  #facebook .x1xqt7ti,
-  #facebook .xmi5d70 {
-    font-family: var(--font-sans)!important
-  }
-  #facebook ._-kb.mac,
-  #facebook ._-kb.sf,
-  #facebook ._8esf ._1gaz,
-  #facebook .system-fonts--body.sf,
-  #facebook [class*=_],
-  #facebook [class*=_] [class*=_] {
     font-family: var(--font-sans)
   }
   ytd-app * {
@@ -886,36 +1026,6 @@ domain("acharyaprashant.quora.com") {
   [class*=r-],
   body {
     font-family: var(--font-sans)
-  }
-}
-@-moz-document url-prefix("https://www.facebook.com/") {
-  :root {
-    --font-sans: var(--parkinsans-font, var(--default-sans))
-  }
-}
-@-moz-document url-prefix("https://www.instagram.com/") {
-  .x1ykew4q {
-    max-width: 1440px
-  }
-  .xh8yej3 {
-    max-width: 100%!important
-  }
-  .x4h1yfo {
-    width: 720px
-  }
-  .__fb-light-mode,
-  .__fb-light-mode:root,
-  ._ar45,
-  :root,
-  body,
-  button,
-  input,
-  label,
-  select,
-  td,
-  textarea {
-    --font-family-system: var(--font-sans);
-    --font-family-apple: var(--font-sans)
   }
 }
 @-moz-document domain("peopleperhour.com") {
