@@ -239,20 +239,3 @@
 		@include sans-font();
 	}
 }
-
-@-moz-document url-prefix("https://x.com/") {
-
-	@include fonts-group();
-
-	:root {
-		--font-sans: var(--parkinsans-font, var(--default-sans));
-	}
-
-	// Apply font to various elements
-	body,
-	[class*="css-"],
-	[class*="r-"] {
-
-		@include sans-font();
-	}
-}
