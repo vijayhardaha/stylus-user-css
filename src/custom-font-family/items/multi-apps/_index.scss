@@ -274,3 +274,12 @@
 		@include sans-font();
 	}
 }
+
+@-moz-document domain("abplive.com") {
+
+	@include root-sans-font();
+
+	html:root {
+		--primary-font: var(--font-sans);
+	}
+}
