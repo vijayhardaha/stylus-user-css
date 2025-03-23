@@ -8,12 +8,12 @@
 	input,
 	.button {
 
-		@include font-sans();
+		@include sans-font();
 	}
 
 	textarea {
 
-		@include font-mono();
+		@include mono-font();
 		line-height: 1.6;
 	}
 }
