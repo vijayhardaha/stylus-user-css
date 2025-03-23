@@ -1,6 +1,7 @@
 @-moz-document url-prefix("https://www.instagram.com/") {
 
 	@include fonts-group();
+	@include root-sans-font();
 
 	:root,
 	.__fb-light-mode:root,
