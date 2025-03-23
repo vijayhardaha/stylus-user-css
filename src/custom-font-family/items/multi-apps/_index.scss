@@ -3,7 +3,7 @@
 	regexp("^https://(.*)(gpldl.com|mailtrap.io)(.*)"),
 	regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
 	regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
-	regexp("^https://(.*)(youtube.com|vimeo.com)(.*)"),
+	regexp("^https://(.*)(vimeo.com)(.*)"),
 	regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
@@ -102,51 +102,6 @@
 		.normal:not(.dig-Button) {
 
 			@include sans-font();
-		}
-	}
-
-	// Global Elements
-	ytd-app * {
-
-		@include sans-font();
-	}
-
-	// Specific Content Blocks
-	#content [class*="ytd-"] {
-
-		@include sans-font(true);
-	}
-
-	// Query Monitor
-	#query-monitor-main {
-
-		dl,
-		dt,
-		dd,
-		button,
-		caption,
-		label,
-		select,
-		table,
-		td,
-		th,
-		ul,
-		ol,
-		li,
-		code,
-		pre,
-		a,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		section,
-		nav,
-		p {
-
-			@include sans-font(true);
 		}
 	}
 
