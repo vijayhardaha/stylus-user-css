@@ -1,0 +1,60 @@
+@-moz-document domain("linkedin.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:root {
+		--artdeco-reset-typography-font-family-sans: var(--font-sans);
+		--artdeco-typography-sans: var(--font-sans);
+		--artdeco-typography-mono: var(--font-mono);
+
+		--pdntctat: var(--font-sans);
+		--pdntctau: var(--font-mono);
+
+		--corner-radius-small: 0.4rem;
+		--corner-radius-medium: 0.4rem;
+		--corner-radius-large: 0.4rem;
+		--corner-radius-xlarge: 0.4rem;
+	}
+
+	html {
+		font-size: 56.5%;
+	}
+
+	.global-nav__nav .premium-upsell-link,
+	.global-nav__nav .global-nav__app-launcher-menu,
+	footer.global-footer-compact,
+	ul[aria-label="Account"] > li:has(a[href^="http://www.linkedin.com/premium/products/"]),
+	div.artdeco-card:has(a[href^="http://www.linkedin.com/premium/products/"]) {
+		display: none;
+	}
+
+	.artdeco-pill--3 {
+		border-radius: 6px !important;
+	}
+
+	.comments-comment-textarea,
+	.comments-comment-texteditor,
+	.gQgqfCIOKgGvfGSOqLSUDloFAaUAauSI,
+	.share-box-feed-entry__trigger {
+		border-radius: 6px !important;
+	}
+}
+
+@-moz-document url-prefix("https://www.linkedin.com/messaging/thread/") {
+
+	.ad-banner,
+	aside.scaffold-layout__aside {
+		display: none;
+	}
+
+	@media screen and (min-width: 992px) {
+
+		.scaffold-layout--reflow .scaffold-layout__content--list-detail-aside {
+			display: grid;
+			grid-template-areas: "main";
+			grid-template-columns: 1fr;
+		}
+	}
+
+}
