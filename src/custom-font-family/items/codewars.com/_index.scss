@@ -1,0 +1,18 @@
+@-moz-document domain("codewars.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:root {
+		--font-sans-serif: var(--font-sans);
+	}
+
+	code,
+	kbd,
+	samp,
+	pre,
+	pre code {
+
+		@include mono-font();
+	}
+}
