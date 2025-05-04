@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.20
+@version 1.0.21
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -110,6 +110,24 @@ domain("insight.gov.in") {
   h5,
   h6 {
     font-family: var(--font-sans)!important
+  }
+}
+@-moz-document domain("codewars.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  :root {
+    --font-mono: var(--ibm-plex-font, var(--default-mono))
+  }
+  :root {
+    --font-sans-serif: var(--font-sans)
+  }
+  code,
+  kbd,
+  pre,
+  pre code,
+  samp {
+    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("cra-nsdl.com") {
