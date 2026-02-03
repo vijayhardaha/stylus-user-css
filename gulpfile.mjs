@@ -4,7 +4,7 @@
 import { deleteSync } from "del"; // Delete files and directories
 import autoprefixer from "autoprefixer"; // Autoprefix CSS properties
 import cleancss from "gulp-clean-css"; // Minify CSS
-import dartSass from "sass"; // Compile SCSS to CSS
+import * as dartSass from "sass"; // Compile SCSS to CSS
 import duplicates from "postcss-discard-duplicates"; // Remove duplicate CSS rules
 import gulp from "gulp"; // Gulp task runner
 import gulpSass from "gulp-sass"; // Compile SCSS to CSS
@@ -20,10 +20,16 @@ const sass = gulpSass(dartSass);
  * @param {Function} done - A callback function to signal task completion.
  */
 const buildCSS = (done) => {
-	gulp
-		.src("src/**/*.scss") // Source LESS files
+	gulp.src("src/**/*.scss") // Source LESS files
 		.pipe(plumber()) // Handle errors gracefully
-		.pipe(sass()) // Compile SCSS to CSS
+		.pipe(
+			sass({
+				quietDeps: true,
+				silenceDeprecations: ["moz-document"],
+				verbose: false,
+				logger: sass.compiler.Logger.silent,
+			}),
+		) // Compile SCSS to CSS
 		.pipe(postcss([duplicates(), autoprefixer()])) // Process CSS with PostCSS plugins
 		.pipe(cleancss({ format: "beautify" })) // Minify CSS
 		.pipe(rename({ suffix: ".user" })) // Rename output files
