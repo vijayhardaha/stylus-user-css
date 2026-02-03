@@ -1,7 +1,6 @@
-@-moz-document domain("openai.com"), domain("chatgpt.com"), domain("www.perplexity.ai"), domain("deepseek.com") {
+@-moz-document domain("openai.com"), domain("chatgpt.com"), domain("claude.ai") {
 
-	@include root-sans-font();
-	@include root-mono-font();
+	@include fonts-group();
 
 	:host,
 	html,
