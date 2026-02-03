@@ -30,26 +30,26 @@
 
 		@include sans-font();
 
-		>.body-container {
+		> .body-container {
 			width: 100%;
 			margin-top: 0;
 			padding-right: 1rem;
 			padding-left: 1rem;
 
-			>div.site-header {
+			> div.site-header {
 				margin: 0;
 
-				>h1 {
+				> h1 {
 					margin: 0;
 					font-weight: 700;
 				}
 			}
 
-			>.row {
+			> .row {
 
 				.span9 {
 
-					>div.contains {
+					> div.contains {
 						margin-top: 1rem;
 						padding: 1rem;
 						border-radius: 0;
@@ -179,10 +179,10 @@
 		.nav-tabs {
 			width: 100%;
 
-			>li {
+			> li {
 				margin-bottom: -1px;
 
-				>a {
+				> a {
 					margin: 0;
 					padding: 6px 10px;
 					border-radius: 0;
@@ -194,7 +194,7 @@
 				}
 			}
 
-			>.active {
+			> .active {
 
 				a,
 				a:hover {
@@ -236,7 +236,12 @@
 	body div.navbar-fixed-top,
 	body div.translation-desktop-faqs,
 	body div.body-container > div.row > div.span9 > div:nth-child(1),
-	body div.body-container > div.row > div.span9 > div.contains > div:nth-child(6),
+	body
+		div.body-container
+		> div.row
+		> div.span9
+		> div.contains
+		> div:nth-child(6),
 	body div.site-header > h2,
 	body .subnav-fixed,
 	body .additional-info,

@@ -57,14 +57,13 @@
 
 	#content {
 
-		>h1,
-		>p:nth-child(1),
-		>p:nth-child(2),
-		>p:nth-child(3),
-		>p:nth-child(4),
-		>p:nth-child(5),
-		>p:nth-child(6), {
-
+		> h1,
+		> p:nth-child(1),
+		> p:nth-child(2),
+		> p:nth-child(3),
+		> p:nth-child(4),
+		> p:nth-child(5),
+		> p:nth-child(6) {
 			display: none !important;
 		}
 	}
@@ -74,7 +73,7 @@
 		padding: 5px 15px;
 		border-radius: 0;
 
-		>h3 {
+		> h3 {
 			margin-top: 0;
 			margin-bottom: 8px;
 		}
@@ -114,7 +113,6 @@
 	.adthrive-placeholder-header,
 	.socialShareBar,
 	#ftr {
-
 		display: none !important;
 	}
 }

@@ -1,4 +1,5 @@
-@-moz-document url-prefix("https://www.instagram.com/") {
+@-moz-document url-prefix("https://www.instagram.com/")
+{
 
 	@include fonts-group();
 	@include root-sans-font();
@@ -13,7 +14,7 @@
 	textarea,
 	._ar45,
 	.__fb-light-mode:root,
-	.__fb-light-mode, {
+	.__fb-light-mode {
 		--font-family-system: var(--font-sans);
 		--font-family-apple: var(--font-sans);
 	}
@@ -38,7 +39,11 @@
 		width: 720px;
 	}
 
-	section > main > div > div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3 > div {
+	section
+		> main
+		> div
+		> div.x6s0dn4.x78zum5.xdt5ytf.xdj266r.xkrivgy.xat24cr.x1gryazu.x1n2onr6.xh8yej3
+		> div {
 		flex-direction: row !important;
 		align-items: flex-start;
 
