@@ -11,7 +11,9 @@ import gulpSass from "gulp-sass"; // Compile SCSS to CSS
 import plumber from "gulp-plumber"; // Handle errors gracefully
 import postcss from "gulp-postcss"; // Process CSS with PostCSS
 import rename from "gulp-rename"; // Rename files
+import mergeRules from 'postcss-merge-rules'; // Merge CSS rules
 
+// Initialize gulp-sass with dart-sass
 const sass = gulpSass(dartSass);
 
 /**
@@ -30,7 +32,7 @@ const buildCSS = (done) => {
 				logger: sass.compiler.Logger.silent,
 			}),
 		) // Compile SCSS to CSS
-		.pipe(postcss([duplicates(), autoprefixer()])) // Process CSS with PostCSS plugins
+		.pipe(postcss([duplicates(), mergeRules(), autoprefixer()])) // Process CSS with PostCSS plugins
 		.pipe(cleancss({ format: "beautify" })) // Minify CSS
 		.pipe(rename({ suffix: ".user" })) // Rename output files
 		.pipe(gulp.dest("dist")); // Output directory
