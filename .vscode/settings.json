@@ -1,9 +1,9 @@
 {
 	"[scss]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll.stylelint": "explicit"
