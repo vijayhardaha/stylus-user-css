@@ -9,5 +9,6 @@
 		"source.fixAll.stylelint": "explicit"
 	},
 	"editor.formatOnSave": false,
+	"eslint.enable": false,
 	"stylelint.validate": ["scss"]
 }
