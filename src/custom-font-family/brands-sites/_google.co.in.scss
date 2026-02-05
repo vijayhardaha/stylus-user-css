@@ -9,4 +9,19 @@
 
 		@include sans-font();
 	}
+
+	body {
+
+		a,
+		div,
+		p,
+		span,
+		li,
+		input. button,
+		textarea,
+		select {
+
+			@include sans-font(true);
+		}
+	}
 }
