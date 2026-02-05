@@ -1,0 +1,10 @@
+@-moz-document domain("indmoney.com") {
+
+	@include root-sans-font();
+
+	:host,
+	html {
+
+		@include sans-font();
+	}
+}

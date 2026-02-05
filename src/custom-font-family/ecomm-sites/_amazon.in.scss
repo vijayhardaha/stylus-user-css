@@ -1,0 +1,14 @@
+@-moz-document domain("amazon.in"), domain("amazon.com") {
+
+	@include root-sans-font();
+
+	.a-ember-1-0-0 body,
+	body,
+	button,
+	input,
+	select,
+	textarea {
+
+		@include sans-font();
+	}
+}

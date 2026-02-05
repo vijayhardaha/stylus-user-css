@@ -1,0 +1,38 @@
+@-moz-document domain("md2pdf.netlify.app") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	.hLjMun {
+
+		@include sans-font();
+	}
+
+	.CodeMirror{
+
+		@include mono-font(true);
+		font-size: 0.75rem;
+	}
+
+	#root .markdown-body {
+
+		@include sans-font();
+		padding: 1rem 1.5rem;
+		font-size: 1rem;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: 700;
+		}
+
+		code,
+		pre {
+
+			@include mono-font();
+		}
+	}
+}

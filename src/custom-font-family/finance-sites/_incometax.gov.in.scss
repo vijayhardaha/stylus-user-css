@@ -1,0 +1,45 @@
+@-moz-document domain("incometax.gov.in"), domain("insight.gov.in") {
+
+	@include root-sans-font();
+
+	*,
+	body {
+
+		@include sans-font();
+	}
+
+	body {
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+
+	div#ui-id-2 .gry-ft,
+	.itr-content label.control-label.js-form-required.form-required,
+	.ui-widget input,
+	.ui-widget select,
+	.ui-widget textarea,
+	.ui-widget button,
+	.footer-main a,
+	.downloads_itr .itr-content .view-header > a,
+	.ui-accordion .ui-accordion-content p,
+	.download-page .ui-widget-content a,
+	.ui-state-default a:link,
+	.ui-state-default a:visited {
+
+		@include sans-font(true);
+	}
+
+	li#login a.btn.login,
+	li#register .btn.register {
+
+		@include sans-font();
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 0;
+		line-height: 1.4;
+	}
+}

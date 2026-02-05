@@ -1,0 +1,25 @@
+@-moz-document domain("flipkart.com") {
+
+	@include root-sans-font();
+
+	$fonts:
+		georgia, arial, robotobold, robotolight, roboto, robotomedium,
+		intersemibold, inter;
+
+	:root {
+
+		@each $font in $fonts {
+			--font-#{$font}: var(--font-sans);
+		}
+	}
+
+	$form-elements: body, button, input, select, textarea;
+
+	@each $element in $form-elements {
+		#{$element},
+		.useInterFont.en-fonts-loaded #{$element} {
+
+			@include sans-font();
+		}
+	}
+}

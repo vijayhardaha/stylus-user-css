@@ -1,0 +1,44 @@
+@-moz-document domain("sbi.bank.in") {
+
+	@include root-sans-font();
+
+	html {
+		--mat-form-field-container-text-font: var(--font-sans);
+		--mat-radio-label-text-font: var(--font-sans);
+		--mat-select-trigger-text-font: var(--font-sans);
+		--mat-tab-header-label-text-font: var(--font-sans);
+		--mdc-outlined-button-label-text-font: var(--font-sans);
+	}
+
+	body {
+
+		@include sans-font(true);
+		font-size: 14px !important;
+		font-weight: 500 !important;
+
+		.mat-internal-form-field > label {
+
+			@include sans-font(true);
+		}
+
+		.custom-nav-item,
+		.dropdown-item,
+		.lable_key,
+		.lable_key_card,
+		.lable_value,
+		.lable_value_card,
+		.lang-dropdown,
+		.logout,
+		.rightside-content .overall .image-category-section .post div,
+		.support,
+		.tab-label,
+		.transaction-link,
+		.whatsNewSwitchToOld {
+
+			@include sans-font(true);
+			font-size: 1em !important;
+			font-weight: 500 !important;
+			line-height: 1.3 !important;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+@-moz-document domain("quora.com") {
+
+	@include fonts-group();
+
+	body {
+
+		@include sans-font();
+	}
+}

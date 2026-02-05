@@ -1,0 +1,70 @@
+@-moz-document url-prefix("https://www.facebook.com/")
+{
+
+	@include fonts-group();
+
+	html,
+	body {
+
+		@include sans-font();
+	}
+
+	// Facebook Styles
+	#facebook {
+
+		.x1xqt7ti,
+		.xmi5d70 {
+
+			@include sans-font(true);
+		}
+
+		.system-fonts--body.sf,
+		._-kb.sf,
+		._-kb.mac,
+		._8esf ._1gaz,
+		[class*="_"],
+		[class*="_"] [class*="_"] {
+
+			@include sans-font();
+		}
+	}
+
+	div[aria-label="Shortcuts"]
+		> div
+		> div
+		> div
+		> div
+		> div
+		> div
+		> div
+		> ul
+		+ div[data-visualcompletion="ignore-dynamic"],
+	div[aria-label="Account controls and settings"]
+		span
+		> div[aria-label="Menu"],
+	div[aria-label="Facebook"][role="navigation"] ul,
+	div[aria-label="New Message"],
+	div[aria-label="People you may know"],
+	div[aria-label="Reels"],
+	div[aria-label="Stories"],
+	div[aria-label="Suggested for you"],
+	div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div:not([class]),
+	div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div.html-div.x1n2onr6.xh8yej3,
+	div.xd665xh.x10l6tqk.x1dquyif[data-0="0"] + div.html-div.x18d9i69.xkhd6sds {
+		display: none !important;
+	}
+}
+
+@-moz-document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\/\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\?fbid=\\d+&set=a\\.\\d.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/[\\w\\d]+\\/videos\\/.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/.*\\/posts\\/.*"),
+	regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
+
+	div[role="complementary"],
+	div[role="complementary"] > div > div {
+		width: 760px;
+		max-width: 760px;
+	}
+}

@@ -1,0 +1,35 @@
+@-moz-document domain("codewars.com") {
+
+	@include fonts-group();
+
+	.CodeMirror,
+	.markdown code,
+	.prose code,
+	.prose pre code,
+	code,
+	kbd,
+	pre,
+	pre code,
+	samp {
+
+		@include mono-font();
+	}
+
+	#users,
+	section.user-profile {
+
+		.company b,
+		.github b,
+		.honor b,
+		.skills b,
+		div.stat b {
+			color: #fff;
+			letter-spacing: 0;
+		}
+	}
+
+	#partner-display,
+	.ads-container {
+		display: none;
+	}
+}

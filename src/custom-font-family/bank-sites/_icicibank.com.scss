@@ -1,0 +1,39 @@
+@-moz-document domain("icicibank.com"), domain("icici.bank.in") {
+
+	@include root-sans-font();
+
+	html body div {
+
+		.Global_P,
+		.globalNavigation,
+		.searchsimpletext,
+		.tableGlobal,
+		> *,
+		ul.submenu li a.Global_sub {
+
+			@include sans-font(true);
+		}
+
+		.globalNavigation,
+		ul.submenu li a.Global_sub {
+			font-size: 14px;
+			text-transform: capitalize;
+		}
+
+		.OfferTitleContainer .UnlockOfferBtn,
+		.cibilScore span,
+		.dropDownRecent .initialArea .recentText,
+		.have-own-wrapper .have-own-area-container .have-own-area p,
+		.sidenav .atag,
+		.sidenav a,
+		.spendDropAreaZeroState .spendText,
+		.upcoming-container-wrapper .upcomingDrop .upcomingCta .upcomingTitle {
+			letter-spacing: 0 !important;
+		}
+
+		.have-own-wrapper .send-money-area .sendMoneyAreaText {
+			font-weight: 700 !important;
+			letter-spacing: 0 !important;
+		}
+	}
+}

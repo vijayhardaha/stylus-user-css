@@ -1,4 +1,34 @@
-// Mixin to set the root variable for sans-serif font
+/**
+ * Emit a font-family declaration with optional !important.
+ *
+ * Internal helper used by sans-font/mono-font so the logic is centralized.
+ *
+ * @param {String|Variable} $font - The font-family value (string or CSS var).
+ * @param {Boolean} $important - When true append !important (default: false).
+ *
+ * @example
+ *   @include font-family(var(--font-sans), true);
+ */
+@mixin font-family($font, $important: false) {
+
+	@if $important {
+		// Use !important when requested to override site styles.
+		font-family: $font !important;
+	} @else {
+		font-family: $font;
+	}
+}
+
+/**
+ * Set the root --font-sans CSS variable.
+ *
+ * Defines a CSS custom property on :root so items can use var(--font-sans).
+ *
+ * @param {String} $font - Root font key (defaults to $default-root-sans).
+ *
+ * @example
+ *   @include root-sans-font("general-sans");
+ */
 @mixin root-sans-font($font: $default-root-sans) {
 
 	:root {
@@ -7,7 +37,14 @@
 	}
 }
 
-// Mixin to set the root variable for monospace font
+/**
+ * Set the root --font-mono CSS variable.
+ *
+ * @param {String} $font - Root mono font key (defaults to $default-root-mono).
+ *
+ * @example
+ *   @include root-mono-font("ibm-plex");
+ */
 @mixin root-mono-font($font: $default-root-mono) {
 
 	:root {
@@ -16,51 +53,55 @@
 	}
 }
 
-// Mixin to set font-family with optional !important declaration
-@mixin font-family($font, $important: false) {
-
-	@if $important {
-		// Overrides font-family with !important if $important is true
-		font-family: $font !important;
-	} @else {
-		font-family: $font;
-	}
-}
-
-// Mixin for applying sans-serif font-family
+/**
+ * Apply the current sans-serif font variable to a selector.
+ *
+ * Wrapper around font-family to make intent clear in item files.
+ *
+ * @param {Boolean} $important - If true, applies with !important (default: false).
+ *
+ * @example
+ *   .selector { @include sans-font(true); }
+ */
 @mixin sans-font($important: false) {
 	// Applies font-family specified in --font-sans variable with optional !important
 	@include font-family(var(--font-sans), $important);
 }
 
-// Mixin for applying monospace font-family
+/**
+ * Apply the current monospace font variable to a selector.
+ *
+ * @param {Boolean} $important - If true, applies with !important (default: false).
+ *
+ * @example
+ *   code { @include mono-font(true); }
+ */
 @mixin mono-font($important: false) {
 	// Applies font-family specified in --font-mono variable with optional !important
 	@include font-family(var(--font-mono), $important);
 }
 
+/**
+ * Initialize both root font variables and common font-related custom properties.
+ *
+ * Use at the top of item partials to ensure variables exist and common aliases are defined.
+ *
+ * @example
+ *   @include fonts-group();
+ */
 @mixin fonts-group() {
 
 	@include root-sans-font();
 	@include root-mono-font();
 
-	// Define font variables
+	// Define font variables and common aliases for broader compatibility.
 	:root {
-		--__bodyFontStack: var(--font-sans);
-		--cp-font-monospace: var(--font-mono);
-		--cp-font-sans-serif: var(--font-sans);
-		--cu-font-family: var(--font-sans);
-		--e-a-font-family: var(--font-sans);
-		--font-display: var(--font-sans);
-		--font-family-apple: var(--font-sans);
-		--font-family-system: var(--font-sans);
-		--font-headline: var(--font-sans);
-		--font-primary: var(--font-sans);
-		--font-sans-serif: var(--font-sans);
-		--font-system: var(--font-sans);
-		--font-ui: var(--font-sans);
-		--neko-font-family: var(--font-sans);
-		--sn-stylekit-sans-serif-font: var(--font-sans);
-		--tnp-font-family: var(--font-sans);
+		$sans-aliases:
+			display, family-apple, family-system, headline, primary, sans-serif,
+			system, ui;
+
+		@each $alias in $sans-aliases {
+			--font-#{$alias}: var(--font-sans);
+		}
 	}
 }

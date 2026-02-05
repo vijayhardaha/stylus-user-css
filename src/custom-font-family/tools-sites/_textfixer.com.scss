@@ -1,0 +1,147 @@
+@-moz-document domain("textfixer.com") {
+
+	@include root-sans-font();
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+
+		@include sans-font();
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.header {
+
+		@include sans-font();
+	}
+
+	.button,
+	input,
+	select,
+	textarea {
+
+		@include sans-font();
+		border: 1px solid #e3e3e3;
+		border-radius: 0;
+		outline: none;
+		font-size: 1rem;
+		letter-spacing: 0;
+		line-height: 1.5;
+	}
+
+	textarea {
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	.frmbtn,
+	.rstbtn,
+	.subbtn,
+	.actbtn {
+
+		@include sans-font();
+		margin: 0 0.5rem 0 0;
+		padding: 0.5rem 1.5rem;
+		border: 0;
+		border-radius: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0;
+		line-height: 1.5;
+	}
+
+	.adthrive-placeholder-video,
+	.adthrive-placeholder-header,
+	.socialShareBar {
+		display: none;
+	}
+
+	#menu li {
+		font-size: 1.25rem;
+	}
+
+	#hdrWrapper {
+		padding: 1rem 0;
+	}
+
+	#hdr {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: auto;
+
+		> a > img {
+			width: 200px;
+			height: auto;
+		}
+
+		#nav,
+		#menu {
+			margin: 0;
+
+			li {
+
+				@include sans-font();
+			}
+		}
+	}
+
+	.ftable {
+		display: flex;
+		margin-bottom: 1rem;
+		border-spacing: 0;
+
+		.frow {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			column-gap: 1rem;
+
+			> div {
+				display: block;
+				flex: 1;
+				width: auto;
+				padding: 1.5rem;
+				border-radius: 0;
+
+				h3 {
+					margin: 0;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1240px) {
+			border-spacing: 0;
+		}
+	}
+
+	.tools {
+		margin-top: 0.5rem;
+		margin-bottom: 1.5rem;
+
+		li {
+			margin-bottom: 0.125rem;
+		}
+	}
+
+	.online-tools,
+	.online-tools ~ div {
+		border-radius: 0 !important;
+	}
+}

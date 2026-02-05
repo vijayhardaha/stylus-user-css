@@ -1,0 +1,17 @@
+// Aggregate imports for tools site partials.
+// Each imported file targets a specific tool site and may be empty if no overrides are required.
+
+// Easy Hindi Typing — provides styles/overrides for the typing widget on easyhindityping.com
+@import "easyhindityping.com";
+
+// FDown.net — font family adjustments for better readability on fdown.net
+@import "fdown.net";
+
+// JSCompress — adjustments for minification preview UI and font rendering quirks
+@import "jscompress.com";
+
+// md2pdf (hosted on netlify) — PDF preview/export tweaks for md2pdf.netlify.app
+@import "md2pdf.netlify.app";
+
+// TextFixer — utility site where font-family rules are applied
+@import "textfixer.com";

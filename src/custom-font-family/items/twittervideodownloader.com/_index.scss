@@ -1,9 +1,0 @@
-@-moz-document domain("twittervideodownloader.com") {
-
-	@include root-sans-font();
-	@include root-mono-font();
-
-	:root {
-		--bs-body-font-family: var(--font-sans);
-	}
-}

@@ -1,0 +1,13 @@
+@-moz-document domain("apple.com") {
+
+	@include fonts-group();
+
+	#globalnav .globalnav-link,
+	.content-post .body .post-content .post-body,
+	.content-post .body .post-content .title,
+	.page .locked-thread,
+	body {
+
+		@include sans-font();
+	}
+}

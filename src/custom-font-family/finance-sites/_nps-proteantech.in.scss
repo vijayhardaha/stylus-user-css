@@ -1,0 +1,152 @@
+@-moz-document domain("nps-proteantech.in") {
+
+	@include root-sans-font();
+
+	.footer-text a,
+	.footer-text,
+	.loginPageLeftBottomLinkSelfLock a,
+	.nav ul li a,
+	.pageheading,
+	.power-text,
+	.sub-text,
+	.welcome-txt a,
+	.welcome-txt,
+	a,
+	abbr,
+	acronym,
+	address,
+	article,
+	aside,
+	blockquote,
+	body,
+	button,
+	caption,
+	code,
+	dd,
+	del,
+	dfn,
+	dialog,
+	div,
+	dl,
+	dt,
+	em,
+	fieldset,
+	figure,
+	footer,
+	form,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	header,
+	hgroup,
+	iframe,
+	img,
+	input,
+	label,
+	legend,
+	li,
+	nav,
+	object,
+	ol,
+	p,
+	pre,
+	q,
+	section,
+	select,
+	span,
+	table,
+	tbody,
+	td,
+	tfoot,
+	th,
+	thead,
+	tr,
+	ul {
+
+		@include sans-font();
+	}
+
+	#gotrust-cookie-banner {
+
+		div.cookieFooterBanner__HERrd,
+		button {
+
+			@include sans-font(true);
+		}
+	}
+
+	.CRA-loginForm {
+
+		.shadow-sm {
+			box-shadow: none;
+		}
+
+		.rounded {
+			border-radius: 0;
+		}
+
+		> div:first-child > div:first-child > p {
+			margin-bottom: 1rem !important;
+			font-size: 2rem !important;
+			font-weight: 700;
+		}
+
+		form[name="logonPwdForm"] > div.row {
+
+			> div.col-6,
+			> div.col-3 > div {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.375rem;
+			}
+
+			> div.col-4 {
+				display: inline-flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+
+			> div.col-4,
+			> div.col-8 {
+				margin-top: 1rem !important;
+			}
+
+			input[type="text"],
+			input[type="password"] {
+				padding: 6px 12px;
+				border: 1px solid #ddd;
+				border-radius: 0;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.shadow-element {
+		height: auto;
+		margin: 16px 5% 0 5%;
+		padding: 8px 24px;
+		border-style: dashed;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.submitbutton,
+	.button {
+
+		@include sans-font();
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 80px;
+		height: auto;
+		margin: 1rem 0 1.5rem 0 !important;
+		border-radius: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.5;
+		cursor: pointer;
+	}
+}

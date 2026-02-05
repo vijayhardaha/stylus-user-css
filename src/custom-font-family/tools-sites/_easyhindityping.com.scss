@@ -1,0 +1,157 @@
+@-moz-document domain("easyhindityping.com") {
+
+	@include root-sans-font();
+
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 14px;
+	}
+
+	.desktop-panel,
+	h1,
+	p {
+
+		@include sans-font(true);
+	}
+
+	body {
+
+		@include sans-font();
+		font-size: 1rem;
+		line-height: 1.8;
+	}
+
+	.navbar.navbar-fixed-top,
+	.subnav.subnav-fixed,
+	.slogan-byline,
+	#DesktopNavBarWrapper + .row > .span3,
+	#how-to-type-hindi-characters,
+	#key-features-overview-of-hindi-transliteration-tool,
+	#key-features-overview-of-hindi-transliteration-tool + div,
+	#viewing-text-in-your-browser,
+	#overview-of-hindi-typing-tool-panels,
+	#hindi-alphabets,
+	#about-hindi-language,
+	#how-to-integrate-english-to-hindi-transliteration-on-website-or-app,
+	#how-to-integrate-english-to-hindi-transliteration-on-website-or-app + div,
+	#ReferenceSection,
+	.center960 .page-info,
+	.center960,
+	#watch-youtube-video-on-hindi-homepage,
+	.adsbygoogle,
+	#EmailModal {
+		display: none !important;
+	}
+
+	.body-container {
+		margin-top: 0;
+	}
+
+	#DesktopNavBarWrapper + .row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+
+		@media (min-width: 1200px) {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+		> .span9 {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 0;
+			padding-right: 15px;
+			padding-left: 15px;
+
+			> div:first-child {
+				display: none;
+			}
+
+			@media (min-width: 1200px) {
+				margin: 0;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+	}
+
+	.site-header {
+		margin: 1rem 0;
+
+		h1 {
+			font-weight: 900;
+		}
+	}
+
+	#NavBar {
+		max-width: 100%;
+		margin: 0;
+		border-bottom: 0;
+
+		.nav-tabs > li {
+
+			&.active > a {
+				border: 1px solid #dbdbdb;
+			}
+
+			a {
+				border: 1px solid transparent;
+			}
+		}
+	}
+
+	.navbar,
+	#NavBar li,
+	body,
+	button,
+	footer,
+	input,
+	select,
+	textarea {
+
+		@include sans-font(true);
+	}
+
+	.contains {
+		border: 1px solid #dbdbdb;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.btn {
+		border: 1px solid #dbdbdb;
+		border-radius: 0;
+		background-image: none;
+		box-shadow: none;
+		text-shadow: none;
+
+		&.btn-info {
+			border-color: #49afcd;
+		}
+
+		&.btn-success {
+			border-color: #5bb75b;
+		}
+	}
+
+	textarea#input_tool,
+	textarea#languageTextarea,
+	textarea#languageTextareaNew {
+
+		@include sans-font();
+		width: 100%;
+		height: 600px;
+		padding: 10px;
+		border: 1px solid #dbdbdb;
+		border-radius: 0;
+		font-size: 100%;
+		resize: vertical;
+	}
+}

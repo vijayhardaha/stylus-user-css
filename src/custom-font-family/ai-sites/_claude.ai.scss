@@ -1,0 +1,10 @@
+@-moz-document domain("claude.ai") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:root {
+		--font-ui: var(--font-sans);
+		--font-system: var(--font-sans);
+	}
+}

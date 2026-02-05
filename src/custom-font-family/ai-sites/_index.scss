@@ -1,0 +1,8 @@
+// Aggregate imports for AI-related site partials.
+// Each imported file targets a specific AI site and may be empty if no overrides are required.
+
+/// ChatGPT site-specific rules
+@import "chatgpt.com";
+
+/// Anthropic Claude site-specific rules
+@import "claude.ai";

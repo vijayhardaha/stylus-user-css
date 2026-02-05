@@ -1,0 +1,21 @@
+@-moz-document domain("smallcase.com") {
+
+	@include root-sans-font();
+
+	.btn,
+	.font-medium,
+	.font-regular,
+	.font-semibold,
+	.reset-button-style,
+	h1.display,
+	h2.display,
+	h3.display,
+	h4.display,
+	h1,
+	h2,
+	h3,
+	body {
+
+		@include sans-font();
+	}
+}

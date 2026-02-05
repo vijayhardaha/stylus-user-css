@@ -1,0 +1,42 @@
+@-moz-document url-prefix("https://x.com/")
+{
+
+	@include fonts-group();
+
+	body,
+	[class*="css-"],
+	[class*="r-"] {
+
+		@include sans-font();
+	}
+}
+
+@-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
+
+	div[role="group"]
+		> div[aria-labelledby="modal-header"]
+		> div
+		> div[aria-expanded="true"] {
+		width: 720px;
+	}
+}
+
+@-moz-document domain("twittershots.com") {
+
+	@include root-sans-font();
+
+	.__className_d65c78 {
+
+		@include sans-font();
+	}
+}
+
+@-moz-document domain("twittervideodownloader.com") {
+
+	@include root-sans-font();
+	@include root-mono-font();
+
+	:root {
+		--bs-body-font-family: var(--font-sans);
+	}
+}

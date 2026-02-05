@@ -15,28 +15,17 @@
 @import "mixins";
 @import "root";
 
-/* Items */
-@import "items/ai-apps/index";
-@import "items/banking-apps/index";
-@import "items/codewars.com/index";
-@import "items/cra-nsdl.com/index";
-@import "items/easyhindityping.com/index";
-@import "items/ecommerce-apps/index";
-@import "items/extensions/index";
-@import "items/facebook.com/index";
-@import "items/fdown.net/index";
-@import "items/instagram.com/index";
-@import "items/investment-apps/index";
-@import "items/jscompress.com/index";
-@import "items/linear.apps/index";
-@import "items/linkedin.com/index";
-@import "items/md2pdf.netlify.app/index";
-@import "items/movie-apps/index";
-@import "items/multi-apps/index";
-@import "items/peopleperhour.com/index";
-@import "items/textfixer.com/index";
-@import "items/twittervideodownloader.com/index";
-@import "items/web.skype.com/index";
-@import "items/whatsapp.com/index";
-@import "items/x.com/index";
-@import "items/youtube.com/index";
+// Multiple wesites in single file using regex.
+@import "multi-sites";
+
+// File from the directories.
+@import "ai-sites";
+@import "bank-sites";
+@import "brands-sites";
+@import "coding-sites";
+@import "ecomm-sites";
+@import "extensions";
+@import "finance-sites";
+@import "media-sites";
+@import "social-sites";
+@import "tools-sites";

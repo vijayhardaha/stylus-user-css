@@ -1,0 +1,9 @@
+@-moz-document domain("reddit.com") {
+
+	@include fonts-group();
+
+	body {
+
+		@include sans-font();
+	}
+}
