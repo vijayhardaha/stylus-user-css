@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.22
+@version 1.0.23
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -270,6 +270,14 @@ domain("google.com") {
     font-family: var(--font-sans)
   }
 }
+@-moz-document domain("mail.google.com") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  body * {
+    font-family: var(--font-sans)!important
+  }
+}
 @-moz-document domain("veganprofile.com") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
@@ -286,6 +294,15 @@ domain("google.com") {
   li,
   p,
   span {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("wikipedia.org") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  body,
+  html {
     font-family: var(--font-sans)
   }
 }
@@ -329,6 +346,10 @@ domain("google.com") {
   #partner-display,
   .ads-container {
     display: none
+  }
+  .btn,
+  a.btn {
+    text-transform: none
   }
 }
 @-moz-document domain("linear.app") {
