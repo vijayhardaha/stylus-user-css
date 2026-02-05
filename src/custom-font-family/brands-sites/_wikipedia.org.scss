@@ -1,0 +1,10 @@
+@-moz-document domain("wikipedia.org") {
+
+	@include root-sans-font();
+
+	html,
+	body {
+
+		@include sans-font();
+	}
+}

@@ -1,0 +1,9 @@
+@-moz-document domain("mail.google.com") {
+
+	@include root-sans-font();
+
+	body * {
+
+		@include sans-font(true);
+	}
+}
