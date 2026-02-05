@@ -1,7 +1,13 @@
-@-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)")
+@-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)")
 {
 
 	@include root-sans-font();
+
+	*,
+	::after,
+	::before {
+		box-sizing: border-box;
+	}
 
 	body,
 	h1,
@@ -20,6 +26,20 @@
 		@include sans-font(true);
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+
+	p {
+		margin-bottom: 1rem;
+	}
+
 	#sidebar,
 	#commentsAdd {
 		display: none !important;
@@ -31,5 +51,680 @@
 
 	.imdbwp {
 		max-width: 100%;
+	}
+
+	#header #s,
+	.fa-search {
+		border-radius: 0;
+	}
+
+	#header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.5rem 0 0 0;
+		float: none;
+
+		.logo-wrap,
+		.header-search,
+		.header-social {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0 !important;
+			padding: 0;
+		}
+
+		.logo-wrap {
+			margin-left: 1rem !important;
+		}
+
+		.header-social {
+			margin-right: 1rem !important;
+			gap: 0.5rem;
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: auto;
+				margin-right: 0;
+				padding: 0.5rem 1rem;
+				float: none;
+				border-radius: 0;
+				font-size: 1rem;
+				line-height: 1.5;
+
+				.fa {
+
+					@include sans-font();
+					font-weight: 700;
+					line-height: 1.5;
+				}
+			}
+		}
+
+		h1,
+		h2 {
+			margin: 0;
+		}
+	}
+
+	#logo a {
+		display: flex;
+	}
+
+	#primary-navigation {
+		background: none;
+
+		a {
+			padding: 0.5rem 1rem;
+			font-weight: 500;
+		}
+
+		.navigation ul ul {
+			width: auto;
+			min-width: 200px;
+			columns: 3;
+
+			li {
+				display: block;
+				width: 100%;
+			}
+
+			a {
+				width: auto;
+				font-size: 0.875rem;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	#primary-navigation,
+	nav.navigation {
+		width: 100%;
+		margin-top: 0.25rem;
+		border-radius: 0;
+
+		.menu-item {
+			border-radius: 0;
+		}
+
+		li,
+		li a {
+			font-size: 1rem;
+			font-weight: 500;
+			text-transform: none;
+		}
+	}
+
+	#searchform {
+
+		#s,
+		.woocommerce-product-search .search-field {
+			position: relative;
+			height: auto;
+			padding: 0.5rem 0.75rem;
+			float: none;
+			font-size: 1rem;
+			line-height: 1.5;
+			text-indent: 0;
+		}
+
+		.sbutton,
+		#searchsubmit {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			float: none;
+			background: #3f3f46 !important;
+		}
+
+		.fa-search {
+			position: relative;
+			width: auto;
+			height: auto;
+			padding: 0;
+			float: none;
+			font-size: 1rem;
+		}
+	}
+
+	.main-container {
+		max-width: 100%;
+
+		#page {
+			margin-top: 1rem !important;
+		}
+	}
+
+	#imbut {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+
+		> a {
+			width: 100%;
+		}
+
+		button,
+		.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			margin: 0;
+			padding: 0.5rem 1rem;
+			transition-duration: 0.15s;
+			border: 0;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 0;
+			font-weight: 600;
+			text-transform: none;
+			white-space: nowrap;
+			gap: 0.25rem;
+
+			&.buttontg {
+				border-color: #009de1;
+			}
+
+			&.button4k {
+				border-color: #ffaa2c;
+			}
+
+			&.button5 {
+				border: 1px solid #555;
+				background-color: #555;
+
+				&:hover {
+					border-color: #fff;
+					background: #fff;
+					color: #555;
+				}
+			}
+		}
+
+		~ br {
+			display: none;
+		}
+	}
+
+	.alert,
+	.search-alert,
+	.alertxxx {
+		position: relative;
+		width: 100%;
+		min-height: 60px;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		border-radius: 0;
+
+		h3 {
+			margin-bottom: 0.5rem;
+		}
+
+		ul.search-info {
+			display: block;
+
+			li {
+				margin-bottom: 0.125rem;
+			}
+		}
+
+		~ br {
+			display: none;
+		}
+	}
+
+	.alertxxx {
+		background-color: #228b22;
+		color: #fff;
+
+		.closebtn {
+			display: flex;
+			position: absolute;
+			top: 0;
+			right: 0;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 100%;
+			margin-left: 0;
+			background: rgba(0, 0, 0, 0.35);
+			color: #fff;
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 1.5;
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.45);
+				color: #fff;
+			}
+		}
+	}
+
+	.post-cards {
+		margin-bottom: 1rem !important;
+
+		@media screen and (min-width: 1024px) {
+			margin: auto 0 !important;
+			margin-bottom: 2rem !important;
+			gap: 1rem;
+		}
+	}
+
+	.featured-thumbnail img {
+		border-radius: 0;
+	}
+
+	.latestPost {
+		border-radius: 0;
+		box-shadow: none;
+
+		header {
+			padding: 0.875rem;
+		}
+
+		.title,
+		.title a {
+			min-height: 120px;
+			margin-bottom: 0;
+			padding-top: 0;
+			transition-duration: 0.15s;
+			font-size: 14px !important;
+			font-weight: 500;
+			line-height: 1.5 !important;
+		}
+
+		.title a:hover {
+			color: #228b22 !important;
+		}
+	}
+
+	nav.pagination {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	.pagination a:hover,
+	.page-numbers.current {
+		background-color: #009de1;
+		color: #fff;
+	}
+
+	.pagination a,
+	.pagination .dots,
+	.page-numbers.current {
+		margin-bottom: 0 !important;
+		border-radius: 0 !important;
+	}
+
+	#breadcrumbs,
+	.single_post .thecategory {
+		display: none;
+	}
+
+	.single-title {
+		font-size: 1.75rem !important;
+		font-weight: 700;
+		line-height: 1.3 !important;
+	}
+
+	.postsby {
+		margin-bottom: 0.5rem;
+
+		+ p:empty {
+			display: none;
+		}
+
+		+ .post-cards {
+			margin-top: 1rem !important;
+		}
+	}
+
+	.mts-archive-description {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		color: #acacac;
+	}
+
+	.post-info > span,
+	.widget .vertical-small .post-info > span {
+		margin-right: 0.75rem;
+	}
+
+	.thecontent {
+
+		~ center {
+			display: none;
+		}
+
+		h3 + ul {
+			margin-top: 0;
+		}
+
+		a.maxbutton[class*="maxbutton"] {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+			min-width: 150px;
+			height: auto;
+			margin: 0 0.25rem;
+			padding: 0.5rem 1rem;
+			border: 0 !important;
+			border-radius: 0;
+			box-shadow: none;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.5;
+
+			&.maxbutton-g-drive,
+			&.maxbutton-download-links,
+			&.maxbutton-episode-links {
+				background: #009de1;
+				color: #fff;
+
+				&:hover {
+					background: #005c83;
+					color: #fff;
+				}
+			}
+
+			&.maxbutton-af-download,
+			&.maxbutton-batch-zip {
+				background: #dd6767;
+				color: #fff;
+
+				&:hover {
+					background: #ba4949;
+					color: #fff;
+				}
+			}
+
+			&:hover {
+				box-shadow: none;
+			}
+
+			span.mb-text {
+				padding: 0;
+				color: inherit !important;
+				font-family: inherit;
+				font-size: inherit;
+				font-style: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				text-shadow: none !important;
+			}
+		}
+	}
+
+	div[role="presentation"] > h2 + p {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: 0.5rem;
+
+		> img {
+			flex: 1 1 calc(50% - 0.25rem);
+			max-width: calc(50% - 0.25rem);
+			margin: 0;
+		}
+	}
+
+	.related-posts h4,
+	#respond h4,
+	.total-comments,
+	.postauthor h4,
+	.postauthor-top {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		color: #fff !important;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+}
+
+@-moz-document domain("modlist.in"), domain("mmodlist.net") {
+
+	.badge {
+		font-weight: 400;
+	}
+
+	.btn,
+	.btn-group-lg > .btn,
+	.btn-lg {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	form.rounded-3.bg-light {
+		border-radius: 0 !important;
+	}
+
+	.form-floating {
+
+		> br {
+			display: none;
+		}
+
+		> hr {
+			margin: 0.75rem 0;
+			background-color: #bbb;
+		}
+	}
+
+	a[href*="telegram"] {
+		display: none;
+
+		~ br {
+			display: none;
+		}
+	}
+
+	main > .text-center > p {
+		display: none;
+	}
+}
+
+@-moz-document domain("leechpro.blog"), domain("modpro.blog") {
+
+	@include root-sans-font();
+
+	*,
+	::after,
+	::before {
+		box-sizing: border-box;
+	}
+
+	body {
+
+		@include sans-font();
+
+		p:empty {
+			display: none;
+		}
+
+		&.custom-background {
+			background: #fff;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		@include sans-font();
+	}
+
+	.entry-header-wrapper,
+	.code-block.code-block-1,
+	.entry-meta-footer,
+	.site-footer,
+	.site-header {
+		display: none !important;
+	}
+
+	.post-wrapper-single .post-wrapper-hentry {
+		padding: 0;
+	}
+
+	div[class*="timed-content-"] {
+
+		> p:empty,
+		~ p:empty {
+			display: none;
+
+			~ center {
+				display: none;
+			}
+		}
+
+		> p {
+			margin-bottom: 0;
+
+			a {
+				margin-bottom: 0.5rem;
+			}
+			font-size: 1rem;
+		}
+	}
+
+	.site-content .site-content-inside {
+
+		@media (min-width: 1200px) {
+			padding: 0 0;
+		}
+	}
+
+	.entry-content {
+
+		.buttonred,
+		a.maxbutton[class*="maxbutton"] {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+			width: 100%;
+			min-width: 150px;
+			height: auto;
+			margin: 0 0.25rem 0.5rem;
+			padding: 0.5rem 1rem;
+			border: 0 !important;
+			border-radius: 0;
+			box-shadow: none;
+			color: #fff;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.5;
+
+			&.maxbutton-g-drive,
+			&.maxbutton-download-links,
+			&.maxbutton-episode-links {
+				background: #009de1;
+				color: #fff;
+
+				&:hover {
+					background: #005c83;
+					color: #fff;
+				}
+			}
+
+			&.maxbutton-af-download,
+			&.maxbutton-batch-zip {
+				background: #dd6767;
+				color: #fff;
+
+				&:hover {
+					background: #ba4949;
+					color: #fff;
+				}
+			}
+
+			&:hover {
+				box-shadow: none;
+			}
+
+			span.mb-text {
+				padding: 0;
+				color: inherit !important;
+				font-family: inherit;
+				font-size: inherit;
+				font-style: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				text-shadow: none !important;
+			}
+		}
+	}
+}
+
+@-moz-document domain("unblockedgames.world") {
+
+	@include root-sans-font();
+
+	*,
+	::after,
+	::before {
+		box-sizing: border-box;
+	}
+
+	body,
+	html,
+	.font-sans {
+
+		@include sans-font();
+
+		p:empty {
+			display: none;
+		}
+	}
+
+	main.container_el > div ~ a,
+	.navigation,
+	.pagination,
+	footer,
+	header,
+	.blog_styles > center ~ script ~ p,
+	.blog_styles > center ~ script ~ div[class*="article-body"] {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("driveseed.org"), domain("video-seed.dev"), domain("video-downloads.xyz") {
+
+	@include root-sans-font();
+
+	body {
+
+		@include sans-font();
+
+		p:empty {
+			display: none;
+		}
+	}
+
+	.btn {
+		min-width: 200px !important;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.alert,
+	.rounded-3 {
+		border-radius: 0 !important;
+	}
+
+	a[href*="telegram"] {
+		display: none;
 	}
 }
