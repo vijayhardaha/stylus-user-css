@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Custom Font Family
 @namespace github.com/openstyles/stylus
-@version 1.0.24
+@version 1.0.25
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -716,9 +716,14 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)
   }
 }
-@-moz-document regexp("^https://(.*)(moviesmod|modlinkz|oddfirm|driveseed|video-downloads.xyz)(.*)") {
+@-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)") {
   :root {
     --font-sans: var(--default-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
   }
   #primary-navigation li,
   #primary-navigation li a,
@@ -735,6 +740,18 @@ domain("insight.gov.in") {
   h6 {
     font-family: var(--font-sans)!important
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: .5rem;
+    font-weight: 700
+  }
+  p {
+    margin-bottom: 1rem
+  }
   #commentsAdd,
   #sidebar {
     display: none!important
@@ -744,6 +761,596 @@ domain("insight.gov.in") {
   }
   .imdbwp {
     max-width: 100%
+  }
+  #header #s,
+  .fa-search {
+    border-radius: 0
+  }
+  #header {
+    padding: .5rem 0 0 0;
+    float: none
+  }
+  #header,
+  #header .header-search,
+  #header .header-social,
+  #header .logo-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between
+  }
+  #header .header-search,
+  #header .header-social,
+  #header .logo-wrap {
+    margin: 0!important;
+    padding: 0
+  }
+  #header .logo-wrap {
+    margin-left: 1rem!important
+  }
+  #header .header-social {
+    margin-right: 1rem!important;
+    gap: .5rem
+  }
+  #header .header-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-right: 0;
+    padding: .5rem 1rem;
+    float: none;
+    border-radius: 0;
+    font-size: 1rem;
+    line-height: 1.5
+  }
+  #header .header-social a .fa {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    line-height: 1.5
+  }
+  #header h1,
+  #header h2 {
+    margin: 0
+  }
+  #logo a {
+    display: flex
+  }
+  #primary-navigation {
+    background: 0 0
+  }
+  #primary-navigation a {
+    padding: .5rem 1rem;
+    font-weight: 500
+  }
+  #primary-navigation .navigation ul ul {
+    width: auto;
+    min-width: 200px;
+    -moz-columns: 3;
+    columns: 3
+  }
+  #primary-navigation .navigation ul ul li {
+    display: block;
+    width: 100%
+  }
+  #primary-navigation .navigation ul ul a {
+    width: auto;
+    font-size: .875rem;
+    font-weight: 500;
+    white-space: nowrap
+  }
+  #primary-navigation,
+  nav.navigation {
+    width: 100%;
+    margin-top: .25rem;
+    border-radius: 0
+  }
+  #primary-navigation .menu-item,
+  nav.navigation .menu-item {
+    border-radius: 0
+  }
+  #primary-navigation li,
+  #primary-navigation li a,
+  nav.navigation li,
+  nav.navigation li a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: none
+  }
+  #searchform #s,
+  #searchform .woocommerce-product-search .search-field {
+    position: relative;
+    height: auto;
+    padding: .5rem .75rem;
+    float: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-indent: 0
+  }
+  #searchform #searchsubmit,
+  #searchform .sbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    background: #3f3f46!important
+  }
+  #searchform .fa-search {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    float: none;
+    font-size: 1rem
+  }
+  .main-container {
+    max-width: 100%
+  }
+  .main-container #page {
+    margin-top: 1rem!important
+  }
+  #imbut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-bottom: 1rem
+  }
+  #imbut > a {
+    width: 100%
+  }
+  #imbut .button,
+  #imbut button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: .5rem 1rem;
+    transition-duration: .15s;
+    border: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    font-weight: 600;
+    text-transform: none;
+    white-space: nowrap;
+    gap: .25rem
+  }
+  #imbut .button.buttontg,
+  #imbut button.buttontg {
+    border-color: #009de1
+  }
+  #imbut .button.button4k,
+  #imbut button.button4k {
+    border-color: #ffaa2c
+  }
+  #imbut .button.button5,
+  #imbut button.button5 {
+    border: 1px solid #555;
+    background-color: #555
+  }
+  #imbut .button.button5:hover,
+  #imbut button.button5:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #555
+  }
+  #imbut ~ br {
+    display: none
+  }
+  .alert,
+  .alertxxx,
+  .search-alert {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0
+  }
+  .alert h3,
+  .alertxxx h3,
+  .search-alert h3 {
+    margin-bottom: .5rem
+  }
+  .alert ul.search-info,
+  .alertxxx ul.search-info,
+  .search-alert ul.search-info {
+    display: block
+  }
+  .alert ul.search-info li,
+  .alertxxx ul.search-info li,
+  .search-alert ul.search-info li {
+    margin-bottom: .125rem
+  }
+  .alert ~ br,
+  .alertxxx ~ br,
+  .search-alert ~ br {
+    display: none
+  }
+  .alertxxx {
+    background-color: #228b22;
+    color: #fff
+  }
+  .alertxxx .closebtn {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    margin-left: 0;
+    background: rgba(0,0,0,.35);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5
+  }
+  .alertxxx .closebtn:hover {
+    background: rgba(0,0,0,.45);
+    color: #fff
+  }
+  .post-cards {
+    margin-bottom: 1rem!important
+  }
+  @media screen and (min-width:1024px) {
+    .post-cards {
+      margin: auto 0!important;
+      margin-bottom: 2rem!important;
+      gap: 1rem
+    }
+  }
+  .featured-thumbnail img,
+  .latestPost {
+    border-radius: 0
+  }
+  .latestPost {
+    box-shadow: none
+  }
+  .latestPost header {
+    padding: .875rem
+  }
+  .latestPost .title,
+  .latestPost .title a {
+    min-height: 120px;
+    margin-bottom: 0;
+    padding-top: 0;
+    transition-duration: .15s;
+    font-size: 14px!important;
+    font-weight: 500;
+    line-height: 1.5!important
+  }
+  .latestPost .title a:hover {
+    color: #228b22!important
+  }
+  nav.pagination {
+    margin-top: 0;
+    margin-bottom: 2rem
+  }
+  .page-numbers.current,
+  .pagination a:hover {
+    background-color: #009de1;
+    color: #fff
+  }
+  .page-numbers.current,
+  .pagination .dots,
+  .pagination a {
+    margin-bottom: 0!important;
+    border-radius: 0!important
+  }
+  #breadcrumbs,
+  .single_post .thecategory {
+    display: none
+  }
+  .single-title {
+    font-size: 1.75rem!important;
+    font-weight: 700;
+    line-height: 1.3!important
+  }
+  .postsby {
+    margin-bottom: .5rem
+  }
+  .postsby + p:empty {
+    display: none
+  }
+  .postsby + .post-cards {
+    margin-top: 1rem!important
+  }
+  .mts-archive-description {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #acacac
+  }
+  .post-info > span,
+  .widget .vertical-small .post-info > span {
+    margin-right: .75rem
+  }
+  .thecontent ~ center {
+    display: none
+  }
+  .thecontent h3 + ul {
+    margin-top: 0
+  }
+  .thecontent a.maxbutton[class*=maxbutton] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    margin: 0 .25rem;
+    padding: .5rem 1rem;
+    border: 0!important;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5
+  }
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-download-links,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-episode-links,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-g-drive {
+    background: #009de1;
+    color: #fff
+  }
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-download-links:hover,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-episode-links:hover,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-g-drive:hover {
+    background: #005c83;
+    color: #fff
+  }
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-af-download,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-batch-zip {
+    background: #dd6767;
+    color: #fff
+  }
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-af-download:hover,
+  .thecontent a.maxbutton[class*=maxbutton].maxbutton-batch-zip:hover {
+    background: #ba4949;
+    color: #fff
+  }
+  .thecontent a.maxbutton[class*=maxbutton]:hover {
+    box-shadow: none
+  }
+  .thecontent a.maxbutton[class*=maxbutton] span.mb-text {
+    padding: 0;
+    color: inherit!important;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-shadow: none!important
+  }
+  div[role=presentation] > h2 + p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: .5rem
+  }
+  div[role=presentation] > h2 + p > img {
+    flex: 1 1 calc(50% - .25rem);
+    max-width: calc(50% - .25rem);
+    margin: 0
+  }
+  #respond h4,
+  .postauthor h4,
+  .postauthor-top,
+  .related-posts h4,
+  .total-comments {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #fff!important;
+    font-size: 1.5rem;
+    font-weight: 700
+  }
+}
+@-moz-document domain("modlist.in"),
+domain("mmodlist.net") {
+  .badge {
+    font-weight: 400
+  }
+  .btn,
+  .btn-group-lg > .btn,
+  .btn-lg {
+    width: 100%;
+    border-radius: 0
+  }
+  form.rounded-3.bg-light {
+    border-radius: 0!important
+  }
+  .form-floating > br {
+    display: none
+  }
+  .form-floating > hr {
+    margin: .75rem 0;
+    background-color: #bbb
+  }
+  a[href*=telegram],
+  a[href*=telegram] ~ br,
+  main > .text-center > p {
+    display: none
+  }
+}
+@-moz-document domain("leechpro.blog"),
+domain("modpro.blog") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+  body p:empty {
+    display: none
+  }
+  body.custom-background {
+    background: #fff
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans)
+  }
+  .code-block.code-block-1,
+  .entry-header-wrapper,
+  .entry-meta-footer,
+  .site-footer,
+  .site-header {
+    display: none!important
+  }
+  .post-wrapper-single .post-wrapper-hentry {
+    padding: 0
+  }
+  div[class*=timed-content-] > p:empty,
+  div[class*=timed-content-] > p:empty ~ center,
+  div[class*=timed-content-] ~ p:empty,
+  div[class*=timed-content-] ~ p:empty ~ center {
+    display: none
+  }
+  div[class*=timed-content-] > p {
+    margin-bottom: 0
+  }
+  div[class*=timed-content-] > p a {
+    margin-bottom: .5rem
+  }
+  div[class*=timed-content-] > p {
+    font-size: 1rem
+  }
+  @media (min-width:1200px) {
+    .site-content .site-content-inside {
+      padding: 0 0
+    }
+  }
+  .entry-content .buttonred,
+  .entry-content a.maxbutton[class*=maxbutton] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    width: 100%;
+    min-width: 150px;
+    height: auto;
+    margin: 0 .25rem .5rem;
+    padding: .5rem 1rem;
+    border: 0!important;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5
+  }
+  .entry-content .buttonred.maxbutton-download-links,
+  .entry-content .buttonred.maxbutton-episode-links,
+  .entry-content .buttonred.maxbutton-g-drive,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-download-links,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-episode-links,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-g-drive {
+    background: #009de1;
+    color: #fff
+  }
+  .entry-content .buttonred.maxbutton-download-links:hover,
+  .entry-content .buttonred.maxbutton-episode-links:hover,
+  .entry-content .buttonred.maxbutton-g-drive:hover,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-download-links:hover,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-episode-links:hover,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-g-drive:hover {
+    background: #005c83;
+    color: #fff
+  }
+  .entry-content .buttonred.maxbutton-af-download,
+  .entry-content .buttonred.maxbutton-batch-zip,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-af-download,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-batch-zip {
+    background: #dd6767;
+    color: #fff
+  }
+  .entry-content .buttonred.maxbutton-af-download:hover,
+  .entry-content .buttonred.maxbutton-batch-zip:hover,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-af-download:hover,
+  .entry-content a.maxbutton[class*=maxbutton].maxbutton-batch-zip:hover {
+    background: #ba4949;
+    color: #fff
+  }
+  .entry-content .buttonred:hover,
+  .entry-content a.maxbutton[class*=maxbutton]:hover {
+    box-shadow: none
+  }
+  .entry-content .buttonred span.mb-text,
+  .entry-content a.maxbutton[class*=maxbutton] span.mb-text {
+    padding: 0;
+    color: inherit!important;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-shadow: none!important
+  }
+}
+@-moz-document domain("unblockedgames.world") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
+  }
+  .font-sans,
+  body,
+  html {
+    font-family: var(--font-sans)
+  }
+  .font-sans p:empty,
+  body p:empty,
+  html p:empty {
+    display: none
+  }
+  .blog_styles > center ~ script ~ div[class*=article-body],
+  .blog_styles > center ~ script ~ p,
+  .navigation,
+  .pagination,
+  footer,
+  header,
+  main.container_el > div ~ a {
+    display: none!important
+  }
+}
+@-moz-document domain("driveseed.org"),
+domain("video-seed.dev"),
+domain("video-downloads.xyz") {
+  :root {
+    --font-sans: var(--default-font, var(--default-sans))
+  }
+  body {
+    font-family: var(--font-sans)
+  }
+  body p:empty {
+    display: none
+  }
+  .btn {
+    min-width: 200px!important;
+    border-radius: 0;
+    box-shadow: none
+  }
+  .alert,
+  .rounded-3 {
+    border-radius: 0!important
+  }
+  a[href*=telegram] {
+    display: none
   }
 }
 @-moz-document url-prefix("https://www.facebook.com/") {
