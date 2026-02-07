@@ -1,0 +1,9 @@
+@-moz-document domain("proton.me") {
+
+	@include root-sans-font;
+
+	:root {
+		--optional-font-family: var(--font-sans);
+		--setting-font-family: var(--font-sans);
+	}
+}
