@@ -16,16 +16,16 @@
 @import "root";
 
 // Multiple wesites in single file using regex.
-@import "multi-sites";
+@import "multi";
 
 // File from the directories.
-@import "ai-sites";
-@import "bank-sites";
-@import "brands-sites";
-@import "coding-sites";
-@import "ecomm-sites";
+@import "ai";
+@import "banking";
+@import "brands";
+@import "coding";
+@import "ecommerce";
 @import "extensions";
-@import "finance-sites";
-@import "media-sites";
-@import "social-sites";
-@import "tools-sites";
+@import "finance";
+@import "media";
+@import "social";
+@import "tools";
