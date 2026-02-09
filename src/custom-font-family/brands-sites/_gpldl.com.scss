@@ -1,0 +1,118 @@
+@-moz-document domain("gpldl.com") {
+
+	@include root-sans-font;
+
+	.author-quote,
+	.comment-author .fn,
+	.comment-author a,
+	.comments-title,
+	.dt-blog-shortcode .post h2.entry-title,
+	.dt-btn-l,
+	.entry-title.h1-size,
+	.entry-title.h3-size,
+	.entry-title.h4-size,
+	.entry-title.h5-size,
+	.entry-title.h6-size,
+	.flex-caption h2,
+	.gform_wrapper .gsection .gfield_label,
+	.gform_wrapper h2.gsection_title,
+	.gform_wrapper h3.gform_title,
+	.gpldlitem,
+	.h1-size,
+	.h3-size,
+	.h4-size,
+	.h5-size,
+	.h6-size,
+	.layout-grid .post h2.entry-title,
+	.layout-masonry .post h2.entry-title,
+	.overlay-door input[type="text"],
+	.rollover-content h2.entry-title,
+	.shortcode-blog-posts .post h2.entry-title,
+	.slider-wrapper .post h2.entry-title,
+	.sub-nav > ul > li > a,
+	.team-author p,
+	.testimonial-item .testimonial-vcard .text-primary,
+	.testimonial-item .testimonial-vcard .text-secondary,
+	.vc-carousel-slideline .vc-carousel-slideline-inner > .vc-item h2,
+	.vc-carousel.vc-build,
+	.wf-container > *,
+	.widget .team-author-name .team-author-name,
+	.widget .team-author-name,
+	.widget-title,
+	#bbpress-forums .reply,
+	#bbpress-forums,
+	#main-nav > li > a,
+	#wpadminbar *,
+	#wpadminbar,
+	blockquote,
+	body,
+	body.page,
+	h1,
+	h2.entry-title,
+	h3,
+	h3.entry-title,
+	h3.gform_title,
+	h4,
+	h5,
+	h6,
+	html {
+
+		@include sans-font;
+	}
+
+	.gform_wrapper .top_label .gfield_label,
+	input[type="text"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="email"],
+	input[type="number"],
+	input[type="date"],
+	input[type="range"],
+	input[type="password"],
+	select,
+	textarea,
+	.customSelect,
+	.woocommerce-product-search .search-field {
+
+		@include sans-font;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+	}
+
+	#main-nav > li > a {
+		font-weight: 700;
+	}
+
+	.widget-title {
+		font-weight: 700;
+	}
+
+	.dt-btn-m,
+	.dt-btn,
+	.dt-form button,
+	.nsu-submit,
+	.widget .dt-form .dt-btn,
+	#main .gform_wrapper .gform_footer input.button,
+	#main .gform_wrapper .gform_footer input[type="submit"],
+	#main-slideshow .tp-button,
+	#s2member-pro-paypal-checkout-submit,
+	#ws-plugin--s2member-profile-submit,
+	a.button,
+	button.button,
+	div.mc4wp-form button[type="submit"],
+	form.mc4wp-form input[type="submit"],
+	input.dt-btn-m[type="submit"],
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+
+		@include sans-font;
+	}
+}
