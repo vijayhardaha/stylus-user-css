@@ -1,9 +1,4 @@
-# Files & Directories related to build & test tools.
-# Exclude the node_modules directory from version control.
+# Exclude the dirs & files from stylelint checks.
+/.vscode
+/dist
 /node_modules
-# Exclude the vendor directory from version control.
-/vendor
-
-# Plugin files and folders.
-# Exclude the assets directory from version control.
-assets/
