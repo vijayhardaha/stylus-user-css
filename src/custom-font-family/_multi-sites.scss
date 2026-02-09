@@ -6,7 +6,6 @@
 	regexp("^https://(.*)(vimeo.com)(.*)"),
 	regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
-	regexp("^https://(.*)(standardnotes.com|simplenote.com)(.*)"),
 	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
 
