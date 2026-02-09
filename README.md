@@ -6,11 +6,11 @@ This is my personal project aimed at simplifying web development by providing a 
 
 Here's a list of available user CSS files in this project:
 
-| Website Name       | Install CSS Link                                                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| Custom Font Family | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/custom-font-family/index.user.css) |
-| StackOverflow.com  | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)      |
-| WordPress.org      | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/wordpress/index.user.css)          |
+| Website Name      | Install CSS Link                                                                                                      |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Font Overrides    | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/font-overrides/index.user.css) |
+| StackOverflow.com | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)  |
+| WordPress.org     | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/wordpress/index.user.css)      |
 
 ## Author
 
