@@ -9,8 +9,6 @@ Here's a list of available user CSS files in this project:
 | Website Name      | Install CSS Link                                                                                                      |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Font Overrides    | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/font-overrides/index.user.css) |
-| StackOverflow.com | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/stackoverflow/index.user.css)  |
-| WordPress.org     | [Click to Install CSS](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/wordpress/index.user.css)      |
 
 ## Author
 
