@@ -1,0 +1,16 @@
+@-moz-document domain("standardnotes.com") {
+
+	@include root-sans-font;
+	@include root-mono-font;
+
+	html,
+	body {
+
+		@include sans-font;
+	}
+
+	:root {
+		--sn-stylekit-sans-serif-font: var(--font-sans);
+		--sn-stylekit-monospace-font: var(--font-mono);
+	}
+}
