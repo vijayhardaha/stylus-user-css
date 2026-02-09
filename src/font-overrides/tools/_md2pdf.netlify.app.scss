@@ -8,7 +8,7 @@
 		@include sans-font();
 	}
 
-	.CodeMirror{
+	.CodeMirror {
 
 		@include mono-font(true);
 		font-size: 0.75rem;

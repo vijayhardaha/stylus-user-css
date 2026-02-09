@@ -24,8 +24,7 @@
 	.global-nav__nav .premium-upsell-link,
 	.global-nav__nav .global-nav__app-launcher-menu,
 	footer.global-footer-compact,
-	ul[aria-label="Account"]
-		> li:has(a[href^="http://www.linkedin.com/premium/products/"]),
+	ul[aria-label="Account"] > li:has(a[href^="http://www.linkedin.com/premium/products/"]),
 	div.artdeco-card:has(a[href^="http://www.linkedin.com/premium/products/"]) {
 		display: none;
 	}

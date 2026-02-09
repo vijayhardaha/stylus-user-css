@@ -96,9 +96,7 @@
 
 	// Define font variables and common aliases for broader compatibility.
 	:root {
-		$sans-aliases:
-			display, family-apple, family-system, headline, primary, sans-serif,
-			system, ui;
+		$sans-aliases: display, family-apple, family-system, headline, primary, sans-serif, system, ui;
 
 		@each $alias in $sans-aliases {
 			--font-#{$alias}: var(--font-sans);

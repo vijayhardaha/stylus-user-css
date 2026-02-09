@@ -39,9 +39,7 @@
 		> div
 		> ul
 		+ div[data-visualcompletion="ignore-dynamic"],
-	div[aria-label="Account controls and settings"]
-		span
-		> div[aria-label="Menu"],
+	div[aria-label="Account controls and settings"] span > div[aria-label="Menu"],
 	div[aria-label="Facebook"][role="navigation"] ul,
 	div[aria-label="New Message"],
 	div[aria-label="People you may know"],

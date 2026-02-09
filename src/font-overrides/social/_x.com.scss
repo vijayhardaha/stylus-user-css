@@ -13,10 +13,7 @@
 
 @-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
 
-	div[role="group"]
-		> div[aria-labelledby="modal-header"]
-		> div
-		> div[aria-expanded="true"] {
+	div[role="group"] > div[aria-labelledby="modal-header"] > div > div[aria-expanded="true"] {
 		width: 720px;
 	}
 }

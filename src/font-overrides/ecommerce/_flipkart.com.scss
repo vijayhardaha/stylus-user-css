@@ -2,9 +2,7 @@
 
 	@include root-sans-font();
 
-	$fonts:
-		georgia, arial, robotobold, robotolight, roboto, robotomedium,
-		intersemibold, inter;
+	$fonts: georgia, arial, robotobold, robotolight, roboto, robotomedium, intersemibold, inter;
 
 	:root {
 
