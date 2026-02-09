@@ -9,7 +9,8 @@
 		"dev": "gulp watch",
 		"build": "gulp build",
 		"lint": "stylelint src",
-		"fix": "stylelint src --fix"
+		"prettier": "prettier --write \"**/*.scss\"",
+		"fix": "pnpm run prettier && stylelint src --fix"
 	},
 	"homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
 	"bugs": {
@@ -35,6 +36,7 @@
 		"postcss": "^8.5.6",
 		"postcss-discard-duplicates": "^7.0.2",
 		"postcss-merge-rules": "^7.0.7",
+		"prettier": "^3.8.1",
 		"sass": "^1.97.3",
 		"stylelint": "^17.1.1",
 		"stylelint-config-property-sort-order-smacss": "^11.1.0",
