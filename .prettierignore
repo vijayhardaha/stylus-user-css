@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+
+#vs code settings
+/.vscode
+
+# lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# generated user css
+*.user.css
