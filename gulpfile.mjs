@@ -17,12 +17,12 @@ import mergeRules from 'postcss-merge-rules'; // Merge CSS rules
 const sass = gulpSass(dartSass);
 
 /**
- * Build CSS from LESS files.
+ * Build CSS from SCSS files.
  *
  * @param {Function} done - A callback function to signal task completion.
  */
 const buildCSS = (done) => {
-	gulp.src("src/**/*.scss") // Source LESS files
+	gulp.src("src/**/*.scss") // Source SCSS files
 		.pipe(plumber()) // Handle errors gracefully
 		.pipe(
 			sass({
