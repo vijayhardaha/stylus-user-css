@@ -1,6 +1,6 @@
 @-moz-document domain("apple.com") {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	#globalnav .globalnav-link,
 	.content-post .body .post-content .post-body,
@@ -8,6 +8,6 @@
 	.page .locked-thread,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }

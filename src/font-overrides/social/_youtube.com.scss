@@ -1,21 +1,21 @@
 @-moz-document domain("youtube.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	ytd-app * {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	#content [class*="ytd-"] {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	.message.ytd-notification-renderer,
 	.yt-tab-shape-wiz__tab,
 	.ytSearchboxComponentInput {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }

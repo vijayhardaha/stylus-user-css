@@ -1,13 +1,13 @@
 @-moz-document url-prefix("https://x.com/")
 {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	body,
 	[class*="css-"],
 	[class*="r-"] {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }
 
@@ -20,18 +20,18 @@
 
 @-moz-document domain("twittershots.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	.__className_d65c78 {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }
 
 @-moz-document domain("twittervideodownloader.com") {
 
-	@include root-sans-font();
-	@include root-mono-font();
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	:root {
 		--bs-body-font-family: var(--font-sans);

@@ -1,6 +1,6 @@
 @-moz-document domain("sbi.bank.in") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	html {
 		--mat-form-field-container-text-font: var(--font-sans);
@@ -12,13 +12,13 @@
 
 	body {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 		font-size: 14px !important;
 		font-weight: 500 !important;
 
 		.mat-internal-form-field > label {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 
 		.custom-nav-item,
@@ -35,7 +35,7 @@
 		.transaction-link,
 		.whatsNewSwitchToOld {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 			font-size: 1em !important;
 			font-weight: 500 !important;
 			line-height: 1.3 !important;

@@ -1,6 +1,6 @@
 @-moz-document domain("textfixer.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	*::before,
@@ -10,7 +10,7 @@
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 		font-size: 1rem;
 		line-height: 1.5;
 	}
@@ -23,7 +23,7 @@
 	h6,
 	.header {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.button,
@@ -31,7 +31,7 @@
 	select,
 	textarea {
 
-		@include sans-font();
+		@include apply-font-sans;
 		border: 1px solid #e3e3e3;
 		border-radius: 0;
 		outline: none;
@@ -55,7 +55,7 @@
 	.subbtn,
 	.actbtn {
 
-		@include sans-font();
+		@include apply-font-sans;
 		margin: 0 0.5rem 0 0;
 		padding: 0.5rem 1.5rem;
 		border: 0;
@@ -97,7 +97,7 @@
 
 			li {
 
-				@include sans-font();
+				@include apply-font-sans;
 			}
 		}
 	}

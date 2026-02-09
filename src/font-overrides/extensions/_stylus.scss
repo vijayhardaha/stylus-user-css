@@ -1,8 +1,8 @@
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne")
 {
 
-	@include root-sans-font();
-	@include root-mono-font();
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	:root {
 		--family: var(--font-sans);
@@ -11,7 +11,7 @@
 
 	html {
 
-		@include sans-font();
+		@include apply-font-sans;
 		font-size: 14px;
 	}
 
@@ -21,7 +21,7 @@
 
 	.CodeMirror {
 
-		@include mono-font();
+		@include apply-font-mono;
 		font-size: 1rem;
 		line-height: 1.6;
 	}

@@ -7,9 +7,9 @@
  * @param {Boolean} $important - When true append !important (default: false).
  *
  * @example
- *   @include font-family(var(--font-sans), true);
+ *   @include _emit-font-family(var(--font-sans), true);
  */
-@mixin font-family($font, $important: false) {
+@mixin _emit-font-family($font, $important: false) {
 
 	@if $important {
 		// Use !important when requested to override site styles.
@@ -22,14 +22,12 @@
 /**
  * Set the root --font-sans CSS variable.
  *
- * Defines a CSS custom property on :root so items can use var(--font-sans).
- *
  * @param {String} $font - Root font key (defaults to $default-root-sans).
  *
  * @example
- *   @include root-sans-font("general-sans");
+ *   @include set-root-font-sans("general-sans");
  */
-@mixin root-sans-font($font: $default-root-sans) {
+@mixin set-root-font-sans($font: $default-root-sans) {
 
 	:root {
 		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
@@ -43,9 +41,9 @@
  * @param {String} $font - Root mono font key (defaults to $default-root-mono).
  *
  * @example
- *   @include root-mono-font("ibm-plex");
+ *   @include set-root-font-mono("ibm-plex");
  */
-@mixin root-mono-font($font: $default-root-mono) {
+@mixin set-root-font-mono($font: $default-root-mono) {
 
 	:root {
 		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
@@ -56,16 +54,16 @@
 /**
  * Apply the current sans-serif font variable to a selector.
  *
- * Wrapper around font-family to make intent clear in item files.
+ * Wrapper around _emit-font-family to make intent clear in item files.
  *
  * @param {Boolean} $important - If true, applies with !important (default: false).
  *
  * @example
- *   .selector { @include sans-font(true); }
+ *   .selector { @include apply-font-sans(true); }
  */
-@mixin sans-font($important: false) {
+@mixin apply-font-sans($important: false) {
 	// Applies font-family specified in --font-sans variable with optional !important
-	@include font-family(var(--font-sans), $important);
+	@include _emit-font-family(var(--font-sans), $important);
 }
 
 /**
@@ -74,11 +72,11 @@
  * @param {Boolean} $important - If true, applies with !important (default: false).
  *
  * @example
- *   code { @include mono-font(true); }
+ *   code { @include apply-font-mono(true); }
  */
-@mixin mono-font($important: false) {
+@mixin apply-font-mono($important: false) {
 	// Applies font-family specified in --font-mono variable with optional !important
-	@include font-family(var(--font-mono), $important);
+	@include _emit-font-family(var(--font-mono), $important);
 }
 
 /**
@@ -87,12 +85,12 @@
  * Use at the top of item partials to ensure variables exist and common aliases are defined.
  *
  * @example
- *   @include fonts-group();
+ *   @include init-root-font-aliases();
  */
-@mixin fonts-group() {
+@mixin init-root-font-aliases() {
 
-	@include root-sans-font();
-	@include root-mono-font();
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	// Define font variables and common aliases for broader compatibility.
 	:root {

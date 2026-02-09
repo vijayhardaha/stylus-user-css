@@ -1,19 +1,19 @@
 @-moz-document domain("zerodha.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }
 
 @-moz-document domain("coin.zerodha.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	* {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }

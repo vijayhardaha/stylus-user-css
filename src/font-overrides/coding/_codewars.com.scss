@@ -1,6 +1,6 @@
 @-moz-document domain("codewars.com") {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	.CodeMirror,
 	.markdown code,
@@ -12,7 +12,7 @@
 	pre code,
 	samp {
 
-		@include mono-font();
+		@include apply-font-mono;
 	}
 
 	#users,

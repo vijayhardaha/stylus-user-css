@@ -1,6 +1,6 @@
 @-moz-document domain("easyhindityping.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	::before,
@@ -16,12 +16,12 @@
 	h1,
 	p {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 		font-size: 1rem;
 		line-height: 1.8;
 	}
@@ -116,7 +116,7 @@
 	select,
 	textarea {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	.contains {
@@ -145,7 +145,7 @@
 	textarea#languageTextarea,
 	textarea#languageTextareaNew {
 
-		@include sans-font();
+		@include apply-font-sans;
 		width: 100%;
 		height: 600px;
 		padding: 10px;

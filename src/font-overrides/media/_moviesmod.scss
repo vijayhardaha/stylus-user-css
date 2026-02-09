@@ -1,7 +1,7 @@
 @-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)")
 {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	::after,
@@ -23,7 +23,7 @@
 	.latestPost .title a,
 	.single-title {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	h1,
@@ -99,7 +99,7 @@
 
 				.fa {
 
-					@include sans-font();
+					@include apply-font-sans;
 					font-weight: 700;
 					line-height: 1.5;
 				}
@@ -535,7 +535,7 @@
 
 @-moz-document domain("leechpro.blog"), domain("modpro.blog") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	::after,
@@ -545,7 +545,7 @@
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 
 		p:empty {
 			display: none;
@@ -563,7 +563,7 @@
 	h5,
 	h6 {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.entry-header-wrapper,
@@ -670,7 +670,7 @@
 
 @-moz-document domain("unblockedgames.world") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	::after,
@@ -682,7 +682,7 @@
 	html,
 	.font-sans {
 
-		@include sans-font();
+		@include apply-font-sans;
 
 		p:empty {
 			display: none;
@@ -702,11 +702,11 @@
 
 @-moz-document domain("driveseed.org"), domain("video-seed.dev"), domain("video-downloads.xyz") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 
 		p:empty {
 			display: none;

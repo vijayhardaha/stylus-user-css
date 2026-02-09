@@ -1,6 +1,6 @@
 @-moz-document domain("grammarly.com") {
 
-	@include root-sans-font;
+	@include set-root-font-sans;
 
 	:host,
 	:root {
@@ -14,6 +14,6 @@
 	.heading,
 	.wrapper_f1xydsbu {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 }

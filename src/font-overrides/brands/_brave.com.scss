@@ -1,7 +1,7 @@
 @-moz-document domain("brave.com") {
 
-	@include root-sans-font;
-	@include root-mono-font;
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	:root {
 		--main-font: var(--font-sans);

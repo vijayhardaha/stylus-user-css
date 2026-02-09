@@ -1,6 +1,6 @@
 @-moz-document domain("smallcase.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	.btn,
 	.font-medium,
@@ -16,6 +16,6 @@
 	h3,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }

@@ -1,6 +1,6 @@
 @-moz-document domain("fdown.net") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	body,
 	p,
@@ -17,7 +17,7 @@
 	.h5,
 	.h6 {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	#menu,

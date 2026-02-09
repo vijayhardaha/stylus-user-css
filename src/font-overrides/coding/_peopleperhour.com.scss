@@ -1,6 +1,6 @@
 @-moz-document domain("peopleperhour.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	body,
 	h4,
@@ -16,7 +16,7 @@
 	select,
 	textarea {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.body,
@@ -27,7 +27,7 @@
 	.title-small,
 	body .select2-container {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.pph-legacy-container .main-content {
@@ -36,7 +36,7 @@
 		h5,
 		h6 {
 
-			@include sans-font();
+			@include apply-font-sans;
 		}
 	}
 
@@ -48,7 +48,7 @@
 	.daterangepicker-elem.daterangepicker-select,
 	.widget-tags-input {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.controller-hourlie {
@@ -59,7 +59,7 @@
 
 			.pseudo-input {
 
-				@include sans-font();
+				@include apply-font-sans;
 			}
 		}
 	}
@@ -70,7 +70,7 @@
 		h2,
 		h3 {
 
-			@include sans-font();
+			@include apply-font-sans;
 		}
 	}
 

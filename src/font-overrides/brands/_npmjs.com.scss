@@ -1,7 +1,7 @@
 @-moz-document domain("npmjs.com") {
 
-	@include root-sans-font;
-	@include root-mono-font;
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	._452c3ec4,
 	.c6c55db4,
@@ -14,7 +14,7 @@
 	select,
 	textarea {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	:root {

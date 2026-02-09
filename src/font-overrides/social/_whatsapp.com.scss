@@ -1,6 +1,6 @@
 @-moz-document domain("whatsapp.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	.os-mac.font-fix,
 	.os-mac button,
@@ -10,7 +10,7 @@
 	body.native.darwin body.native.darwin button,
 	body.native.darwin input {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	.UzMP7 {

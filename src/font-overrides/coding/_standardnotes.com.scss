@@ -1,12 +1,12 @@
 @-moz-document domain("standardnotes.com") {
 
-	@include root-sans-font;
-	@include root-mono-font;
+	@include set-root-font-sans;
+	@include set-root-font-mono;
 
 	html,
 	body {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 
 	:root {

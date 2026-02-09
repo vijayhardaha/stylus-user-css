@@ -1,6 +1,6 @@
 @-moz-document domain("nps-proteantech.in") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	.footer-text a,
 	.footer-text,
@@ -66,7 +66,7 @@
 	tr,
 	ul {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	#gotrust-cookie-banner {
@@ -74,7 +74,7 @@
 		div.cookieFooterBanner__HERrd,
 		button {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 	}
 
@@ -136,7 +136,7 @@
 	.submitbutton,
 	.button {
 
-		@include sans-font();
+		@include apply-font-sans;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;

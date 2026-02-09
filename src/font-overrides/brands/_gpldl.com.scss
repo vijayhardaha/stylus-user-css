@@ -1,6 +1,6 @@
 @-moz-document domain("gpldl.com") {
 
-	@include root-sans-font;
+	@include set-root-font-sans;
 
 	.author-quote,
 	.comment-author .fn,
@@ -57,7 +57,7 @@
 	h6,
 	html {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 
 	.gform_wrapper .top_label .gfield_label,
@@ -74,7 +74,7 @@
 	.customSelect,
 	.woocommerce-product-search .search-field {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 
 	h1,
@@ -113,6 +113,6 @@
 	input[type="reset"],
 	input[type="submit"] {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 }

@@ -1,11 +1,11 @@
 @-moz-document domain("incometax.gov.in"), domain("insight.gov.in") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	*,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	body {
@@ -26,13 +26,13 @@
 	.ui-state-default a:link,
 	.ui-state-default a:visited {
 
-		@include sans-font(true);
+		@include apply-font-sans(true);
 	}
 
 	li#login a.btn.login,
 	li#register .btn.register {
 
-		@include sans-font();
+		@include apply-font-sans;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;

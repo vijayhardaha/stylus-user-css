@@ -1,12 +1,12 @@
 @-moz-document domain("bitly.com") {
 
-	@include root-sans-font;
+	@include set-root-font-sans;
 
 	body,
 	body [class*="css-"],
 	.orb-tag-input .input,
 	.orb-input-field .input {
 
-		@include sans-font;
+		@include apply-font-sans;
 	}
 }

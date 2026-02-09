@@ -1,6 +1,6 @@
 @-moz-document domain("icicibank.com"), domain("icici.bank.in") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	html body div {
 
@@ -11,7 +11,7 @@
 		> *,
 		ul.submenu li a.Global_sub {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 
 		.globalNavigation,

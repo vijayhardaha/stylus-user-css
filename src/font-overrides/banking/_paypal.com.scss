@@ -1,6 +1,6 @@
 @-moz-document domain("paypal.com") {
 
-	@include root-sans-font;
+	@include set-root-font-sans;
 
 	._default-font_1cu9p_970,
 	:root,
@@ -26,7 +26,7 @@
 		label,
 		select {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 	}
 }

@@ -1,8 +1,8 @@
 @-moz-document url-prefix("https://www.instagram.com/")
 {
 
-	@include fonts-group();
-	@include root-sans-font();
+	@include init-root-font-aliases();
+	@include set-root-font-sans;
 
 	:root,
 	body,

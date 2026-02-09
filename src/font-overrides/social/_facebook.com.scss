@@ -1,12 +1,12 @@
 @-moz-document url-prefix("https://www.facebook.com/")
 {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	html,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Facebook Styles
@@ -15,7 +15,7 @@
 		.x1xqt7ti,
 		.xmi5d70 {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 
 		.system-fonts--body.sf,
@@ -25,7 +25,7 @@
 		[class*="_"],
 		[class*="_"] [class*="_"] {
 
-			@include sans-font();
+			@include apply-font-sans;
 		}
 	}
 

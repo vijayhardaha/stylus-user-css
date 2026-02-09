@@ -9,7 +9,7 @@
 	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	// Apply font to various elements
 	html,
@@ -18,7 +18,7 @@
 	#wpadminbar *,
 	body.wpallimport-plugin {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Headings
@@ -29,14 +29,14 @@
 	h5,
 	h6 {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Code Blocks
 	.code,
 	code {
 
-		@include mono-font();
+		@include apply-font-mono;
 	}
 
 	// Buttons and Inputs
@@ -45,14 +45,14 @@
 	select,
 	textarea {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Navigation
 	#primary-navigation li,
 	#primary-navigation li a {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Content Blocks
@@ -61,7 +61,7 @@
 	.single-title,
 	.widget .widget-title {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Text and Typography
@@ -69,7 +69,7 @@
 	.md-subheader,
 	.ql-container {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Media and UI Elements
@@ -77,7 +77,7 @@
 	.media-frame,
 	.media-modal {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Elements with Specific Class Patterns
@@ -87,7 +87,7 @@
 	[class*="tinvwl-"] *,
 	[class*="tinv-"] * {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	// Maestro Styles
@@ -100,7 +100,7 @@
 		button:not(.dig-Button),
 		.normal:not(.dig-Button) {
 
-			@include sans-font();
+			@include apply-font-sans;
 		}
 	}
 
@@ -108,14 +108,14 @@
 	.qm code,
 	.qm pre {
 
-		@include mono-font(true);
+		@include apply-font-mono(true);
 	}
 
 	// CodeMirror style
 	.cm-s-darcula.CodeMirror,
 	.CodeMirror {
 
-		@include mono-font();
+		@include apply-font-mono;
 	}
 
 	// Markdown code formatting
@@ -124,7 +124,7 @@
 		code,
 		pre {
 
-			@include mono-font();
+			@include apply-font-mono;
 		}
 
 		pre > code {
@@ -145,13 +145,13 @@
 
 		* {
 
-			@include sans-font();
+			@include apply-font-sans;
 		}
 
 		code,
 		code * {
 
-			@include mono-font();
+			@include apply-font-mono;
 		}
 	}
 }

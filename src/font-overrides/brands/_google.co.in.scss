@@ -1,13 +1,13 @@
 @-moz-document domain("google.co.in"), domain("google.com") {
 
-	@include root-sans-font();
+	@include set-root-font-sans;
 
 	.JJYS0b,
 	.Ose4Jf,
 	.Rj2Mlf,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	body {
@@ -22,7 +22,7 @@
 		textarea,
 		select {
 
-			@include sans-font(true);
+			@include apply-font-sans(true);
 		}
 	}
 }

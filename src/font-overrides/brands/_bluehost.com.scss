@@ -1,10 +1,10 @@
 @-moz-document domain("bluehost.com") {
 
-	@include fonts-group();
+	@include init-root-font-aliases();
 
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 
 	#hosting-app,
@@ -17,6 +17,6 @@
 	.mat-typography h3,
 	body {
 
-		@include sans-font();
+		@include apply-font-sans;
 	}
 }
