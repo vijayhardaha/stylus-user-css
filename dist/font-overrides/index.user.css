@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.0
+@version 1.1.1
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -14,15 +14,16 @@
 @-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://") {
   @import url(https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&display=swap);
-  @import url(https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap);
   :root {
     --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --default-sans: Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    --geist-font: "Geist Mono",var(--default-mono);
-    --outfit-font: "Outfit","Hind",var(--default-sans);
-    --default-font: var(--outfit-font);
-    --default-sans-font: var(--default-font);
+    --geist-font: "Geist Mono";
+    --noto-sans-font: "Noto Sans";
+    --bricolage-font: "Bricolage Grotesque";
+    --default-hindi-font: var(--noto-sans-font);
+    --default-sans-font: var(--bricolage-font);
     --default-mono-font: var(--geist-font)
   }
 }
@@ -37,8 +38,8 @@ regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 regexp("^https://(.*)(cpsess)(.*)"),
 domain("127.0.0.1") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -121,8 +122,8 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("chatgpt.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   html {
     font-family: var(--font-sans)
@@ -134,8 +135,8 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("claude.ai") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-ui: var(--font-sans);
     --font-system: var(--font-sans)
   }
@@ -143,7 +144,7 @@ domain("127.0.0.1") {
 @-moz-document domain("icicibank.com"),
 domain("icici.bank.in") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   html body div .Global_P,
   html body div .globalNavigation,
@@ -175,7 +176,7 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("paypal.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   ._default-font_1cu9p_970,
   :root,
@@ -201,7 +202,7 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("sbi.bank.in") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   html {
     --mat-form-field-container-text-font: var(--font-sans);
@@ -239,8 +240,8 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("apple.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -260,7 +261,7 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("bitly.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .orb-input-field .input,
   .orb-tag-input .input,
@@ -271,8 +272,8 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("bluehost.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -296,16 +297,18 @@ domain("icici.bank.in") {
 }
 @-moz-document domain("brave.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --main-font: var(--font-sans);
     --mono-font: var(--font-mono)
   }
 }
-@-moz-document domain("google.co.in"),
-domain("google.com") {
+@-moz-document url-prefix("https://www.google.co.in/search"),
+url-prefix("https://www.google.com/search"),
+domain("mail.google.com"),
+domain("gemini.google.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .JJYS0b,
   .Ose4Jf,
@@ -327,7 +330,7 @@ domain("google.com") {
 }
 @-moz-document domain("gpldl.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   #bbpress-forums,
   #bbpress-forums .reply,
@@ -431,7 +434,7 @@ domain("google.com") {
 }
 @-moz-document domain("grammarly.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   :host,
   :root {
@@ -448,7 +451,7 @@ domain("google.com") {
 }
 @-moz-document domain("mail.google.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body * {
     font-family: var(--font-sans)!important
@@ -456,8 +459,8 @@ domain("google.com") {
 }
 @-moz-document domain("npmjs.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   ._452c3ec4,
   .c6c55db4,
@@ -484,14 +487,14 @@ domain("google.com") {
 }
 @-moz-document domain("proton.me") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --optional-font-family: var(--font-sans);
     --setting-font-family: var(--font-sans)
   }
 }
 @-moz-document domain("veganprofile.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   a,
   body,
@@ -510,7 +513,7 @@ domain("google.com") {
 }
 @-moz-document domain("wikipedia.org") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body,
   html {
@@ -519,8 +522,8 @@ domain("google.com") {
 }
 @-moz-document domain("codewars.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -565,7 +568,7 @@ domain("google.com") {
 }
 @-moz-document domain("freelancer.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body {
     font-family: var(--font-sans)
@@ -573,14 +576,14 @@ domain("google.com") {
 }
 @-moz-document domain("linear.app") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-regular: var(--font-sans);
     --font-monospace: var(--font-mono)
   }
 }
 @-moz-document domain("peopleperhour.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   #stream-message-box .content .simple-message .textbox,
   .body,
@@ -646,8 +649,8 @@ domain("google.com") {
 }
 @-moz-document domain("standardnotes.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   body,
   html {
@@ -661,7 +664,7 @@ domain("google.com") {
 @-moz-document domain("amazon.in"),
 domain("amazon.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .a-ember-1-0-0 body,
   body,
@@ -674,7 +677,7 @@ domain("amazon.com") {
 }
 @-moz-document domain("flipkart.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-georgia: var(--font-sans);
     --font-arial: var(--font-sans);
     --font-robotobold: var(--font-sans);
@@ -699,8 +702,8 @@ domain("amazon.com") {
 }
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --family: var(--font-sans);
     --input-height: 30px
   }
@@ -726,7 +729,7 @@ domain("amazon.com") {
 @-moz-document domain("incometax.gov.in"),
 domain("insight.gov.in") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   body {
@@ -765,7 +768,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("indmoney.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   :host,
   html {
@@ -774,7 +777,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("nps-proteantech.in") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .footer-text,
   .footer-text a,
@@ -904,7 +907,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("smallcase.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .btn,
   .font-medium,
@@ -924,7 +927,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("zerodha.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body {
     font-family: var(--font-sans)
@@ -932,7 +935,7 @@ domain("insight.gov.in") {
 }
 @-moz-document domain("coin.zerodha.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   * {
     font-family: var(--font-sans)
@@ -940,7 +943,7 @@ domain("insight.gov.in") {
 }
 @-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   ::after,
@@ -1400,7 +1403,7 @@ domain("mmodlist.net") {
 @-moz-document domain("leechpro.blog"),
 domain("modpro.blog") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   ::after,
@@ -1523,7 +1526,7 @@ domain("modpro.blog") {
 }
 @-moz-document domain("unblockedgames.world") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   ::after,
@@ -1554,7 +1557,7 @@ domain("modpro.blog") {
 domain("video-seed.dev"),
 domain("video-downloads.xyz") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body {
     font-family: var(--font-sans)
@@ -1577,8 +1580,8 @@ domain("video-downloads.xyz") {
 }
 @-moz-document url-prefix("https://www.facebook.com/") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -1632,7 +1635,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document url-prefix("https://www.instagram.com/") {
   :root {
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -1641,7 +1644,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     --font-sans-serif: var(--font-sans);
     --font-system: var(--font-sans);
     --font-ui: var(--font-sans);
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .__fb-light-mode,
   .__fb-light-mode:root,
@@ -1711,8 +1714,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("linkedin.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --artdeco-reset-typography-font-family-sans: var(--font-sans);
     --artdeco-typography-sans: var(--font-sans);
     --artdeco-typography-mono: var(--font-mono);
@@ -1756,8 +1759,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("quora.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -1773,8 +1776,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("reddit.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -1790,7 +1793,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("whatsapp.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .os-mac,
   .os-mac button,
@@ -1808,8 +1811,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document url-prefix("https://x.com/") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
     --font-family-apple: var(--font-sans);
     --font-family-system: var(--font-sans);
@@ -1832,7 +1835,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("twittershots.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .__className_d65c78 {
     font-family: var(--font-sans)
@@ -1840,14 +1843,14 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("twittervideodownloader.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono));
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
     --bs-body-font-family: var(--font-sans)
   }
 }
 @-moz-document domain("youtube.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   ytd-app * {
     font-family: var(--font-sans)
@@ -1863,7 +1866,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("easyhindityping.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   ::after,
@@ -1994,7 +1997,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("fdown.net") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   .h1,
   .h2,
@@ -2040,8 +2043,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("jscompress.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   .button,
   body,
@@ -2056,8 +2059,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("md2pdf.netlify.app") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans));
-    --font-mono: var(--geist-font, var(--default-mono))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   .hLjMun {
     font-family: var(--font-sans)
@@ -2086,7 +2089,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
 }
 @-moz-document domain("textfixer.com") {
   :root {
-    --font-sans: var(--default-font, var(--default-sans))
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   *,
   ::after,
