@@ -31,7 +31,7 @@
 
 	:root {
 		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
-		--font-sans: var(--#{$font}-font, var(--default-hindi-font, var(--default-sans)));
+		--font-sans: var(--#{$font}-font), var(--default-hindi-font), var(--default-sans);
 	}
 }
 
@@ -47,7 +47,7 @@
 
 	:root {
 		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
-		--font-mono: var(--#{$font}-font, var(--default-mono));
+		--font-mono: var(--#{$font}-font), var(--default-mono);
 	}
 }
 
