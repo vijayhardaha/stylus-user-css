@@ -1,4 +1,7 @@
-@-moz-document domain("google.co.in"), domain("google.com") {
+@-moz-document url-prefix("https://www.google.co.in/search"),
+url-prefix("https://www.google.com/search"),
+domain("mail.google.com"),
+domain("gemini.google.com") {
 
 	@include set-root-font-sans;
 
