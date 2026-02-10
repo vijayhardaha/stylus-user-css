@@ -25,13 +25,13 @@
  * @param {String} $font - Root font key (defaults to $default-root-sans).
  *
  * @example
- *   @include set-root-font-sans("general-sans");
+ *   @include set-root-font-sans("inter");
  */
-@mixin set-root-font-sans($font: $default-root-sans) {
+@mixin set-root-font-sans($font: "default-sans") {
 
 	:root {
 		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
-		--font-sans: var(--#{$font}-font, var(--default-sans));
+		--font-sans: var(--#{$font}-font, var(--default-hindi-font, var(--default-sans)));
 	}
 }
 
@@ -41,9 +41,9 @@
  * @param {String} $font - Root mono font key (defaults to $default-root-mono).
  *
  * @example
- *   @include set-root-font-mono("ibm-plex");
+ *   @include set-root-font-mono("geist");
  */
-@mixin set-root-font-mono($font: $default-root-mono) {
+@mixin set-root-font-mono($font: "default-mono") {
 
 	:root {
 		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
