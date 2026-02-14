@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.1
+@version 1.1.2
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -659,6 +659,57 @@ domain("gemini.google.com") {
   :root {
     --sn-stylekit-sans-serif-font: var(--font-sans);
     --sn-stylekit-monospace-font: var(--font-mono)
+  }
+}
+@-moz-document domain("w3schools.com") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  #exercisecontainer .quizoption,
+  #getwebsitebtn,
+  #pagetop,
+  #runbtn,
+  #sidenav a,
+  .footerlinks_1,
+  .footerlinks_2,
+  .w3s-pathfinder,
+  .ws-btn,
+  a.btnsmall:active,
+  a.btnsmall:hover,
+  a.btnsmall:link,
+  a.btnsmall:visited,
+  body,
+  button,
+  html,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)
+  }
+  .footerlinks_1 {
+    padding: 40px
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    font-weight: 700
+  }
+  #sidenav a {
+    font-size: 1rem
+  }
+  .CodeMirror,
+  .w3-code,
+  .w3-codespan,
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("amazon.in"),
