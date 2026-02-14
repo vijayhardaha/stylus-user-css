@@ -1,0 +1,58 @@
+@-moz-document domain("w3schools.com") {
+
+	@include set-root-font-sans;
+	@include set-root-font-mono;
+
+	.w3s-pathfinder,
+	.ws-btn,
+	#exercisecontainer .quizoption,
+	#getwebsitebtn,
+	#pagetop,
+	#runbtn,
+	#sidenav a,
+	a.btnsmall:active,
+	a.btnsmall:hover,
+	a.btnsmall:link,
+	a.btnsmall:visited,
+	.footerlinks_1,
+	.footerlinks_2,
+	button,
+	input,
+	select,
+	textarea,
+	html,
+	body {
+
+		@include apply-font-sans;
+	}
+
+	.footerlinks_1 {
+		padding: 40px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		@include apply-font-sans;
+		font-weight: 700;
+	}
+
+	#sidenav a {
+		font-size: 1rem;
+	}
+
+	code,
+	kbd,
+	pre,
+	samp,
+	.CodeMirror,
+	.w3-code,
+	.w3-codespan {
+
+		@include apply-font-mono;
+	}
+}
