@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.2
+@version 1.1.3
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -17,8 +17,8 @@ url-prefix("chrome-extension://") {
   @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap);
   :root {
-    --default-mono: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-    --default-sans: Segoe UI,Roboto,Helvetica Neue,Noto Sans,Liberation Sans,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --default-mono: "SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --default-sans: "Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --geist-font: "Geist Mono";
     --noto-sans-font: "Noto Sans";
     --bricolage-font: "Bricolage Grotesque";
@@ -30,7 +30,7 @@ url-prefix("chrome-extension://") {
 @-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 regexp("^(https?://)(192.168.1)(.*)"),
 regexp("^https://(.*)(mailtrap.io)(.*)"),
-regexp("^https://(.*)(github.com|netlify.com|nextui.org|vercel.com)(.*)"),
+regexp("^https://(.*)(netlify.com|nextui.org|vercel.com)(.*)"),
 regexp("^https://(.*)(discord.com|dropbox.com)(.*)"),
 regexp("^https://(.*)(vimeo.com)(.*)"),
 regexp("^https://(.*)(cloudflare.com|cloudways.com)(.*)"),
@@ -572,6 +572,14 @@ domain("gemini.google.com") {
   }
   body {
     font-family: var(--font-sans)
+  }
+}
+@-moz-document domain('github.com') {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
+    --fontStack-monospace: var(--font-mono)!important;
+    --fontStack-sansSerif: var(--font-sans)!important
   }
 }
 @-moz-document domain("linear.app") {
