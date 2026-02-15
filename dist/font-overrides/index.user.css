@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.3
+@version 1.1.4
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -256,6 +256,48 @@ domain("icici.bank.in") {
   .content-post .body .post-content .title,
   .page .locked-thread,
   body {
+    font-family: var(--font-sans)
+  }
+}
+@-moz-document domain("bing.com") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  :root,
+  html {
+    --body-font: var(--font-sans)!important;
+    --bing-smtc-text-style-default-regular-font-family: var(--font-sans)!important
+  }
+  #sw_as .pp_tile.pp_sTile .sa_tm .pp_title,
+  .b_footnote,
+  .b_smText,
+  .ciot,
+  .sbox .sb_form,
+  .sbox_sl .sb_form,
+  [class^=css-],
+  body,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  html,
+  html .hp_body #sw_as #sa_ul,
+  html .hp_body #sw_as .pp_title,
+  html .hp_body #sw_as .sa_as #sa_ul .sa_tm,
+  html .hp_body #sw_as .sa_as #sa_ul .sa_tmHS,
+  img,
+  li,
+  ol,
+  p,
+  table,
+  td,
+  th,
+  tr,
+  ul {
     font-family: var(--font-sans)
   }
 }
