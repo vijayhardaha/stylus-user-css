@@ -1,0 +1,44 @@
+@-moz-document domain("bing.com") {
+
+	@include set-root-font-sans;
+	@include set-root-font-mono;
+
+	html,
+	:root {
+		--body-font: var(--font-sans) !important;
+		--bing-smtc-text-style-default-regular-font-family: var(--font-sans) !important;
+	}
+
+	html,
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	img,
+	ol,
+	ul,
+	li,
+	form,
+	table,
+	tr,
+	th,
+	td,
+	.b_smText,
+	.b_footnote,
+	.ciot,
+	.sbox .sb_form,
+	.sbox_sl .sb_form,
+	#sw_as .pp_tile.pp_sTile .sa_tm .pp_title,
+	html .hp_body #sw_as #sa_ul,
+	html .hp_body #sw_as .pp_title,
+	html .hp_body #sw_as .sa_as #sa_ul .sa_tm,
+	html .hp_body #sw_as .sa_as #sa_ul .sa_tmHS,
+	[class^="css-"] {
+
+		@include apply-font-sans;
+	}
+}
