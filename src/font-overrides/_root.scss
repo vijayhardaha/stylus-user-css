@@ -1,3 +1,5 @@
+@use "sass:string";
+
 @-moz-document regexp("(.*)"), url-prefix("chrome-extension://")
 {
 
@@ -8,8 +10,8 @@
 	:root {
 
 		/* Default fonts */
-		--default-mono: #{$font-family-monospace};
-		--default-sans: #{$font-family-sans-serif}, #{$font-family-emoji};
+		--default-mono: #{string.quote($font-family-monospace)};
+		--default-sans: #{string.quote($font-family-sans-serif)}, #{string.quote($font-family-emoji)};
 
 		/* Define custom fonts */
 		--geist-font: "Geist Mono";
