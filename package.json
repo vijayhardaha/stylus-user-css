@@ -26,7 +26,6 @@
 		"autoprefixer": "^10.4.24",
 		"bootstrap": "^5.3.8",
 		"del": "^8.0.1",
-		"eslint": "9.39.2",
 		"gulp": "^5.0.1",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-filter": "^9.0.1",
