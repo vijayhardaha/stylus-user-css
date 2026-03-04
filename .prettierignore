@@ -1,13 +1,19 @@
-# dependencies
+# ======================================================================
+# Prettier Ignore
+# ======================================================================
+# Purpose: Files and directories that should be excluded from Prettier
+# ======================================================================
+
+# ---- Dependencies ----
 /node_modules
 
-#vs code settings
+# ---- Editor / IDE ----
 /.vscode
 
-# lock files
+# ---- Lockfiles ----
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# generated user css
+# ---- Generated Output ----
 *.user.css

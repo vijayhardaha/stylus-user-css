@@ -1,40 +1,45 @@
-# Operating System files.
+# ======================================================================
+# Git Ignore
+# ======================================================================
+# Purpose: Ignore build artifacts, local editor files and temporary logs
+# ======================================================================
+
+# ---- Operating System ----
 .DS_Store
 Thumbs.db
 
-# Sass.
+# ---- Sass ----
 .sass-cache/
 
-# NPM.
+# ---- Package Managers / Lockfiles ----
 .npm
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
 
-# Logs.
+# ---- Logs ----
 *.log
 logs/
 
-# Eslint Cache.
+# ---- Caches & REPL ----
 .eslintcache
-
-# REPL.
 .node_repl_history
 
-# node-waf.
+# ---- Misc / Environment ----
 .lock-wscript
-
-# Environment files.
 .pnpm-debug.log
 npm-debug.log
 wp-cli.local.yml
 yarn-error.log
 
-# Built packages.
+# ---- Build output ----
 build/
 coverage/
 
-# Project files.
+# ---- Project dependencies ----
 node_modules/
 
-# Patches.
+# ---- Patches ----
 *.diff
 *.orig
 *.patch

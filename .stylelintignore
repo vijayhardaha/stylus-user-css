@@ -1,4 +1,14 @@
-# Exclude the dirs & files from stylelint checks.
+# ======================================================================
+# Stylelint Ignore
+# ======================================================================
+# Purpose: Files and directories excluded from stylelint checks
+# ======================================================================
+
+# ---- Editor / IDE ----
 /.vscode
+
+# ---- Build / Distribution ----
 /dist
+
+# ---- Dependencies ----
 /node_modules

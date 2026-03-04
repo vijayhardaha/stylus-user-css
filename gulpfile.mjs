@@ -1,6 +1,15 @@
 /**
  * Required packages
  */
+/**
+ * ======================================================================
+ * Gulp Build Tasks
+ * ======================================================================
+ * Purpose: Task definitions for building and watching SCSS -> CSS outputs.
+ * Docs: https://gulpjs.com/docs/en/getting-started/quick-start
+ * ======================================================================
+ */
+
 import { deleteSync } from "del"; // Delete files and directories
 import autoprefixer from "autoprefixer"; // Autoprefix CSS properties
 import cleancss from "gulp-clean-css"; // Minify CSS
