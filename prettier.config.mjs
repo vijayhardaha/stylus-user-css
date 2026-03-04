@@ -32,7 +32,7 @@ const config = {
   objectWrap: 'collapse', // Preserve developer's object wrapping where present
 
   // ---- Plugins ----
-  plugins: ['prettier-plugin-tailwindcss'],
+  //plugins: ['prettier-plugin-tailwindcss'],
 
   // ---- Overrides (Grouped by Language) ----
   overrides: [
