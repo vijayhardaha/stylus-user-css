@@ -6,21 +6,19 @@
 // ======================================================================
 
 {
-	// ---- Language Formatter ----
-	"[scss]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
+  // ---- Language Formatter ----
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-	// ---- Editor Behavior ----
-	"editor.formatOnSave": false,
+  // ---- Editor Behavior ----
+  "editor.formatOnSave": false,
 
-	// ---- Linting ----
-	"eslint.enable": false,
-	"editor.codeActionsOnSave": {
-		// ---- Stylelint: run explicit fixes only ----
-		"source.fixAll.stylelint": "explicit"
-	},
+  // ---- Linting ----
+  "eslint.enable": false,
+  "editor.codeActionsOnSave": {
+    // ---- Stylelint: run explicit fixes only ----
+    "source.fixAll.stylelint": "explicit"
+  },
 
-	// ---- Stylelint Validation ----
-	"stylelint.validate": ["scss"]
+  // ---- Stylelint Validation ----
+  "stylelint.validate": ["scss"]
 }
