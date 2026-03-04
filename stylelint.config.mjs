@@ -23,10 +23,12 @@ const config = {
     'selector-class-pattern': null,
     'selector-id-pattern': null,
 
-    // Handle specific edge cases in Next.js/SCSS development
+    // Handle specific edge cases in SCSS development
     'no-empty-source': null,
     'function-url-quotes': null,
     'no-descending-specificity': null,
+    'at-rule-no-vendor-prefix': null,
+    'at-rule-no-deprecated': null,
 
     // Clean up comment enforcement
     'comment-no-empty': null,
