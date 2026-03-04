@@ -11,7 +11,8 @@
     "lint": "stylelint src",
     "lint:fix": "stylelint src --fix",
     "format": "prettier --write \"**/*.{scss,md,json,mjs,js}\"",
-    "format:check": "prettier --check \"**/*.{scss,md,json,mjs,js}\""
+    "format:check": "prettier --check \"**/*.{scss,md,json,mjs,js}\"",
+    "prepare": "husky"
   },
   "homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
   "bugs": {
