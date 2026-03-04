@@ -1,4 +1,4 @@
-@-moz-document domain("incometax.gov.in"), domain("insight.gov.in") {
+@document domain("incometax.gov.in"), domain("insight.gov.in") {
   @include set-root-font-sans;
 
   *,
@@ -29,6 +29,7 @@
   li#login a.btn.login,
   li#register .btn.register {
     @include apply-font-sans;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;

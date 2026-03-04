@@ -1,5 +1,5 @@
-@-moz-document domain("codewars.com") {
-  @include init-root-font-aliases();
+@document domain("codewars.com") {
+  @include init-root-font-aliases;
 
   .CodeMirror,
   .markdown code,

@@ -1,4 +1,4 @@
-@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+@document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 	regexp("^(https?://)(192.168.1)(.*)"),
 	regexp("^https://(.*)(mailtrap.io)(.*)"),
 	regexp("^https://(.*)(netlify.com|nextui.org|vercel.com)(.*)"),
@@ -8,7 +8,7 @@
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
-  @include init-root-font-aliases();
+  @include init-root-font-aliases;
 
   // Apply font to various elements
   html,

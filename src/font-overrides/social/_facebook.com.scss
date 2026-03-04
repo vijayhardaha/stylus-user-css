@@ -1,6 +1,6 @@
-@-moz-document url-prefix("https://www.facebook.com/")
+@document url-prefix("https://www.facebook.com/")
 {
-  @include init-root-font-aliases();
+  @include init-root-font-aliases;
 
   html,
   body {
@@ -48,7 +48,7 @@
   }
 }
 
-@-moz-document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
+@document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
 	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\/\\?fbid=\\d+&set=a\\.\\d.*"),
 	regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\?fbid=\\d+&set=a\\.\\d.*"),
 	regexp("https:\\/\\/www\\.facebook\\.com\\/[\\w\\d]+\\/videos\\/.*"),

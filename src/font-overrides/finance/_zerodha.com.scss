@@ -1,4 +1,4 @@
-@-moz-document domain("zerodha.com") {
+@document domain("zerodha.com") {
   @include set-root-font-sans;
 
   body {
@@ -6,7 +6,7 @@
   }
 }
 
-@-moz-document domain("coin.zerodha.com") {
+@document domain("coin.zerodha.com") {
   @include set-root-font-sans;
 
   * {

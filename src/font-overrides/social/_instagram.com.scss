@@ -1,6 +1,6 @@
-@-moz-document url-prefix("https://www.instagram.com/")
+@document url-prefix("https://www.instagram.com/")
 {
-  @include init-root-font-aliases();
+  @include init-root-font-aliases;
   @include set-root-font-sans;
 
   :root,

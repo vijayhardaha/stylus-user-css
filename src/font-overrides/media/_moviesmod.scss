@@ -1,4 +1,4 @@
-@-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)")
+@document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)")
 {
   @include set-root-font-sans;
 
@@ -61,7 +61,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0 0 0;
+    padding: 0.5rem 0 0;
     float: none;
 
     .logo-wrap,
@@ -97,6 +97,7 @@
 
         .fa {
           @include apply-font-sans;
+
           font-weight: 700;
           line-height: 1.5;
         }
@@ -292,14 +293,14 @@
       width: 60px;
       height: 100%;
       margin-left: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgb(0 0 0 / 35%);
       color: #fff;
       font-size: 2rem;
       font-weight: 400;
       line-height: 1.5;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.45);
+        background: rgb(0 0 0 / 45%);
         color: #fff;
       }
     }
@@ -308,7 +309,7 @@
   .post-cards {
     margin-bottom: 1rem !important;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (width >= 1024px) {
       margin: auto 0 !important;
       margin-bottom: 2rem !important;
       gap: 1rem;
@@ -486,7 +487,7 @@
   }
 }
 
-@-moz-document domain("modlist.in"), domain("mmodlist.net") {
+@document domain("modlist.in"), domain("mmodlist.net") {
   .badge {
     font-weight: 400;
   }
@@ -526,7 +527,7 @@
   }
 }
 
-@-moz-document domain("leechpro.blog"), domain("modpro.blog") {
+@document domain("leechpro.blog"), domain("modpro.blog") {
   @include set-root-font-sans;
 
   *,
@@ -584,13 +585,14 @@
       a {
         margin-bottom: 0.5rem;
       }
+
       font-size: 1rem;
     }
   }
 
   .site-content .site-content-inside {
-    @media (min-width: 1200px) {
-      padding: 0 0;
+    @media (width >= 1200px) {
+      padding: 0;
     }
   }
 
@@ -655,7 +657,7 @@
   }
 }
 
-@-moz-document domain("unblockedgames.world") {
+@document domain("unblockedgames.world") {
   @include set-root-font-sans;
 
   *,
@@ -685,7 +687,7 @@
   }
 }
 
-@-moz-document domain("driveseed.org"), domain("video-seed.dev"), domain("video-downloads.xyz") {
+@document domain("driveseed.org"), domain("video-seed.dev"), domain("video-downloads.xyz") {
   @include set-root-font-sans;
 
   body {

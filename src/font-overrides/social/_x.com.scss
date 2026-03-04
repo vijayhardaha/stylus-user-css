@@ -1,6 +1,6 @@
-@-moz-document url-prefix("https://x.com/")
+@document url-prefix("https://x.com/")
 {
-  @include init-root-font-aliases();
+  @include init-root-font-aliases;
 
   body,
   [class*="css-"],
@@ -9,7 +9,7 @@
   }
 }
 
-@-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
+@document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
   div[role="group"]
     > div[aria-labelledby="modal-header"]
     > div
@@ -18,7 +18,7 @@
   }
 }
 
-@-moz-document domain("twittershots.com") {
+@document domain("twittershots.com") {
   @include set-root-font-sans;
 
   .__className_d65c78 {
@@ -26,7 +26,7 @@
   }
 }
 
-@-moz-document domain("twittervideodownloader.com") {
+@document domain("twittervideodownloader.com") {
   @include set-root-font-sans;
   @include set-root-font-mono;
 

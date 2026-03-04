@@ -7,9 +7,9 @@
  * @param {Boolean} $important - When true append !important (default: false).
  *
  * @example
- *   @include _emit-font-family(var(--font-sans), true);
+ *   @include emit-font-family(var(--font-sans), true);
  */
-@mixin _emit-font-family($font, $important: false) {
+@mixin emit-font-family($font, $important: false) {
   @if $important {
     // Use !important when requested to override site styles.
     font-family: $font !important;
@@ -52,7 +52,7 @@
 /**
  * Apply the current sans-serif font variable to a selector.
  *
- * Wrapper around _emit-font-family to make intent clear in item files.
+ * Wrapper around emit-font-family to make intent clear in item files.
  *
  * @param {Boolean} $important - If true, applies with !important (default: false).
  *
@@ -61,7 +61,7 @@
  */
 @mixin apply-font-sans($important: false) {
   // Applies font-family specified in --font-sans variable with optional !important
-  @include _emit-font-family(var(--font-sans), $important);
+  @include emit-font-family(var(--font-sans), $important);
 }
 
 /**
@@ -74,7 +74,7 @@
  */
 @mixin apply-font-mono($important: false) {
   // Applies font-family specified in --font-mono variable with optional !important
-  @include _emit-font-family(var(--font-mono), $important);
+  @include emit-font-family(var(--font-mono), $important);
 }
 
 /**

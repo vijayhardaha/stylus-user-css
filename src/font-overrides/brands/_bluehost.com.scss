@@ -1,5 +1,5 @@
-@-moz-document domain("bluehost.com") {
-  @include init-root-font-aliases();
+@document domain("bluehost.com") {
+  @include init-root-font-aliases;
 
   body {
     @include apply-font-sans;

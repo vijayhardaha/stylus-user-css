@@ -1,4 +1,4 @@
-@-moz-document domain("w3schools.com") {
+@document domain("w3schools.com") {
   @include set-root-font-sans;
   @include set-root-font-mono;
 
@@ -35,6 +35,7 @@
   h5,
   h6 {
     @include apply-font-sans;
+
     font-weight: 700;
   }
 

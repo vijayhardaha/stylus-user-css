@@ -1,5 +1,5 @@
-@-moz-document domain("apple.com") {
-  @include init-root-font-aliases();
+@document domain("apple.com") {
+  @include init-root-font-aliases;
 
   #globalnav .globalnav-link,
   .content-post .body .post-content .post-body,

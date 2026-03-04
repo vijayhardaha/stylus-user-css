@@ -1,4 +1,4 @@
-@-moz-document domain("linkedin.com") {
+@document domain("linkedin.com") {
   @include set-root-font-sans;
   @include set-root-font-mono;
 
@@ -6,10 +6,8 @@
     --artdeco-reset-typography-font-family-sans: var(--font-sans);
     --artdeco-typography-sans: var(--font-sans);
     --artdeco-typography-mono: var(--font-mono);
-
     --pdntctat: var(--font-sans);
     --pdntctau: var(--font-mono);
-
     --corner-radius-small: 0.4rem;
     --corner-radius-medium: 0.4rem;
     --corner-radius-large: 0.4rem;
@@ -41,14 +39,14 @@
   }
 }
 
-@-moz-document url-prefix("https://www.linkedin.com/messaging/thread/")
+@document url-prefix("https://www.linkedin.com/messaging/thread/")
 {
   .ad-banner,
   aside.scaffold-layout__aside {
     display: none;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (width >= 992px) {
     .scaffold-layout--reflow .scaffold-layout__content--list-detail-aside {
       display: grid;
       grid-template-areas: "main";

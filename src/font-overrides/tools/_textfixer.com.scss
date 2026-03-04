@@ -1,4 +1,4 @@
-@-moz-document domain("textfixer.com") {
+@document domain("textfixer.com") {
   @include set-root-font-sans;
 
   *,
@@ -9,6 +9,7 @@
 
   body {
     @include apply-font-sans;
+
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -28,6 +29,7 @@
   select,
   textarea {
     @include apply-font-sans;
+
     border: 1px solid #e3e3e3;
     border-radius: 0;
     outline: none;
@@ -51,6 +53,7 @@
   .subbtn,
   .actbtn {
     @include apply-font-sans;
+
     margin: 0 0.5rem 0 0;
     padding: 0.5rem 1.5rem;
     border: 0;
@@ -120,7 +123,7 @@
       }
     }
 
-    @media screen and (max-width: 1240px) {
+    @media screen and (width <= 1240px) {
       border-spacing: 0;
     }
   }

@@ -1,4 +1,4 @@
-@-moz-document domain("nps-proteantech.in") {
+@document domain("nps-proteantech.in") {
   @include set-root-font-sans;
 
   .footer-text a,
@@ -120,7 +120,7 @@
 
   .shadow-element {
     height: auto;
-    margin: 16px 5% 0 5%;
+    margin: 16px 5% 0;
     padding: 8px 24px;
     border-style: dashed;
     border-radius: 0;
@@ -130,12 +130,13 @@
   .submitbutton,
   .button {
     @include apply-font-sans;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 80px;
     height: auto;
-    margin: 1rem 0 1.5rem 0 !important;
+    margin: 1rem 0 1.5rem !important;
     border-radius: 0;
     font-size: 1rem;
     font-weight: 600;
