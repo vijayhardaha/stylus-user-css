@@ -1,46 +1,46 @@
 {
-	"name": "stylus-user-css",
-	"version": "1.0.0",
-	"description": "A collection of Stylus CSS.",
-	"private": true,
-	"author": "Vijay Hardaha <https://twitter.com/vijayhardaha>",
-	"license": "MIT",
-	"scripts": {
-		"dev": "gulp watch",
-		"build": "gulp build",
-		"lint": "stylelint src",
-		"lint:fix": "stylelint src --fix",
-		"format": "prettier --write \"**/*.{scss,md,json,mjs,js}\"",
-		"format:check": "prettier --check \"**/*.{scss,md,json,mjs,js}\""
-	},
-	"homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
-	"bugs": {
-		"url": "https://github.com/vijayhardaha/stylus-user-css/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
-	},
-	"devDependencies": {
-		"@popperjs/core": "^2.11.8",
-		"autoprefixer": "^10.4.27",
-		"bootstrap": "^5.3.8",
-		"del": "^8.0.1",
-		"gulp": "^5.0.1",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-filter": "^9.0.1",
-		"gulp-plumber": "^1.2.1",
-		"gulp-postcss": "^10.0.0",
-		"gulp-rename": "^2.1.0",
-		"gulp-sass": "^6.0.1",
-		"postcss": "^8.5.8",
-		"postcss-discard-duplicates": "^7.0.2",
-		"postcss-merge-rules": "^7.0.7",
-		"prettier": "^3.8.1",
-		"sass": "^1.97.3",
-		"stylelint": "^17.4.0",
-		"stylelint-config-property-sort-order-smacss": "^11.1.0",
-		"stylelint-config-standard-scss": "^17.0.0",
-		"stylelint-order": "^7.0.1"
-	}
+  "name": "stylus-user-css",
+  "version": "1.0.0",
+  "description": "A collection of Stylus CSS.",
+  "private": true,
+  "author": "Vijay Hardaha <https://twitter.com/vijayhardaha>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "lint": "stylelint src",
+    "lint:fix": "stylelint src --fix",
+    "format": "prettier --write \"**/*.{scss,md,json,mjs,js}\"",
+    "format:check": "prettier --check \"**/*.{scss,md,json,mjs,js}\""
+  },
+  "homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
+  "bugs": {
+    "url": "https://github.com/vijayhardaha/stylus-user-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.27",
+    "bootstrap": "^5.3.8",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-filter": "^9.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "postcss": "^8.5.8",
+    "postcss-discard-duplicates": "^7.0.2",
+    "postcss-merge-rules": "^7.0.7",
+    "prettier": "^3.8.1",
+    "sass": "^1.97.3",
+    "stylelint": "^17.4.0",
+    "stylelint-config-property-sort-order-smacss": "^11.1.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^7.0.1"
+  }
 }
