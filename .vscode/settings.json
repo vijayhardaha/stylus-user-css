@@ -1,11 +1,26 @@
+// ======================================================================
+// Settings JSON
+// ======================================================================
+// Purpose: Workspace editor settings focused on SCSS formatting and linting
+// Docs: https://code.visualstudio.com/docs/getstarted/settings
+// ======================================================================
+
 {
+	// ---- Language Formatter ----
 	"[scss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"eslint.enable": false,
+
+	// ---- Editor Behavior ----
 	"editor.formatOnSave": false,
+
+	// ---- Linting ----
+	"eslint.enable": false,
 	"editor.codeActionsOnSave": {
+		// ---- Stylelint: run explicit fixes only ----
 		"source.fixAll.stylelint": "explicit"
 	},
+
+	// ---- Stylelint Validation ----
 	"stylelint.validate": ["scss"]
 }
