@@ -1,39 +1,36 @@
 @-moz-document domain("icicibank.com"), domain("icici.bank.in") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
+  html body div {
+    .Global_P,
+    .globalNavigation,
+    .searchsimpletext,
+    .tableGlobal,
+    > *,
+    ul.submenu li a.Global_sub {
+      @include apply-font-sans(true);
+    }
 
-	html body div {
+    .globalNavigation,
+    ul.submenu li a.Global_sub {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
 
-		.Global_P,
-		.globalNavigation,
-		.searchsimpletext,
-		.tableGlobal,
-		> *,
-		ul.submenu li a.Global_sub {
+    .OfferTitleContainer .UnlockOfferBtn,
+    .cibilScore span,
+    .dropDownRecent .initialArea .recentText,
+    .have-own-wrapper .have-own-area-container .have-own-area p,
+    .sidenav .atag,
+    .sidenav a,
+    .spendDropAreaZeroState .spendText,
+    .upcoming-container-wrapper .upcomingDrop .upcomingCta .upcomingTitle {
+      letter-spacing: 0 !important;
+    }
 
-			@include apply-font-sans(true);
-		}
-
-		.globalNavigation,
-		ul.submenu li a.Global_sub {
-			font-size: 14px;
-			text-transform: capitalize;
-		}
-
-		.OfferTitleContainer .UnlockOfferBtn,
-		.cibilScore span,
-		.dropDownRecent .initialArea .recentText,
-		.have-own-wrapper .have-own-area-container .have-own-area p,
-		.sidenav .atag,
-		.sidenav a,
-		.spendDropAreaZeroState .spendText,
-		.upcoming-container-wrapper .upcomingDrop .upcomingCta .upcomingTitle {
-			letter-spacing: 0 !important;
-		}
-
-		.have-own-wrapper .send-money-area .sendMoneyAreaText {
-			font-weight: 700 !important;
-			letter-spacing: 0 !important;
-		}
-	}
+    .have-own-wrapper .send-money-area .sendMoneyAreaText {
+      font-weight: 700 !important;
+      letter-spacing: 0 !important;
+    }
+  }
 }

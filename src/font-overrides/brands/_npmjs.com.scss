@@ -1,32 +1,30 @@
 @-moz-document domain("npmjs.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
+  ._452c3ec4,
+  .c6c55db4,
+  .cd2827bb,
+  .sans-serif,
+  body,
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    @include apply-font-sans(true);
+  }
 
-	._452c3ec4,
-	.c6c55db4,
-	.cd2827bb,
-	.sans-serif,
-	body,
-	button,
-	input,
-	optgroup,
-	select,
-	textarea {
+  :root {
+    --code: var(--font-mono);
+  }
 
-		@include apply-font-sans(true);
-	}
+  .code,
+  code {
+    font-family: var(--code);
+  }
 
-	:root {
-		--code: var(--font-mono);
-	}
-
-	.code,
-	code {
-		font-family: var(--code);
-	}
-
-	._1b8c0a9f {
-		letter-spacing: 0;
-	}
+  ._1b8c0a9f {
+    letter-spacing: 0;
+  }
 }

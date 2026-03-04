@@ -1,10 +1,9 @@
 @-moz-document domain('github.com') {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
-
-	:root {
-		--fontStack-monospace: var(--font-mono) !important;
-		--fontStack-sansSerif: var(--font-sans) !important;
-	}
+  :root {
+    --fontStack-monospace: var(--font-mono) !important;
+    --fontStack-sansSerif: var(--font-sans) !important;
+  }
 }

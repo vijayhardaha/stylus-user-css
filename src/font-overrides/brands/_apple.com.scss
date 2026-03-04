@@ -1,13 +1,11 @@
 @-moz-document domain("apple.com") {
+  @include init-root-font-aliases();
 
-	@include init-root-font-aliases();
-
-	#globalnav .globalnav-link,
-	.content-post .body .post-content .post-body,
-	.content-post .body .post-content .title,
-	.page .locked-thread,
-	body {
-
-		@include apply-font-sans;
-	}
+  #globalnav .globalnav-link,
+  .content-post .body .post-content .post-body,
+  .content-post .body .post-content .title,
+  .page .locked-thread,
+  body {
+    @include apply-font-sans;
+  }
 }

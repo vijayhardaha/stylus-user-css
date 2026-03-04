@@ -1,40 +1,37 @@
 @-moz-document domain("codewars.com") {
+  @include init-root-font-aliases();
 
-	@include init-root-font-aliases();
+  .CodeMirror,
+  .markdown code,
+  .prose code,
+  .prose pre code,
+  code,
+  kbd,
+  pre,
+  pre code,
+  samp {
+    @include apply-font-mono;
+  }
 
-	.CodeMirror,
-	.markdown code,
-	.prose code,
-	.prose pre code,
-	code,
-	kbd,
-	pre,
-	pre code,
-	samp {
+  #users,
+  section.user-profile {
+    .company b,
+    .github b,
+    .honor b,
+    .skills b,
+    div.stat b {
+      color: #fff;
+      letter-spacing: 0;
+    }
+  }
 
-		@include apply-font-mono;
-	}
+  #partner-display,
+  .ads-container {
+    display: none;
+  }
 
-	#users,
-	section.user-profile {
-
-		.company b,
-		.github b,
-		.honor b,
-		.skills b,
-		div.stat b {
-			color: #fff;
-			letter-spacing: 0;
-		}
-	}
-
-	#partner-display,
-	.ads-container {
-		display: none;
-	}
-
-	.btn,
-	a.btn {
-		text-transform: none;
-	}
+  .btn,
+  a.btn {
+    text-transform: none;
+  }
 }

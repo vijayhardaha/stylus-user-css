@@ -2,30 +2,26 @@
 url-prefix("https://www.google.com/search"),
 domain("mail.google.com"),
 domain("gemini.google.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
+  .JJYS0b,
+  .Ose4Jf,
+  .Rj2Mlf,
+  body {
+    @include apply-font-sans;
+  }
 
-	.JJYS0b,
-	.Ose4Jf,
-	.Rj2Mlf,
-	body {
-
-		@include apply-font-sans;
-	}
-
-	body {
-
-		a,
-		div,
-		p,
-		span,
-		li,
-		input,
-		button,
-		textarea,
-		select {
-
-			@include apply-font-sans(true);
-		}
-	}
+  body {
+    a,
+    div,
+    p,
+    span,
+    li,
+    input,
+    button,
+    textarea,
+    select {
+      @include apply-font-sans(true);
+    }
+  }
 }

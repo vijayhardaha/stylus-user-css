@@ -1,10 +1,9 @@
 @-moz-document domain("brave.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
-
-	:root {
-		--main-font: var(--font-sans);
-		--mono-font: var(--font-mono);
-	}
+  :root {
+    --main-font: var(--font-sans);
+    --mono-font: var(--font-mono);
+  }
 }

@@ -1,10 +1,8 @@
 @-moz-document domain("indmoney.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
-
-	:host,
-	html {
-
-		@include apply-font-sans;
-	}
+  :host,
+  html {
+    @include apply-font-sans;
+  }
 }

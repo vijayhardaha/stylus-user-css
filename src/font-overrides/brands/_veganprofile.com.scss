@@ -1,20 +1,18 @@
 @-moz-document domain("veganprofile.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
-
-	a,
-	body,
-	div,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	li,
-	p,
-	span {
-
-		@include apply-font-sans;
-	}
+  a,
+  body,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  p,
+  span {
+    @include apply-font-sans;
+  }
 }

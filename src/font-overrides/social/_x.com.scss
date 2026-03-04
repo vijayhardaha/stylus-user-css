@@ -1,39 +1,36 @@
 @-moz-document url-prefix("https://x.com/")
 {
+  @include init-root-font-aliases();
 
-	@include init-root-font-aliases();
-
-	body,
-	[class*="css-"],
-	[class*="r-"] {
-
-		@include apply-font-sans;
-	}
+  body,
+  [class*="css-"],
+  [class*="r-"] {
+    @include apply-font-sans;
+  }
 }
 
 @-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
-
-	div[role="group"] > div[aria-labelledby="modal-header"] > div > div[aria-expanded="true"] {
-		width: 720px;
-	}
+  div[role="group"]
+    > div[aria-labelledby="modal-header"]
+    > div
+    > div[aria-expanded="true"] {
+    width: 720px;
+  }
 }
 
 @-moz-document domain("twittershots.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
-
-	.__className_d65c78 {
-
-		@include apply-font-sans;
-	}
+  .__className_d65c78 {
+    @include apply-font-sans;
+  }
 }
 
 @-moz-document domain("twittervideodownloader.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
-
-	:root {
-		--bs-body-font-family: var(--font-sans);
-	}
+  :root {
+    --bs-body-font-family: var(--font-sans);
+  }
 }

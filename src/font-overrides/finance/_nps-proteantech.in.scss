@@ -1,152 +1,145 @@
 @-moz-document domain("nps-proteantech.in") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
+  .footer-text a,
+  .footer-text,
+  .loginPageLeftBottomLinkSelfLock a,
+  .nav ul li a,
+  .pageheading,
+  .power-text,
+  .sub-text,
+  .welcome-txt a,
+  .welcome-txt,
+  a,
+  abbr,
+  acronym,
+  address,
+  article,
+  aside,
+  blockquote,
+  body,
+  button,
+  caption,
+  code,
+  dd,
+  del,
+  dfn,
+  dialog,
+  div,
+  dl,
+  dt,
+  em,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  iframe,
+  img,
+  input,
+  label,
+  legend,
+  li,
+  nav,
+  object,
+  ol,
+  p,
+  pre,
+  q,
+  section,
+  select,
+  span,
+  table,
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr,
+  ul {
+    @include apply-font-sans;
+  }
 
-	.footer-text a,
-	.footer-text,
-	.loginPageLeftBottomLinkSelfLock a,
-	.nav ul li a,
-	.pageheading,
-	.power-text,
-	.sub-text,
-	.welcome-txt a,
-	.welcome-txt,
-	a,
-	abbr,
-	acronym,
-	address,
-	article,
-	aside,
-	blockquote,
-	body,
-	button,
-	caption,
-	code,
-	dd,
-	del,
-	dfn,
-	dialog,
-	div,
-	dl,
-	dt,
-	em,
-	fieldset,
-	figure,
-	footer,
-	form,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	header,
-	hgroup,
-	iframe,
-	img,
-	input,
-	label,
-	legend,
-	li,
-	nav,
-	object,
-	ol,
-	p,
-	pre,
-	q,
-	section,
-	select,
-	span,
-	table,
-	tbody,
-	td,
-	tfoot,
-	th,
-	thead,
-	tr,
-	ul {
+  #gotrust-cookie-banner {
+    div.cookieFooterBanner__HERrd,
+    button {
+      @include apply-font-sans(true);
+    }
+  }
 
-		@include apply-font-sans;
-	}
+  .CRA-loginForm {
+    .shadow-sm {
+      box-shadow: none;
+    }
 
-	#gotrust-cookie-banner {
+    .rounded {
+      border-radius: 0;
+    }
 
-		div.cookieFooterBanner__HERrd,
-		button {
+    > div:first-child > div:first-child > p {
+      margin-bottom: 1rem !important;
+      font-size: 2rem !important;
+      font-weight: 700;
+    }
 
-			@include apply-font-sans(true);
-		}
-	}
+    form[name="logonPwdForm"] > div.row {
+      > div.col-6,
+      > div.col-3 > div {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+      }
 
-	.CRA-loginForm {
+      > div.col-4 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
 
-		.shadow-sm {
-			box-shadow: none;
-		}
+      > div.col-4,
+      > div.col-8 {
+        margin-top: 1rem !important;
+      }
 
-		.rounded {
-			border-radius: 0;
-		}
+      input[type="text"],
+      input[type="password"] {
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 0;
+        font-size: 14px;
+      }
+    }
+  }
 
-		> div:first-child > div:first-child > p {
-			margin-bottom: 1rem !important;
-			font-size: 2rem !important;
-			font-weight: 700;
-		}
+  .shadow-element {
+    height: auto;
+    margin: 16px 5% 0 5%;
+    padding: 8px 24px;
+    border-style: dashed;
+    border-radius: 0;
+    box-shadow: none;
+  }
 
-		form[name="logonPwdForm"] > div.row {
-
-			> div.col-6,
-			> div.col-3 > div {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.375rem;
-			}
-
-			> div.col-4 {
-				display: inline-flex;
-				align-items: center;
-				justify-content: flex-end;
-			}
-
-			> div.col-4,
-			> div.col-8 {
-				margin-top: 1rem !important;
-			}
-
-			input[type="text"],
-			input[type="password"] {
-				padding: 6px 12px;
-				border: 1px solid #ddd;
-				border-radius: 0;
-				font-size: 14px;
-			}
-		}
-	}
-
-	.shadow-element {
-		height: auto;
-		margin: 16px 5% 0 5%;
-		padding: 8px 24px;
-		border-style: dashed;
-		border-radius: 0;
-		box-shadow: none;
-	}
-
-	.submitbutton,
-	.button {
-
-		@include apply-font-sans;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 80px;
-		height: auto;
-		margin: 1rem 0 1.5rem 0 !important;
-		border-radius: 0;
-		font-size: 1rem;
-		font-weight: 600;
-		line-height: 1.5;
-		cursor: pointer;
-	}
+  .submitbutton,
+  .button {
+    @include apply-font-sans;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: auto;
+    margin: 1rem 0 1.5rem 0 !important;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+  }
 }

@@ -1,19 +1,17 @@
 @-moz-document domain("grammarly.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
+  :host,
+  :root {
+    --font-stack-inter: var(--font-sans);
+    --font-stack-matter: var(--font-sans);
+  }
 
-	:host,
-	:root {
-		--font-stack-inter: var(--font-sans);
-		--font-stack-matter: var(--font-sans);
-	}
-
-	body,
-	.text,
-	thead,
-	.heading,
-	.wrapper_f1xydsbu {
-
-		@include apply-font-sans;
-	}
+  body,
+  .text,
+  thead,
+  .heading,
+  .wrapper_f1xydsbu {
+    @include apply-font-sans;
+  }
 }

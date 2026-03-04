@@ -1,9 +1,7 @@
 @-moz-document domain("freelancer.com") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
-
-	body {
-
-		@include apply-font-sans;
-	}
+  body {
+    @include apply-font-sans;
+  }
 }

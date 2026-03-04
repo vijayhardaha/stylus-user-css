@@ -1,9 +1,7 @@
 @-moz-document domain("reddit.com") {
+  @include init-root-font-aliases();
 
-	@include init-root-font-aliases();
-
-	body {
-
-		@include apply-font-sans;
-	}
+  body {
+    @include apply-font-sans;
+  }
 }

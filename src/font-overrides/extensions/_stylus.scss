@@ -1,36 +1,33 @@
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne")
 {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
+  :root {
+    --family: var(--font-sans);
+    --input-height: 30px;
+  }
 
-	:root {
-		--family: var(--font-sans);
-		--input-height: 30px;
-	}
+  html {
+    @include apply-font-sans;
+    font-size: 14px;
+  }
 
-	html {
+  body {
+    font-size: 1rem;
+  }
 
-		@include apply-font-sans;
-		font-size: 14px;
-	}
+  .CodeMirror {
+    @include apply-font-mono;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-	body {
-		font-size: 1rem;
-	}
+  .applies-to ul {
+    --input-height: 2rem;
+  }
 
-	.CodeMirror {
-
-		@include apply-font-mono;
-		font-size: 1rem;
-		line-height: 1.6;
-	}
-
-	.applies-to ul {
-		--input-height: 2rem;
-	}
-
-	.select-wrapper::after {
-		top: 8px;
-	}
+  .select-wrapper::after {
+    top: 8px;
+  }
 }

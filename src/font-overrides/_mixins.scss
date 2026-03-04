@@ -10,13 +10,12 @@
  *   @include _emit-font-family(var(--font-sans), true);
  */
 @mixin _emit-font-family($font, $important: false) {
-
-	@if $important {
-		// Use !important when requested to override site styles.
-		font-family: $font !important;
-	} @else {
-		font-family: $font;
-	}
+  @if $important {
+    // Use !important when requested to override site styles.
+    font-family: $font !important;
+  } @else {
+    font-family: $font;
+  }
 }
 
 /**
@@ -28,11 +27,11 @@
  *   @include set-root-font-sans("inter");
  */
 @mixin set-root-font-sans($font: "default-sans") {
-
-	:root {
-		// Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
-		--font-sans: var(--#{$font}-font), var(--default-hindi-font), var(--default-sans);
-	}
+  :root {
+    // Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
+    --font-sans:
+      var(--#{$font}-font), var(--default-hindi-font), var(--default-sans);
+  }
 }
 
 /**
@@ -44,11 +43,10 @@
  *   @include set-root-font-mono("geist");
  */
 @mixin set-root-font-mono($font: "default-mono") {
-
-	:root {
-		// Sets the --font-mono variable to the provided font name or falls back to a default monospace font
-		--font-mono: var(--#{$font}-font), var(--default-mono);
-	}
+  :root {
+    // Sets the --font-mono variable to the provided font name or falls back to a default monospace font
+    --font-mono: var(--#{$font}-font), var(--default-mono);
+  }
 }
 
 /**
@@ -62,8 +60,8 @@
  *   .selector { @include apply-font-sans(true); }
  */
 @mixin apply-font-sans($important: false) {
-	// Applies font-family specified in --font-sans variable with optional !important
-	@include _emit-font-family(var(--font-sans), $important);
+  // Applies font-family specified in --font-sans variable with optional !important
+  @include _emit-font-family(var(--font-sans), $important);
 }
 
 /**
@@ -75,8 +73,8 @@
  *   code { @include apply-font-mono(true); }
  */
 @mixin apply-font-mono($important: false) {
-	// Applies font-family specified in --font-mono variable with optional !important
-	@include _emit-font-family(var(--font-mono), $important);
+  // Applies font-family specified in --font-mono variable with optional !important
+  @include _emit-font-family(var(--font-mono), $important);
 }
 
 /**
@@ -88,16 +86,17 @@
  *   @include init-root-font-aliases();
  */
 @mixin init-root-font-aliases() {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
+  // Define font variables and common aliases for broader compatibility.
+  :root {
+    $sans-aliases:
+      display, family-apple, family-system, headline, primary, sans-serif,
+      system, ui;
 
-	// Define font variables and common aliases for broader compatibility.
-	:root {
-		$sans-aliases: display, family-apple, family-system, headline, primary, sans-serif, system, ui;
-
-		@each $alias in $sans-aliases {
-			--font-#{$alias}: var(--font-sans);
-		}
-	}
+    @each $alias in $sans-aliases {
+      --font-#{$alias}: var(--font-sans);
+    }
+  }
 }

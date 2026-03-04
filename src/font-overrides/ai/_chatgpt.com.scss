@@ -1,16 +1,13 @@
 @-moz-document domain("chatgpt.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
 
-	@include set-root-font-sans;
-	@include set-root-font-mono;
+  html {
+    @include apply-font-sans;
+  }
 
-	html {
-
-		@include apply-font-sans;
-	}
-
-	code,
-	pre {
-
-		@include apply-font-mono(true);
-	}
+  code,
+  pre {
+    @include apply-font-mono(true);
+  }
 }

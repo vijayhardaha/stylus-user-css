@@ -1,22 +1,19 @@
 @-moz-document domain("bluehost.com") {
+  @include init-root-font-aliases();
 
-	@include init-root-font-aliases();
+  body {
+    @include apply-font-sans;
+  }
 
-	body {
-
-		@include apply-font-sans;
-	}
-
-	#hosting-app,
-	.mat-h1,
-	.mat-h3,
-	.mat-headline,
-	.mat-subheading-2,
-	.mat-typography,
-	.mat-typography h1,
-	.mat-typography h3,
-	body {
-
-		@include apply-font-sans;
-	}
+  #hosting-app,
+  .mat-h1,
+  .mat-h3,
+  .mat-headline,
+  .mat-subheading-2,
+  .mat-typography,
+  .mat-typography h1,
+  .mat-typography h3,
+  body {
+    @include apply-font-sans;
+  }
 }

@@ -1,9 +1,8 @@
 @-moz-document domain("linear.app") {
+  @include set-root-font-sans;
 
-	@include set-root-font-sans;
-
-	:root {
-		--font-regular: var(--font-sans);
-		--font-monospace: var(--font-mono);
-	}
+  :root {
+    --font-regular: var(--font-sans);
+    --font-monospace: var(--font-mono);
+  }
 }
