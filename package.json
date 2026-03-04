@@ -22,6 +22,7 @@
 		"url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
 	},
 	"devDependencies": {
+		"@popperjs/core": "^2.11.8",
 		"autoprefixer": "^10.4.24",
 		"bootstrap": "^5.3.8",
 		"del": "^8.0.1",
