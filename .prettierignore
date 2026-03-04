@@ -7,9 +7,6 @@
 # ---- Dependencies ----
 /node_modules
 
-# ---- Editor / IDE ----
-/.vscode
-
 # ---- Lockfiles ----
 package-lock.json
 pnpm-lock.yaml
