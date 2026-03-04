@@ -93,7 +93,7 @@
   :root {
     $sans-aliases:
       display, family-apple, family-system, headline, primary, sans-serif,
-      system, ui, family-monospace;
+      system, ui, family-sans-serif;
     $mono-aliases: family-monospace;
 
     @each $alias in $sans-aliases {
