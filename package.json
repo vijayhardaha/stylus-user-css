@@ -22,7 +22,6 @@
 		"url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
 	},
 	"devDependencies": {
-		"@wordpress/stylelint-config": "^23.31.0",
 		"autoprefixer": "^10.4.24",
 		"bootstrap": "^5.3.8",
 		"del": "^8.0.1",
@@ -40,6 +39,7 @@
 		"sass": "^1.97.3",
 		"stylelint": "^17.1.1",
 		"stylelint-config-property-sort-order-smacss": "^11.1.0",
+		"stylelint-config-standard-scss": "^17.0.0",
 		"stylelint-order": "^7.0.1"
 	}
 }
