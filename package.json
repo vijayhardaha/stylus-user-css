@@ -22,7 +22,10 @@
     "url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
     "@popperjs/core": "^2.11.8",
+    "@types/node": "^25.3.3",
     "autoprefixer": "^10.4.27",
     "bootstrap": "^5.3.8",
     "del": "^8.0.1",
@@ -33,6 +36,7 @@
     "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.1.0",
     "gulp-sass": "^6.0.1",
+    "husky": "^9.1.7",
     "postcss": "^8.5.8",
     "postcss-discard-duplicates": "^7.0.2",
     "postcss-merge-rules": "^7.0.7",
@@ -41,6 +45,7 @@
     "stylelint": "^17.4.0",
     "stylelint-config-property-sort-order-smacss": "^11.1.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "stylelint-order": "^7.0.1"
+    "stylelint-order": "^7.0.1",
+    "typescript": "^5.9.3"
   }
 }
