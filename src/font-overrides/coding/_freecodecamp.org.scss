@@ -1,0 +1,12 @@
+@document domain("freecodecamp.org") {
+  @include init-root-font-aliases;
+
+  code,
+  kbd,
+  pre,
+  samp,
+  code[class*="language-"],
+  pre[class*="language-"] {
+    @include apply-font-mono;
+  }
+}
