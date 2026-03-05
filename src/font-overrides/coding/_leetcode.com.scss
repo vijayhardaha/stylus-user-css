@@ -1,0 +1,17 @@
+@document domain("leetcode.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  body {
+    @include apply-font-sans;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp,
+  .elfjS code,
+  div.view-lines.monaco-mouse-cursor-text {
+    @include apply-font-mono(true);
+  }
+}
