@@ -10,8 +10,8 @@
     "build": "gulp build",
     "lint": "stylelint src",
     "lint:fix": "stylelint src --fix",
-    "format": "prettier --write \"**/*.{scss,md,json,mjs,js}\"",
-    "format:check": "prettier --check \"**/*.{scss,md,json,mjs,js}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
     "prepare": "husky"
   },
   "homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
@@ -27,6 +27,7 @@
     "@commitlint/config-conventional": "^20.4.3",
     "@popperjs/core": "^2.11.8",
     "@types/node": "^25.3.3",
+    "@vijayhardaha/dev-config": "^1.0.11",
     "autoprefixer": "^10.4.27",
     "bootstrap": "^5.3.8",
     "del": "^8.0.1",
@@ -48,5 +49,8 @@
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-order": "^7.0.1",
     "typescript": "^5.9.3"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }
