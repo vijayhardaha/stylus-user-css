@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.7
+@version 1.1.8
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -837,6 +837,20 @@ domain("gemini.google.com") {
   pre,
   samp {
     font-family: var(--font-mono)
+  }
+}
+@document domain("wordpress.org") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  #wpadminbar,
+  .global-footer,
+  .global-header,
+  .global-header__alert-banner,
+  :root {
+    --wp--preset--font-family--inter: var(--font-sans);
+    --wp--preset--font-family--monospace: var(--font-mono)
   }
 }
 @document domain("amazon.in"),
