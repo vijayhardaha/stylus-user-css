@@ -1,0 +1,15 @@
+@document domain("wordpress.org") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  :root,
+  #wpadminbar,
+  .global-footer,
+  .global-header,
+  .global-header__alert-banner {
+    /* stylelint-disable custom-property-pattern */
+    --wp--preset--font-family--inter: var(--font-sans);
+    --wp--preset--font-family--monospace: var(--font-mono);
+    /* stylelint-enable custom-property-pattern */
+  }
+}
