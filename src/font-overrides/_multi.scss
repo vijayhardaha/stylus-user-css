@@ -134,4 +134,18 @@
       @include apply-font-mono;
     }
   }
+
+  body.woocommerce_page_wc-settings .nav-tab-wrapper a,
+  .wc-addons-wrap h1.search-form-title,
+  .wc-addons-wrap .addon-product-group-title,
+  .wc-addons-wrap .current-section-dropdown__title,
+  .wc-addons-wrap .products li .product-details .product-developed-by,
+  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
+  #order_data h2,
+  #order_data p.order_number,
+  .wc-metaboxes-wrapper .wc-metabox h3 select,
+  .woocommerce-reports-wide .postbox .chart-legend li strong,
+  .woocommerce-reports-wrap .postbox .chart-legend li strong {
+    @include apply-font-sans;
+  }
 }
