@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.6
+@version 1.1.7
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -120,6 +120,19 @@ domain("127.0.0.1") {
   .simplenote-app code,
   .simplenote-app code * {
     font-family: var(--font-mono)
+  }
+  #order_data h2,
+  #order_data p.order_number,
+  .wc-addons-wrap .addon-product-group-title,
+  .wc-addons-wrap .current-section-dropdown__title,
+  .wc-addons-wrap .products li .product-details .product-developed-by,
+  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
+  .wc-addons-wrap h1.search-form-title,
+  .wc-metaboxes-wrapper .wc-metabox h3 select,
+  .woocommerce-reports-wide .postbox .chart-legend li strong,
+  .woocommerce-reports-wrap .postbox .chart-legend li strong,
+  body.woocommerce_page_wc-settings .nav-tab-wrapper a {
+    font-family: var(--font-sans)
   }
 }
 @document domain("chatgpt.com") {
