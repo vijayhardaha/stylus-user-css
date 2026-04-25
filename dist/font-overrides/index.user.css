@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.5
+@version 1.1.6
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -141,6 +141,19 @@ domain("127.0.0.1") {
     --font-mono: var(--default-mono-font),var(--default-mono);
     --font-ui: var(--font-sans);
     --font-system: var(--font-sans)
+  }
+}
+@document domain("ollama.com") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  html {
+    font-family: var(--font-sans)
+  }
+  code,
+  pre {
+    font-family: var(--font-mono)!important
   }
 }
 @document domain("icicibank.com"),
@@ -2262,6 +2275,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-size: 1rem;
     line-height: 1.5
   }
+  .button,
   .header,
   body,
   h1,
@@ -2269,14 +2283,16 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  input,
+  select,
+  textarea {
     font-family: var(--font-sans)
   }
   .button,
   input,
   select,
   textarea {
-    font-family: var(--font-sans);
     border: 1px solid #e3e3e3;
     border-radius: 0;
     outline: 0;
