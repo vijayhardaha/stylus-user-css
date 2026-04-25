@@ -1,0 +1,13 @@
+@document domain("ollama.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  html {
+    @include apply-font-sans;
+  }
+
+  code,
+  pre {
+    @include apply-font-mono(true);
+  }
+}
