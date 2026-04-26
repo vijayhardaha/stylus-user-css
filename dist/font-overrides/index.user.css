@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.9
+@version 1.1.10
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -156,19 +156,6 @@ domain("127.0.0.1") {
     --font-system: var(--font-sans)
   }
 }
-@document domain("ollama.com") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono)
-  }
-  html {
-    font-family: var(--font-sans)
-  }
-  code,
-  pre {
-    font-family: var(--font-mono)!important
-  }
-}
 @document domain("deepseek.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
@@ -195,6 +182,36 @@ domain("127.0.0.1") {
   pre[class*=language-],
   samp {
     font-family: var(--font-mono)
+  }
+}
+@document domain("ollama.com") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  html {
+    font-family: var(--font-sans)
+  }
+  code,
+  pre {
+    font-family: var(--font-mono)!important
+  }
+}
+@document domain("opencode.ai") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  [data-page=opencode] {
+    font-family: var(--font-sans)
+  }
+}
+@document domain("openrouter.ai") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono);
+    --font-inter: var(--font-sans);
+    --font-geist-mono: var(--font-mono)
   }
 }
 @document domain("icicibank.com"),
