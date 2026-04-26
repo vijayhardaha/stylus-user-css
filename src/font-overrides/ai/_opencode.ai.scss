@@ -6,7 +6,7 @@
     --font-sans: var(--default-sans-font), var(--default-hindi-font), var(--default-sans);
   }
 
-  [data-page="opencode"] {
+  body [data-page] {
     @include apply-font-sans;
   }
 }

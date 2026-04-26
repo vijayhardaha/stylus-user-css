@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.11
+@version 1.1.12
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -205,7 +205,7 @@ domain("127.0.0.1") {
   body {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
-  [data-page=opencode] {
+  body [data-page] {
     font-family: var(--font-sans)
   }
 }
