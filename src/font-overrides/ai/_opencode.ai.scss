@@ -1,0 +1,8 @@
+@document domain("opencode.ai") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  [data-page="opencode"] {
+    @include apply-font-sans;
+  }
+}

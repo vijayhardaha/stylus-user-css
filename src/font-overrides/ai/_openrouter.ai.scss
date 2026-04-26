@@ -1,0 +1,9 @@
+@document domain("openrouter.ai") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  :root {
+    --font-inter: var(--font-sans);
+    --font-geist-mono: var(--font-mono);
+  }
+}

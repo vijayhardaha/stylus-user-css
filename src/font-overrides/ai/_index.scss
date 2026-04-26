@@ -1,17 +1,10 @@
 // Aggregate imports for AI-related site partials.
 // Each imported file targets a specific AI site and may be empty if no overrides are required.
 
-/// ChatGPT site-specific rules
 @import "chatgpt.com";
-
-/// Anthropic Claude site-specific rules
 @import "claude.ai";
-
-/// Ollama site-specific rules
-@import "ollama.com";
-
-/// Deepseek site-specific rules
 @import "deepseek.com";
-
-/// Kilo AI site-specific rules
 @import "kilo.ai";
+@import "ollama.com";
+@import "opencode.ai";
+@import "openrouter.ai";
