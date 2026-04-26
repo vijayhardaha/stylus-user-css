@@ -1,0 +1,9 @@
+@document domain("deepseek.com") {
+  @include set-root-font-sans;
+  @include set-root-font-mono;
+
+  :root {
+    --dsw-font-family: var(--font-sans);
+    --ds-font-family-code: var(--font-mono);
+  }
+}
