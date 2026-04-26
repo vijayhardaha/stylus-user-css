@@ -2,6 +2,10 @@
   @include set-root-font-sans;
   @include set-root-font-mono;
 
+  body {
+    --font-sans: var(--default-sans-font), var(--default-hindi-font), var(--default-sans);
+  }
+
   [data-page="opencode"] {
     @include apply-font-sans;
   }
