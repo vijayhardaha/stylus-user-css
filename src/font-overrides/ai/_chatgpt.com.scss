@@ -2,7 +2,7 @@
   @include set-root-font-sans;
   @include set-root-font-mono;
 
-  html {
+  body {
     @include apply-font-sans;
   }
 
