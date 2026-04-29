@@ -898,9 +898,18 @@ domain("gemini.google.com") {
   .global-footer,
   .global-header,
   .global-header__alert-banner,
-  :root {
+  :root,
+  body {
     --wp--preset--font-family--inter: var(--font-sans);
+    --wp--preset--font-family--eb-garamond: var(--font-sans);
+    --wp--preset--font-family--ibm-plex-sans: var(--font-sans);
     --wp--preset--font-family--monospace: var(--font-mono)
+  }
+  #bbpress-forums div.bbp-reply-content code,
+  #bbpress-forums div.bbp-reply-content pre,
+  #bbpress-forums div.bbp-topic-content code,
+  #bbpress-forums div.bbp-topic-content pre {
+    font-family: var(--font-mono)
   }
 }
 @document domain("amazon.in"),
