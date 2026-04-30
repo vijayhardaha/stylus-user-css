@@ -2,7 +2,9 @@
   @include set-root-font-sans;
   @include set-root-font-mono;
 
-  :root {
+  :root,
+  body[class*="inter"],
+  body[class*="geist"] {
     --font-inter: var(--font-sans);
     --font-geist-mono: var(--font-mono);
   }
