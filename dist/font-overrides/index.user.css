@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.15
+@version 1.1.16
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -214,7 +214,11 @@ domain("127.0.0.1") {
 @document domain("openrouter.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  :root,
+  body[class*=geist],
+  body[class*=inter] {
     --font-inter: var(--font-sans);
     --font-geist-mono: var(--font-mono)
   }
