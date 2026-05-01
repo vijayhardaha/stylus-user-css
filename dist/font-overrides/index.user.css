@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.16
+@version 1.1.17
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -112,7 +112,7 @@ domain("127.0.0.1") {
   }
   .markdown-body ol ol,
   .markdown-body ul ol {
-    list-style-type: numerial
+    list-style-type: decimal
   }
   .simplenote-app * {
     font-family: var(--font-sans)
@@ -132,6 +132,15 @@ domain("127.0.0.1") {
   .woocommerce-reports-wide .postbox .chart-legend li strong,
   .woocommerce-reports-wrap .postbox .chart-legend li strong,
   body.woocommerce_page_wc-settings .nav-tab-wrapper a {
+    font-family: var(--font-sans)
+  }
+}
+@document regexp("^https://(.*)(.test)(.*)") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
+  }
+  #wpadminbar,
+  #wpadminbar * {
     font-family: var(--font-sans)
   }
 }
