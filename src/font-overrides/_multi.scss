@@ -118,7 +118,7 @@
     ol,
     ul {
       ol {
-        list-style-type: numerial;
+        list-style-type: decimal;
       }
     }
   }
@@ -146,6 +146,16 @@
   .wc-metaboxes-wrapper .wc-metabox h3 select,
   .woocommerce-reports-wide .postbox .chart-legend li strong,
   .woocommerce-reports-wrap .postbox .chart-legend li strong {
+    @include apply-font-sans;
+  }
+}
+
+@document regexp("^https://(.*)(.test)(.*)")
+{
+  @include set-root-font-sans;
+
+  #wpadminbar,
+  #wpadminbar * {
     @include apply-font-sans;
   }
 }
