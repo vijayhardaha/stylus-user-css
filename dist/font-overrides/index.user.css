@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.17
+@version 1.1.18
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -168,7 +168,11 @@ domain("127.0.0.1") {
 @document domain("deepseek.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  .ds-theme,
+  :root,
+  body {
     --dsw-font-family: var(--font-sans);
     --ds-font-family-code: var(--font-mono)
   }
