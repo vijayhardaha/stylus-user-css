@@ -2,7 +2,9 @@
   @include set-root-font-sans;
   @include set-root-font-mono;
 
-  :root {
+  :root,
+  body,
+  .ds-theme {
     --dsw-font-family: var(--font-sans);
     --ds-font-family-code: var(--font-mono);
   }
