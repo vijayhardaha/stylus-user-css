@@ -1,12 +1,9 @@
 /**
- * Required packages
- */
-/**
  * ======================================================================
  * Gulp Build Tasks
  * ======================================================================
  * Purpose: Task definitions for building and watching SCSS -> CSS outputs.
- * Docs: https://gulpjs.com/docs/en/getting-started/quick-start
+ * Docs:    https://gulpjs.com/docs/en/getting-started/quick-start
  * ======================================================================
  */
 
@@ -28,7 +25,7 @@ const sass = gulpSass(dartSass);
 /**
  * Build CSS from SCSS files.
  *
- * @param {Function} done - A callback function to signal task completion.
+ * @param {()=> void} done - A callback function to signal task completion.
  */
 const buildCSS = (done) => {
   gulp
@@ -53,7 +50,7 @@ const buildCSS = (done) => {
 /**
  * Clean the build directory by deleting the 'dist' directory.
  *
- * @param {Function} done - A callback function to signal task completion.
+ * @param {()=> void} done - A callback function to signal task completion.
  */
 const cleanAssets = (done) => {
   deleteSync('dist'); // Delete the 'dist' directory
@@ -64,7 +61,7 @@ const cleanAssets = (done) => {
 /**
  * Watch for changes in LESS files and trigger the 'buildCSS' task.
  *
- * @param {Function} done - A callback function to signal task completion.
+ * @param {()=> void} done - A callback function to signal task completion.
  */
 const watchAssets = (done) => {
   gulp.watch('src/**/*.scss', gulp.series(buildCSS)); // Watch LESS files for changes and run 'buildCSS' task
