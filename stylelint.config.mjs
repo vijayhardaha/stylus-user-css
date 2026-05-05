@@ -2,37 +2,21 @@
  * ======================================================================
  * Stylelint Configuration
  * ======================================================================
- * Purpose: Project-wide Stylelint rules and plugin configuration.
- * Docs: https://stylelint.io/user-guide/configuration
+ * Purpose: Defines linting rules for CSS/SCSS to ensure consistent
+ *          styling, ordering, and best practices across the repository.
+ * Docs:    https://stylelint.io/user-guide/configure
  * ======================================================================
  */
 
 const config = {
   // ---- Ruleset Inheritance ----
-  extends: [
-    'stylelint-config-standard-scss', // Standard SCSS rules
-    'stylelint-config-property-sort-order-smacss', // Logical SMACSS ordering
-  ],
-
-  // ---- Plugins ----
-  plugins: ['stylelint-order'],
+  extends: ['@vijayhardaha/dev-config/stylelint'],
 
   // ---- Rule Customization ----
   rules: {
-    // Disable restrictive patterns to allow for creative/flexible naming
-    'selector-class-pattern': null,
-    'selector-id-pattern': null,
-
     // Handle specific edge cases in SCSS development
-    'no-empty-source': null,
-    'function-url-quotes': null,
-    'no-descending-specificity': null,
     'at-rule-no-vendor-prefix': null,
     'at-rule-no-deprecated': null,
-
-    // Clean up comment enforcement
-    'comment-no-empty': null,
-    'scss/comment-no-empty': null,
   },
 };
 
