@@ -12,7 +12,7 @@
     "lint:fix": "stylelint src --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
-    "gc": "source .tmp/git.md",
+    "gc": "read -p 'Execute git commands from .tmp/git.txt? [Y/n] ' ans; [ \"$ans\" = \"n\" ] || [ \"$ans\" = \"N\" ] && echo 'Aborted.' || source .tmp/git.txt",
     "prepare": "husky"
   },
   "homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
