@@ -50,7 +50,6 @@ next-env.d.ts
 
 # Bundler output
 build/
-dist/
 
 # ----------------------------------------------------------------------
 # Cache Directories
