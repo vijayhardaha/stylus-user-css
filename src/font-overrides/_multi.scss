@@ -1,3 +1,5 @@
+@use "mixins";
+
 @document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 	regexp("^(https?://)(192.168.1)(.*)"),
 	regexp("^https://(.*)(mailtrap.io)(.*)"),
@@ -8,7 +10,7 @@
 	regexp("^https://(.*)(basecamp.com|clickup.com|zipbooks.com)(.*)"),
 	regexp("^https://(.*)(cpsess)(.*)"),
 	domain("127.0.0.1") {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   // Apply font to various elements
   html,
@@ -16,7 +18,7 @@
   a,
   #wpadminbar *,
   body.wpallimport-plugin {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Headings
@@ -26,13 +28,13 @@
   h4,
   h5,
   h6 {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Code Blocks
   .code,
   code {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 
   // Buttons and Inputs
@@ -40,13 +42,13 @@
   input,
   select,
   textarea {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Navigation
   #primary-navigation li,
   #primary-navigation li a {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Content Blocks
@@ -54,21 +56,21 @@
   .cron-job-tab2 h4,
   .single-title,
   .widget .widget-title {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Text and Typography
   .markdown-body,
   .md-subheader,
   .ql-container {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Media and UI Elements
   .yith-plugin-ui,
   .media-frame,
   .media-modal {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Elements with Specific Class Patterns
@@ -77,7 +79,7 @@
   [class*="tinv-"],
   [class*="tinvwl-"] *,
   [class*="tinv-"] * {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Maestro Styles
@@ -88,27 +90,27 @@
     select:not(.dig-Button),
     button:not(.dig-Button),
     .normal:not(.dig-Button) {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
   }
 
   // Style for CodeMirror
   .qm code,
   .qm pre {
-    @include apply-font-mono(true);
+    @include mixins.apply-font-mono(true);
   }
 
   // CodeMirror style
   .cm-s-darcula.CodeMirror,
   .CodeMirror {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 
   // Markdown code formatting
   .markdown-body {
     code,
     pre {
-      @include apply-font-mono;
+      @include mixins.apply-font-mono;
     }
 
     pre > code {
@@ -126,12 +128,12 @@
   // Simplenote app fonts
   .simplenote-app {
     * {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
 
     code,
     code * {
-      @include apply-font-mono;
+      @include mixins.apply-font-mono;
     }
   }
 
@@ -146,16 +148,16 @@
   .wc-metaboxes-wrapper .wc-metabox h3 select,
   .woocommerce-reports-wide .postbox .chart-legend li strong,
   .woocommerce-reports-wrap .postbox .chart-legend li strong {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
 
 @document regexp("^https://(.*)(.test)(.*)")
 {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   #wpadminbar,
   #wpadminbar * {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

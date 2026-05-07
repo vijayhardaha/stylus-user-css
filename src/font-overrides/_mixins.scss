@@ -29,8 +29,7 @@
 @mixin set-root-font-sans($font: "default-sans") {
   :root {
     // Sets the --font-sans variable to the provided font name or falls back to a default sans-serif font
-    --font-sans:
-      var(--#{$font}-font), var(--default-hindi-font), var(--default-sans);
+    --font-sans: var(--#{$font}-font), var(--default-hindi-font), var(--default-sans);
   }
 }
 
@@ -91,9 +90,7 @@
 
   // Define font variables and common aliases for broader compatibility.
   :root {
-    $sans-aliases:
-      display, family-apple, family-system, headline, primary, sans-serif,
-      system, ui, family-sans-serif;
+    $sans-aliases: display, family-apple, family-system, headline, primary, sans-serif, system, ui, family-sans-serif;
     $mono-aliases: family-monospace;
 
     @each $alias in $sans-aliases {

@@ -1,4 +1,5 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
+@use "variables";
 @use "sass:string";
 
 @document regexp("(.*)"), url-prefix("chrome-extension://")
@@ -9,10 +10,8 @@
 
   :root {
     /* Default fonts */
-    --default-mono: #{string.quote($font-family-monospace)};
-    --default-sans:
-      #{string.quote($font-family-sans-serif)},
-      #{string.quote($font-family-emoji)};
+    --default-mono: #{string.quote(variables.$font-family-monospace)};
+    --default-sans: #{string.quote(variables.$font-family-sans-serif)}, #{string.quote(variables.$font-family-emoji)};
 
     /* Define custom fonts */
     --geist-font: "Geist Mono";

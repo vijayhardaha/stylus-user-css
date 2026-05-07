@@ -11,21 +11,21 @@
 @preprocessor default
 ==/UserStyle== */
 
-@import "variables";
-@import "mixins";
-@import "root";
+@use "variables";
+@use "mixins";
+@use "root";
 
 // Multiple wesites in single file using regex.
-@import "multi";
+@use "multi";
 
 // File from the directories.
-@import "ai";
-@import "banking";
-@import "brands";
-@import "coding";
-@import "ecommerce";
-@import "extensions";
-@import "finance";
-@import "media";
-@import "social";
-@import "tools";
+@use "ai";
+@use "banking";
+@use "brands";
+@use "coding";
+@use "ecommerce";
+@use "extensions";
+@use "finance";
+@use "media";
+@use "social";
+@use "tools";
