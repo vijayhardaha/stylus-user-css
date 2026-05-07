@@ -1,0 +1,10 @@
+@use "../mixins";
+
+@document domain("indmoney.com") {
+  @include mixins.set-root-font-sans;
+
+  :host,
+  html {
+    @include mixins.apply-font-sans;
+  }
+}
