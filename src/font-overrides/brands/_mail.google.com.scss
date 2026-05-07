@@ -1,9 +1,0 @@
-@use "../mixins";
-
-@document domain("mail.google.com") {
-  @include mixins.set-root-font-sans;
-
-  body * {
-    @include mixins.apply-font-sans(true);
-  }
-}
