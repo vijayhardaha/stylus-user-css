@@ -1,0 +1,20 @@
+@use "../mixins";
+
+@document domain("whatsapp.com") {
+  @include mixins.set-root-font-sans;
+
+  .os-mac.font-fix,
+  .os-mac button,
+  .os-mac input,
+  .os-mac,
+  body,
+  body.native.darwin body.native.darwin button,
+  body.native.darwin input {
+    @include mixins.apply-font-sans;
+  }
+
+  .UzMP7 {
+    font-size: 14.5px;
+    line-height: 1.3;
+  }
+}

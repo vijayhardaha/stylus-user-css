@@ -1,0 +1,9 @@
+@use "../mixins";
+
+@document domain("quora.com") {
+  @include mixins.init-root-font-aliases;
+
+  body {
+    @include mixins.apply-font-sans;
+  }
+}
