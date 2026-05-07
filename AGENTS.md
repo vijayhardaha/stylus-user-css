@@ -20,7 +20,6 @@
 - `bun run build` — full build (clean + compile)
 - `bun run lint` / `bun run lint:fix` — stylelint on `src/`
 - `bun run format` / `bun run format:check` — Prettier across project
-- `bun run gc` — run git commit from `.tmp/git.md`
 - `bun run prepare` — install Husky hooks
 
 ## Linting & formatting
@@ -43,12 +42,6 @@
 - `_multi.scss` handles generic/common sites with regex/domain rules and broad font application
 - Target selectors precisely within `@document` blocks; use mixins for font-family application
 
-## Environment & tooling
-
-- Node env. Lockfile: `bun.lock` (but `package.json` scripts use bun-style commands — `bun`/`pbun`/`bun` all work; prefer bun or pbun per `.github/copilot-instructions.md`)
-- Husky is installed; `bun run prepare` sets up hooks
-- `commitlint.config.mjs` delegates to `@vijayhardaha/dev-config`
-
 ## Important protected files (from existing docs)
 
 - Do not modify `package.json`, `LICENSE`, or anything under `.github/` unless explicitly requested
@@ -57,43 +50,6 @@
 
 ## Workflow checklist for changes
 
-1. Edit SCSS in `src/font-overrides/` only
+1. Edit SCSS in `src/` only
 2. Run `bun run lint:fix` and `bun run format`
 3. Run `bun run build` to verify output
-4. Commit with conventional commit message
-
-## Git Workflow
-
-**Before preparing git.md (after each task):**
-
-1. Run `composer lint` — Lint check
-
-**After completing a task:**
-
-1. Check unstaged changes: `git status --porcelain` && `git diff`
-2. Stage files: `git add <files>`
-3. Create `.tmp/git.md` containing the staged files and commit command
-4. Create separate commits for each logical change
-5. Do NOT run git commands directly — only write to `.tmp/git.md`
-6. Wait for user to verify and commit
-7. Do NOT restore `.tmp/git.md` after it's cleared — clearing is intentional
-
-Example `.tmp/git.md`:
-
-```bash
-git add includes/zt-functions.php
-git commit -m "feat(functions): add caching support with transient
-
-- add zt_get_user_tags_cache_key() helper
-- add bypass_cache parameter to all helper functions
-- add zt_clear_user_tags_cache() function
-- cache results for 1 day using transients"
-```
-
-## Commit Conventions
-
-**Format:** `<type>(<scope>): <summary>`
-
-**Types:** `feat`, `fix`, `docs`, `test`, `refactor`, `style`, `build`, `chore`
-
-**Rules:** Subject line ≤72 chars, lowercase. Body: normal case, max 100 chars per line. Blank line after subject.

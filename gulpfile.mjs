@@ -42,6 +42,12 @@ const buildCSS = async () => {
     .pipe(postcss([duplicates(), mergeRules(), autoprefixer()]))
     .pipe(cleancss({ format: 'beautify', level: { 1: { specialComments: 1 } } }))
     .pipe(rename({ suffix: '.user' }))
+    .pipe(
+      rename((path) => {
+        // Remove 'styles/' from the path (src/styles/font-overrides/ -> dist/font-overrides/)
+        path.dirname = path.dirname.replace(/^styles\/?/, '');
+      })
+    )
     .pipe(gulp.dest('dist'));
 };
 
