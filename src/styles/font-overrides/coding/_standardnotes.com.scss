@@ -1,0 +1,16 @@
+@use "../mixins";
+
+@document domain("standardnotes.com") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  html,
+  body {
+    @include mixins.apply-font-sans;
+  }
+
+  :root {
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --sn-stylekit-monospace-font: var(--font-mono);
+  }
+}

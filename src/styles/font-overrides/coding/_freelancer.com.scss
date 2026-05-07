@@ -1,0 +1,9 @@
+@use "../mixins";
+
+@document domain("freelancer.com") {
+  @include mixins.set-root-font-sans;
+
+  body {
+    @include mixins.apply-font-sans;
+  }
+}
