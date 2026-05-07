@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("paypal.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   ._default-font_1cu9p_970,
   :root,
@@ -23,7 +25,7 @@
     h1,
     label,
     select {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
   }
 }

@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("icicibank.com"), domain("icici.bank.in") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   html body div {
     .Global_P,
@@ -8,7 +10,7 @@
     .tableGlobal,
     > *,
     ul.submenu li a.Global_sub {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
 
     .globalNavigation,

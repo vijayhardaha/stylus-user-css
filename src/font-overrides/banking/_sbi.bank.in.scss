@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("sbi.bank.in") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   html {
     --mat-form-field-container-text-font: var(--font-sans);
@@ -10,13 +12,13 @@
   }
 
   body {
-    @include apply-font-sans(true);
+    @include mixins.apply-font-sans(true);
 
     font-size: 14px !important;
     font-weight: 500 !important;
 
     .mat-internal-form-field > label {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
 
     .custom-nav-item,
@@ -32,7 +34,7 @@
     .tab-label,
     .transaction-link,
     .whatsNewSwitchToOld {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
 
       font-size: 1em !important;
       font-weight: 500 !important;
