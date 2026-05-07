@@ -364,9 +364,7 @@ domain("icici.bank.in") {
   :root,
   html {
     --body-font: var(--font-sans)!important;
-    --bing-smtc-text-style-default-regular-font-family: var(
-      --font-sans
-    )!important
+    --bing-smtc-text-style-default-regular-font-family: var(--font-sans)!important
   }
   #sw_as .pp_tile.pp_sTile .sa_tm .pp_title,
   .b_footnote,
