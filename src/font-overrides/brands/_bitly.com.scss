@@ -1,10 +1,12 @@
+@use "../mixins";
+
 @document domain("bitly.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   body,
   body [class*="css-"],
   .orb-tag-input .input,
   .orb-input-field .input {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

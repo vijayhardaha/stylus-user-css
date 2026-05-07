@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("veganprofile.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   a,
   body,
@@ -13,6 +15,6 @@
   li,
   p,
   span {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

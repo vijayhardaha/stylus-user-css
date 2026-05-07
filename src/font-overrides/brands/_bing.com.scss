@@ -1,13 +1,13 @@
+@use "../mixins";
+
 @document domain("bing.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   html,
   :root {
     --body-font: var(--font-sans) !important;
-    --bing-smtc-text-style-default-regular-font-family: var(
-      --font-sans
-    ) !important;
+    --bing-smtc-text-style-default-regular-font-family: var(--font-sans) !important;
   }
 
   html,
@@ -39,6 +39,6 @@
   html .hp_body #sw_as .sa_as #sa_ul .sa_tm,
   html .hp_body #sw_as .sa_as #sa_ul .sa_tmHS,
   [class^="css-"] {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

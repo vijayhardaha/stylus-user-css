@@ -1,8 +1,10 @@
+@use "../mixins";
+
 @document domain("wikipedia.org") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   html,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("npmjs.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   ._452c3ec4,
   .c6c55db4,
@@ -12,7 +14,7 @@
   optgroup,
   select,
   textarea {
-    @include apply-font-sans(true);
+    @include mixins.apply-font-sans(true);
   }
 
   :root {

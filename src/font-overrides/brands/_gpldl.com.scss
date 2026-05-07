@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("gpldl.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .author-quote,
   .comment-author .fn,
@@ -55,7 +57,7 @@
   h5,
   h6,
   html {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .gform_wrapper .top_label .gfield_label,
@@ -71,7 +73,7 @@
   textarea,
   .customSelect,
   .woocommerce-product-search .search-field {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   h1,
@@ -109,6 +111,6 @@
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

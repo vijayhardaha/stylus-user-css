@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("proton.me") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   :root {
     --optional-font-family: var(--font-sans);

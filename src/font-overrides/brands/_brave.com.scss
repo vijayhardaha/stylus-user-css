@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("brave.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   :root {
     --main-font: var(--font-sans);

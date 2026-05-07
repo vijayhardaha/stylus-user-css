@@ -1,14 +1,16 @@
+@use "../mixins";
+
 @document url-prefix("https://www.google.co.in/search"),
 url-prefix("https://www.google.com/search"),
 domain("mail.google.com"),
 domain("gemini.google.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .JJYS0b,
   .Ose4Jf,
   .Rj2Mlf,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   body {
@@ -21,7 +23,7 @@ domain("gemini.google.com") {
     button,
     textarea,
     select {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
   }
 }
