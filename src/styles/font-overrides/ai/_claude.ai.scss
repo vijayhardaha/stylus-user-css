@@ -1,0 +1,11 @@
+@use "../mixins";
+
+@document domain("claude.ai") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  :root {
+    --font-ui: var(--font-sans);
+    --font-system: var(--font-sans);
+  }
+}

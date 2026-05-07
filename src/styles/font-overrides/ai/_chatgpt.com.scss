@@ -1,0 +1,15 @@
+@use "../mixins";
+
+@document domain("chatgpt.com") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  body {
+    @include mixins.apply-font-sans;
+  }
+
+  code,
+  pre {
+    @include mixins.apply-font-mono(true);
+  }
+}
