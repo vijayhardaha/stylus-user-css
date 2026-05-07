@@ -1,9 +1,9 @@
-@document domain("flipkart.com") {
-  @include set-root-font-sans;
+@use "../mixins";
 
-  $fonts:
-    georgia, arial, robotobold, robotolight, roboto, robotomedium,
-    intersemibold, inter;
+@document domain("flipkart.com") {
+  @include mixins.set-root-font-sans;
+
+  $fonts: georgia, arial, robotobold, robotolight, roboto, robotomedium, intersemibold, inter;
 
   :root {
     @each $font in $fonts {
@@ -16,7 +16,7 @@
   @each $element in $form-elements {
     #{$element},
     .useInterFont.en-fonts-loaded #{$element} {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
   }
 }

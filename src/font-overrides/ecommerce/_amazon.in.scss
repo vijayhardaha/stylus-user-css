@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("amazon.in"), domain("amazon.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .a-ember-1-0-0 body,
   body,
@@ -7,6 +9,6 @@
   input,
   select,
   textarea {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
