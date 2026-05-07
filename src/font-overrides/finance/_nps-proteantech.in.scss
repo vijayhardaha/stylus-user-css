@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("nps-proteantech.in") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .footer-text a,
   .footer-text,
@@ -64,13 +66,13 @@
   thead,
   tr,
   ul {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   #gotrust-cookie-banner {
     div.cookieFooterBanner__HERrd,
     button {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
   }
 
@@ -129,7 +131,7 @@
 
   .submitbutton,
   .button {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     display: inline-flex;
     align-items: center;

@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("smallcase.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .btn,
   .font-medium,
@@ -14,6 +16,6 @@
   h2,
   h3,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

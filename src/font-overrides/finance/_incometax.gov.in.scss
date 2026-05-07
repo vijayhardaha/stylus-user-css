@@ -1,9 +1,11 @@
+@use "../mixins";
+
 @document domain("incometax.gov.in"), domain("insight.gov.in") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   *,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   body {
@@ -23,12 +25,12 @@
   .download-page .ui-widget-content a,
   .ui-state-default a:link,
   .ui-state-default a:visited {
-    @include apply-font-sans(true);
+    @include mixins.apply-font-sans(true);
   }
 
   li#login a.btn.login,
   li#register .btn.register {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     display: inline-flex;
     align-items: center;

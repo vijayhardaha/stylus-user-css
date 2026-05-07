@@ -1,15 +1,17 @@
+@use "../mixins";
+
 @document domain("zerodha.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
 
 @document domain("coin.zerodha.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   * {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
