@@ -50,6 +50,7 @@ next-env.d.ts
 
 # Bundler output
 build/
+dist/
 
 # ----------------------------------------------------------------------
 # Cache Directories
@@ -146,6 +147,53 @@ ehthumbs.db
 .vercel/
 
 # ----------------------------------------------------------------------
+# Log Files
+# ----------------------------------------------------------------------
+# Application, server, and framework logs across all project types.
+*.log
+
+# Node.js / npm / pnpm
+npm-debug.log*
+pnpm-debug.log*
+pnpm-error.log*
+
+# Yarn
+yarn-debug.log*
+yarn-error.log*
+
+# Bun
+bun-debug.log*
+bun-error.log*
+
+# Next.js / Nuxt
+.nuxt/
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.tox/
+
+# PHP
+error_log
+php-error.log
+wp-content/debug.log
+wp-content/uploads/debug.log
+
+# Laravel / Symfony / Rails / Django
+storage/logs/
+log/
+logs/
+
+# PM2 / Forever / Process Managers
+*.log.*
+.pm2/
+
+# Syslog
+syslog/
+syslog.log
+
+# ----------------------------------------------------------------------
 # Temporary Files
 # ----------------------------------------------------------------------
 # Scratch data, prepared commands, local workflow artifacts.
@@ -159,6 +207,7 @@ tmp/
 .agent/
 .agents/
 .claude/
+.cline/
 .codex/
 .copilot/
 .deepseek/

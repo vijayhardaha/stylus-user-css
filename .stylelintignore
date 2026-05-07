@@ -82,6 +82,7 @@ static/
 .agents/
 .claude/
 .codex/
+.cline/
 .copilot/
 .deepseek/
 .droid/

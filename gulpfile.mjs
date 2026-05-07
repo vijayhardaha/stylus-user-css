@@ -23,14 +23,14 @@ import mergeRules from 'postcss-merge-rules'; // Merge CSS rules
 const sass = gulpSass(dartSass);
 
 /**
- * Build CSS from SCSS files.
+ * Build CSS from SCSS files (excludes partials starting with _).
  *
- * @param {()=> void} done - A callback function to signal task completion.
+ * @returns {NodeJS.ReadableStream} The gulp stream.
  */
-const buildCSS = (done) => {
-  gulp
-    .src('src/**/*.scss') // Source SCSS files
-    .pipe(plumber()) // Handle errors gracefully
+const buildCSS = async () => {
+  return gulp
+    .src('src/**/!(_)*.scss')
+    .pipe(plumber())
     .pipe(
       sass({
         quietDeps: true,
@@ -38,35 +38,25 @@ const buildCSS = (done) => {
         verbose: false,
         logger: sass.compiler.Logger.silent,
       })
-    ) // Compile SCSS to CSS
-    .pipe(postcss([duplicates(), mergeRules(), autoprefixer()])) // Process CSS with PostCSS plugins
-    .pipe(cleancss({ format: 'beautify' })) // Minify CSS
-    .pipe(rename({ suffix: '.user' })) // Rename output files
-    .pipe(gulp.dest('dist')); // Output directory
-
-  done(); // Signal task completion
+    )
+    .pipe(postcss([duplicates(), mergeRules(), autoprefixer()]))
+    .pipe(cleancss({ format: 'beautify', level: { 1: { specialComments: 1 } } }))
+    .pipe(rename({ suffix: '.user' }))
+    .pipe(gulp.dest('dist'));
 };
 
 /**
  * Clean the build directory by deleting the 'dist' directory.
- *
- * @param {()=> void} done - A callback function to signal task completion.
  */
-const cleanAssets = (done) => {
-  deleteSync('dist'); // Delete the 'dist' directory
-
-  done(); // Signal task completion
+const cleanAssets = async () => {
+  deleteSync('dist');
 };
 
 /**
- * Watch for changes in LESS files and trigger the 'buildCSS' task.
- *
- * @param {()=> void} done - A callback function to signal task completion.
+ * Watch for changes in SCSS files and trigger the 'buildCSS' task.
  */
-const watchAssets = (done) => {
-  gulp.watch('src/**/*.scss', gulp.series(buildCSS)); // Watch LESS files for changes and run 'buildCSS' task
-
-  done(); // Signal task completion
+const watchAssets = async () => {
+  gulp.watch('src/**/!(_)*.scss', gulp.series(buildCSS));
 };
 
 // Define a series of tasks that should run in a sequence

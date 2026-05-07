@@ -6,13 +6,12 @@
   "author": "Vijay Hardaha <https://twitter.com/vijayhardaha>",
   "license": "MIT",
   "scripts": {
-    "dev": "gulp watch",
+    "dev": "gulp",
     "build": "gulp build",
     "lint": "stylelint src",
-    "lint:fix": "stylelint src --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
-    "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,json,css,md,yml}\"",
-    "gc": "read -p 'Execute git commands from .tmp/git.txt? [Y/n] ' ans; [ \"$ans\" = \"n\" ] || [ \"$ans\" = \"N\" ] && echo 'Aborted.' || source .tmp/git.txt",
+    "lint:fix": "stylelint --fix src",
+    "format": "prettier --write --log-level error .",
+    "format:check": "prettier --check --log-level error .",
     "prepare": "husky"
   },
   "homepage": "https://github.com/vijayhardaha/stylus-user-css#readme",
@@ -24,34 +23,37 @@
     "url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/types": "^20.5.0",
     "@popperjs/core": "^2.11.8",
-    "@types/node": "^25.6.0",
-    "@vijayhardaha/dev-config": "^1.0.11",
+    "@prettier/plugin-xml": "^3.4.2",
+    "@types/node": "^25.6.1",
+    "@vijayhardaha/dev-config": "^1.1.2",
     "autoprefixer": "^10.5.0",
     "bootstrap": "^5.3.8",
     "del": "^8.0.1",
     "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
-    "gulp-filter": "^9.0.1",
+    "gulp-filter": "^10.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.1.0",
     "gulp-sass": "^6.0.1",
     "husky": "^9.1.7",
-    "postcss": "^8.5.10",
-    "postcss-discard-duplicates": "^7.0.3",
-    "postcss-merge-rules": "^7.0.10",
+    "postcss": "^8.5.14",
+    "postcss-discard-duplicates": "^8.0.0",
+    "postcss-merge-rules": "^8.0.0",
     "prettier": "^3.8.3",
-    "sass": "^1.97.3",
-    "stylelint": "^17.9.0",
+    "sass": "^1.99.0",
+    "stylelint": "^17.11.0",
     "stylelint-config-property-sort-order-smacss": "^11.2.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-order": "^8.1.1",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "trustedDependencies": [
-    "@parcel/watcher"
+    "@parcel/watcher",
+    "unrs-resolver"
   ]
 }
