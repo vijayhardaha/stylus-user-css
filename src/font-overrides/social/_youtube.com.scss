@@ -1,17 +1,19 @@
+@use "../mixins";
+
 @document domain("youtube.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   ytd-app * {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   #content [class*="ytd-"] {
-    @include apply-font-sans(true);
+    @include mixins.apply-font-sans(true);
   }
 
   .message.ytd-notification-renderer,
   .yt-tab-shape-wiz__tab,
   .ytSearchboxComponentInput {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

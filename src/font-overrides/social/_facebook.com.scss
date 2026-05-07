@@ -1,17 +1,19 @@
+@use "../mixins";
+
 @document url-prefix("https://www.facebook.com/")
 {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   html,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   // Facebook Styles
   #facebook {
     .x1xqt7ti,
     .xmi5d70 {
-      @include apply-font-sans(true);
+      @include mixins.apply-font-sans(true);
     }
 
     .system-fonts--body.sf,
@@ -20,7 +22,7 @@
     ._8esf ._1gaz,
     [class*="_"],
     [class*="_"] [class*="_"] {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
   }
 

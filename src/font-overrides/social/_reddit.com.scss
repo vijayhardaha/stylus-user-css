@@ -1,7 +1,9 @@
+@use "../mixins";
+
 @document domain("reddit.com") {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

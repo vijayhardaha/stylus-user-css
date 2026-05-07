@@ -1,34 +1,33 @@
+@use "../mixins";
+
 @document url-prefix("https://x.com/")
 {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   body,
   [class*="css-"],
   [class*="r-"] {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
 
 @document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
-  div[role="group"]
-    > div[aria-labelledby="modal-header"]
-    > div
-    > div[aria-expanded="true"] {
+  div[role="group"] > div[aria-labelledby="modal-header"] > div > div[aria-expanded="true"] {
     width: 720px;
   }
 }
 
 @document domain("twittershots.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .__className_d65c78 {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }
 
 @document domain("twittervideodownloader.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   :root {
     --bs-body-font-family: var(--font-sans);

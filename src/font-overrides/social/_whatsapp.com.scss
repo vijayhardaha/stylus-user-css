@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("whatsapp.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   .os-mac.font-fix,
   .os-mac button,
@@ -8,7 +10,7 @@
   body,
   body.native.darwin body.native.darwin button,
   body.native.darwin input {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .UzMP7 {
