@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("fdown.net") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   body,
   p,
@@ -15,7 +17,7 @@
   .h4,
   .h5,
   .h6 {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   #menu,

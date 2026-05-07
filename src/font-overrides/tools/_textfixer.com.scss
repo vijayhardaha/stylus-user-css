@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("textfixer.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   *,
   *::before,
@@ -8,7 +10,7 @@
   }
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     font-size: 1rem;
     line-height: 1.5;
@@ -21,14 +23,14 @@
   h5,
   h6,
   .header {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .button,
   input,
   select,
   textarea {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     border: 1px solid #e3e3e3;
     border-radius: 0;
@@ -52,7 +54,7 @@
   .rstbtn,
   .subbtn,
   .actbtn {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     margin: 0 0.5rem 0 0;
     padding: 0.5rem 1.5rem;
@@ -94,7 +96,7 @@
       margin: 0;
 
       li {
-        @include apply-font-sans;
+        @include mixins.apply-font-sans;
       }
     }
   }

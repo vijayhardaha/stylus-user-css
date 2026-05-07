@@ -1,16 +1,18 @@
+@use "../mixins";
+
 @document domain("jscompress.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   body,
   button,
   input,
   .button {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   textarea {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
 
     line-height: 1.6;
   }

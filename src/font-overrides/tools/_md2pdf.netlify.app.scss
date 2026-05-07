@@ -1,19 +1,21 @@
+@use "../mixins";
+
 @document domain("md2pdf.netlify.app") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   .hLjMun {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .CodeMirror {
-    @include apply-font-mono(true);
+    @include mixins.apply-font-mono(true);
 
     font-size: 0.75rem;
   }
 
   #root .markdown-body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -29,7 +31,7 @@
 
     code,
     pre {
-      @include apply-font-mono;
+      @include mixins.apply-font-mono;
     }
   }
 }
