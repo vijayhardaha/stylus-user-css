@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("opencode.ai") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   :root {
     /* stylelint-disable custom-property-pattern */
@@ -14,6 +16,6 @@
   }
 
   body [data-page] {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 }

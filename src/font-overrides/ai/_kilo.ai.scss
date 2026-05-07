@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("kilo.ai") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   :root {
     --default-font-family: var(--font-sans);
@@ -9,7 +11,7 @@
   }
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   code[class*="language-"],
@@ -18,6 +20,6 @@
   kbd,
   pre,
   samp {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 }

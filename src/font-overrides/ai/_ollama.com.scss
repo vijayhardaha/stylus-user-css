@@ -1,13 +1,15 @@
+@use "../mixins";
+
 @document domain("ollama.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   html {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   code,
   pre {
-    @include apply-font-mono(true);
+    @include mixins.apply-font-mono(true);
   }
 }
