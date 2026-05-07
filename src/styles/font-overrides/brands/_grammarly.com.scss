@@ -1,0 +1,19 @@
+@use "../mixins";
+
+@document domain("grammarly.com") {
+  @include mixins.set-root-font-sans;
+
+  :host,
+  :root {
+    --font-stack-inter: var(--font-sans);
+    --font-stack-matter: var(--font-sans);
+  }
+
+  body,
+  .text,
+  thead,
+  .heading,
+  .wrapper_f1xydsbu {
+    @include mixins.apply-font-sans;
+  }
+}

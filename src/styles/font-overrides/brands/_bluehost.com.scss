@@ -1,0 +1,21 @@
+@use "../mixins";
+
+@document domain("bluehost.com") {
+  @include mixins.init-root-font-aliases;
+
+  body {
+    @include mixins.apply-font-sans;
+  }
+
+  #hosting-app,
+  .mat-h1,
+  .mat-h3,
+  .mat-headline,
+  .mat-subheading-2,
+  .mat-typography,
+  .mat-typography h1,
+  .mat-typography h3,
+  body {
+    @include mixins.apply-font-sans;
+  }
+}
