@@ -1,0 +1,31 @@
+@use "../mixins";
+
+@document domain("paypal.com") {
+  @include mixins.set-root-font-sans;
+
+  ._default-font_1cu9p_970,
+  :root,
+  div[class*="default-font"] {
+    --glnv-font-family-base: var(--font-sans);
+    --glnv-font-family-headline: var(--font-sans);
+  }
+
+  body {
+    .textInput input,
+    .textInput textarea,
+    .button,
+    a,
+    a:link,
+    a:visited,
+    p,
+    div,
+    span,
+    ,
+    .css-151vsl0-text_caption .css-1aq3bmv-text_heading_lg,
+    h1,
+    label,
+    select {
+      @include mixins.apply-font-sans(true);
+    }
+  }
+}
