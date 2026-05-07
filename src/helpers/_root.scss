@@ -1,0 +1,24 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use "variables";
+@use "sass:string";
+
+@document regexp("(.*)"), url-prefix("chrome-extension://")
+{
+  @import "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&display=swap";
+  @import "https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap";
+  @import "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap";
+
+  :root {
+    /* Default fonts */
+    --default-mono: #{string.quote(variables.$font-family-monospace)};
+    --default-sans: #{string.quote(variables.$font-family-sans-serif)}, #{string.quote(variables.$font-family-emoji)};
+
+    /* Define custom fonts */
+    --geist-font: "Geist Mono";
+    --noto-sans-font: "Noto Sans";
+    --bricolage-font: "Bricolage Grotesque";
+    --default-hindi-font: var(--noto-sans-font);
+    --default-sans-font: var(--bricolage-font);
+    --default-mono-font: var(--geist-font);
+  }
+}
