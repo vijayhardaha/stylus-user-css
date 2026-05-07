@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)")
 {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   *,
   ::after,
@@ -21,7 +23,7 @@
   .latestPost .title,
   .latestPost .title a,
   .single-title {
-    @include apply-font-sans(true);
+    @include mixins.apply-font-sans(true);
   }
 
   h1,
@@ -96,7 +98,7 @@
         line-height: 1.5;
 
         .fa {
-          @include apply-font-sans;
+          @include mixins.apply-font-sans;
 
           font-weight: 700;
           line-height: 1.5;
@@ -528,7 +530,7 @@
 }
 
 @document domain("leechpro.blog"), domain("modpro.blog") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   *,
   ::after,
@@ -537,7 +539,7 @@
   }
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     p:empty {
       display: none;
@@ -554,7 +556,7 @@
   h4,
   h5,
   h6 {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .entry-header-wrapper,
@@ -658,7 +660,7 @@
 }
 
 @document domain("unblockedgames.world") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   *,
   ::after,
@@ -669,7 +671,7 @@
   body,
   html,
   .font-sans {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     p:empty {
       display: none;
@@ -688,10 +690,10 @@
 }
 
 @document domain("driveseed.org"), domain("video-seed.dev"), domain("video-downloads.xyz") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     p:empty {
       display: none;
