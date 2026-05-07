@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("wordpress.org") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   #wpadminbar,
   :root,
@@ -21,7 +23,7 @@
     div.bbp-topic-content {
       pre,
       code {
-        @include apply-font-mono;
+        @include mixins.apply-font-mono;
       }
     }
   }

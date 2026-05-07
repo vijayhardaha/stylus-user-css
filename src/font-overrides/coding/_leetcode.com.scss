@@ -1,9 +1,11 @@
+@use "../mixins";
+
 @document domain("leetcode.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   code,
@@ -12,6 +14,6 @@
   samp,
   .elfjS code,
   div.view-lines.monaco-mouse-cursor-text {
-    @include apply-font-mono(true);
+    @include mixins.apply-font-mono(true);
   }
 }

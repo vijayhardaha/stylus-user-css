@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("peopleperhour.com") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   body,
   h4,
@@ -14,7 +16,7 @@
   button,
   select,
   textarea {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .body,
@@ -24,14 +26,14 @@
   .title-new,
   .title-small,
   body .select2-container {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .pph-legacy-container .main-content {
     h4,
     h5,
     h6 {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
   }
 
@@ -42,7 +44,7 @@
   .listings-sidebar .search-container .input-group,
   .daterangepicker-elem.daterangepicker-select,
   .widget-tags-input {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .controller-hourlie {
@@ -50,7 +52,7 @@
     &.view-new,
     &.view-create {
       .pseudo-input {
-        @include apply-font-sans;
+        @include mixins.apply-font-sans;
       }
     }
   }
@@ -59,7 +61,7 @@
   .left-column {
     h2,
     h3 {
-      @include apply-font-sans;
+      @include mixins.apply-font-sans;
     }
   }
 

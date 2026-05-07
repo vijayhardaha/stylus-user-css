@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain('github.com') {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   :root {
     /* stylelint-disable-next-line custom-property-pattern */

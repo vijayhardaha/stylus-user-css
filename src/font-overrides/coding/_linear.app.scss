@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("linear.app") {
-  @include set-root-font-sans;
+  @include mixins.set-root-font-sans;
 
   :root {
     --font-regular: var(--font-sans);

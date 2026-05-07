@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("codewars.com") {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   .CodeMirror,
   .markdown code,
@@ -10,7 +12,7 @@
   pre,
   pre code,
   samp {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 
   #users,

@@ -1,5 +1,7 @@
+@use "../mixins";
+
 @document domain("freecodecamp.org") {
-  @include init-root-font-aliases;
+  @include mixins.init-root-font-aliases;
 
   code,
   kbd,
@@ -7,6 +9,6 @@
   samp,
   code[class*="language-"],
   pre[class*="language-"] {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 }

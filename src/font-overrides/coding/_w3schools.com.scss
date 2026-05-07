@@ -1,6 +1,8 @@
+@use "../mixins";
+
 @document domain("w3schools.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   .w3s-pathfinder,
   .ws-btn,
@@ -21,7 +23,7 @@
   textarea,
   html,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   .footerlinks_1 {
@@ -34,7 +36,7 @@
   h4,
   h5,
   h6 {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
 
     font-weight: 700;
   }
@@ -50,6 +52,6 @@
   .CodeMirror,
   .w3-code,
   .w3-codespan {
-    @include apply-font-mono;
+    @include mixins.apply-font-mono;
   }
 }

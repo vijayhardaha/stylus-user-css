@@ -1,10 +1,12 @@
+@use "../mixins";
+
 @document domain("standardnotes.com") {
-  @include set-root-font-sans;
-  @include set-root-font-mono;
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
 
   html,
   body {
-    @include apply-font-sans;
+    @include mixins.apply-font-sans;
   }
 
   :root {
