@@ -104,25 +104,14 @@ domain("127.0.0.1") {
   .CodeMirror,
   .cm-s-darcula.CodeMirror,
   .markdown-body code,
-  .markdown-body pre {
-    font-family: var(--font-mono)
-  }
-  .markdown-body pre > code {
-    white-space: pre-wrap
-  }
-  .markdown-body ol ol,
-  .markdown-body ul ol {
-    list-style-type: decimal
-  }
-  .simplenote-app * {
-    font-family: var(--font-sans)
-  }
+  .markdown-body pre,
   .simplenote-app code,
   .simplenote-app code * {
     font-family: var(--font-mono)
   }
   #order_data h2,
   #order_data p.order_number,
+  .simplenote-app *,
   .wc-addons-wrap .addon-product-group-title,
   .wc-addons-wrap .current-section-dropdown__title,
   .wc-addons-wrap .products li .product-details .product-developed-by,
@@ -133,6 +122,13 @@ domain("127.0.0.1") {
   .woocommerce-reports-wrap .postbox .chart-legend li strong,
   body.woocommerce_page_wc-settings .nav-tab-wrapper a {
     font-family: var(--font-sans)
+  }
+  .markdown-body pre > code {
+    white-space: pre-wrap
+  }
+  .markdown-body ol ol,
+  .markdown-body ul ol {
+    list-style-type: decimal
   }
 }
 @document regexp("^https://(.*)(.test)(.*)") {
@@ -470,21 +466,26 @@ domain("gemini.google.com") {
   }
 }
 @document domain("gpldl.com") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
-  }
   #bbpress-forums,
   #bbpress-forums .reply,
+  #main .gform_wrapper .gform_footer input.button,
+  #main .gform_wrapper .gform_footer input[type=submit],
   #main-nav > li > a,
+  #main-slideshow .tp-button,
+  #s2member-pro-paypal-checkout-submit,
   #wpadminbar,
   #wpadminbar *,
+  #ws-plugin--s2member-profile-submit,
   .author-quote,
   .comment-author .fn,
   .comment-author a,
   .comments-title,
   .customSelect,
   .dt-blog-shortcode .post h2.entry-title,
+  .dt-btn,
   .dt-btn-l,
+  .dt-btn-m,
+  .dt-form button,
   .entry-title.h1-size,
   .entry-title.h3-size,
   .entry-title.h4-size,
@@ -503,6 +504,7 @@ domain("gemini.google.com") {
   .h6-size,
   .layout-grid .post h2.entry-title,
   .layout-masonry .post h2.entry-title,
+  .nsu-submit,
   .overlay-door input[type=text],
   .rollover-content h2.entry-title,
   .shortcode-blog-posts .post h2.entry-title,
@@ -514,13 +516,18 @@ domain("gemini.google.com") {
   .vc-carousel-slideline .vc-carousel-slideline-inner > .vc-item h2,
   .vc-carousel.vc-build,
   .wf-container > *,
+  .widget .dt-form .dt-btn,
   .widget .team-author-name,
   .widget .team-author-name .team-author-name,
   .widget-title,
   .woocommerce-product-search .search-field,
+  a.button,
   blockquote,
   body,
   body.page,
+  button.button,
+  div.mc4wp-form button[type=submit],
+  form.mc4wp-form input[type=submit],
   h1,
   h2.entry-title,
   h3,
@@ -530,17 +537,24 @@ domain("gemini.google.com") {
   h5,
   h6,
   html,
+  input.dt-btn-m[type=submit],
+  input[type=button],
   input[type=date],
   input[type=email],
   input[type=number],
   input[type=password],
   input[type=range],
+  input[type=reset],
+  input[type=submit],
   input[type=tel],
   input[type=text],
   input[type=url],
   select,
   textarea {
     font-family: var(--font-sans)
+  }
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   #main-nav > li > a,
   .widget-title,
@@ -551,26 +565,6 @@ domain("gemini.google.com") {
   h5,
   h6 {
     font-weight: 700
-  }
-  #main .gform_wrapper .gform_footer input.button,
-  #main .gform_wrapper .gform_footer input[type=submit],
-  #main-slideshow .tp-button,
-  #s2member-pro-paypal-checkout-submit,
-  #ws-plugin--s2member-profile-submit,
-  .dt-btn,
-  .dt-btn-m,
-  .dt-form button,
-  .nsu-submit,
-  .widget .dt-form .dt-btn,
-  a.button,
-  button.button,
-  div.mc4wp-form button[type=submit],
-  form.mc4wp-form input[type=submit],
-  input.dt-btn-m[type=submit],
-  input[type=button],
-  input[type=reset],
-  input[type=submit] {
-    font-family: var(--font-sans)
   }
 }
 @document domain("grammarly.com") {
@@ -601,7 +595,8 @@ domain("gemini.google.com") {
 @document domain("npmjs.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono)
+    --font-mono: var(--default-mono-font),var(--default-mono);
+    --code: var(--font-mono)
   }
   ._452c3ec4,
   .c6c55db4,
@@ -614,9 +609,6 @@ domain("gemini.google.com") {
   select,
   textarea {
     font-family: var(--font-sans)!important
-  }
-  :root {
-    --code: var(--font-mono)
   }
   .code,
   code {
@@ -842,22 +834,16 @@ domain("gemini.google.com") {
 @document domain("standardnotes.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono)
+    --font-mono: var(--default-mono-font),var(--default-mono);
+    --sn-stylekit-sans-serif-font: var(--font-sans);
+    --sn-stylekit-monospace-font: var(--font-mono)
   }
   body,
   html {
     font-family: var(--font-sans)
   }
-  :root {
-    --sn-stylekit-sans-serif-font: var(--font-sans);
-    --sn-stylekit-monospace-font: var(--font-mono)
-  }
 }
 @document domain("w3schools.com") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
-    --font-mono: var(--default-mono-font),var(--default-mono)
-  }
   #exercisecontainer .quizoption,
   #getwebsitebtn,
   #pagetop,
@@ -873,11 +859,21 @@ domain("gemini.google.com") {
   a.btnsmall:visited,
   body,
   button,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   html,
   input,
   select,
   textarea {
     font-family: var(--font-sans)
+  }
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
   }
   .footerlinks_1 {
     padding: 40px
@@ -888,7 +884,6 @@ domain("gemini.google.com") {
   h4,
   h5,
   h6 {
-    font-family: var(--font-sans);
     font-weight: 700
   }
   #sidenav a {
@@ -1042,9 +1037,11 @@ domain("insight.gov.in") {
   }
 }
 @document domain("nps-proteantech.in") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
+  .CRA-loginForm .shadow-sm,
+  .shadow-element {
+    box-shadow: none
   }
+  .button,
   .footer-text,
   .footer-text a,
   .loginPageLeftBottomLinkSelfLock a,
@@ -1052,6 +1049,7 @@ domain("insight.gov.in") {
   .pageheading,
   .power-text,
   .sub-text,
+  .submitbutton,
   .welcome-txt,
   .welcome-txt a,
   a,
@@ -1110,12 +1108,12 @@ domain("insight.gov.in") {
   ul {
     font-family: var(--font-sans)
   }
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
+  }
   #gotrust-cookie-banner button,
   #gotrust-cookie-banner div.cookieFooterBanner__HERrd {
     font-family: var(--font-sans)!important
-  }
-  .CRA-loginForm .shadow-sm {
-    box-shadow: none
   }
   .CRA-loginForm .rounded {
     border-radius: 0
@@ -1129,7 +1127,7 @@ domain("insight.gov.in") {
   .CRA-loginForm form[name=logonPwdForm] > div.row > div.col-6 {
     display: inline-flex;
     align-items: center;
-    gap: .375rem
+    gap: .38rem
   }
   .CRA-loginForm form[name=logonPwdForm] > div.row > div.col-4 {
     display: inline-flex;
@@ -1152,12 +1150,10 @@ domain("insight.gov.in") {
     margin: 16px 5% 0;
     padding: 8px 24px;
     border-style: dashed;
-    border-radius: 0;
-    box-shadow: none
+    border-radius: 0
   }
   .button,
   .submitbutton {
-    font-family: var(--font-sans);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1208,6 +1204,32 @@ domain("insight.gov.in") {
   }
 }
 @document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)") {
+  #header #s,
+  #header .header-social a,
+  #primary-navigation .menu-item,
+  .fa-search,
+  nav.navigation .menu-item {
+    border-radius: 0
+  }
+  .imdbwp,
+  .main-container {
+    max-width: 100%
+  }
+  .alert h3,
+  .alertxxx h3,
+  .search-alert h3,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: .5rem
+  }
+  .latestPost,
+  .thecontent a.maxbutton[class*=maxbutton]:hover {
+    box-shadow: none
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1237,9 +1259,9 @@ domain("insight.gov.in") {
   h4,
   h5,
   h6 {
-    margin-bottom: .5rem;
     font-weight: 700
   }
+  #imbut,
   p {
     margin-bottom: 1rem
   }
@@ -1249,13 +1271,6 @@ domain("insight.gov.in") {
   }
   #page .article {
     width: 100%
-  }
-  .imdbwp {
-    max-width: 100%
-  }
-  #header #s,
-  .fa-search {
-    border-radius: 0
   }
   #header {
     padding: .5rem 0 0;
@@ -1276,6 +1291,10 @@ domain("insight.gov.in") {
     margin: 0!important;
     padding: 0
   }
+  .main-container #page,
+  .postsby+.post-cards {
+    margin-top: 1rem!important
+  }
   #header .logo-wrap {
     margin-left: 1rem!important
   }
@@ -1291,7 +1310,6 @@ domain("insight.gov.in") {
     margin-right: 0;
     padding: .5rem 1rem;
     float: none;
-    border-radius: 0;
     font-size: 1rem;
     line-height: 1.5
   }
@@ -1326,7 +1344,7 @@ domain("insight.gov.in") {
   }
   #primary-navigation .navigation ul ul a {
     width: auto;
-    font-size: .875rem;
+    font-size: .88rem;
     font-weight: 500;
     white-space: nowrap
   }
@@ -1334,10 +1352,6 @@ domain("insight.gov.in") {
   nav.navigation {
     width: 100%;
     margin-top: .25rem;
-    border-radius: 0
-  }
-  #primary-navigation .menu-item,
-  nav.navigation .menu-item {
     border-radius: 0
   }
   #primary-navigation li,
@@ -1374,18 +1388,11 @@ domain("insight.gov.in") {
     float: none;
     font-size: 1rem
   }
-  .main-container {
-    max-width: 100%
-  }
-  .main-container #page {
-    margin-top: 1rem!important
-  }
   #imbut {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: .5rem;
-    margin-bottom: 1rem
+    gap: .5rem
   }
   #imbut > a {
     width: 100%
@@ -1399,14 +1406,18 @@ domain("insight.gov.in") {
     margin: 0;
     padding: .5rem 1rem;
     transition-duration: .15s;
-    border: 0;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid;
     border-radius: 0;
     font-weight: 600;
     text-transform: none;
     white-space: nowrap;
     gap: .25rem
+  }
+  #imbut ~ br,
+  .alert ~ br,
+  .alertxxx ~ br,
+  .search-alert ~ br {
+    display: none
   }
   #imbut .button.buttontg,
   #imbut button.buttontg {
@@ -1427,9 +1438,6 @@ domain("insight.gov.in") {
     background: #fff;
     color: #555
   }
-  #imbut ~ br {
-    display: none
-  }
   .alert,
   .alertxxx,
   .search-alert {
@@ -1440,11 +1448,6 @@ domain("insight.gov.in") {
     padding: 1rem;
     border-radius: 0
   }
-  .alert h3,
-  .alertxxx h3,
-  .search-alert h3 {
-    margin-bottom: .5rem
-  }
   .alert ul.search-info,
   .alertxxx ul.search-info,
   .search-alert ul.search-info {
@@ -1453,12 +1456,7 @@ domain("insight.gov.in") {
   .alert ul.search-info li,
   .alertxxx ul.search-info li,
   .search-alert ul.search-info li {
-    margin-bottom: .125rem
-  }
-  .alert ~ br,
-  .alertxxx ~ br,
-  .search-alert ~ br {
-    display: none
+    margin-bottom: .13rem
   }
   .alertxxx {
     background-color: #228b22;
@@ -1480,6 +1478,12 @@ domain("insight.gov.in") {
     font-weight: 400;
     line-height: 1.5
   }
+  #breadcrumbs,
+  .postsby+p:empty,
+  .single_post .thecategory,
+  .thecontent ~ center {
+    display: none
+  }
   .alertxxx .closebtn:hover {
     background: rgba(0,0,0,.45);
     color: #fff
@@ -1489,8 +1493,7 @@ domain("insight.gov.in") {
   }
   @media screen and (width >= 1024px) {
     .post-cards {
-      margin: auto 0!important;
-      margin-bottom: 2rem!important;
+      margin: auto 0 2rem!important;
       gap: 1rem
     }
   }
@@ -1498,11 +1501,8 @@ domain("insight.gov.in") {
   .latestPost {
     border-radius: 0
   }
-  .latestPost {
-    box-shadow: none
-  }
   .latestPost header {
-    padding: .875rem
+    padding: .88rem
   }
   .latestPost .title,
   .latestPost .title a {
@@ -1532,10 +1532,6 @@ domain("insight.gov.in") {
     margin-bottom: 0!important;
     border-radius: 0!important
   }
-  #breadcrumbs,
-  .single_post .thecategory {
-    display: none
-  }
   .single-title {
     font-size: 1.75rem!important;
     font-weight: 700;
@@ -1543,12 +1539,6 @@ domain("insight.gov.in") {
   }
   .postsby {
     margin-bottom: .5rem
-  }
-  .postsby + p:empty {
-    display: none
-  }
-  .postsby + .post-cards {
-    margin-top: 1rem!important
   }
   .mts-archive-description {
     margin-top: 0;
@@ -1558,9 +1548,6 @@ domain("insight.gov.in") {
   .post-info > span,
   .widget .vertical-small .post-info > span {
     margin-right: .75rem
-  }
-  .thecontent ~ center {
-    display: none
   }
   .thecontent h3 + ul {
     margin-top: 0
@@ -1603,9 +1590,6 @@ domain("insight.gov.in") {
     background: #ba4949;
     color: #fff
   }
-  .thecontent a.maxbutton[class*=maxbutton]:hover {
-    box-shadow: none
-  }
   .thecontent a.maxbutton[class*=maxbutton] span.mb-text {
     padding: 0;
     color: inherit!important;
@@ -1641,6 +1625,12 @@ domain("insight.gov.in") {
 }
 @document domain("modlist.in"),
 domain("mmodlist.net") {
+  .form-floating > br,
+  a[href*=telegram],
+  a[href*=telegram] ~ br,
+  main > .text-center > p {
+    display: none
+  }
   .badge {
     font-weight: 400
   }
@@ -1653,21 +1643,29 @@ domain("mmodlist.net") {
   form.rounded-3.bg-light {
     border-radius: 0!important
   }
-  .form-floating > br {
-    display: none
-  }
   .form-floating > hr {
     margin: .75rem 0;
     background-color: #bbb
   }
-  a[href*=telegram],
-  a[href*=telegram] ~ br,
-  main > .text-center > p {
-    display: none
-  }
 }
 @document domain("leechpro.blog"),
 domain("modpro.blog") {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans)
+  }
+  body p:empty,
+  div[class*=timed-content-] > p:empty,
+  div[class*=timed-content-] > p:empty ~ center,
+  div[class*=timed-content-] ~ p:empty,
+  div[class*=timed-content-] ~ p:empty ~ center {
+    display: none
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1676,22 +1674,8 @@ domain("modpro.blog") {
   ::before {
     box-sizing: border-box
   }
-  body {
-    font-family: var(--font-sans)
-  }
-  body p:empty {
-    display: none
-  }
   body.custom-background {
     background: #fff
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-sans)
   }
   .code-block.code-block-1,
   .entry-header-wrapper,
@@ -1703,20 +1687,12 @@ domain("modpro.blog") {
   .post-wrapper-single .post-wrapper-hentry {
     padding: 0
   }
-  div[class*=timed-content-] > p:empty,
-  div[class*=timed-content-] > p:empty ~ center,
-  div[class*=timed-content-] ~ p:empty,
-  div[class*=timed-content-] ~ p:empty ~ center {
-    display: none
-  }
   div[class*=timed-content-] > p {
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-size: 1rem
   }
   div[class*=timed-content-] > p a {
     margin-bottom: .5rem
-  }
-  div[class*=timed-content-] > p {
-    font-size: 1rem
   }
   @media (width >= 1200px) {
     .site-content .site-content-inside {
@@ -1728,7 +1704,6 @@ domain("modpro.blog") {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
     width: 100%;
     min-width: 150px;
     height: auto;
@@ -1822,14 +1797,15 @@ domain("modpro.blog") {
 @document domain("driveseed.org"),
 domain("video-seed.dev"),
 domain("video-downloads.xyz") {
+  a[href*=telegram],
+  body p:empty {
+    display: none
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   body {
     font-family: var(--font-sans)
-  }
-  body p:empty {
-    display: none
   }
   .btn {
     min-width: 200px!important;
@@ -1839,9 +1815,6 @@ domain("video-downloads.xyz") {
   .alert,
   .rounded-3 {
     border-radius: 0!important
-  }
-  a[href*=telegram] {
-    display: none
   }
 }
 @document url-prefix("https://www.facebook.com/") {
@@ -1973,8 +1946,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     max-height: 90px
   }
   form:has(textarea[aria-label="Add a comment…"]) {
-    padding: 10px 12px;
-    padding-right: 6px;
+    padding: 10px 6px 10px 12px;
     border-radius: 4px;
     border-color: #b9b9b9;
     outline: 0;
@@ -2125,22 +2097,25 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   }
 }
 @document domain("youtube.com") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
-  }
+  .message.ytd-notification-renderer,
+  .yt-tab-shape-wiz__tab,
+  .ytSearchboxComponentInput,
   ytd-app * {
     font-family: var(--font-sans)
+  }
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
   #content [class*=ytd-] {
     font-family: var(--font-sans)!important
   }
-  .message.ytd-notification-renderer,
-  .yt-tab-shape-wiz__tab,
-  .ytSearchboxComponentInput {
-    font-family: var(--font-sans)
-  }
 }
 @document domain("easyhindityping.com") {
+  #NavBar .nav-tabs > li.active > a,
+  .btn,
+  .contains {
+    border: 1px solid #dbdbdb
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -2192,12 +2167,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     margin-right: -15px;
     margin-left: -15px
   }
-  @media (width >= 1200px) {
-    #DesktopNavBarWrapper + .row {
-      margin-right: -15px;
-      margin-left: -15px
-    }
-  }
   #DesktopNavBarWrapper + .row > .span9 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -2209,6 +2178,10 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     display: none
   }
   @media (width >= 1200px) {
+    #DesktopNavBarWrapper + .row {
+      margin-right: -15px;
+      margin-left: -15px
+    }
     #DesktopNavBarWrapper + .row > .span9 {
       margin: 0;
       padding-right: 15px;
@@ -2226,9 +2199,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     margin: 0;
     border-bottom: 0
   }
-  #NavBar .nav-tabs > li.active > a {
-    border: 1px solid #dbdbdb
-  }
   #NavBar .nav-tabs > li a {
     border: 1px solid transparent
   }
@@ -2244,7 +2214,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   }
   .btn,
   .contains {
-    border: 1px solid #dbdbdb;
     border-radius: 0;
     box-shadow: none
   }
@@ -2334,19 +2303,19 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   }
 }
 @document domain("md2pdf.netlify.app") {
+  #root .markdown-body,
+  .hLjMun {
+    font-family: var(--font-sans)
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
-  }
-  .hLjMun {
-    font-family: var(--font-sans)
   }
   .CodeMirror {
     font-family: var(--font-mono)!important;
     font-size: .75rem
   }
   #root .markdown-body {
-    font-family: var(--font-sans);
     padding: 1rem 1.5rem;
     font-size: 1rem
   }
@@ -2364,18 +2333,16 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   }
 }
 @document domain("textfixer.com") {
-  :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
-  }
-  *,
-  ::after,
-  ::before {
-    box-sizing: border-box
-  }
-  body {
+  .button,
+  body,
+  input,
+  select,
+  textarea {
     font-size: 1rem;
     line-height: 1.5
   }
+  #hdr #menu li,
+  #hdr #nav li,
   .button,
   .header,
   body,
@@ -2390,6 +2357,19 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   textarea {
     font-family: var(--font-sans)
   }
+  #hdr #menu,
+  #hdr #nav,
+  .ftable .frow > div h3 {
+    margin: 0
+  }
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box
+  }
   .button,
   input,
   select,
@@ -2397,9 +2377,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     border: 1px solid #e3e3e3;
     border-radius: 0;
     outline: 0;
-    font-size: 1rem;
-    letter-spacing: 0;
-    line-height: 1.5
+    letter-spacing: 0
   }
   textarea {
     width: 100%;
@@ -2428,6 +2406,10 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   .socialShareBar {
     display: none
   }
+  #hdr,
+  .ftable {
+    display: flex
+  }
   #menu li {
     font-size: 1.25rem
   }
@@ -2435,7 +2417,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     padding: 1rem 0
   }
   #hdr {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     height: auto
@@ -2444,16 +2425,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     width: 200px;
     height: auto
   }
-  #hdr #menu,
-  #hdr #nav {
-    margin: 0
-  }
-  #hdr #menu li,
-  #hdr #nav li {
-    font-family: var(--font-sans)
-  }
   .ftable {
-    display: flex;
     margin-bottom: 1rem;
     border-spacing: 0
   }
@@ -2471,9 +2443,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     padding: 1.5rem;
     border-radius: 0
   }
-  .ftable .frow > div h3 {
-    margin: 0
-  }
   @media screen and (width <= 1240px) {
     .ftable {
       border-spacing: 0
@@ -2484,10 +2453,11 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     margin-bottom: 1.5rem
   }
   .tools li {
-    margin-bottom: .125rem
+    margin-bottom: .13rem
   }
   .online-tools,
   .online-tools ~ div {
     border-radius: 0!important
   }
 }
+/*# sourceMappingURL=index.css.map */
