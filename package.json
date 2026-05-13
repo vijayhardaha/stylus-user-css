@@ -25,12 +25,12 @@
     "url": "git+https://github.com/vijayhardaha/stylus-user-css.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.0.0",
-    "@commitlint/config-conventional": "^21.0.0",
-    "@commitlint/types": "^21.0.0",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@commitlint/types": "^21.0.1",
     "@popperjs/core": "^2.11.8",
     "@prettier/plugin-xml": "^3.4.2",
-    "@types/node": "^25.6.2",
+    "@types/node": "^25.7.0",
     "@vijayhardaha/dev-config": "^1.1.2",
     "autoprefixer": "^10.5.0",
     "bootstrap": "^5.3.8",
