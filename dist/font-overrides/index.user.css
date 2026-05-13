@@ -2,7 +2,7 @@
 /*! ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.18
+@version 1.1.19
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -13,13 +13,13 @@
 ==/UserStyle== */
 @document regexp("(.*)"),
 url-prefix("chrome-extension://") {
-  @import url(https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap);
   :root {
-    --default-mono: "SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --default-mono: Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --default-sans: "Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --geist-font: "Geist Mono";
+    --geist-font: "JetBrains Mono";
     --noto-sans-font: "Noto Sans";
     --bricolage-font: "Bricolage Grotesque";
     --default-hindi-font: var(--noto-sans-font);
