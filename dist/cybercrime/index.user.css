@@ -1,4 +1,4 @@
-/*! ==UserStyle==
+/* ==UserStyle==
 @name Cybercrime Website Design
 @namespace github.com/openstyles/stylus
 @version 1.1.18
@@ -10,7 +10,7 @@
 @license MIT
 @preprocessor default
 ==/UserStyle== */
-@document regexp("(.*)"),
+@-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://") {
   @import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
@@ -18,12 +18,9 @@ url-prefix("chrome-extension://") {
   :root {
     --default-mono: Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --default-sans: "Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --geist-font: "JetBrains Mono";
-    --noto-sans-font: "Noto Sans";
-    --bricolage-font: "Bricolage Grotesque";
-    --default-hindi-font: var(--noto-sans-font);
-    --default-sans-font: var(--bricolage-font);
-    --default-mono-font: var(--geist-font)
+    --default-hindi-font: "Noto Sans";
+    --default-sans-font: "Bricolage Grotesque";
+    --default-mono-font: "JetBrains Mono"
   }
 }
 /*# sourceMappingURL=index.css.map */

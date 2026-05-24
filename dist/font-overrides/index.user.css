@@ -1,8 +1,7 @@
-@charset "UTF-8";
-/*! ==UserStyle==
+/* ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.19
+@version 1.1.20
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -11,7 +10,7 @@
 @license MIT
 @preprocessor default
 ==/UserStyle== */
-@document regexp("(.*)"),
+@-moz-document regexp("(.*)"),
 url-prefix("chrome-extension://") {
   @import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap);
   @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
@@ -19,15 +18,12 @@ url-prefix("chrome-extension://") {
   :root {
     --default-mono: Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --default-sans: "Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --geist-font: "JetBrains Mono";
-    --noto-sans-font: "Noto Sans";
-    --bricolage-font: "Bricolage Grotesque";
-    --default-hindi-font: var(--noto-sans-font);
-    --default-sans-font: var(--bricolage-font);
-    --default-mono-font: var(--geist-font)
+    --default-hindi-font: "Noto Sans";
+    --default-sans-font: "Bricolage Grotesque";
+    --default-mono-font: "JetBrains Mono"
   }
 }
-@document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
 regexp("^(https?://)(192.168.1)(.*)"),
 regexp("^https://(.*)(mailtrap.io)(.*)"),
 regexp("^https://(.*)(netlify.com|nextui.org|vercel.com)(.*)"),
@@ -131,7 +127,14 @@ domain("127.0.0.1") {
     list-style-type: decimal
   }
 }
-@document regexp("^https://(.*)(.test)(.*)") {
+@-moz-document regexp("^https://(.*)(.test)(.*)") {
+  #rediscache #diagnostics-pane .card,
+  .code,
+  .wc-logs-entries,
+  code,
+  kbd {
+    font-family: var(--font-mono)
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -139,8 +142,70 @@ domain("127.0.0.1") {
   #wpadminbar * {
     font-family: var(--font-sans)
   }
+  code,
+  kbd,
+  pre,
+  samp {
+    --theme-font-family: var(--font-mono)
+  }
+  .wpo_wcpdf_badge {
+    margin: 0 .1em;
+    border-radius: 2px
+  }
+  .wcpdf_document_settings_sections > h2 {
+    margin-bottom: 0;
+    border-radius: 2px
+  }
+  #wpo-wcpdf-preview-wrapper .preview-document {
+    flex: 0 0 55%
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar {
+    flex: 0 0 45%
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar > .settings-search {
+    margin-bottom: 0
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar > .settings-search > input {
+    border-radius: 2px
+  }
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .sidebar {
+    flex: 0 0 40%
+  }
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .preview-document {
+    flex: 0 0 55%
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr,
+  #wpo-wcpdf-settings .settings_category table.form-table > tbody > tr {
+    padding: 1em 1em 0!important
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr:last-child,
+  #wpo-wcpdf-settings .settings_category table.form-table > tbody > tr:last-child {
+    padding-bottom: 1em!important
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr > td label,
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr > th,
+  #wpo-wcpdf-settings .settings_category table.form-table > tbody > tr > td label,
+  #wpo-wcpdf-settings .settings_category table.form-table > tbody > tr > th {
+    padding-bottom: .2em
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr > td p.description,
+  #wpo-wcpdf-settings .settings_category table.form-table > tbody > tr > td p.description {
+    padding-top: 0
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table .wpo-wcpdf-input-wrapper > button,
+  #wpo-wcpdf-settings .settings_category table.form-table .wpo-wcpdf-input-wrapper > button {
+    width: 46px;
+    border-radius: 2px
+  }
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table .select2-container .select2-search--inline .select2-search__field,
+  #wpo-wcpdf-settings .settings_category table.form-table .select2-container .select2-search--inline .select2-search__field {
+    margin-top: 0
+  }
+  .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
+    border-radius: 2px
+  }
 }
-@document domain("chatgpt.com") {
+@-moz-document domain("chatgpt.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -153,7 +218,7 @@ domain("127.0.0.1") {
     font-family: var(--font-mono)!important
   }
 }
-@document domain("claude.ai") {
+@-moz-document domain("claude.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -161,7 +226,20 @@ domain("127.0.0.1") {
     --font-system: var(--font-sans)
   }
 }
-@document domain("deepseek.com") {
+@-moz-document domain("commandcode.ai") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  .font-display,
+  body {
+    font-family: var(--font-sans)
+  }
+  .font-mono {
+    font-family: var(--font-mono)
+  }
+}
+@-moz-document domain("deepseek.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -173,7 +251,7 @@ domain("127.0.0.1") {
     --ds-font-family-code: var(--font-mono)
   }
 }
-@document domain("kilo.ai") {
+@-moz-document domain("kilo.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -193,7 +271,7 @@ domain("127.0.0.1") {
     font-family: var(--font-mono)
   }
 }
-@document domain("ollama.com") {
+@-moz-document domain("ollama.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -206,7 +284,7 @@ domain("127.0.0.1") {
     font-family: var(--font-mono)!important
   }
 }
-@document domain("opencode.ai") {
+@-moz-document domain("opencode.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -220,7 +298,7 @@ domain("127.0.0.1") {
     font-family: var(--font-sans)
   }
 }
-@document domain("openrouter.ai") {
+@-moz-document domain("openrouter.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -232,7 +310,7 @@ domain("127.0.0.1") {
     --font-geist-mono: var(--font-mono)
   }
 }
-@document domain("icicibank.com"),
+@-moz-document domain("icicibank.com"),
 domain("icici.bank.in") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
@@ -265,7 +343,7 @@ domain("icici.bank.in") {
     letter-spacing: 0!important
   }
 }
-@document domain("paypal.com") {
+@-moz-document domain("paypal.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -291,7 +369,7 @@ domain("icici.bank.in") {
     font-family: var(--font-sans)!important
   }
 }
-@document domain("sbi.bank.in") {
+@-moz-document domain("sbi.bank.in") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -329,7 +407,7 @@ domain("icici.bank.in") {
     line-height: 1.3!important
   }
 }
-@document domain("apple.com") {
+@-moz-document domain("apple.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -352,7 +430,7 @@ domain("icici.bank.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("bing.com") {
+@-moz-document domain("bing.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -394,7 +472,7 @@ domain("icici.bank.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("bitly.com") {
+@-moz-document domain("bitly.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -405,7 +483,7 @@ domain("icici.bank.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("bluehost.com") {
+@-moz-document domain("bluehost.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -432,7 +510,7 @@ domain("icici.bank.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("brave.com") {
+@-moz-document domain("brave.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -440,7 +518,7 @@ domain("icici.bank.in") {
     --mono-font: var(--font-mono)
   }
 }
-@document url-prefix("https://www.google.co.in/search"),
+@-moz-document url-prefix("https://www.google.co.in/search"),
 url-prefix("https://www.google.com/search"),
 domain("mail.google.com"),
 domain("gemini.google.com") {
@@ -465,7 +543,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)!important
   }
 }
-@document domain("gpldl.com") {
+@-moz-document domain("gpldl.com") {
   #bbpress-forums,
   #bbpress-forums .reply,
   #main .gform_wrapper .gform_footer input.button,
@@ -567,7 +645,7 @@ domain("gemini.google.com") {
     font-weight: 700
   }
 }
-@document domain("grammarly.com") {
+@-moz-document domain("grammarly.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -584,7 +662,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain("mail.google.com") {
+@-moz-document domain("mail.google.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -592,7 +670,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)!important
   }
 }
-@document domain("npmjs.com") {
+@-moz-document domain("npmjs.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -618,14 +696,14 @@ domain("gemini.google.com") {
     letter-spacing: 0
   }
 }
-@document domain("proton.me") {
+@-moz-document domain("proton.me") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --optional-font-family: var(--font-sans);
     --setting-font-family: var(--font-sans)
   }
 }
-@document domain("veganprofile.com") {
+@-moz-document domain("veganprofile.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -644,7 +722,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain("wikipedia.org") {
+@-moz-document domain("wikipedia.org") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -653,7 +731,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain("codewars.com") {
+@-moz-document domain("codewars.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -701,7 +779,7 @@ domain("gemini.google.com") {
     text-transform: none
   }
 }
-@document domain("freecodecamp.org") {
+@-moz-document domain("freecodecamp.org") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -725,7 +803,7 @@ domain("gemini.google.com") {
     font-family: var(--font-mono)
   }
 }
-@document domain("freelancer.com") {
+@-moz-document domain("freelancer.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -733,7 +811,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain('github.com') {
+@-moz-document domain('github.com') {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -741,7 +819,7 @@ domain("gemini.google.com") {
     --fontStack-sansSerif: var(--font-sans)!important
   }
 }
-@document domain("leetcode.com") {
+@-moz-document domain("leetcode.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -758,14 +836,14 @@ domain("gemini.google.com") {
     font-family: var(--font-mono)!important
   }
 }
-@document domain("linear.app") {
+@-moz-document domain("linear.app") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-regular: var(--font-sans);
     --font-monospace: var(--font-mono)
   }
 }
-@document domain("peopleperhour.com") {
+@-moz-document domain("peopleperhour.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -831,7 +909,7 @@ domain("gemini.google.com") {
     padding-bottom: 0
   }
 }
-@document domain("standardnotes.com") {
+@-moz-document domain("standardnotes.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -843,7 +921,7 @@ domain("gemini.google.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain("w3schools.com") {
+@-moz-document domain("w3schools.com") {
   #exercisecontainer .quizoption,
   #getwebsitebtn,
   #pagetop,
@@ -899,7 +977,22 @@ domain("gemini.google.com") {
     font-family: var(--font-mono)
   }
 }
-@document domain("wordpress.org") {
+@-moz-document domain("wordpress.org") {
+  #bbpress-forums div.bbp-reply-content code,
+  #bbpress-forums div.bbp-reply-content pre,
+  #bbpress-forums div.bbp-topic-content code,
+  #bbpress-forums div.bbp-topic-content pre,
+  code,
+  kbd,
+  tt,
+  var {
+    font-family: var(--font-mono)
+  }
+  .bbpress #bbpress-forums div.bbp-reply-content pre,
+  .bbpress #bbpress-forums div.bbp-topic-content pre,
+  pre {
+    padding: .6em
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -915,14 +1008,45 @@ domain("gemini.google.com") {
     --wp--preset--font-family--ibm-plex-sans: var(--font-sans);
     --wp--preset--font-family--monospace: var(--font-mono)
   }
-  #bbpress-forums div.bbp-reply-content code,
-  #bbpress-forums div.bbp-reply-content pre,
-  #bbpress-forums div.bbp-topic-content code,
-  #bbpress-forums div.bbp-topic-content pre {
-    font-family: var(--font-mono)
+  .gutenberg-support .iso-editor :where(.wp-block):not(ul>li>ul,li) {
+    margin-top: 0!important;
+    margin-bottom: 8px!important
+  }
+  .components-modal__frame,
+  .components-modal__frame select,
+  .iso-editor,
+  .iso-editor .block-editor-writing-flow,
+  .iso-editor select {
+    font-family: var(--font-sans)
+  }
+  @media (width >= 600px) {
+    .iso-editor .block-editor-block-list__layout.is-root-container {
+      padding-right: 1rem;
+      padding-left: 1rem
+    }
+  }
+  .gutenberg-support #bbpress-forums .editor-styles-wrapper li,
+  .gutenberg-support .bbp-topic-form .editor-styles-wrapper li {
+    margin-bottom: 0;
+    line-height: 1.5
+  }
+  .bbpress #bbpress-forums div.bbp-reply-content,
+  .bbpress #bbpress-forums div.bbp-topic-content {
+    --wp--style--block-gap: 0.5rem;
+    --wp--custom--body--typography--line-height: 1.5
+  }
+  .bbpress #bbpress-forums div.bbp-reply-content li,
+  .bbpress #bbpress-forums div.bbp-topic-content li {
+    line-height: var(--wp--custom--body--typography--line-height)
+  }
+  .bbpress #bbpress-forums div.bbp-reply-content code,
+  .bbpress #bbpress-forums div.bbp-reply-content pre,
+  .bbpress #bbpress-forums div.bbp-topic-content code,
+  .bbpress #bbpress-forums div.bbp-topic-content pre {
+    font-weight: 400
   }
 }
-@document domain("amazon.in"),
+@-moz-document domain("amazon.in"),
 domain("amazon.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
@@ -936,7 +1060,7 @@ domain("amazon.com") {
     font-family: var(--font-sans)
   }
 }
-@document domain("flipkart.com") {
+@-moz-document domain("flipkart.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-georgia: var(--font-sans);
@@ -961,7 +1085,7 @@ domain("amazon.com") {
     font-family: var(--font-sans)
   }
 }
-@document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -987,7 +1111,7 @@ domain("amazon.com") {
     top: 8px
   }
 }
-@document domain("incometax.gov.in"),
+@-moz-document domain("incometax.gov.in"),
 domain("insight.gov.in") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
@@ -1027,7 +1151,7 @@ domain("insight.gov.in") {
     line-height: 1.4
   }
 }
-@document domain("indmoney.com") {
+@-moz-document domain("indmoney.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1036,7 +1160,7 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("nps-proteantech.in") {
+@-moz-document domain("nps-proteantech.in") {
   .CRA-loginForm .shadow-sm,
   .shadow-element {
     box-shadow: none
@@ -1167,7 +1291,7 @@ domain("insight.gov.in") {
     cursor: pointer
   }
 }
-@document domain("smallcase.com") {
+@-moz-document domain("smallcase.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1187,7 +1311,7 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("zerodha.com") {
+@-moz-document domain("zerodha.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1195,7 +1319,7 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)
   }
 }
-@document domain("coin.zerodha.com") {
+@-moz-document domain("coin.zerodha.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1203,7 +1327,7 @@ domain("insight.gov.in") {
     font-family: var(--font-sans)
   }
 }
-@document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)") {
+@-moz-document regexp("^https://(.*)(moviesmod|moviesleech|modlist|mmodlist|modlinkz|animeflix|oddfirm)(.*)") {
   #header #s,
   #header .header-social a,
   #primary-navigation .menu-item,
@@ -1623,7 +1747,7 @@ domain("insight.gov.in") {
     font-weight: 700
   }
 }
-@document domain("modlist.in"),
+@-moz-document domain("modlist.in"),
 domain("mmodlist.net") {
   .form-floating > br,
   a[href*=telegram],
@@ -1648,7 +1772,7 @@ domain("mmodlist.net") {
     background-color: #bbb
   }
 }
-@document domain("leechpro.blog"),
+@-moz-document domain("leechpro.blog"),
 domain("modpro.blog") {
   body,
   h1,
@@ -1765,7 +1889,7 @@ domain("modpro.blog") {
     text-shadow: none!important
   }
 }
-@document domain("unblockedgames.world") {
+@-moz-document domain("unblockedgames.world") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -1794,7 +1918,7 @@ domain("modpro.blog") {
     display: none!important
   }
 }
-@document domain("driveseed.org"),
+@-moz-document domain("driveseed.org"),
 domain("video-seed.dev"),
 domain("video-downloads.xyz") {
   a[href*=telegram],
@@ -1817,7 +1941,7 @@ domain("video-downloads.xyz") {
     border-radius: 0!important
   }
 }
-@document url-prefix("https://www.facebook.com/") {
+@-moz-document url-prefix("https://www.facebook.com/") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -1862,7 +1986,7 @@ domain("video-downloads.xyz") {
     display: none!important
   }
 }
-@document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
+@-moz-document regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\.php\\?fbid=\\d+&set=a\\.\\d.*"),
 regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\/\\?fbid=\\d+&set=a\\.\\d.*"),
 regexp("https:\\/\\/www\\.facebook\\.com\\/photo\\?fbid=\\d+&set=a\\.\\d.*"),
 regexp("https:\\/\\/www\\.facebook\\.com\\/[\\w\\d]+\\/videos\\/.*"),
@@ -1874,7 +1998,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     max-width: 760px
   }
 }
-@document url-prefix("https://www.instagram.com/") {
+@-moz-document url-prefix("https://www.instagram.com/") {
   :root {
     --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
@@ -1954,7 +2078,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     box-shadow: 0 0 0 .1rem rgba(0,0,0,.08)
   }
 }
-@document domain("linkedin.com") {
+@-moz-document domain("linkedin.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -1986,7 +2110,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     border-radius: 6px!important
   }
 }
-@document url-prefix("https://www.linkedin.com/messaging/thread/") {
+@-moz-document url-prefix("https://www.linkedin.com/messaging/thread/") {
   .ad-banner,
   aside.scaffold-layout__aside {
     display: none
@@ -1999,7 +2123,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     }
   }
 }
-@document domain("quora.com") {
+@-moz-document domain("quora.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -2018,7 +2142,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-sans)
   }
 }
-@document domain("reddit.com") {
+@-moz-document domain("reddit.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -2037,7 +2161,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-sans)
   }
 }
-@document domain("whatsapp.com") {
+@-moz-document domain("whatsapp.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -2055,7 +2179,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     line-height: 1.3
   }
 }
-@document url-prefix("https://x.com/") {
+@-moz-document url-prefix("https://x.com/") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
@@ -2076,12 +2200,12 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-sans)
   }
 }
-@document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
+@-moz-document regexp("https:\\/\\/x\\.com\\/[\\w\\d_]+\\/status\\/\\d+\\/photo\\/\\d.*") {
   div[role=group] > div[aria-labelledby=modal-header] > div > div[aria-expanded=true] {
     width: 720px
   }
 }
-@document domain("twittershots.com") {
+@-moz-document domain("twittershots.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -2089,14 +2213,14 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-sans)
   }
 }
-@document domain("twittervideodownloader.com") {
+@-moz-document domain("twittervideodownloader.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
     --bs-body-font-family: var(--font-sans)
   }
 }
-@document domain("youtube.com") {
+@-moz-document domain("youtube.com") {
   .message.ytd-notification-renderer,
   .yt-tab-shape-wiz__tab,
   .ytSearchboxComponentInput,
@@ -2110,7 +2234,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-sans)!important
   }
 }
-@document domain("easyhindityping.com") {
+@-moz-document domain("easyhindityping.com") {
   #NavBar .nav-tabs > li.active > a,
   .btn,
   .contains {
@@ -2240,7 +2364,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     resize: vertical
   }
 }
-@document domain("fdown.net") {
+@-moz-document domain("fdown.net") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -2286,7 +2410,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     padding: 0
   }
 }
-@document domain("jscompress.com") {
+@-moz-document domain("jscompress.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -2302,7 +2426,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     line-height: 1.6
   }
 }
-@document domain("md2pdf.netlify.app") {
+@-moz-document domain("md2pdf.netlify.app") {
   #root .markdown-body,
   .hLjMun {
     font-family: var(--font-sans)
@@ -2332,7 +2456,7 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     font-family: var(--font-mono)
   }
 }
-@document domain("textfixer.com") {
+@-moz-document domain("textfixer.com") {
   .button,
   body,
   input,
