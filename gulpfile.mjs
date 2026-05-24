@@ -22,6 +22,7 @@ import path from 'path'; // Path utilities for file system operations
 import plumber from 'gulp-plumber'; // Handle errors gracefully
 import postcss from 'gulp-postcss'; // Process CSS with PostCSS
 import rename from 'gulp-rename'; // Rename files
+import replace from 'gulp-replace'; // Replace CSS at-rules
 import size from 'gulp-size'; // Display file size information
 import sourcemaps from 'gulp-sourcemaps'; // Generate source maps for debugging
 
@@ -71,6 +72,7 @@ const cssOptimizationLevels = {
 
 /** Shared Sass compiler options for all SCSS entry builds. */
 const sassCompilerOptions = {
+  charset: false,
   quietDeps: true,
   silenceDeprecations: ['moz-document'],
   verbose: false,
@@ -209,6 +211,9 @@ const buildCSS = () => {
       .pipe(postcss([duplicates(), mergeRules(), autoprefixer()]))
       // Minify CSS
       .pipe(cleancss({ format: 'beautify', level: cssOptimizationLevels }))
+      // Replace @document with @-moz-document for compatibility
+      .pipe(replace(/@document/g, '@-moz-document'))
+      .pipe(replace(/! ==UserStyle==/g, ' ==UserStyle=='))
       // Write source maps
       .pipe(sourcemaps.write('.'))
       // Add .user suffix to output files
