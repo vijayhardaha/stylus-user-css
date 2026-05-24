@@ -29,11 +29,9 @@ This project provides **ready-to-install CSS files** that work out of the box wi
 
 ## Available User CSS Files
 
-| Style Name     | Description                                                                               | Install                                                                                                             |
-| -------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Font Overrides | Replaces default website fonts with cleaner, more readable font choices across many sites | [Install via Stylus](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/font-overrides/index.user.css) |
+- **Font Overrides** – Replaces default website fonts with cleaner, more readable font choices across many sites. [🚀 Install on Stylus](https://github.com/vijayhardaha/stylus-user-css/raw/master/dist/font-overrides/index.user.css)
 
-> Each file is maintained separately so you can install only what you need.
+Each file is maintained separately so you can install only what you need.
 
 ---
 
