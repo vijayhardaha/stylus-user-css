@@ -1,24 +1,34 @@
-// ======================================================================
-// Settings JSON
-// ======================================================================
-// Purpose: Workspace editor settings focused on SCSS formatting and linting
-// Docs: https://code.visualstudio.com/docs/getstarted/settings
-// ======================================================================
-
 {
-  // ---- Language Formatter ----
+  // ======================================================================
+  // VS Code Workspace Settings
+  // ======================================================================
+  // Purpose: Configure formatter, ESLint, and editor behavior for consistency
+  // Docs: https://code.visualstudio.com/docs/getstarted/settings
+  // ======================================================================
+
+  // ---- Formatting & Saving ----
+  // Use Prettier as the master formatter for this project
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  // ---- Editor Behavior ----
+  // We disable `formatOnSave` because ESLint code actions handle formatting
   "editor.formatOnSave": false,
 
-  // ---- Linting ----
-  "eslint.enable": false,
   "editor.codeActionsOnSave": {
-    // ---- Stylelint: run explicit fixes only ----
+    // Automatically fix lint errors and trigger Prettier on every save
+    "source.fixAll.eslint": "explicit",
+    // Automatically fix stylelint errors on save
     "source.fixAll.stylelint": "explicit"
   },
 
-  // ---- Stylelint Validation ----
-  "stylelint.validate": ["scss"]
+  // ---- Linter Integration ----
+  // Allow ESLint to handle formatting (via Prettier plugin)
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  // ---- Stylelint Configuration ----
+  // Enable stylelint for CSS/SCSS linting and auto-fixing
+  "stylelint.enable": true,
+  // File types that stylelint will validate
+  "stylelint.validate": ["css", "scss"]
 }

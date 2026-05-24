@@ -78,23 +78,46 @@ static/
 # Ai Coding Tools
 # ----------------------------------------------------------------------
 # AI agent caches and generated files.
-.agent/
-.agents/
-.claude/
-.codex/
-.cline/
-.copilot/
-.deepseek/
-.droid/
-.fallow/
-.gemini/
-.kilo/
-.kilocode/
-.mistral/
-.opencode/
-.qoder/
-.qwen/
-.vibe/
+.agent
+.agents
+.aider
+.amazonq
+.antigravitycli
+.augmith
+.bolt
+.charliepython
+.claude
+.cline
+.codex
+.commandcode
+.continue
+.copilot
+.crush
+.cursor
+.devin
+.fallow
+.freebuff
+.gemini
+.gptscript
+.jina
+.kilo
+.kilocode
+.maestro
+.manus
+.midjourney
+.mistral
+.nexus
+.opencode
+.perplexity
+.pi
+.qoder
+.qwen
+.replit
+.starcode
+.supercursor
+.vibe
+.windsurf
+.xai
 
 # ----------------------------------------------------------------------
 # Minified & Generated
