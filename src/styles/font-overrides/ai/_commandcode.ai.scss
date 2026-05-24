@@ -1,0 +1,15 @@
+@use "../mixins";
+
+@document domain("commandcode.ai") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  body,
+  .font-display {
+    @include mixins.apply-font-sans;
+  }
+
+  .font-mono {
+    @include mixins.apply-font-mono;
+  }
+}

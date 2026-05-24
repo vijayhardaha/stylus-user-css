@@ -14,11 +14,8 @@
     --default-sans: #{string.quote(variables.$font-family-sans-serif)}, #{string.quote(variables.$font-family-emoji)};
 
     /* Define custom fonts */
-    --geist-font: "JetBrains Mono";
-    --noto-sans-font: "Noto Sans";
-    --bricolage-font: "Bricolage Grotesque";
-    --default-hindi-font: var(--noto-sans-font);
-    --default-sans-font: var(--bricolage-font);
-    --default-mono-font: var(--geist-font);
+    --default-hindi-font: "Noto Sans";
+    --default-sans-font: "Bricolage Grotesque";
+    --default-mono-font: "JetBrains Mono";
   }
 }

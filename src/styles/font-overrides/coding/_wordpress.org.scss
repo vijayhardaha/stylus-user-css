@@ -10,12 +10,12 @@
   .global-footer,
   .global-header,
   .global-header__alert-banner {
-    /* stylelint-disable custom-property-pattern */
+    // stylelint-disable custom-property-pattern
     --wp--preset--font-family--inter: var(--font-sans);
     --wp--preset--font-family--eb-garamond: var(--font-sans);
     --wp--preset--font-family--ibm-plex-sans: var(--font-sans);
     --wp--preset--font-family--monospace: var(--font-mono);
-    /* stylelint-enable custom-property-pattern */
+    // stylelint-enable custom-property-pattern
   }
 
   #bbpress-forums {
@@ -25,6 +25,66 @@
       code {
         @include mixins.apply-font-mono;
       }
+    }
+  }
+
+  .gutenberg-support .iso-editor :where(.wp-block):not(ul > li > ul, li) {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .components-modal__frame,
+  .components-modal__frame select,
+  .iso-editor,
+  .iso-editor select,
+  .iso-editor .block-editor-writing-flow {
+    @include mixins.apply-font-sans;
+  }
+
+  code,
+  kbd,
+  tt,
+  var {
+    @include mixins.apply-font-mono;
+  }
+
+  pre {
+    padding: 0.6em;
+  }
+
+  @media (width >= 600px) {
+    .iso-editor .block-editor-block-list__layout.is-root-container {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+
+  .gutenberg-support #bbpress-forums .editor-styles-wrapper li,
+  .gutenberg-support .bbp-topic-form .editor-styles-wrapper li {
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .bbpress #bbpress-forums {
+    div.bbp-topic-content,
+    div.bbp-reply-content {
+      // stylelint-disable custom-property-pattern
+      --wp--style--block-gap: 0.5rem;
+      --wp--custom--body--typography--line-height: 1.5;
+
+      li {
+        line-height: var(--wp--custom--body--typography--line-height);
+      }
+
+      pre,
+      code {
+        font-weight: 400;
+      }
+
+      pre {
+        padding: 0.6em;
+      }
+      // stylelint-enable custom-property-pattern
     }
   }
 }

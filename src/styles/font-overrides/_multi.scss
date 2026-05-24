@@ -160,4 +160,110 @@
   #wpadminbar * {
     @include mixins.apply-font-sans;
   }
+
+  .wc-logs-entries {
+    @include mixins.apply-font-mono;
+  }
+
+  pre,
+  code,
+  samp,
+  kbd {
+    --theme-font-family: var(--font-mono);
+  }
+
+  code,
+  kbd,
+  .code {
+    @include mixins.apply-font-mono;
+  }
+
+  #rediscache #diagnostics-pane .card {
+    @include mixins.apply-font-mono;
+  }
+
+  .wpo_wcpdf_badge {
+    margin: 0 0.1em;
+    border-radius: 2px;
+  }
+
+  .wcpdf_document_settings_sections {
+    > h2 {
+      margin-bottom: 0;
+      border-radius: 2px;
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper {
+    .preview-document {
+      flex: 0 0 55%;
+    }
+
+    .sidebar {
+      flex: 0 0 45%;
+
+      > .settings-search {
+        margin-bottom: 0;
+
+        > input {
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"]
+    #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"] {
+    .sidebar {
+      flex: 0 0 40%;
+    }
+
+    .preview-document {
+      flex: 0 0 55%;
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper .sidebar,
+  #wpo-wcpdf-settings .settings_category {
+    table.form-table {
+      > tbody > tr {
+        padding: 1em 1em 0 !important;
+
+        &:last-child {
+          padding-bottom: 1em !important;
+        }
+
+        > th {
+          padding-bottom: 0.2em;
+        }
+
+        > td {
+          label {
+            padding-bottom: 0.2em;
+          }
+
+          p.description {
+            padding-top: 0;
+          }
+        }
+      }
+
+      td > {
+        margin-bottom: 0;
+      }
+
+      .wpo-wcpdf-input-wrapper > button {
+        width: 46px;
+        border-radius: 2px;
+      }
+
+      .select2-container .select2-search--inline .select2-search__field {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
+    border-radius: 2px;
+  }
 }
