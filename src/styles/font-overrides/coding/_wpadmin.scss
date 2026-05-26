@@ -1,0 +1,224 @@
+@use "mixins";
+
+@document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+regexp("^https://(.*)(.test)(.*)")
+{
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  // Apply font to various elements
+  html,
+  body,
+  a,
+  #wpadminbar *,
+  body.wpallimport-plugin {
+    @include mixins.apply-font-sans;
+  }
+
+  #wpadminbar,
+  #wpadminbar * {
+    @include mixins.apply-font-sans;
+  }
+
+  .wc-logs-entries {
+    @include mixins.apply-font-mono;
+  }
+
+  pre,
+  code,
+  samp,
+  kbd {
+    --theme-font-family: var(--font-mono);
+  }
+
+  code,
+  kbd,
+  .code {
+    @include mixins.apply-font-mono;
+  }
+
+  #rediscache #diagnostics-pane .card {
+    @include mixins.apply-font-mono;
+  }
+
+  .wpo_wcpdf_badge {
+    margin: 0 0.1em;
+    border-radius: 2px;
+  }
+
+  .wcpdf_document_settings_sections {
+    > h2 {
+      margin-bottom: 0;
+      border-radius: 2px;
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper {
+    .preview-document {
+      flex: 0 0 55%;
+    }
+
+    .sidebar {
+      flex: 0 0 45%;
+
+      > .settings-search {
+        margin-bottom: 0;
+
+        > input {
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"]
+    #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"] {
+    .sidebar {
+      flex: 0 0 40%;
+    }
+
+    .preview-document {
+      flex: 0 0 55%;
+    }
+  }
+
+  #wpo-wcpdf-preview-wrapper .sidebar,
+  #wpo-wcpdf-settings .settings_category {
+    table.form-table {
+      > tbody > tr {
+        padding: 1em 1em 0 !important;
+
+        &:last-child {
+          padding-bottom: 1em !important;
+        }
+
+        > th {
+          padding-bottom: 0.2em;
+        }
+
+        > td {
+          label {
+            padding-bottom: 0.2em;
+          }
+
+          p.description {
+            padding-top: 0;
+          }
+        }
+      }
+
+      td > {
+        margin-bottom: 0;
+      }
+
+      .wpo-wcpdf-input-wrapper > button {
+        width: 46px;
+        border-radius: 2px;
+      }
+
+      .select2-container .select2-search--inline .select2-search__field {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
+    border-radius: 2px;
+  }
+  // Content Blocks
+  .comment-bar__send-btn,
+  .cron-job-tab2 h4,
+  .single-title,
+  .widget .widget-title {
+    @include mixins.apply-font-sans;
+  }
+
+  // Text and Typography
+  .markdown-body,
+  .md-subheader,
+  .ql-container {
+    @include mixins.apply-font-sans;
+  }
+
+  // Navigation
+  #primary-navigation li,
+  #primary-navigation li a {
+    @include mixins.apply-font-sans;
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include mixins.apply-font-sans;
+  }
+
+  // Code Blocks
+  .code,
+  code {
+    @include mixins.apply-font-mono;
+  }
+
+  // Style for CodeMirror
+  .qm code,
+  .qm pre {
+    @include mixins.apply-font-mono(true);
+  }
+
+  // CodeMirror style
+  .cm-s-darcula.CodeMirror,
+  .CodeMirror {
+    @include mixins.apply-font-mono;
+  }
+
+  // Buttons and Inputs
+  .button,
+  input,
+  select,
+  textarea {
+    @include mixins.apply-font-sans;
+  }
+
+  // Media and UI Elements
+  .yith-plugin-ui,
+  .media-frame,
+  .media-modal {
+    @include mixins.apply-font-sans;
+  }
+  body.woocommerce_page_wc-settings .nav-tab-wrapper a,
+  .wc-addons-wrap h1.search-form-title,
+  .wc-addons-wrap .addon-product-group-title,
+  .wc-addons-wrap .current-section-dropdown__title,
+  .wc-addons-wrap .products li .product-details .product-developed-by,
+  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
+  #order_data h2,
+  #order_data p.order_number,
+  .wc-metaboxes-wrapper .wc-metabox h3 select,
+  .woocommerce-reports-wide .postbox .chart-legend li strong,
+  .woocommerce-reports-wrap .postbox .chart-legend li strong {
+    @include mixins.apply-font-sans;
+  }
+  // Style for CodeMirror
+  .qm code,
+  .qm pre {
+    @include mixins.apply-font-mono(true);
+  }
+
+  // Elements with Specific Class Patterns
+  [class*="c_"],
+  [class*="tinvwl-"],
+  [class*="tinv-"],
+  [class*="tinvwl-"] *,
+  [class*="tinv-"] * {
+    @include mixins.apply-font-sans;
+  }
+
+  // CodeMirror style
+  .cm-s-darcula.CodeMirror,
+  .CodeMirror {
+    @include mixins.apply-font-mono;
+  }
+}
