@@ -1,12 +1,12 @@
 @use "mixins";
 
-@document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+@document regexp("^(https?:\/\/)?(www\.)?(.*)(\/(wp-admin|backoffice|wp-login\.php)(.*))$"),
 regexp("^https://(.*)(.test)(.*)")
 {
   @include mixins.set-root-font-sans;
   @include mixins.set-root-font-mono;
 
-  // Apply font to various elements
+  // Base elements
   html,
   body,
   a,
@@ -15,37 +15,109 @@ regexp("^https://(.*)(.test)(.*)")
     @include mixins.apply-font-sans;
   }
 
+  // WordPress admin bar
   #wpadminbar,
   #wpadminbar * {
     @include mixins.apply-font-sans;
   }
 
+  // WooCommerce logs
   .wc-logs-entries {
     @include mixins.apply-font-mono;
   }
 
+  // Code elements
   pre,
-  code,
   samp,
-  kbd {
-    --theme-font-family: var(--font-mono);
-  }
-
+  kbd,
   code,
   kbd,
   .code {
+    --theme-font-family: var(--font-mono);
+
     @include mixins.apply-font-mono;
   }
 
+  // Content blocks
+  .comment-bar__send-btn,
+  .cron-job-tab2 h4,
+  .single-title,
+  .widget .widget-title,
+  .markdown-body,
+  .md-subheader,
+  .ql-container,
+  #primary-navigation li,
+  #primary-navigation li a {
+    @include mixins.apply-font-sans;
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  select,
+  textarea,
+  .button {
+    @include mixins.apply-font-sans;
+  }
+
+  // Code blocks
+  code,
+  .code,
+  .cm-s-darcula.CodeMirror,
+  .CodeMirror {
+    @include mixins.apply-font-mono;
+  }
+
+  // CodeMirror
+  .qm code,
+  .qm pre {
+    @include mixins.apply-font-mono(true);
+  }
+
+  // UI elements
+  .yith-plugin-ui,
+  .media-frame,
+  .media-modal {
+    @include mixins.apply-font-sans;
+  }
+
+  // WooCommerce elements
+  #order_data h2,
+  #order_data p.order_number,
+  body.woocommerce_page_wc-settings .nav-tab-wrapper a,
+  .wc-addons-wrap h1.search-form-title,
+  .wc-addons-wrap .addon-product-group-title,
+  .wc-addons-wrap .current-section-dropdown__title,
+  .wc-addons-wrap .products li .product-details .product-developed-by,
+  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
+  .wc-metaboxes-wrapper .wc-metabox h3 select,
+  .woocommerce-reports-wide .postbox .chart-legend li strong,
+  .woocommerce-reports-wrap .postbox .chart-legend li strong,
+  [class*="c_"],
+  [class*="tinvwl-"],
+  [class*="tinv-"],
+  [class*="tinvwl-"] *,
+  [class*="tinv-"] * {
+    @include mixins.apply-font-sans;
+  }
+
+  // Redis Cache diagnostics
   #rediscache #diagnostics-pane .card {
     @include mixins.apply-font-mono;
   }
 
+  // WPO PDF badges
   .wpo_wcpdf_badge {
     margin: 0 0.1em;
     border-radius: 2px;
   }
 
+  // WPO PDF document settings
   .wcpdf_document_settings_sections {
     > h2 {
       margin-bottom: 0;
@@ -53,6 +125,7 @@ regexp("^https://(.*)(.test)(.*)")
     }
   }
 
+  // WPO PDF preview wrapper
   #wpo-wcpdf-preview-wrapper {
     .preview-document {
       flex: 0 0 55%;
@@ -71,8 +144,8 @@ regexp("^https://(.*)(.test)(.*)")
     }
   }
 
-  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"]
-    #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"] {
+  // WPO PDF preview wrapper - sidebar state
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state="sidebar"] {
     .sidebar {
       flex: 0 0 40%;
     }
@@ -82,6 +155,7 @@ regexp("^https://(.*)(.test)(.*)")
     }
   }
 
+  // Form tables
   #wpo-wcpdf-preview-wrapper .sidebar,
   #wpo-wcpdf-settings .settings_category {
     table.form-table {
@@ -107,7 +181,7 @@ regexp("^https://(.*)(.test)(.*)")
         }
       }
 
-      td > {
+      td > * {
         margin-bottom: 0;
       }
 
@@ -122,103 +196,8 @@ regexp("^https://(.*)(.test)(.*)")
     }
   }
 
+  // Select2 multiple selection
   .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
     border-radius: 2px;
-  }
-  // Content Blocks
-  .comment-bar__send-btn,
-  .cron-job-tab2 h4,
-  .single-title,
-  .widget .widget-title {
-    @include mixins.apply-font-sans;
-  }
-
-  // Text and Typography
-  .markdown-body,
-  .md-subheader,
-  .ql-container {
-    @include mixins.apply-font-sans;
-  }
-
-  // Navigation
-  #primary-navigation li,
-  #primary-navigation li a {
-    @include mixins.apply-font-sans;
-  }
-
-  // Headings
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include mixins.apply-font-sans;
-  }
-
-  // Code Blocks
-  .code,
-  code {
-    @include mixins.apply-font-mono;
-  }
-
-  // Style for CodeMirror
-  .qm code,
-  .qm pre {
-    @include mixins.apply-font-mono(true);
-  }
-
-  // CodeMirror style
-  .cm-s-darcula.CodeMirror,
-  .CodeMirror {
-    @include mixins.apply-font-mono;
-  }
-
-  // Buttons and Inputs
-  .button,
-  input,
-  select,
-  textarea {
-    @include mixins.apply-font-sans;
-  }
-
-  // Media and UI Elements
-  .yith-plugin-ui,
-  .media-frame,
-  .media-modal {
-    @include mixins.apply-font-sans;
-  }
-  body.woocommerce_page_wc-settings .nav-tab-wrapper a,
-  .wc-addons-wrap h1.search-form-title,
-  .wc-addons-wrap .addon-product-group-title,
-  .wc-addons-wrap .current-section-dropdown__title,
-  .wc-addons-wrap .products li .product-details .product-developed-by,
-  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
-  #order_data h2,
-  #order_data p.order_number,
-  .wc-metaboxes-wrapper .wc-metabox h3 select,
-  .woocommerce-reports-wide .postbox .chart-legend li strong,
-  .woocommerce-reports-wrap .postbox .chart-legend li strong {
-    @include mixins.apply-font-sans;
-  }
-  // Style for CodeMirror
-  .qm code,
-  .qm pre {
-    @include mixins.apply-font-mono(true);
-  }
-
-  // Elements with Specific Class Patterns
-  [class*="c_"],
-  [class*="tinvwl-"],
-  [class*="tinv-"],
-  [class*="tinvwl-"] *,
-  [class*="tinv-"] * {
-    @include mixins.apply-font-sans;
-  }
-
-  // CodeMirror style
-  .cm-s-darcula.CodeMirror,
-  .CodeMirror {
-    @include mixins.apply-font-mono;
   }
 }
