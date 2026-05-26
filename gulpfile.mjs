@@ -24,7 +24,6 @@ import postcss from 'gulp-postcss'; // Process CSS with PostCSS
 import rename from 'gulp-rename'; // Rename files
 import replace from 'gulp-replace'; // Replace CSS at-rules
 import size from 'gulp-size'; // Display file size information
-import sourcemaps from 'gulp-sourcemaps'; // Generate source maps for debugging
 
 /** Sass compiler instance configured for Gulp pipelines. */
 const sass = gulpSass(dartSass);
@@ -203,8 +202,6 @@ const buildCSS = () => {
     gulp
       .src(['src/**/*.scss', '!src/**/_*.scss'])
       .pipe(plumber({ errorHandler: createErrorHandler('buildCSS') }))
-      // Initialize source maps
-      .pipe(sourcemaps.init())
       // Compile SCSS to CSS
       .pipe(sass({ ...sassCompilerOptions }).on('error', sass.logError))
       // Process CSS with PostCSS plugins
@@ -214,8 +211,6 @@ const buildCSS = () => {
       // Replace @document with @-moz-document for compatibility
       .pipe(replace(/@document/g, '@-moz-document'))
       .pipe(replace(/! ==UserStyle==/g, ' ==UserStyle=='))
-      // Write source maps
-      .pipe(sourcemaps.write('.'))
       // Add .user suffix to output files
       .pipe(rename({ suffix: '.user' }))
       // Process file paths
