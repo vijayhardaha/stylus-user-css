@@ -912,8 +912,13 @@ domain("gemini.google.com") {
     font-weight: 400
   }
 }
-@-moz-document regexp("^(https?:\\/\\/)?(www\\.)?(.*)(\\/(wp-admin|backoffice|wp-login\\.php)(.*))$"),
+@-moz-document regexp("^(https?:\/\/)?(www\.)?(.*)(\/(wp-admin|backoffice|wp-login\.php)(.*))$"),
 regexp("^https://(.*)(.test)(.*)") {
+  #wpo-wcpdf-preview-wrapper .sidebar > .settings-search,
+  #wpo-wcpdf-preview-wrapper .sidebar table.form-table td > *,
+  #wpo-wcpdf-settings .settings_category table.form-table td > * {
+    margin-bottom: 0
+  }
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono)
@@ -926,18 +931,73 @@ regexp("^https://(.*)(.test)(.*)") {
   html {
     font-family: var(--font-sans)
   }
-  #rediscache #diagnostics-pane .card,
   .code,
   .wc-logs-entries,
   code,
-  kbd {
+  kbd,
+  pre,
+  samp {
     font-family: var(--font-mono)
   }
+  .code,
   code,
   kbd,
   pre,
   samp {
     --theme-font-family: var(--font-mono)
+  }
+  #primary-navigation li,
+  #primary-navigation li a,
+  .button,
+  .comment-bar__send-btn,
+  .cron-job-tab2 h4,
+  .markdown-body,
+  .md-subheader,
+  .ql-container,
+  .single-title,
+  .widget .widget-title,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans)
+  }
+  #rediscache #diagnostics-pane .card,
+  .CodeMirror,
+  .cm-s-darcula.CodeMirror,
+  .code,
+  code {
+    font-family: var(--font-mono)
+  }
+  .qm code,
+  .qm pre {
+    font-family: var(--font-mono)!important
+  }
+  #order_data h2,
+  #order_data p.order_number,
+  .media-frame,
+  .media-modal,
+  .wc-addons-wrap .addon-product-group-title,
+  .wc-addons-wrap .current-section-dropdown__title,
+  .wc-addons-wrap .products li .product-details .product-developed-by,
+  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
+  .wc-addons-wrap h1.search-form-title,
+  .wc-metaboxes-wrapper .wc-metabox h3 select,
+  .woocommerce-reports-wide .postbox .chart-legend li strong,
+  .woocommerce-reports-wrap .postbox .chart-legend li strong,
+  .yith-plugin-ui,
+  [class*=c_],
+  [class*=tinv-],
+  [class*=tinv-] *,
+  [class*=tinvwl-],
+  [class*=tinvwl-] *,
+  body.woocommerce_page_wc-settings .nav-tab-wrapper a {
+    font-family: var(--font-sans)
   }
   .wpo_wcpdf_badge {
     margin: 0 .1em;
@@ -953,16 +1013,13 @@ regexp("^https://(.*)(.test)(.*)") {
   #wpo-wcpdf-preview-wrapper .sidebar {
     flex: 0 0 45%
   }
-  #wpo-wcpdf-preview-wrapper .sidebar > .settings-search {
-    margin-bottom: 0
-  }
   #wpo-wcpdf-preview-wrapper .sidebar > .settings-search > input {
     border-radius: 2px
   }
-  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .sidebar {
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .sidebar {
     flex: 0 0 40%
   }
-  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .preview-document {
+  #wpo-wcpdf-preview-wrapper[data-preview-states="3"][data-preview-state=sidebar] .preview-document {
     flex: 0 0 55%
   }
   #wpo-wcpdf-preview-wrapper .sidebar table.form-table > tbody > tr,
@@ -994,60 +1051,6 @@ regexp("^https://(.*)(.test)(.*)") {
   }
   .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
     border-radius: 2px
-  }
-  #primary-navigation li,
-  #primary-navigation li a,
-  .comment-bar__send-btn,
-  .cron-job-tab2 h4,
-  .markdown-body,
-  .md-subheader,
-  .ql-container,
-  .single-title,
-  .widget .widget-title,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-sans)
-  }
-  .code,
-  code {
-    font-family: var(--font-mono)
-  }
-  #order_data h2,
-  #order_data p.order_number,
-  .button,
-  .media-frame,
-  .media-modal,
-  .wc-addons-wrap .addon-product-group-title,
-  .wc-addons-wrap .current-section-dropdown__title,
-  .wc-addons-wrap .products li .product-details .product-developed-by,
-  .wc-addons-wrap .products li .product-footer .product-reviews-block .product-reviews-count,
-  .wc-addons-wrap h1.search-form-title,
-  .wc-metaboxes-wrapper .wc-metabox h3 select,
-  .woocommerce-reports-wide .postbox .chart-legend li strong,
-  .woocommerce-reports-wrap .postbox .chart-legend li strong,
-  .yith-plugin-ui,
-  [class*=c_],
-  [class*=tinv-],
-  [class*=tinv-] *,
-  [class*=tinvwl-],
-  [class*=tinvwl-] *,
-  body.woocommerce_page_wc-settings .nav-tab-wrapper a,
-  input,
-  select,
-  textarea {
-    font-family: var(--font-sans)
-  }
-  .qm code,
-  .qm pre {
-    font-family: var(--font-mono)!important
-  }
-  .CodeMirror,
-  .cm-s-darcula.CodeMirror {
-    font-family: var(--font-mono)
   }
 }
 @-moz-document domain("amazon.in"),
