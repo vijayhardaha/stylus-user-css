@@ -916,7 +916,8 @@ domain("gemini.google.com") {
 regexp("^https://(.*)(.test)(.*)") {
   #wpo-wcpdf-preview-wrapper .sidebar > .settings-search,
   #wpo-wcpdf-preview-wrapper .sidebar table.form-table td > *,
-  #wpo-wcpdf-settings .settings_category table.form-table td > * {
+  #wpo-wcpdf-settings .settings_category table.form-table td > *,
+  .wpo_wcpdf-actions {
     margin-bottom: 0
   }
   :root {
@@ -982,6 +983,9 @@ regexp("^https://(.*)(.test)(.*)") {
   #order_data p.order_number,
   .media-frame,
   .media-modal,
+  .nfd-reset-page,
+  .nfd-root,
+  .nfd-widget-lighthouse .nfd-root,
   .wc-addons-wrap .addon-product-group-title,
   .wc-addons-wrap .current-section-dropdown__title,
   .wc-addons-wrap .products li .product-details .product-developed-by,
@@ -998,6 +1002,70 @@ regexp("^https://(.*)(.test)(.*)") {
   [class*=tinvwl-] *,
   body.woocommerce_page_wc-settings .nav-tab-wrapper a {
     font-family: var(--font-sans)
+  }
+  #dashboard-widgets .postbox,
+  #screen-meta-links .show-settings,
+  .badge,
+  .choices__inner,
+  .components-button,
+  .components-form-token-field__input-container,
+  .css-13cymwt-control,
+  .plugin-card,
+  .select2-container--default .select2-selection--multiple,
+  .select2-container--default .select2-selection--single,
+  .snippet-editor-sidebar .box,
+  .wc-wp-version-gte-70.post-type-product #postdivrich,
+  .wc-wp-version-gte-70.post-type-product .postbox,
+  .wc-wp-version-gte-70.post-type-shop_coupon #postdivrich,
+  .wc-wp-version-gte-70.post-type-shop_coupon .postbox,
+  .wc-wp-version-gte-70.post-type-shop_order #postdivrich,
+  .wc-wp-version-gte-70.post-type-shop_order .postbox,
+  .wc-wp-version-gte-70.woocommerce_page_wc-orders #postdivrich,
+  .wc-wp-version-gte-70.woocommerce_page_wc-orders .postbox,
+  .wp-core-ui .button,
+  .wp-core-ui .button-primary,
+  .wp-core-ui .button-secondary,
+  .wp-core-ui select,
+  .wpforms-admin-page .wpforms-btn,
+  .wpforms-admin-settings .wpforms-setting-row input[type=number],
+  .wpforms-admin-settings .wpforms-setting-row input[type=password],
+  .wpforms-admin-settings .wpforms-setting-row input[type=text],
+  .wpforms-admin-settings .wpforms-setting-row select,
+  .wpforms-dash-widget .wpforms-dash-widget-settings #wpforms-dash-widget-timespan,
+  .wpforms-dash-widget .wpforms-dash-widget-settings .wpforms-dash-widget-settings-container .wpforms-dash-widget-settings-button,
+  .wrap .add-new-h2,
+  .wrap .add-new-h2:active,
+  .wrap .page-title-action,
+  .wrap .page-title-action:active,
+  body.wc-wp-version-gte-53 .select2-container .select2-selection--multiple,
+  body.wc-wp-version-gte-70 .select2-container .select2-selection--single,
+  input[type=checkbox],
+  input[type=color],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=datetime],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=radio],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week],
+  select,
+  textarea {
+    border-radius: 0
+  }
+  #adminmenu .code-snippets-upgrade-button .dashicons {
+    line-height: 1
+  }
+  .wpo_wcpdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px
   }
   .wpo_wcpdf_badge {
     margin: 0 .1em;
@@ -2591,4 +2659,3 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
     border-radius: 0!important
   }
 }
-/*# sourceMappingURL=index.css.map */
