@@ -1,4 +1,5 @@
 @use "mixins";
+@use "sass:color";
 
 @document regexp("^(https?:\/\/)?(www\.)?(.*)(\/(wp-admin|backoffice|wp-login\.php)(.*))$"),
 regexp("^https://(.*)(.test)(.*)")
@@ -102,8 +103,101 @@ regexp("^https://(.*)(.test)(.*)")
   [class*="tinvwl-"],
   [class*="tinv-"],
   [class*="tinvwl-"] *,
-  [class*="tinv-"] * {
+  [class*="tinv-"] *,
+  .nfd-widget-lighthouse .nfd-root,
+  .nfd-root,
+  .nfd-reset-page {
     @include mixins.apply-font-sans;
+  }
+
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea,
+  input[type="checkbox"],
+  input[type="radio"],
+  .wp-core-ui select {
+    border-radius: 0;
+  }
+
+  #dashboard-widgets .postbox {
+    border-radius: 0;
+  }
+
+  .badge {
+    border-radius: 0;
+  }
+
+  #screen-meta-links .show-settings,
+  .wp-core-ui .button,
+  .wp-core-ui .button-primary,
+  .wp-core-ui .button-secondary,
+  .components-button,
+  .components-form-token-field__input-container,
+  .snippet-editor-sidebar .box,
+  .css-13cymwt-control,
+  .wrap .add-new-h2,
+  .wrap .add-new-h2:active,
+  .wrap .page-title-action,
+  .wrap .page-title-action:active {
+    border-radius: 0;
+  }
+
+  .wpforms-dash-widget .wpforms-dash-widget-settings #wpforms-dash-widget-timespan,
+  .wpforms-dash-widget
+    .wpforms-dash-widget-settings
+    .wpforms-dash-widget-settings-container
+    .wpforms-dash-widget-settings-button,
+  .wpforms-admin-settings .wpforms-setting-row input[type="text"],
+  .wpforms-admin-settings .wpforms-setting-row input[type="password"],
+  .wpforms-admin-settings .wpforms-setting-row input[type="number"],
+  .wpforms-admin-settings .wpforms-setting-row select,
+  .wpforms-admin-page .wpforms-btn,
+  .choices__inner,
+  .plugin-card {
+    border-radius: 0;
+  }
+
+  body.wc-wp-version-gte-70 .select2-container .select2-selection--single,
+  body.wc-wp-version-gte-53 .select2-container .select2-selection--multiple,
+  body.wc-wp-version-gte-53 .select2-container .select2-selection--multiple,
+  .select2-container--default .select2-selection--single,
+  .select2-container--default .select2-selection--multiple {
+    border-radius: 0;
+  }
+
+  .wc-wp-version-gte-70.post-type-product #postdivrich,
+  .wc-wp-version-gte-70.post-type-product .postbox,
+  .wc-wp-version-gte-70.post-type-shop_coupon #postdivrich,
+  .wc-wp-version-gte-70.post-type-shop_coupon .postbox,
+  .wc-wp-version-gte-70.post-type-shop_order #postdivrich,
+  .wc-wp-version-gte-70.post-type-shop_order .postbox,
+  .wc-wp-version-gte-70.woocommerce_page_wc-orders #postdivrich,
+  .wc-wp-version-gte-70.woocommerce_page_wc-orders .postbox {
+    border-radius: 0;
+  }
+
+  #adminmenu .code-snippets-upgrade-button .dashicons {
+    line-height: 1;
+  }
+
+  .wpo_wcpdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 0;
   }
 
   // Redis Cache diagnostics
