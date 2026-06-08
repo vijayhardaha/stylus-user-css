@@ -8,9 +8,8 @@ regexp("^https://(.*)(.test)(.*)")
   @include mixins.set-root-font-mono;
 
   // Base elements
-  html,
-  body,
-  a,
+  body.wp-admin,
+  body.wp-admin a,
   #wpadminbar *,
   body.wpallimport-plugin {
     @include mixins.apply-font-sans;
@@ -27,64 +26,66 @@ regexp("^https://(.*)(.test)(.*)")
     @include mixins.apply-font-mono;
   }
 
-  // Code elements
-  pre,
-  samp,
-  kbd,
-  code,
-  kbd,
-  .code {
-    --theme-font-family: var(--font-mono);
+  body.wp-admin {
+    // Code elements
+    pre,
+    samp,
+    kbd,
+    code,
+    kbd,
+    .code {
+      --theme-font-family: var(--font-mono);
 
-    @include mixins.apply-font-mono;
-  }
+      @include mixins.apply-font-mono;
+    }
 
-  // Content blocks
-  .comment-bar__send-btn,
-  .cron-job-tab2 h4,
-  .single-title,
-  .widget .widget-title,
-  .markdown-body,
-  .md-subheader,
-  .ql-container,
-  #primary-navigation li,
-  #primary-navigation li a {
-    @include mixins.apply-font-sans;
-  }
+    // Content blocks
+    .comment-bar__send-btn,
+    .cron-job-tab2 h4,
+    .single-title,
+    .widget .widget-title,
+    .markdown-body,
+    .md-subheader,
+    .ql-container,
+    #primary-navigation li,
+    #primary-navigation li a {
+      @include mixins.apply-font-sans;
+    }
 
-  // Headings
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  input,
-  select,
-  textarea,
-  .button {
-    @include mixins.apply-font-sans;
-  }
+    // Headings
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    select,
+    textarea,
+    .button {
+      @include mixins.apply-font-sans;
+    }
 
-  // Code blocks
-  code,
-  .code,
-  .cm-s-darcula.CodeMirror,
-  .CodeMirror {
-    @include mixins.apply-font-mono;
-  }
+    // Code blocks
+    code,
+    .code,
+    .cm-s-darcula.CodeMirror,
+    .CodeMirror {
+      @include mixins.apply-font-mono;
+    }
 
-  // CodeMirror
-  .qm code,
-  .qm pre {
-    @include mixins.apply-font-mono(true);
-  }
+    // CodeMirror
+    .qm code,
+    .qm pre {
+      @include mixins.apply-font-mono(true);
+    }
 
-  // UI elements
-  .yith-plugin-ui,
-  .media-frame,
-  .media-modal {
-    @include mixins.apply-font-sans;
+    // UI elements
+    .yith-plugin-ui,
+    .media-frame,
+    .media-modal {
+      @include mixins.apply-font-sans;
+    }
   }
 
   // WooCommerce elements
@@ -109,65 +110,66 @@ regexp("^https://(.*)(.test)(.*)")
   .nfd-reset-page {
     @include mixins.apply-font-sans;
   }
+  body.wp-admin {
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea,
+    input[type="checkbox"],
+    input[type="radio"],
+    .wp-core-ui select {
+      border-radius: 0;
+    }
 
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  select,
-  textarea,
-  input[type="checkbox"],
-  input[type="radio"],
-  .wp-core-ui select {
-    border-radius: 0;
-  }
+    #dashboard-widgets .postbox {
+      border-radius: 0;
+    }
 
-  #dashboard-widgets .postbox {
-    border-radius: 0;
-  }
+    .badge {
+      border-radius: 0;
+    }
 
-  .badge {
-    border-radius: 0;
-  }
+    #screen-meta-links .show-settings,
+    .wp-core-ui .button,
+    .wp-core-ui .button-primary,
+    .wp-core-ui .button-secondary,
+    .components-button,
+    .components-form-token-field__input-container,
+    .snippet-editor-sidebar .box,
+    .css-13cymwt-control,
+    .wrap .add-new-h2,
+    .wrap .add-new-h2:active,
+    .wrap .page-title-action,
+    .wrap .page-title-action:active {
+      border-radius: 0;
+    }
 
-  #screen-meta-links .show-settings,
-  .wp-core-ui .button,
-  .wp-core-ui .button-primary,
-  .wp-core-ui .button-secondary,
-  .components-button,
-  .components-form-token-field__input-container,
-  .snippet-editor-sidebar .box,
-  .css-13cymwt-control,
-  .wrap .add-new-h2,
-  .wrap .add-new-h2:active,
-  .wrap .page-title-action,
-  .wrap .page-title-action:active {
-    border-radius: 0;
-  }
-
-  .wpforms-dash-widget .wpforms-dash-widget-settings #wpforms-dash-widget-timespan,
-  .wpforms-dash-widget
-    .wpforms-dash-widget-settings
-    .wpforms-dash-widget-settings-container
-    .wpforms-dash-widget-settings-button,
-  .wpforms-admin-settings .wpforms-setting-row input[type="text"],
-  .wpforms-admin-settings .wpforms-setting-row input[type="password"],
-  .wpforms-admin-settings .wpforms-setting-row input[type="number"],
-  .wpforms-admin-settings .wpforms-setting-row select,
-  .wpforms-admin-page .wpforms-btn,
-  .choices__inner,
-  .plugin-card {
-    border-radius: 0;
+    .wpforms-dash-widget .wpforms-dash-widget-settings #wpforms-dash-widget-timespan,
+    .wpforms-dash-widget
+      .wpforms-dash-widget-settings
+      .wpforms-dash-widget-settings-container
+      .wpforms-dash-widget-settings-button,
+    .wpforms-admin-settings .wpforms-setting-row input[type="text"],
+    .wpforms-admin-settings .wpforms-setting-row input[type="password"],
+    .wpforms-admin-settings .wpforms-setting-row input[type="number"],
+    .wpforms-admin-settings .wpforms-setting-row select,
+    .wpforms-admin-page .wpforms-btn,
+    .choices__inner,
+    .plugin-card {
+      border-radius: 0;
+    }
   }
 
   body.wc-wp-version-gte-70 .select2-container .select2-selection--single,
