@@ -110,6 +110,7 @@ regexp("^https://(.*)(.test)(.*)")
   .nfd-reset-page {
     @include mixins.apply-font-sans;
   }
+
   body.wp-admin {
     input[type="color"],
     input[type="date"],
