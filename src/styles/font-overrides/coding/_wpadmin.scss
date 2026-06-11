@@ -13,6 +13,12 @@ regexp("^https://(.*)(.test)(.*)")
   #wpadminbar *,
   body.wpallimport-plugin {
     @include mixins.apply-font-sans;
+
+    .dashicons,
+    .dashicons-before::before {
+      // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
+      font-family: dashicons !important;
+    }
   }
 
   // WordPress admin bar
@@ -296,11 +302,5 @@ regexp("^https://(.*)(.test)(.*)")
   // Select2 multiple selection
   .wc-wp-version-gte-53 .select2-container .select2-selection--multiple {
     border-radius: 2px;
-  }
-
-  .dashicons,
-  .dashicons-before::before {
-    // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
-    font-family: dashicons;
   }
 }
