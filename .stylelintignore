@@ -21,9 +21,9 @@ vendor/
 # bundlers emit compiled stylesheets.
 .next/
 .svelte-kit/
-build/
-dist/
-out/
+/build/
+/dist/
+/out/
 
 # ----------------------------------------------------------------------
 # Cache Directories
@@ -70,9 +70,9 @@ tmp/
 # Public & Static Assets
 # ----------------------------------------------------------------------
 # Committed CSS assets, vendor stylesheets, theme CSS (WordPress).
-assets/
-public/
-static/
+/assets/
+/public/
+/static/
 
 # ----------------------------------------------------------------------
 # Ai Coding Tools
@@ -87,9 +87,9 @@ static/
 .bolt
 .charliepython
 .claude
+.commandcode
 .cline
 .codex
-.commandcode
 .continue
 .copilot
 .crush
@@ -106,10 +106,11 @@ static/
 .manus
 .midjourney
 .mistral
+.mimocode
+.openclaude
 .nexus
 .opencode
 .perplexity
-.pi
 .qoder
 .qwen
 .replit
