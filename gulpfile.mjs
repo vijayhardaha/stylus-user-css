@@ -31,8 +31,17 @@ const sass = gulpSass(dartSass);
 /** True when running in production mode. */
 const isProduction = process.env.NODE_ENV === 'production';
 
-/** Parsed package metadata used by startup banner. */
-const packageJson = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'), 'utf8'));
+/**
+ * Parsed package metadata used by startup banner.
+ *
+ * @type {{name?: string, version?: string, author?: string|{name?: string, url?: string}}}
+ */
+let packageJson = {};
+try {
+  packageJson = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'), 'utf8'));
+} catch {
+  log('Warning: package.json not found or invalid — banner metadata will be missing.');
+}
 
 /** CleanCSS optimization levels shared across CSS output variants. */
 const cssOptimizationLevels = {
@@ -73,15 +82,15 @@ const cssOptimizationLevels = {
 const sassCompilerOptions = {
   charset: false,
   quietDeps: true,
-  silenceDeprecations: ['moz-document'],
+  silenceDeprecations: ['moz-document', 'import'],
   verbose: false,
-  logger: sass.compiler.Logger.silent,
 };
 
 /**
  * Ensure a directory exists before read/write operations.
  *
  * @param {string} dir - Directory path to create if missing.
+ *
  * @returns {Promise<void>}
  */
 const ensureDir = async (dir) => {
@@ -95,9 +104,11 @@ const ensureDir = async (dir) => {
 /**
  * Print a startup banner with package metadata and runtime mode.
  *
+ * @param {() => void} cb - Gulp task completion callback.
+ *
  * @returns {void}
  */
-const printStartupBanner = () => {
+const printStartupBanner = (cb) => {
   const mode = isProduction ? 'production' : 'development';
   const author = typeof packageJson.author === 'string' ? packageJson.author : packageJson.author?.name || 'Unknown';
   const lines = [
@@ -115,12 +126,15 @@ const printStartupBanner = () => {
     console.log(`| ${line.padEnd(width)} |`);
   }
   console.log(border);
+
+  cb();
 };
 
 /**
  * Create a reusable plumber error handler for build streams.
  *
  * @param {string} taskName - Task label for contextual error logs.
+ *
  * @returns {(this: import('stream').Transform, err: Error) => void} Error handler callback.
  */
 const createErrorHandler = (taskName) => {
@@ -134,6 +148,7 @@ const createErrorHandler = (taskName) => {
  * Validates file paths to prevent directory traversal attacks.
  *
  * @param {string} filePath - The path to validate.
+ *
  * @returns {boolean} True if path is valid, false otherwise.
  */
 const isValidPath = (filePath) => {
@@ -193,9 +208,9 @@ const displayTotalSize = async () => {
 
 /**
  * Build CSS from SCSS files (excludes partials starting with _).
- * Handles compilation, prefixing, minification, and source maps.
+ * Handles compilation, prefixing, minification, and userstyle rewrites.
  *
- * @returns {NodeJS.ReadableStream} The gulp stream.
+ * @returns {import('stream').Readable} The gulp stream.
  */
 const buildCSS = () => {
   return (
@@ -232,6 +247,8 @@ const buildCSS = () => {
 /**
  * Clean the build directory by deleting the 'dist' directory.
  * Handles errors during the cleaning process.
+ *
+ * @returns {Promise<void>}
  */
 const cleanAssets = async () => {
   try {
@@ -246,6 +263,8 @@ const cleanAssets = async () => {
 /**
  * Watch for changes in SCSS files and trigger the build process.
  * Provides feedback on file changes and errors.
+ *
+ * @returns {void}
  */
 const watchAssets = () => {
   console.log('Starting SCSS file watcher...');
@@ -257,11 +276,7 @@ const watchAssets = () => {
   watcher.on('change', (filePath) => {
     const relativePath = path.relative(process.cwd(), filePath);
     console.log(`File changed: ${relativePath}`);
-    buildCSS((error) => {
-      if (error) {
-        log(`buildCSS Error: ${error.message}`);
-      }
-    });
+    buildCSS();
   });
 
   watcher.on('add', (filePath) => {
@@ -275,16 +290,11 @@ const watchAssets = () => {
   watcher.on('error', (error) => {
     log(`watch Error: ${error.message}`);
   });
-
-  return watcher;
 };
 
 // Define the main build task sequence
-const build = gulp.series(cleanAssets, buildCSS, displayTotalSize);
+const build = gulp.series(printStartupBanner, cleanAssets, buildCSS, displayTotalSize);
 const dev = gulp.series(build, watchAssets);
-
-// Print startup banner.
-printStartupBanner();
 
 // Export the 'build' task and rename 'watchAssets' to 'watch' for better clarity.
 export { build, watchAssets as watch };
