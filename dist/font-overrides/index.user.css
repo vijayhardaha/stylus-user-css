@@ -152,11 +152,11 @@ domain("127.0.0.1") {
 }
 @-moz-document domain("opencode.ai") {
   :root {
-    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
     --font-mono: var(--default-mono-font),var(--default-mono);
     --__sl-font: var(--font-sans);
     --__sl-font-mono: var(--font-mono)
   }
+  :root,
   body {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans)
   }
@@ -2026,8 +2026,6 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   :root {
     --font-mono: var(--default-mono-font),var(--default-mono);
     --font-display: var(--font-sans);
-    --font-family-apple: var(--font-sans);
-    --font-family-system: var(--font-sans);
     --font-headline: var(--font-sans);
     --font-primary: var(--font-sans);
     --font-sans-serif: var(--font-sans);
@@ -2048,8 +2046,8 @@ regexp("https:\\/\\/www\\.facebook\\.com\\/reel\\/.*") {
   select,
   td,
   textarea {
-    --font-family-system: var(--font-sans);
-    --font-family-apple: var(--font-sans)
+    --font-family-apple: var(--font-sans);
+    --font-family-system: var(--font-sans)
   }
   .__fb-light-mode,
   .__fb-light-mode:root,
