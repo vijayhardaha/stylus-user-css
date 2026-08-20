@@ -55,6 +55,9 @@
     "stylelint-order": "^8.1.1",
     "typescript": "^6.0.3"
   },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
   "trustedDependencies": [
     "@parcel/watcher",
     "es5-ext",
