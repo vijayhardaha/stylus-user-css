@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Font Overrides
 @namespace github.com/openstyles/stylus
-@version 1.1.24
+@version 1.1.25
 @description A new userstyle for custom font family on multiple websites.
 @author Vijay Hardaha (http://github.com/vijayhardaha)
 @homepageURL https://github.com/vijayhardaha/stylus-user-css
@@ -71,6 +71,24 @@ domain("127.0.0.1") {
     list-style-type: decimal
   }
 }
+@-moz-document domain("agent.minimax.io") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  .matrix-markdown,
+  :root,
+  body {
+    --adm-font-family: var(--font-sans);
+    --md-font-family-body: var(--font-sans)
+  }
+  #root,
+  [class*=" ant-"],
+  [class^=ant-],
+  body {
+    font-family: var(--font-sans)!important
+  }
+}
 @-moz-document domain("chatgpt.com") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
@@ -117,6 +135,19 @@ domain("127.0.0.1") {
     --ds-font-family-code: var(--font-mono)
   }
 }
+@-moz-document domain("grok.com") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  :root,
+  body {
+    --font-universal-sans: var(--font-sans)!important;
+    --font-vazirmatn: var(--font-sans)!important;
+    --font-inter: var(--font-sans)!important;
+    --font-ibm-plex-mono: var(--font-mono)!important
+  }
+}
 @-moz-document domain("kilo.ai") {
   :root {
     --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
@@ -135,6 +166,16 @@ domain("127.0.0.1") {
   pre[class*=language-],
   samp {
     font-family: var(--font-mono)
+  }
+}
+@-moz-document domain("mistral.ai") {
+  :root {
+    --font-sans: var(--default-sans-font),var(--default-hindi-font),var(--default-sans);
+    --font-mono: var(--default-mono-font),var(--default-mono)
+  }
+  :root,
+  body {
+    --font-inter: var(--font-sans)!important
   }
 }
 @-moz-document domain("ollama.com") {
