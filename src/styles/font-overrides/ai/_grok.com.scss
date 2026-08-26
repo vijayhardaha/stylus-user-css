@@ -1,0 +1,14 @@
+@use "../mixins";
+
+@document domain("grok.com") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  :root,
+  body {
+    --font-universal-sans: var(--font-sans) !important;
+    --font-vazirmatn: var(--font-sans) !important;
+    --font-inter: var(--font-sans) !important;
+    --font-ibm-plex-mono: var(--font-mono) !important;
+  }
+}

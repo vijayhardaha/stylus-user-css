@@ -1,0 +1,11 @@
+@use "../mixins";
+
+@document domain("mistral.ai") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  :root,
+  body {
+    --font-inter: var(--font-sans) !important;
+  }
+}

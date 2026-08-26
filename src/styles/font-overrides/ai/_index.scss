@@ -1,11 +1,14 @@
 // Aggregate imports for AI-related site partials.
 // Each imported file targets a specific AI site and may be empty if no overrides are required.
 
+@use "agent.minimax.io";
 @use "chatgpt.com";
 @use "claude.ai";
 @use "commandcode.ai";
 @use "deepseek.com";
+@use "grok.com";
 @use "kilo.ai";
+@use "mistral.ai";
 @use "ollama.com";
 @use "opencode.ai";
 @use "openrouter.ai";

@@ -1,0 +1,20 @@
+@use "../mixins";
+
+@document domain("agent.minimax.io") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  :root,
+  body,
+  .matrix-markdown {
+    --adm-font-family: var(--font-sans);
+    --md-font-family-body: var(--font-sans);
+  }
+
+  #root,
+  [class*=" ant-"],
+  [class^="ant-"],
+  body {
+    @include mixins.apply-font-sans(true);
+  }
+}
