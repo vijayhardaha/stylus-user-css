@@ -1,0 +1,12 @@
+@use "../mixins";
+
+@document domain("supabase.com") {
+  @include mixins.set-root-font-sans;
+  @include mixins.set-root-font-mono;
+
+  :root,
+  body {
+    --font-heading: var(--font-sans) !important;
+    --font-source-code-pro: var(--font-mono) !important;
+  }
+}
